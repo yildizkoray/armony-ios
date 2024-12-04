@@ -23,6 +23,67 @@ Armony is a platform designed for musicians and those involved in the music indu
 * Style Guide: [Raywenderlich](https://github.com/raywenderlich/swift-style-guide)
 * Powered by ❤️
 
+## Getting Started
+
+Follow these steps to get started with the project:
+
+### Prerequisites
+
+- [Xcode](https://developer.apple.com/xcode/)
+- Access to Firebase and Facebook Developer accounts (to generate required secret keys)
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone git@github.com:studiogo-armony/armony-ios.git
+cd armony-ios
+```
+
+## Secrets
+
+This project uses sensitive keys for integrations.
+
+### Required Keys
+
+#### Firebase Keys
+
+- `FIREBASE_CLIENT_ID`
+- `FIREBASE_REVERSED_CLIENT_ID`
+- `FIREBASE_API_KEY`
+- `FIREBASE_GCM_SENDER_ID`
+- `FIREBASE_PLIST_VERSION`
+- `FIREBASE_BUNDLE_ID`
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_STORAGE_BUCKET`
+- `FIREBASE_IS_ADS_ENABLED`
+- `FIREBASE_IS_ANALYTICS_ENABLED`
+- `FIREBASE_IS_APPINVITE_ENABLED`
+- `FIREBASE_IS_GCM_ENABLED`
+- `FIREBASE_IS_SIGNIN_ENABLED`
+- `FIREBASE_GOOGLE_APP_ID`
+
+#### Facebook Keys
+
+- `FACEBOOK_APP_ID`
+- `FACEBOOK_CLIENT_TOKEN`
+
+#### Mixpanel Keys
+
+- `MIXPANEL_TOKEN`
+
+#### Adjust Keys
+
+- `ADJUST_TOKEN`
+
+### Managing Secrets
+
+Store secrets in configuration files specific to your environment:
+
+- Debug Configuration (`${PROJECT_DIR}/Armony/Resources/Configs/DebugConfiguration.xcconfig`)
+- Release Configuration (`${PROJECT_DIR}/Armony/Resources/Configs/ReleaseConfiguration.xcconfig`)
+
 ## Structure
 ```bash
 ⊢ Common

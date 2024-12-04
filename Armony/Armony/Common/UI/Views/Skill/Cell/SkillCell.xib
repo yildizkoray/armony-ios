@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SkillCell" customModule="Armony" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="228"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="228"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-ZA-6gp">
+                        <rect key="frame" x="0.0" y="0.0" width="435" height="228"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Lo4-51-oUp">
+                                <rect key="frame" x="0.0" y="0.0" width="435" height="228"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjp-n4-UEV">
+                                        <rect key="frame" x="0.0" y="102" width="24" height="24"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJp-jl-C9X">
+                                                <rect key="frame" x="5" y="5" width="14" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bjp-n4-UEV" secondAttribute="height" multiplier="1:1" id="AQ1-4x-T6f"/>
+                                            <constraint firstAttribute="width" constant="24" id="NhN-Xn-U3w"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JUQ-uc-eu1">
+                                        <rect key="frame" x="28" y="89" width="407" height="50"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                        <color key="textColor" name="armonyBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Lo4-51-oUp" firstAttribute="leading" secondItem="Z7t-ZA-6gp" secondAttribute="leading" id="GJQ-nX-Or2"/>
+                            <constraint firstAttribute="bottom" secondItem="Lo4-51-oUp" secondAttribute="bottom" id="Tfv-bp-TO8"/>
+                            <constraint firstItem="Lo4-51-oUp" firstAttribute="top" secondItem="Z7t-ZA-6gp" secondAttribute="top" id="igY-jX-8Pn"/>
+                            <constraint firstAttribute="trailing" secondItem="Lo4-51-oUp" secondAttribute="trailing" id="o2S-ZS-Avp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Z7t-ZA-6gp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AXb-A0-bdW"/>
+                <constraint firstItem="Z7t-ZA-6gp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DJf-Am-EYd"/>
+                <constraint firstAttribute="trailing" secondItem="Z7t-ZA-6gp" secondAttribute="trailing" id="KCY-gb-1LN"/>
+                <constraint firstAttribute="bottom" secondItem="Z7t-ZA-6gp" secondAttribute="bottom" id="vFk-iK-bxh"/>
+            </constraints>
+            <size key="customSize" width="435" height="228"/>
+            <connections>
+                <outlet property="containerStackView" destination="Lo4-51-oUp" id="Op5-NU-hAY"/>
+                <outlet property="imageContainerView" destination="bjp-n4-UEV" id="Ud7-54-o21"/>
+                <outlet property="imageContainerViewWidthConstraint" destination="NhN-Xn-U3w" id="lTa-8v-aec"/>
+                <outlet property="imageView" destination="QJp-jl-C9X" id="mkn-Oc-cEr"/>
+                <outlet property="titleLabel" destination="JUQ-uc-eu1" id="poX-mj-4MM"/>
+            </connections>
+            <point key="canvasLocation" x="373.1884057971015" y="74.330357142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="armonyBlack">
+            <color red="0.054901960784313725" green="0.0039215686274509803" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

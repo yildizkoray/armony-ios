@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Adverts View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Adverts" id="BYZ-38-t0r" customClass="AdvertsViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UuK-uS-hi9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YV6-fw-tfl">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="armonyBlack"/>
+                        <constraints>
+                            <constraint firstItem="UuK-uS-hi9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kfe-hL-Cch"/>
+                            <constraint firstItem="UuK-uS-hi9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="l0c-mb-HiI"/>
+                            <constraint firstItem="UuK-uS-hi9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lgd-b7-m7i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UuK-uS-hi9" secondAttribute="bottom" id="q31-AT-NvJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="UuK-uS-hi9" id="8aU-eN-CPK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-907.24637681159425" y="40.848214285714285"/>
+        </scene>
+        <!--Advert View Controller-->
+        <scene sceneID="S46-tW-e4P">
+            <objects>
+                <viewController storyboardIdentifier="Advert" id="1QS-m0-Mcg" customClass="AdvertViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ih-cb-2Db">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFU-y6-G15" customClass="GradientView" customModule="Armony" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="152"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qSJ-XO-980">
+                                <rect key="frame" x="0.0" y="44" width="414" height="782"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wq0-13-gmF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="622"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NwW-7P-1Yl">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="456"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tg0-BI-b0c">
+                                                        <rect key="frame" x="16" y="16" width="382" height="136"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="6Df-fd-WdX" customClass="UserSummaryView" customModule="Armony" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="120"/>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTh-j2-lLk" customClass="ExpandableLabel" customModule="Armony" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="136" width="382" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
+                                                                <color key="textColor" name="armonyWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="collapsed" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldExpand" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldCollapse" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="382" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="k1z-gD-K4C" customClass="MusicGenresView" customModule="Armony" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="172" width="382" height="128"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="epx-hN-1xW" customClass="SkillsView" customModule="Armony" customModuleProvider="target">
+                                                        <rect key="frame" x="16" y="320" width="382" height="120"/>
+                                                    </view>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NwW-7P-1Yl" firstAttribute="leading" secondItem="wq0-13-gmF" secondAttribute="leading" id="3Fh-Vg-roY"/>
+                                            <constraint firstAttribute="bottom" secondItem="NwW-7P-1Yl" secondAttribute="bottom" id="FKJ-kC-zkr"/>
+                                            <constraint firstItem="NwW-7P-1Yl" firstAttribute="top" secondItem="wq0-13-gmF" secondAttribute="top" id="OdS-RW-tYS"/>
+                                            <constraint firstItem="NwW-7P-1Yl" firstAttribute="width" secondItem="wq0-13-gmF" secondAttribute="width" id="WS5-YV-VQ8"/>
+                                            <constraint firstAttribute="trailing" secondItem="NwW-7P-1Yl" secondAttribute="trailing" id="af6-fF-ugf"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-XA-deR">
+                                        <rect key="frame" x="0.0" y="642" width="414" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtS-l2-b2L">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="VVy-NP-hPf"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="42" minY="0.0" maxX="42" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="send-message-right-arrow-icon"/>
+                                                <connections>
+                                                    <action selector="applyButtonTapped" destination="1QS-m0-Mcg" eventType="touchUpInside" id="qsZ-34-WMP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQa-xj-93P">
+                                                <rect key="frame" x="16" y="48" width="382" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="l6l-dy-bAG"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="activateAdvertButtonTapped" destination="1QS-m0-Mcg" eventType="touchUpInside" id="dNR-ji-Ugp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXG-FD-gNg" userLabel="Remove Adverts Button">
+                                                <rect key="frame" x="16" y="96" width="382" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="W4h-uj-F5G"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="42" minY="0.0" maxX="42" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="removeButtonDidTap" destination="1QS-m0-Mcg" eventType="touchUpInside" id="6OZ-fO-gQ1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UlN-FC-Fkq"/>
+                        <color key="backgroundColor" name="armonyDarkBlue"/>
+                        <constraints>
+                            <constraint firstItem="qSJ-XO-980" firstAttribute="leading" secondItem="UlN-FC-Fkq" secondAttribute="leading" id="0J6-mU-3gf"/>
+                            <constraint firstItem="tg0-BI-b0c" firstAttribute="bottom" secondItem="jFU-y6-G15" secondAttribute="bottom" id="Akf-dG-Har"/>
+                            <constraint firstItem="UlN-FC-Fkq" firstAttribute="bottom" secondItem="qSJ-XO-980" secondAttribute="bottom" constant="36" id="Bn9-2a-J3g"/>
+                            <constraint firstItem="UlN-FC-Fkq" firstAttribute="trailing" secondItem="qSJ-XO-980" secondAttribute="trailing" id="R5t-QO-HCD"/>
+                            <constraint firstItem="jFU-y6-G15" firstAttribute="top" secondItem="NwW-7P-1Yl" secondAttribute="top" id="XOl-Ia-6AD"/>
+                            <constraint firstItem="qSJ-XO-980" firstAttribute="top" secondItem="UlN-FC-Fkq" secondAttribute="top" id="a8t-GH-s7Y"/>
+                            <constraint firstAttribute="trailing" secondItem="jFU-y6-G15" secondAttribute="trailing" id="i4F-vd-Qel"/>
+                            <constraint firstItem="jFU-y6-G15" firstAttribute="leading" secondItem="8ih-cb-2Db" secondAttribute="leading" id="qKS-9P-ijB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activateAdvertButton" destination="wQa-xj-93P" id="8Dk-PM-HRF"/>
+                        <outlet property="buttonsStackView" destination="uSS-XA-deR" id="gQP-mS-gKB"/>
+                        <outlet property="contentStackView" destination="qSJ-XO-980" id="s3F-YK-gPe"/>
+                        <outlet property="descriptionLabel" destination="YTh-j2-lLk" id="Ry0-Fl-b24"/>
+                        <outlet property="genresView" destination="k1z-gD-K4C" id="v1c-9O-1eD"/>
+                        <outlet property="gradientView" destination="jFU-y6-G15" id="QDF-Ot-g5L"/>
+                        <outlet property="removeAdvertsButton" destination="iXG-FD-gNg" id="5wi-aa-icZ"/>
+                        <outlet property="scrollView" destination="wq0-13-gmF" id="Ht5-mM-2RT"/>
+                        <outlet property="scrollableContentStackView" destination="NwW-7P-1Yl" id="60s-nA-kyI"/>
+                        <outlet property="sendMessageButton" destination="dtS-l2-b2L" id="Fxh-Sg-nYR"/>
+                        <outlet property="skillsView" destination="epx-hN-1xW" id="aWz-5i-TDf"/>
+                        <outlet property="userSummaryView" destination="6Df-fd-WdX" id="tl3-ey-MuM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVm-eK-Snc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228.50467289719626" y="41.46868250539957"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="send-message-right-arrow-icon" width="24" height="24"/>
+        <namedColor name="armonyBlack">
+            <color red="0.054901960784313725" green="0.0039215686274509803" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="armonyDarkBlue">
+            <color red="0.090196078431372548" green="0.12941176470588237" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="armonyWhite">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

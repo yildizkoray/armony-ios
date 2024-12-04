@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Visited Account View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="VisitedAccount" id="Y6W-OH-hqX" customClass="VisitedAccountViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKb-BV-XTD" customClass="GradientView" customModule="Armony" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="377"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UPY-lD-6vV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="377"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="366" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="ufe-Gk-Tlu" customClass="UserSummaryView" customModule="Armony" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="68" width="374" height="128"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1bz-XT-VhQ">
+                                        <rect key="frame" x="20" y="216" width="374" height="152"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiM-AA-LhL">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
+                                                <color key="textColor" name="armonyWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="WjB-HF-4nj" customClass="SegmentedControlView" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="24" width="374" height="128"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="9" right="20"/>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coL-Na-9Sj">
+                                <rect key="frame" x="0.0" y="393" width="414" height="469"/>
+                                <connections>
+                                    <segue destination="goz-Sd-zcN" kind="embed" identifier="pager" id="fvB-jO-zSh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="armonyBlack"/>
+                        <constraints>
+                            <constraint firstItem="oKb-BV-XTD" firstAttribute="bottom" secondItem="UPY-lD-6vV" secondAttribute="bottom" id="FA9-tz-8Kk"/>
+                            <constraint firstItem="coL-Na-9Sj" firstAttribute="top" secondItem="oKb-BV-XTD" secondAttribute="bottom" constant="16" id="Nx7-bi-e0t"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="coL-Na-9Sj" secondAttribute="trailing" id="OEM-2Y-Esd"/>
+                            <constraint firstItem="UPY-lD-6vV" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Rtj-wj-FBH"/>
+                            <constraint firstItem="oKb-BV-XTD" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="WN3-cZ-Cut"/>
+                            <constraint firstItem="coL-Na-9Sj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gmQ-3d-kZF"/>
+                            <constraint firstAttribute="trailing" secondItem="oKb-BV-XTD" secondAttribute="trailing" id="hFw-fT-knh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="coL-Na-9Sj" secondAttribute="bottom" id="x7p-PT-zv8"/>
+                            <constraint firstItem="UPY-lD-6vV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yAQ-qh-LvI"/>
+                            <constraint firstItem="oKb-BV-XTD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yxI-Ss-gWc"/>
+                            <constraint firstItem="UPY-lD-6vV" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="z9g-on-CPs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioLabel" destination="uiM-AA-LhL" id="VAq-iz-FxA"/>
+                        <outlet property="gradientView" destination="oKb-BV-XTD" id="SzP-QQ-5gj"/>
+                        <outlet property="segmentedControl" destination="WjB-HF-4nj" id="bcR-jG-Xt4"/>
+                        <outlet property="userSummaryView" destination="ufe-Gk-Tlu" id="sWZ-4o-6Li"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="-221"/>
+        </scene>
+        <!--Visited Account Musical Profile View Controller-->
+        <scene sceneID="cfU-XG-CzV">
+            <objects>
+                <viewController storyboardIdentifier="VisitedAccountMusicalProfile" id="cfT-Gw-fzE" customClass="VisitedAccountMusicalProfileViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mgg-5g-V4F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f31-tv-hml">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-m1-ALx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="5fG-Ds-yio" customClass="MusicGenresView" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="0.0" width="366" height="300"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Vzx-7f-fdQ" customClass="SkillsView" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="332" width="366" height="128"/>
+                                            </view>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="0.0" right="24"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZNt-m1-ALx" secondAttribute="trailing" id="XWI-Yb-FHw"/>
+                                    <constraint firstAttribute="width" secondItem="ZNt-m1-ALx" secondAttribute="width" id="Zoq-ib-1xG"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZNt-m1-ALx" secondAttribute="bottom" id="hIc-0k-Ba2"/>
+                                    <constraint firstItem="ZNt-m1-ALx" firstAttribute="top" secondItem="f31-tv-hml" secondAttribute="top" id="kWH-iC-onq"/>
+                                    <constraint firstItem="ZNt-m1-ALx" firstAttribute="leading" secondItem="f31-tv-hml" secondAttribute="leading" id="tJT-OE-CxA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0QM-4K-I38"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0QM-4K-I38" firstAttribute="bottom" secondItem="f31-tv-hml" secondAttribute="bottom" id="QGo-eo-DIR"/>
+                            <constraint firstItem="f31-tv-hml" firstAttribute="leading" secondItem="0QM-4K-I38" secondAttribute="leading" id="Yif-ta-3p5"/>
+                            <constraint firstItem="0QM-4K-I38" firstAttribute="trailing" secondItem="f31-tv-hml" secondAttribute="trailing" id="bEm-fG-5ho"/>
+                            <constraint firstItem="f31-tv-hml" firstAttribute="top" secondItem="0QM-4K-I38" secondAttribute="top" id="sH2-no-1qY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="musicGenresView" destination="5fG-Ds-yio" id="CvI-xQ-TG8"/>
+                        <outlet property="skillsView" destination="Vzx-7f-fdQ" id="hAT-e4-uZh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvc-R2-Uxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="483"/>
+        </scene>
+        <!--Visited Account Adverts View Controller-->
+        <scene sceneID="I2J-pI-56p">
+            <objects>
+                <viewController storyboardIdentifier="VisitedAccountAdverts" id="ZRn-ug-uvB" customClass="VisitedAccountAdvertsViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aBG-hz-EDK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rWH-P2-mh5">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BuS-82-Zg2">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZr-M2-1wz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rWH-P2-mh5" firstAttribute="leading" secondItem="KZr-M2-1wz" secondAttribute="leading" id="P9Y-Ri-9z2"/>
+                            <constraint firstItem="KZr-M2-1wz" firstAttribute="bottom" secondItem="rWH-P2-mh5" secondAttribute="bottom" id="Qvq-Vr-xpG"/>
+                            <constraint firstItem="KZr-M2-1wz" firstAttribute="trailing" secondItem="rWH-P2-mh5" secondAttribute="trailing" id="eq5-Mi-Dzx"/>
+                            <constraint firstItem="rWH-P2-mh5" firstAttribute="top" secondItem="KZr-M2-1wz" secondAttribute="top" id="eyO-nN-PJU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="rWH-P2-mh5" id="vbI-ZG-mPp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LF3-Iq-2X4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="483"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="vBu-ny-Ei0">
+            <objects>
+                <viewController id="goz-Sd-zcN" customClass="PageViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wdd-Z2-vPB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="469"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gej-CA-R6Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTf-Vg-9XO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="-221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="armonyBlack">
+            <color red="0.054901960784313725" green="0.0039215686274509803" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="armonyWhite">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

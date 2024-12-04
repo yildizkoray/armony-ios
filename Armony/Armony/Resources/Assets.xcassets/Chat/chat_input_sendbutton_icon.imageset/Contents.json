@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "chat_input_sendbutton_icon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="Armony" customModuleProvider="target">
+            <connections>
+                <outlet property="colorfulHeaderView" destination="9TD-NZ-2T0" id="hmH-DV-H5o"/>
+                <outlet property="genreView" destination="Kba-2V-dt5" id="JqE-za-w6S"/>
+                <outlet property="infoContainerView" destination="BbH-ob-7V7" id="iIy-1w-K7t"/>
+                <outlet property="skillsView" destination="jS6-Bv-IKy" id="UwN-I9-CFS"/>
+                <outlet property="userSummaryView" destination="Ice-dR-V1F" id="VvP-g1-KMA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="789" height="476"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-yH-gvI">
+                    <rect key="frame" x="0.0" y="0.0" width="789" height="476"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="589" placeholderIntrinsicHeight="43" translatesAutoresizingMaskIntoConstraints="NO" id="9TD-NZ-2T0">
+                            <rect key="frame" x="0.0" y="0.0" width="789" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="8fa-X4-X9F"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbH-ob-7V7">
+                            <rect key="frame" x="0.0" y="8" width="789" height="468"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="igd-LZ-Zgf">
+                                    <rect key="frame" x="16" y="16" width="757" height="436"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="557" placeholderIntrinsicHeight="117" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-dR-V1F" customClass="UserSummaryView" customModule="Armony" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="757" height="226"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jS6-Bv-IKy" customClass="SkillsView" customModule="Armony" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="242" width="757" height="50"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="757" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Kba-2V-dt5" customClass="MusicGenresView" customModule="Armony" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="308" width="757" height="128"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="igd-LZ-Zgf" firstAttribute="leading" secondItem="BbH-ob-7V7" secondAttribute="leading" constant="16" id="MYe-DI-Ehf"/>
+                                <constraint firstAttribute="trailing" secondItem="igd-LZ-Zgf" secondAttribute="trailing" constant="16" id="SiM-rN-ncY"/>
+                                <constraint firstAttribute="bottom" secondItem="igd-LZ-Zgf" secondAttribute="bottom" constant="16" id="ar9-es-tAU"/>
+                                <constraint firstItem="igd-LZ-Zgf" firstAttribute="top" secondItem="BbH-ob-7V7" secondAttribute="top" constant="16" id="cBx-XZ-Qr5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Dea-yH-gvI" secondAttribute="bottom" id="3ic-86-XhJ"/>
+                <constraint firstItem="Dea-yH-gvI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BsD-hh-x3K"/>
+                <constraint firstAttribute="trailing" secondItem="Dea-yH-gvI" secondAttribute="trailing" id="FLV-RW-LZG"/>
+                <constraint firstItem="Dea-yH-gvI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oys-HC-UBt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-158.01526717557252" y="9.8591549295774659"/>
+        </view>
+    </objects>
+</document>

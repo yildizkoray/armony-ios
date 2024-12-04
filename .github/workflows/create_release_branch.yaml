@@ -1,0 +1,39 @@
+name: Create Release Branch
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+    workflow_dispatch:
+      inputs:
+        version:
+          description: 'Version'     
+          required: true
+          default: '1.2.0'
+jobs:
+  create-branch:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Git
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "koray.yildizz@gmail.com"
+      
+    - name: Create new branch
+      run: |
+        git checkout -b Releases/Release${{ github.event.inputs.version }}
+
+    - name: Update marketing version
+      run: |
+        cd Armony
+        xcrun agvtool new-marketing-version ${{ github.event.inputs.version }}
+
+    - name: Git add, commit and push
+      run: |
+        git add .
+        git commit -m "Bump version number to ${{ github.event.inputs.version }}"
+        git push origin Releases/Release${{ github.event.inputs.version }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.TEST }}
+

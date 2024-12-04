@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationHeaderView" customModule="Armony" customModuleProvider="target">
+            <connections>
+                <outlet property="containerStackView" destination="B5o-02-K7E" id="44U-bs-q82"/>
+                <outlet property="subtitleLabel" destination="F88-U1-WoP" id="SxM-U4-ZJP"/>
+                <outlet property="titleLabel" destination="bVa-YV-ya9" id="KRy-fU-hcK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="514" height="293"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="B5o-02-K7E">
+                    <rect key="frame" x="0.0" y="0.0" width="514" height="293"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="g2U-eA-BaV" customClass="NotchView" customModule="Armony" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="514" height="32"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="efm-gr-cU1">
+                            <rect key="frame" x="0.0" y="48" width="514" height="245"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVa-YV-ya9">
+                                    <rect key="frame" x="0.0" y="0.0" width="514" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F88-U1-WoP">
+                                    <rect key="frame" x="0.0" y="58" width="514" height="187"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="B5o-02-K7E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eQS-mQ-jY0"/>
+                <constraint firstAttribute="bottom" secondItem="B5o-02-K7E" secondAttribute="bottom" id="k0q-wn-OjD"/>
+                <constraint firstAttribute="trailing" secondItem="B5o-02-K7E" secondAttribute="trailing" id="o2x-CG-8C2"/>
+                <constraint firstItem="B5o-02-K7E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xMZ-xj-Jm0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="371.01449275362324" y="55.915178571428569"/>
+        </view>
+    </objects>
+</document>

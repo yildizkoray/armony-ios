@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Settings" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rpT-F2-zjO">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="armonyBlack"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rpT-F2-zjO" secondAttribute="trailing" id="J37-Ah-p5q"/>
+                            <constraint firstItem="rpT-F2-zjO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Na6-rU-0Ss"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="rpT-F2-zjO" secondAttribute="bottom" id="llD-yo-NTh"/>
+                            <constraint firstItem="rpT-F2-zjO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ybu-Ba-s52"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rpT-F2-zjO" id="mtY-nZ-h6e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="-80"/>
+        </scene>
+        <!--Account Information View Controller-->
+        <scene sceneID="Uta-w5-5bI">
+            <objects>
+                <viewController storyboardIdentifier="AccountInformation" id="ZTy-Cg-3hO" customClass="AccountInformationViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emh-Ge-7DP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="uGj-kQ-WH0">
+                                <rect key="frame" x="0.0" y="48" width="414" height="798"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qrm-sg-XPV">
+                                        <rect key="frame" x="16" y="16" width="382" height="194"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="1000" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-Z8-7XP" customClass="ValidatableTextField" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="1000" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Lrh-gJ-y8e" customClass="ValidatableTextField" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="66" width="382" height="128"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-JD-ZOA">
+                                        <rect key="frame" x="16" y="242" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="EfT-11-fLN"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="deleteAccountButtonTapped" destination="ZTy-Cg-3hO" eventType="touchUpInside" id="UVI-jh-Gmu"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUp-ht-hpJ">
+                                        <rect key="frame" x="16" y="318" width="382" height="388"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gau-d5-nGf">
+                                        <rect key="frame" x="16" y="738" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="9t3-6g-HEe"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped" destination="ZTy-Cg-3hO" eventType="touchUpInside" id="MXQ-GU-GuW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t6B-Do-Bwr"/>
+                        <color key="backgroundColor" name="armonyBlack"/>
+                        <constraints>
+                            <constraint firstItem="t6B-Do-Bwr" firstAttribute="trailing" secondItem="uGj-kQ-WH0" secondAttribute="trailing" id="ck8-4a-ux6"/>
+                            <constraint firstItem="uGj-kQ-WH0" firstAttribute="leading" secondItem="t6B-Do-Bwr" secondAttribute="leading" id="ezo-ov-HTF"/>
+                            <constraint firstItem="uGj-kQ-WH0" firstAttribute="top" secondItem="t6B-Do-Bwr" secondAttribute="top" id="mYL-0J-lvw"/>
+                            <constraint firstItem="t6B-Do-Bwr" firstAttribute="bottom" secondItem="uGj-kQ-WH0" secondAttribute="bottom" constant="16" id="yVc-D3-B4C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerStackView" destination="uGj-kQ-WH0" id="3W9-Lo-TrB"/>
+                        <outlet property="deleteAccountButton" destination="dyM-JD-ZOA" id="rKl-Vq-ifH"/>
+                        <outlet property="emailTextField" destination="Lrh-gJ-y8e" id="5Yd-Ns-xel"/>
+                        <outlet property="nameTextField" destination="Sap-Z8-7XP" id="Agj-92-ZXW"/>
+                        <outlet property="saveButton" destination="Gau-d5-nGf" id="F51-vD-yWG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dX-qW-R2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="712"/>
+        </scene>
+        <!--Log Out Bottom Pop Up View Controller-->
+        <scene sceneID="JbX-bE-sJ7">
+            <objects>
+                <viewController storyboardIdentifier="LogOutBottomPopUp" id="Lhq-kP-5wG" customClass="LogOutBottomPopUpViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGw-4B-U4o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-k0-7cT" customClass="NotchView" customModule="Armony" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="48" width="414" height="28"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="N9t-VX-rYe">
+                                <rect key="frame" x="16" y="112" width="382" height="169"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Nx-rY-FeO">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="49"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t61-vh-I9E">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufw-2P-hNL">
+                                                <rect key="frame" x="0.0" y="28.5" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h7a-2L-usL">
+                                        <rect key="frame" x="0.0" y="73" width="382" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUM-q1-xma">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="h6i-mH-qDT"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Çıkış Yap"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="logOutTapped" destination="Lhq-kP-5wG" eventType="touchUpInside" id="HgJ-QD-jMf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJs-a5-ycy">
+                                                <rect key="frame" x="0.0" y="52" width="382" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="URF-HS-qnh"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="cancelTapped" destination="Lhq-kP-5wG" eventType="touchUpInside" id="WGY-uy-zel"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D15-aG-do9"/>
+                        <color key="backgroundColor" name="armonyDarkBlue"/>
+                        <constraints>
+                            <constraint firstItem="lv1-k0-7cT" firstAttribute="top" secondItem="D15-aG-do9" secondAttribute="top" id="6lb-mM-La2"/>
+                            <constraint firstItem="N9t-VX-rYe" firstAttribute="leading" secondItem="D15-aG-do9" secondAttribute="leading" constant="16" id="DBe-PE-fSM"/>
+                            <constraint firstItem="D15-aG-do9" firstAttribute="trailing" secondItem="lv1-k0-7cT" secondAttribute="trailing" id="iK9-K9-eol"/>
+                            <constraint firstItem="N9t-VX-rYe" firstAttribute="top" secondItem="lv1-k0-7cT" secondAttribute="bottom" constant="36" id="icf-An-9XO"/>
+                            <constraint firstItem="lv1-k0-7cT" firstAttribute="leading" secondItem="D15-aG-do9" secondAttribute="leading" id="kgy-PI-PzD"/>
+                            <constraint firstItem="D15-aG-do9" firstAttribute="trailing" secondItem="N9t-VX-rYe" secondAttribute="trailing" constant="16" id="r5X-It-YQW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="BJs-a5-ycy" id="v5m-Qk-IB0"/>
+                        <outlet property="logOutButton" destination="kUM-q1-xma" id="gXX-Ao-Rlq"/>
+                        <outlet property="subtitleLabel" destination="ufw-2P-hNL" id="IFD-sz-Oau"/>
+                        <outlet property="titleLabel" destination="t61-vh-I9E" id="o5r-J1-jTB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSg-hx-7J7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="712"/>
+        </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="8jH-1R-HTL">
+            <objects>
+                <viewController storyboardIdentifier="Feedback" id="jrS-Um-TzL" customClass="FeedbackViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j4L-YV-IE1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-fh-cpX">
+                                <rect key="frame" x="16" y="64" width="382" height="340"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gke-28-RzD">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="272"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="iiA-Ix-oaG" customClass="ValidatableDropdownView" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="128"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="6AB-F4-L6F" customClass="ValidatableTextView" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="144" width="382" height="128"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqO-Jm-waV">
+                                        <rect key="frame" x="0.0" y="296" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="wUf-fu-vpi"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="sendButtonDidTap" destination="jrS-Um-TzL" eventType="touchUpInside" id="5lE-hm-mbZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="21O-MQ-YKJ"/>
+                        <color key="backgroundColor" name="armonyBlack"/>
+                        <constraints>
+                            <constraint firstItem="21O-MQ-YKJ" firstAttribute="trailing" secondItem="WLb-fh-cpX" secondAttribute="trailing" constant="16" id="54Y-gH-uE8"/>
+                            <constraint firstItem="WLb-fh-cpX" firstAttribute="leading" secondItem="21O-MQ-YKJ" secondAttribute="leading" constant="16" id="5Xy-jV-KoM"/>
+                            <constraint firstItem="WLb-fh-cpX" firstAttribute="top" secondItem="21O-MQ-YKJ" secondAttribute="top" constant="16" id="yvT-aN-KKM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailSubjectTextView" destination="6AB-F4-L6F" id="WjQ-vt-6av"/>
+                        <outlet property="sendButton" destination="eqO-Jm-waV" id="CXP-Ar-8hW"/>
+                        <outlet property="subjectDropdownView" destination="iiA-Ix-oaG" id="Sow-t7-Ksv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5N-iy-ssI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="712"/>
+        </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="9vb-vL-UbY">
+            <objects>
+                <viewController storyboardIdentifier="ChangePassword" id="j5Q-Fb-GYG" customClass="ChangePasswordViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EdK-G9-n5f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xer-4Y-5Xp">
+                                <rect key="frame" x="16" y="64" width="382" height="348"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jah-LQ-pkH">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="272"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="ldY-R0-fYM" customClass="ValidatableTextField" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="128"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-hF-0hI" customClass="ValidatableTextField" customModule="Armony" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="144" width="382" height="128"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-nu-rIM">
+                                        <rect key="frame" x="0.0" y="304" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="drT-jb-thf"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped" destination="j5Q-Fb-GYG" eventType="touchUpInside" id="syq-Hg-CfZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aFl-NG-5C4"/>
+                        <color key="backgroundColor" name="armonyBlack"/>
+                        <constraints>
+                            <constraint firstItem="aFl-NG-5C4" firstAttribute="trailing" secondItem="xer-4Y-5Xp" secondAttribute="trailing" constant="16" id="GQM-a6-Og3"/>
+                            <constraint firstItem="xer-4Y-5Xp" firstAttribute="leading" secondItem="aFl-NG-5C4" secondAttribute="leading" constant="16" id="ZRT-QF-8l0"/>
+                            <constraint firstItem="xer-4Y-5Xp" firstAttribute="top" secondItem="aFl-NG-5C4" secondAttribute="top" constant="16" id="dzg-xQ-K5J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentPasswordTextField" destination="ldY-R0-fYM" id="F4N-Fn-DIZ"/>
+                        <outlet property="newPasswordTextField" destination="EfG-hF-0hI" id="IE6-HR-oVr"/>
+                        <outlet property="saveButton" destination="Yl6-nu-rIM" id="Alt-a0-mw9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUG-Rb-Kvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="712"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="EfG-hF-0hI">
+            <size key="intrinsicContentSize" width="414" height="128"/>
+        </designable>
+        <designable name="Lrh-gJ-y8e">
+            <size key="intrinsicContentSize" width="414" height="128"/>
+        </designable>
+        <designable name="Sap-Z8-7XP">
+            <size key="intrinsicContentSize" width="414" height="50"/>
+        </designable>
+        <designable name="ldY-R0-fYM">
+            <size key="intrinsicContentSize" width="414" height="128"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="armonyBlack">
+            <color red="0.054901960784313725" green="0.0039215686274509803" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="armonyDarkBlue">
+            <color red="0.090196078431372548" green="0.12941176470588237" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Place Advert View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PlaceAdvert" id="Y6W-OH-hqX" customClass="PlaceAdvertViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buE-0I-vE7" customClass="GradientView" customModule="Armony" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="122.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İlanını yayınla ve müzik ağını geliştir" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmR-0C-hAO">
+                                        <rect key="frame" x="16" y="70" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="armonyWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xmR-0C-hAO" firstAttribute="leading" secondItem="buE-0I-vE7" secondAttribute="leading" constant="16" id="4Y9-vM-eQB"/>
+                                    <constraint firstItem="xmR-0C-hAO" firstAttribute="top" secondItem="buE-0I-vE7" secondAttribute="top" constant="70" id="8mq-A4-XOA"/>
+                                    <constraint firstAttribute="bottom" secondItem="xmR-0C-hAO" secondAttribute="bottom" constant="32" id="iU4-nV-b0e"/>
+                                    <constraint firstAttribute="trailing" secondItem="xmR-0C-hAO" secondAttribute="trailing" constant="16" id="ioF-FS-4Yp"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sY-7p-SNN">
+                                <rect key="frame" x="0.0" y="122.5" width="414" height="671.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Yma-ju-w5B">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="498.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İlan Oluştur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYx-kS-8ZF">
+                                                <rect key="frame" x="16" y="24" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="armonyWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-1j-duG">
+                                                <rect key="frame" x="16" y="68.5" width="382" height="414"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="qDC-TM-ZLy" customClass="ValidatableDropdownView" customModule="Armony" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qaB-Ti-J98">
+                                                        <rect key="frame" x="0.0" y="66" width="382" height="348"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="NZq-ae-sIh" customClass="ValidatableDropdownView" customModule="Armony" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="bKy-Hk-Ag2" customClass="ValidatableDropdownView" customModule="Armony" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="66" width="382" height="50"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="KRl-Ea-o1c" customClass="ValidatableDropdownView" customModule="Armony" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="132" width="382" height="50"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="150" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-Lw-Jc9" customClass="TextView" customModule="Armony" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="198" width="382" height="150"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="24" left="16" bottom="16" right="16"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Yma-ju-w5B" firstAttribute="leading" secondItem="8sY-7p-SNN" secondAttribute="leading" id="3ns-iR-AJ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yma-ju-w5B" secondAttribute="trailing" id="cJr-pE-UHA"/>
+                                    <constraint firstItem="Yma-ju-w5B" firstAttribute="top" secondItem="8sY-7p-SNN" secondAttribute="top" id="fGF-fP-K2r"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yma-ju-w5B" secondAttribute="bottom" id="kcA-Dd-DJo"/>
+                                    <constraint firstItem="Yma-ju-w5B" firstAttribute="width" secondItem="8sY-7p-SNN" secondAttribute="width" id="zrt-6v-uwH"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-RS-DE3">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <color key="backgroundColor" name="armonyPurple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YDI-eh-KtD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Yayina Al">
+                                    <color key="titleColor" name="armonyWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fmg-RS-DE3" firstAttribute="top" secondItem="8sY-7p-SNN" secondAttribute="bottom" constant="8" id="E94-Dg-frZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="buE-0I-vE7" secondAttribute="trailing" id="Ewm-Dg-QCs"/>
+                            <constraint firstItem="buE-0I-vE7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="J8X-ZK-k3e"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Fmg-RS-DE3" secondAttribute="bottom" constant="16" id="KWa-AO-Mqe"/>
+                            <constraint firstItem="buE-0I-vE7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Oh4-yV-J3X"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8sY-7p-SNN" secondAttribute="trailing" id="TP7-Jx-mm6"/>
+                            <constraint firstItem="8sY-7p-SNN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="adC-ww-IyU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fmg-RS-DE3" secondAttribute="trailing" constant="16" id="iBW-e0-G5s"/>
+                            <constraint firstItem="Fmg-RS-DE3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xUn-4E-O7p"/>
+                            <constraint firstItem="8sY-7p-SNN" firstAttribute="top" secondItem="buE-0I-vE7" secondAttribute="bottom" id="yAr-VQ-f3e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="advertTypesDropdownView" destination="qDC-TM-ZLy" id="xMQ-dZ-iEY"/>
+                        <outlet property="descriptionTextView" destination="uSN-Lw-Jc9" id="ahp-ZE-dh7"/>
+                        <outlet property="headerGradientView" destination="buE-0I-vE7" id="wOV-1L-CCY"/>
+                        <outlet property="informationsStackView" destination="qaB-Ti-J98" id="Hps-lf-w6w"/>
+                        <outlet property="locationDropdownView" destination="KRl-Ea-o1c" id="hhx-dk-X0T"/>
+                        <outlet property="musicGenresDropdownView" destination="NZq-ae-sIh" id="kvn-52-j0o"/>
+                        <outlet property="navigationSubtitleLabel" destination="xmR-0C-hAO" id="ZBy-A2-tb0"/>
+                        <outlet property="skillsDropdownView" destination="bKy-Hk-Ag2" id="yHo-bq-xFc"/>
+                        <outlet property="submitButton" destination="Fmg-RS-DE3" id="GSi-Ts-nFQ"/>
+                        <outlet property="titleLabel" destination="cYx-kS-8ZF" id="btS-tG-1ab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="armonyPurple">
+            <color red="0.4823529411764706" green="0.38039215686274508" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="armonyWhite">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

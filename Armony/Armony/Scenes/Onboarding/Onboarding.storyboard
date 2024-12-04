@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Onboarding" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Armony" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-icon-with-title" translatesAutoresizingMaskIntoConstraints="NO" id="gAq-Sw-hdm">
+                                <rect key="frame" x="159" y="64" width="96" height="68"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nfh-Ye-Eh2">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="54e-QL-wsR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Ng-uv-Uv0">
+                                <rect key="frame" x="149" y="688" width="116.5" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="XQk-C2-Aro"/>
+                                </constraints>
+                            </pageControl>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zHF-Ek-FmM">
+                                <rect key="frame" x="160.5" y="728" width="93" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EY-ij-E9Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="pjd-rr-BUK"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Giriş Yap" image="onboarding-registration-right-arrow-icon"/>
+                                        <connections>
+                                            <action selector="registerButtonDidTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0ty-Jq-tV0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-Xn-93E">
+                                        <rect key="frame" x="0.0" y="48" width="93" height="22"/>
+                                        <inset key="imageEdgeInsets" minX="14" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Anasayfa" image="onboarding-home-icon"/>
+                                        <connections>
+                                            <action selector="homePageButtonDidTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="J1t-jB-1RL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="armonyBlack"/>
+                        <constraints>
+                            <constraint firstItem="3Ng-uv-Uv0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3ED-L7-Eh5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nfh-Ye-Eh2" secondAttribute="trailing" id="NRq-W6-59s"/>
+                            <constraint firstItem="nfh-Ye-Eh2" firstAttribute="top" secondItem="gAq-Sw-hdm" secondAttribute="bottom" constant="16" id="SmD-WV-jfG"/>
+                            <constraint firstItem="gAq-Sw-hdm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VtI-c4-Vbc"/>
+                            <constraint firstItem="gAq-Sw-hdm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="dnk-jE-6hK"/>
+                            <constraint firstItem="zHF-Ek-FmM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fLa-yL-RRb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zHF-Ek-FmM" secondAttribute="bottom" constant="64" id="ll4-Sy-1gg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nfh-Ye-Eh2" secondAttribute="bottom" id="q9b-7P-Hcv"/>
+                            <constraint firstItem="zHF-Ek-FmM" firstAttribute="top" secondItem="3Ng-uv-Uv0" secondAttribute="bottom" constant="32" id="rar-1w-Tgx"/>
+                            <constraint firstItem="nfh-Ye-Eh2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ytZ-fX-y3J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButtonsContainerView" destination="zHF-Ek-FmM" id="Bma-VA-U7r"/>
+                        <outlet property="collectionView" destination="nfh-Ye-Eh2" id="MfJ-vo-awa"/>
+                        <outlet property="flowLayout" destination="54e-QL-wsR" id="i7E-ok-eOk"/>
+                        <outlet property="homePageButton" destination="AHl-Xn-93E" id="rhZ-lr-coL"/>
+                        <outlet property="pageControl" destination="3Ng-uv-Uv0" id="xAR-0o-xsu"/>
+                        <outlet property="registerButton" destination="8EY-ij-E9Z" id="6aZ-6J-D76"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-icon-with-title" width="96" height="68"/>
+        <image name="onboarding-home-icon" width="22" height="22"/>
+        <image name="onboarding-registration-right-arrow-icon" width="32" height="32"/>
+        <namedColor name="armonyBlack">
+            <color red="0.054901960784313725" green="0.0039215686274509803" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

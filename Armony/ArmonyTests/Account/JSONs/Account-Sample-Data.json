@@ -1,0 +1,47 @@
+{
+    "data": {
+        "id": "kfWMkZOdlCUvboGWwsrfPoteaM63",
+        "name": "Koray Yildiz",
+        "bio": null,
+        "city": {
+            "id": 1,
+            "name": "Adana"
+        },
+        "photoUrl": "https://firebasestorage.googleapis.com/v0/b/armony-stg.appspot.com/o/users%2FkfWMkZOdlCUvboGWwsrfPoteaM63%2Fimages%2Favatar.jpg?alt=media",
+        "title": {
+            "id": 1,
+            "name": "Söz Yazarı"
+        },
+        "genres": [
+            {
+                "id": 1,
+                "name": "Acoustic"
+            },
+            {
+                "id": 2,
+                "name": "Afrobeat"
+            },
+            {
+                "id": 3,
+                "name": "Anatolian"
+            }
+        ],
+        "skills": [
+            {
+                "id": 1,
+                "name": "Akordeon",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/armony-stg.appspot.com/o/skills%2Faccordion.png?alt=media"
+            },
+            {
+                "id": 2,
+                "name": "Davul",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/armony-stg.appspot.com/o/skills%2Fdrum.png?alt=media"
+            },
+            {
+                "id": 3,
+                "name": "DJ",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/armony-stg.appspot.com/o/skills%2Fdj.png?alt=media"
+            }
+        ]
+    }
+}

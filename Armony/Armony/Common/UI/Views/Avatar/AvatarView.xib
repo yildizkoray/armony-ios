@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AvatarView" customModule="Armony" customModuleProvider="target">
+            <connections>
+                <outlet property="borderImageViewWidthConstraint" destination="kQL-rh-bTt" id="h4a-J3-XcI"/>
+                <outlet property="imageView" destination="RdO-0M-jND" id="s5Q-9M-Z4H"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RdO-0M-jND">
+                    <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="RdO-0M-jND" secondAttribute="height" multiplier="1:1" id="Dpf-nz-OUA"/>
+                        <constraint firstAttribute="width" constant="72" id="kQL-rh-bTt"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RdO-0M-jND" secondAttribute="bottom" id="HXL-XR-dSh"/>
+                <constraint firstAttribute="trailing" secondItem="RdO-0M-jND" secondAttribute="trailing" id="IlL-am-hrW"/>
+                <constraint firstItem="RdO-0M-jND" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ssT-0W-Tci"/>
+                <constraint firstItem="RdO-0M-jND" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vPw-Wj-nbB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="189.85507246376812" y="3.0133928571428572"/>
+        </view>
+    </objects>
+</document>

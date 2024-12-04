@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AdvertCell" customModule="Armony" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="817" height="621"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="817" height="621"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9r9-bW-Jdm">
+                        <rect key="frame" x="16" y="0.0" width="785" height="621"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugg-pK-yMG" customClass="CardView" customModule="Armony" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="785" height="621"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ugg-pK-yMG" secondAttribute="bottom" id="4pC-yE-jHJ"/>
+                            <constraint firstItem="ugg-pK-yMG" firstAttribute="top" secondItem="9r9-bW-Jdm" secondAttribute="top" id="PDg-8P-CCI"/>
+                            <constraint firstItem="ugg-pK-yMG" firstAttribute="leading" secondItem="9r9-bW-Jdm" secondAttribute="leading" id="Qki-h4-GMj"/>
+                            <constraint firstAttribute="trailing" secondItem="ugg-pK-yMG" secondAttribute="trailing" id="fSj-16-AdZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="9r9-bW-Jdm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FYT-U4-Rur"/>
+                <constraint firstAttribute="trailing" secondItem="9r9-bW-Jdm" secondAttribute="trailing" constant="16" id="OdY-Xg-pDF"/>
+                <constraint firstItem="9r9-bW-Jdm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="S5Z-9o-baw"/>
+                <constraint firstAttribute="bottom" secondItem="9r9-bW-Jdm" secondAttribute="bottom" id="ql0-W1-KcT"/>
+            </constraints>
+            <size key="customSize" width="817" height="621"/>
+            <connections>
+                <outlet property="cardView" destination="ugg-pK-yMG" id="vjz-cH-MRK"/>
+            </connections>
+            <point key="canvasLocation" x="83" y="-43"/>
+        </collectionViewCell>
+    </objects>
+</document>

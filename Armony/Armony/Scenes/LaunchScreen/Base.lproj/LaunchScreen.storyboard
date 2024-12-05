@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="m3e-3a-5Z2">
-                                <rect key="frame" x="161" y="376.5" width="92" height="143"/>
+                                <rect key="frame" x="161" y="385" width="92" height="126"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L2r-6x-saj">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="82"/>
@@ -31,8 +31,8 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-5O-kJ9">
-                                        <rect key="frame" x="27.5" y="106" width="37" height="37"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-5O-kJ9">
+                                        <rect key="frame" x="36" y="106" width="20" height="20"/>
                                         <color key="color" name="armonyWhite"/>
                                     </activityIndicatorView>
                                 </subviews>

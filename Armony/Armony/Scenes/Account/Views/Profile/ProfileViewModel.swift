@@ -232,7 +232,7 @@ extension ProfileViewModel: ViewModelLifeCycle {
         view?.configureUI()
 
         let avatarPresentation = AvatarPresentation(
-            kind: .custom(.init(size: .custom(72), radius: .medium)),
+            kind: .custom(.init(size: .medium, radius: .medium)),
             source: .url(presentation.avatarURLString?.url)
         )
         view?.configureAvatarView(with: avatarPresentation)

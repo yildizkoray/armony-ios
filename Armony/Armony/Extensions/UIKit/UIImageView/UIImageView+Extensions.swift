@@ -30,7 +30,7 @@ public extension UIImageView {
         }
     }
 
-    func setImage(source: ImageSource, completion: Callback<UIImage?>? = nil ) {
+    func setImage(source: ImageSource, completion: Callback<UIImage?>? = nil) {
         switch source {
         case .static(let image):
             self.image = image

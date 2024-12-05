@@ -9,9 +9,13 @@ Armony is a platform designed for musicians and those involved in the music indu
 <br/><br/>
 
 <p align="center">
-<img src="/screenshots/Home.png" width="300"/>
+<img src="/screenshots/home.png" width="300"/>
 <img src="/screenshots/LiveChat.png" width="300"/>
 <img src="/screenshots/Profile.png" width="300"/>
+<img src="/screenshots/adp.png" width="300"/>
+<img src="/screenshots/profile-edit.png" width="300"/>
+<img src="/screenshots/onboarding.png" width="300"/>
+<img src="/screenshots/registration.png" width="300"/>
 </p>
 
 ## Project Tech Stack

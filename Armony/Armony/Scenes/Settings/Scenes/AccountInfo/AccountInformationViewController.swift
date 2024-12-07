@@ -55,14 +55,14 @@ final class AccountInformationViewController: UIViewController, ViewController {
 
     //    MARK: - Configuration TextFields
     private func configureNameTextField() {
-        nameTextField.placeholder = "İsim Soyisim" // TODO: - Localizable
+        nameTextField.placeholder = String("FullName", table: .common)
 
         nameTextField.autocapitalizationType = .words
         nameTextField.autocorrectionType = .no
 
         nameTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 3, max: 40, error: "En az 3 en fazla 40 karakter giriniz")
+                Validation.Rule.Length(min: 3, max: 40, error: "Common.Validation.Name.Error")
             ]
         )
 
@@ -75,7 +75,7 @@ final class AccountInformationViewController: UIViewController, ViewController {
     private func configureEmailTextField() {
         emailTextField.textColor = .armonyWhiteMedium
 
-        emailTextField.placeholder = "E-posta" // TODO: - Localizable
+        emailTextField.placeholder = "E-mail"
         emailTextField.isUserInteractionEnabled = false
     }
 
@@ -90,7 +90,7 @@ final class AccountInformationViewController: UIViewController, ViewController {
     }
 
     private func configureDeleteAccountButton() {
-        deleteAccountButton.setTitle("Hesabımı Sil", for: .normal)
+        deleteAccountButton.setTitle(String("DeleteAccount", table: .account), for: .normal)
         deleteAccountButton.setTitleColor(.armonyWhite, for: .normal)
         deleteAccountButton.titleLabel?.font = .lightBody
         deleteAccountButton.isEnabled = true
@@ -107,7 +107,7 @@ extension AccountInformationViewController: AccountInformationViewDelegate {
 
     func configureUI() {
         view.backgroundColor = .armonyBlack
-        title = "Hesap Bilgileri"
+        title = String("AccountInformation.Title", table: .account)
 
         configureNameTextField()
         configureEmailTextField()

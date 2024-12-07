@@ -86,7 +86,7 @@ final class LoginViewController: UIViewController, ViewController {
     }
 
     private func configureEmailAndPasswordTextFields() {
-        emailTextField.placeholder = "E-posta".needLocalization
+        emailTextField.placeholder = "E-mail"
         emailTextField.autocapitalizationType = .none
         emailTextField.autocorrectionType = .no
         emailTextField.keyboardType = .emailAddress
@@ -97,7 +97,7 @@ final class LoginViewController: UIViewController, ViewController {
             ]
         )
 
-        passwordTextField.placeholder = "Şifre".needLocalization
+        passwordTextField.placeholder = String("Password", table: .common)
 
         passwordTextField.autocapitalizationType = .none
         passwordTextField.autocorrectionType = .no
@@ -108,7 +108,7 @@ final class LoginViewController: UIViewController, ViewController {
 
         passwordTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 6, max: 300, error: "Şifreniz minimum 6 karakter olmalı")
+                Validation.Rule.Length(min: 6, max: 300, error: String("Common.Validation.Password.Error", table: .common))
             ]
         )
     }
@@ -128,18 +128,21 @@ extension LoginViewController: LoginViewDelegate {
         titleLabel.textColor = .armonyWhite
         titleLabel.font = .semiboldTitle
 
-        forgetPasswordButton.setTitle("Şifremi unuttum".needLocalization, for: .normal)
+        forgetPasswordButton.setTitle(String("ForgetPassword", table: .common),
+                                      for: .normal)
         forgetPasswordButton.setTitleColor(.armonyWhite, for: .normal)
         forgetPasswordButton.titleLabel?.font = .lightBody
 
-        loginButton.setTitle("Giriş Yap".needLocalization, for: .normal)
+        loginButton.setTitle(String("SignIn", table: .common),
+                             for: .normal)
         loginButton.isEnabled = false
         loginButton.backgroundColor = .armonyPurpleLow
         loginButton.setTitleColor(.armonyWhite, for: .normal)
         loginButton.setTitleColor(.armonyWhiteMedium, for: .disabled)
         loginButton.titleLabel?.font = .semiboldHeading
 
-        signupButton.setTitle("Üyelik Oluştur".needLocalization, for: .normal)
+        signupButton.setTitle(String("SignUp", table: .common),
+                              for: .normal)
         signupButton.titleLabel?.font = .lightBody
         signupButton.setTitleColor(.armonyWhite, for: .normal)
 

@@ -94,7 +94,7 @@ final class RegistrationViewController: UIViewController, ViewController {
 
 //    MARK: - Configuration TextFields
     private func configureNameTextField() {
-        nameTextField.placeholder = "İsim Soyisim" // TODO: - Localizable
+        nameTextField.placeholder = String("FullName", table: .common)
 
         nameTextField.autocapitalizationType = .words
         nameTextField.autocorrectionType = .no
@@ -105,18 +105,18 @@ final class RegistrationViewController: UIViewController, ViewController {
             ]
         )
 
-        okayButton.setTitle("Üye Ol".needLocalization, for: .normal)
+        okayButton.setTitle(String("SignUp", table: .common), for: .normal)
         okayButton.setTitleColor(.armonyWhite, for: .normal)
         okayButton.setTitleColor(.armonyWhite.withAlphaComponent(AppTheme.Alpha.medium.rawValue), for: .disabled)
         okayButton.titleLabel?.font = .semiboldHeading
 
-        goLoginButton.setTitle("Zaten Üyeliğim Var".needLocalization, for: .normal)
+        goLoginButton.setTitle(String("AlreadyHaveAccount", table: .common), for: .normal)
         goLoginButton.titleLabel?.font = .lightBody
         goLoginButton.setTitleColor(.armonyWhite, for: .normal)
     }
 
     private func configureEmailTextField() {
-        emailTextField.placeholder = "E-posta".needLocalization
+        emailTextField.placeholder = "E-mail"
         emailTextField.autocapitalizationType = .none
         emailTextField.autocorrectionType = .no
         emailTextField.keyboardType = .emailAddress
@@ -129,7 +129,7 @@ final class RegistrationViewController: UIViewController, ViewController {
     }
 
     private func configurePasswordTextField() {
-        passwordTextField.placeholder = "Şifre".needLocalization
+        passwordTextField.placeholder = String("Password", table: .common)
 
         passwordTextField.autocapitalizationType = .none
         passwordTextField.autocorrectionType = .no
@@ -140,7 +140,7 @@ final class RegistrationViewController: UIViewController, ViewController {
 
         passwordTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 6, max: 300, error: "Şifreniz minimum 6 karakter olmalı")
+                Validation.Rule.Length(min: 6, max: 300, error: String("Common.Password.Validation.Error", table: .common))
             ]
         )
     }
@@ -162,10 +162,10 @@ final class RegistrationViewController: UIViewController, ViewController {
     }
 
     fileprivate func configureTermsAndConditionLabel() {
-        let termsAndCondition = "Hizmet Şartları"
-        let cookie = "Çerez Kullanımı"
-        let nondisclosureAgreement = "Gizlilik Sözleşmesi"
-        let fullText = "Kaydolduğunda Hizmet Şartları'nı ve Çerez Kullanımı dahil olmak üzere Gizlilik Sözleşmesi'ni kabul etmiş olursun."
+        let termsAndCondition = "Hizmet Şartları".needLocalization
+        let cookie = "Çerez Kullanımı".needLocalization
+        let nondisclosureAgreement = "Gizlilik Sözleşmesi".needLocalization
+        let fullText = "Kaydolduğunda Hizmet Şartları'nı ve Çerez Kullanımı dahil olmak üzere Gizlilik Sözleşmesi'ni kabul etmiş olursun.".needLocalization
 
         let termsAndConditionLink = LabelLink(title: termsAndCondition, color: .armonyBlue, font: .semiboldBody)
         let cookieLink = LabelLink(title: cookie, color: .armonyBlue, font: .semiboldBody)

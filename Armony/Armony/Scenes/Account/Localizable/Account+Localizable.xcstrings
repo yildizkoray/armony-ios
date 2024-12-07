@@ -1,6 +1,74 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "AccountInformation.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account Settings"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap Bilgileri"
+          }
+        }
+      }
+    },
+    "AccountInformation.Update.Succes.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account information has been updated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap bilgilerin güncellendi"
+          }
+        }
+      }
+    },
+    "ChangePassword.Success.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password has been updated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifren güncellendi"
+          }
+        }
+      }
+    },
+    "DeleteAccount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete account"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabımı Sil"
+          }
+        }
+      }
+    },
     "Edit.Profile" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -86,23 +154,6 @@
         }
       }
     },
-    "My.Performances" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "My Performances"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Performanslarım"
-          }
-        }
-      }
-    },
     "MyPerformances.AddVideo.Error.Message" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -116,6 +167,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yüklemek istediğiniz link YouTube içeriği değildi. Lütfen linki kontrol ediniz."
+          }
+        }
+      }
+    },
+    "MyPerformances.Alert.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can add YouTube link here"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "YouTube video linkini buradan ekleyebilirsin"
           }
         }
       }
@@ -148,7 +216,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "YouTube videolarını ekleyerek performanslarını sergileyebilirsin"
           }
         }
@@ -252,6 +320,65 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yayınladığın ilanlarını bu alanda yönetebilirsin"
+          }
+        }
+      }
+    },
+    "VisitedAccount.Ads" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adverts"
+          }
+        }
+      }
+    },
+    "VisitedAccount.Medias.EmptyState.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No performances available"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Henüz Performans Eklenmedi"
+          }
+        }
+      }
+    },
+    "VisitedAccount.Musical.Profile" : {
+      "extractionState" : "manual"
+    },
+    "VisitedAccount.MusicalProfile.EmptyState.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile has not been completed"
+          }
+        }
+      }
+    },
+    "VisitedAccount.Performances" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performances"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Performanslarım"
           }
         }
       }

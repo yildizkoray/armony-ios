@@ -53,7 +53,7 @@ final class VisitedAccountMediasViewController: UIViewController, ViewController
 
     private func toggleEmptyState() {
         if viewModel.presentation.medias.isEmpty {
-            let noContent = EmptyStatePresentation(title: "Henüz Performans Eklenmedi")
+            let noContent = EmptyStatePresentation(title: String("VisitedAccount.Medias.EmptyState.Title", table: .account))
             showEmptyStateView(with: noContent)
         }
         else {

@@ -41,10 +41,9 @@ extension VisitedAccountMusicalProfileViewModel: ViewModelLifeCycle {
 // MARK: - EmptyStatePresentation
 private extension EmptyStatePresentation {
     static var noContent: EmptyStatePresentation = {
-        let title = "Henüz Profil Tamamlanmamış".needLocalization
-        let subtitle = "Bu kullanıcı henüz müzik tarzı veya çaldığı enstrümanları eklememiş.".needLocalization
+        let title = String("VisitedAccount.MusicalProfile.EmptyState.Title", table: .account)
 
-        let presentation = EmptyStatePresentation(title: title, subtitle: subtitle)
+        let presentation = EmptyStatePresentation(title: title)
         return presentation
     }()
 }

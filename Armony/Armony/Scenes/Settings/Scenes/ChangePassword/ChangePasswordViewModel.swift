@@ -36,7 +36,9 @@ final class ChangePasswordViewModel: ViewModel {
                     view?.stopSaveButtonActivityIndicatorView()
                 }
 
-                await AlertService.show(message: "Şifren güncellendi".needLocalization, actions: [.okay(action: { [weak self] in
+                let message = String("ChangePassword.Success.Message", table: .account)
+                await AlertService.show(message: message,
+                                        actions: [.okay(action: { [weak self] in
                     self?.coordinator.pop()
                 })])
             }

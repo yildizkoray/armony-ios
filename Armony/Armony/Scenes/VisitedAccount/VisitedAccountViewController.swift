@@ -24,7 +24,11 @@ final class VisitedAccountViewController: UIViewController, ViewController {
 
     private weak var pager: PageViewController!
 
-    private lazy var segmentedControlItems = ["Müzikal Profil", "İlanlar", "Performanslar", ] // TODO: - Localizable
+    private lazy var segmentedControlItems = [
+        String(localized: "Musical.Profile", table: "Account+Localizable"),
+        String(localized: "VisitedAccount.Ads", table: "Account+Localizable"),
+        String(localized: "VisitedAccount.Performances", table: "Account+Localizable")
+    ]
     private lazy var segmentedControlPresentation = SegmentedControlPresentation(items: segmentedControlItems)
 
     var viewModel: VisitedAccountViewModel!

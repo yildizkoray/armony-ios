@@ -125,6 +125,7 @@ extension LoginViewController: LoginViewDelegate {
         view.backgroundColor = .armonyBlack
         navigationBarImageView.setAlpha(.medium)
         gradientView.configure(with: .init(orientation: .vertical, color: .login))
+        titleLabel.text = String("SignIn", table: .common)
         titleLabel.textColor = .armonyWhite
         titleLabel.font = .semiboldTitle
 

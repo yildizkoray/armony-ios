@@ -323,6 +323,23 @@
         }
       }
     },
+    "ForgetPassword.Subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter e-mail addresss"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lütfen e-posta adresinizi girin"
+          }
+        }
+      }
+    },
     "FullName" : {
       "extractionState" : "manual",
       "localizations" : {

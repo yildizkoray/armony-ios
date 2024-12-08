@@ -60,6 +60,8 @@ final class RegistrationViewController: UIViewController, ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
+        
+        titleLabel.text = String("SignUp", table: .common)
 
         view.addTapGestureRecognizer { _ in
             self.view.endEditing(true)

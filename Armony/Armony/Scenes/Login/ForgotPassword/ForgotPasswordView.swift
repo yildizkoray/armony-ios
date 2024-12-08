@@ -62,7 +62,9 @@ public final class ForgotPasswordView: MessageView, NibLoadable {
         configureEmailTextField()
         configureActionButton()
 
+        title.text = String("ForgetPassword", table: .common)
         title.font = .semiboldTitle
+        subtitleLabel.text = String("ForgetPassword.Subtitle", table: .common)
         subtitleLabel.font = .lightBody
 
         validationResponders.didValidate = { [weak self] result in

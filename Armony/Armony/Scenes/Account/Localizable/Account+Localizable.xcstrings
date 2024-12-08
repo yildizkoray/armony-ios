@@ -154,6 +154,9 @@
         }
       }
     },
+    "My.Performances" : {
+
+    },
     "MyPerformances.AddVideo.Error.Message" : {
       "extractionState" : "manual",
       "localizations" : {

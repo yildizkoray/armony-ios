@@ -62,7 +62,7 @@ final class AccountInformationViewController: UIViewController, ViewController {
 
         nameTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 3, max: 40, error: "Common.Validation.Name.Error")
+                Validation.Rule.Length(min: 3, max: 40, error: String("Common.Validation.Name.Error", table: .common))
             ]
         )
 

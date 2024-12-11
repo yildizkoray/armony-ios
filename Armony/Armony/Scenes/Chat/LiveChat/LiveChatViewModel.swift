@@ -242,7 +242,8 @@ extension LiveChatViewModel: ReportSubjectSelectionDelegate {
                     view?.stopRightBarButtonItemActivityIndicatorView()
                 }
 
-                await AlertService.show(message: "Geri bildirimini aldık", actions: [.okay()])
+                await AlertService.show(message: String("Common.Report.Success", table: .common), 
+                                        actions: [.okay()])
             }
             catch let error {
                 safeSync {

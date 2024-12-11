@@ -155,7 +155,20 @@
       }
     },
     "My.Performances" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Performances"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performanslarım"
+          }
+        }
+      }
     },
     "MyPerformances.AddVideo.Error.Message" : {
       "extractionState" : "manual",
@@ -185,7 +198,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "YouTube video linkini buradan ekleyebilirsin"
           }
         }
@@ -236,7 +249,7 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Video ekle"
           }
         }
@@ -335,6 +348,12 @@
             "state" : "translated",
             "value" : "Adverts"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ilanlar"
+          }
         }
       }
     },
@@ -349,14 +368,22 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Henüz Performans Eklenmedi"
           }
         }
       }
     },
     "VisitedAccount.Musical.Profile" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzikal Profil"
+          }
+        }
+      }
     },
     "VisitedAccount.MusicalProfile.EmptyState.Title" : {
       "extractionState" : "manual",
@@ -365,6 +392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profile has not been completed"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil henüz tamamlanmamış"
           }
         }
       }
@@ -380,8 +413,8 @@
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Performanslarım"
+            "state" : "translated",
+            "value" : "Performanslar"
           }
         }
       }

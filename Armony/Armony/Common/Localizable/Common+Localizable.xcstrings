@@ -170,6 +170,23 @@
         }
       }
     },
+    "Common.Report.Success" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We have received your report. Thanks."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geri bildirimini aldık"
+          }
+        }
+      }
+    },
     "Common.Save" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -251,6 +268,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Şifreniz minimum 6 karakter olmalı"
+          }
+        }
+      }
+    },
+    "CookieUsage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cookie Usage"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizlilik Sözleşmesi"
           }
         }
       }
@@ -555,6 +589,23 @@
         }
       }
     },
+    "PrivacyPolicy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizlilik Sözleşmesi"
+          }
+        }
+      }
+    },
     "ProfileType" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -670,6 +721,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Üyelik oluştur"
+          }
+        }
+      }
+    },
+    "TermsAndConditions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms and Conditions of Service"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hizmet Şartları"
+          }
+        }
+      }
+    },
+    "TermsConditionFullText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By signing up, you agree to the Terms and Conditions of Service, Privacy Policy, and Cookie Usage"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydolduğunda Hizmet Şartları'nı ve Çerez Kullanımı dahil olmak üzere Gizlilik Sözleşmesi'ni kabul etmiş olursun"
           }
         }
       }

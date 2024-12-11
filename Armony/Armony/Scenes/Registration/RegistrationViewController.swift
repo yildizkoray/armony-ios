@@ -103,7 +103,7 @@ final class RegistrationViewController: UIViewController, ViewController {
 
         nameTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 3, max: 40, error: "En az 3 en fazla 40 karakter giriniz")
+                Validation.Rule.Length(min: 3, max: 40, error: String("Common.Validation.Name.Error"))
             ]
         )
 
@@ -142,7 +142,7 @@ final class RegistrationViewController: UIViewController, ViewController {
 
         passwordTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 6, max: 300, error: String("Common.Password.Validation.Error", table: .common))
+                Validation.Rule.Length(min: 6, max: 300, error: String("Common.Validation.Password.Error", table: .common))
             ]
         )
     }
@@ -164,10 +164,10 @@ final class RegistrationViewController: UIViewController, ViewController {
     }
 
     fileprivate func configureTermsAndConditionLabel() {
-        let termsAndCondition = "Hizmet Şartları".needLocalization
-        let cookie = "Çerez Kullanımı".needLocalization
-        let nondisclosureAgreement = "Gizlilik Sözleşmesi".needLocalization
-        let fullText = "Kaydolduğunda Hizmet Şartları'nı ve Çerez Kullanımı dahil olmak üzere Gizlilik Sözleşmesi'ni kabul etmiş olursun.".needLocalization
+        let termsAndCondition = String("TermsAndConditions", table: .common)
+        let cookie = String("CookieUsage", table: .common)
+        let nondisclosureAgreement = String("PrivacyPolicy", table: .common)
+        let fullText = String("TermsConditionFullText", table: .common)
 
         let termsAndConditionLink = LabelLink(title: termsAndCondition, color: .armonyBlue, font: .semiboldBody)
         let cookieLink = LabelLink(title: cookie, color: .armonyBlue, font: .semiboldBody)
@@ -183,15 +183,15 @@ final class RegistrationViewController: UIViewController, ViewController {
             switch tappedLink {
             case termsAndConditionLink:
                 let url = "https://armony.app/sartlar-ve-kosullar.html"
-                webCoordinator.start(with: url, title: "Şartlar ve Koşullar")
+                webCoordinator.start(with: url, title: termsAndCondition)
 
             case cookieLink:
                 let url = "https://armony.app/sartlar-ve-kosullar.html"
-                webCoordinator.start(with: url, title: "Şartlar ve Koşullar")
+                webCoordinator.start(with: url, title: termsAndCondition)
 
             case nondisclosureAgreementLink:
                 let url = "https://armony.app/gizlilik-sozlesmesi.html"
-                webCoordinator.start(with: url, title: "Gizlilik Sözleşmesi")
+                webCoordinator.start(with: url, title: nondisclosureAgreement)
 
             default:
                 break

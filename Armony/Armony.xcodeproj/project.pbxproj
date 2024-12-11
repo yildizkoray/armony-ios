@@ -161,6 +161,7 @@
 		02A1DB512809AAB600E5B89E /* ForgotPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A1DB502809AAB600E5B89E /* ForgotPasswordView.xib */; };
 		02A261F12B24D10D004D26A1 /* DeleteAccountFeedbackSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A261F02B24D10D004D26A1 /* DeleteAccountFeedbackSelection.swift */; };
 		02A261F32B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A261F22B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift */; };
+		02A60CE22D0A291300B0FA80 /* Onboarding+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02A60CE12D0A291300B0FA80 /* Onboarding+Localizable.xcstrings */; };
 		02A824842881B202004351D0 /* MockRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A824832881B202004351D0 /* MockRestService.swift */; };
 		02AC514128343DF1004C82E4 /* EmptyStatePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */; };
 		02AC514328343E65004C82E4 /* EmptyStateShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514228343E65004C82E4 /* EmptyStateShowing.swift */; };
@@ -604,6 +605,7 @@
 		02A1DB502809AAB600E5B89E /* ForgotPasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordView.xib; sourceTree = "<group>"; };
 		02A261F02B24D10D004D26A1 /* DeleteAccountFeedbackSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountFeedbackSelection.swift; sourceTree = "<group>"; };
 		02A261F22B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDeleteAccountFeedbackTask.swift; sourceTree = "<group>"; };
+		02A60CE12D0A291300B0FA80 /* Onboarding+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Onboarding+Localizable.xcstrings"; sourceTree = "<group>"; };
 		02A824832881B202004351D0 /* MockRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestService.swift; sourceTree = "<group>"; };
 		02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStatePresentation.swift; sourceTree = "<group>"; };
 		02AC514228343E65004C82E4 /* EmptyStateShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateShowing.swift; sourceTree = "<group>"; };
@@ -1864,6 +1866,7 @@
 				02D90D1028568F09005B5162 /* OnboardingViewController.swift */,
 				0212F8EE2857AF430019A8B4 /* OnboardingViewModel.swift */,
 				02D90D0E28568EB5005B5162 /* Onboarding.storyboard */,
+				02A60CE12D0A291300B0FA80 /* Onboarding+Localizable.xcstrings */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -3338,6 +3341,7 @@
 				02C95390285A81BF00A2B107 /* NotchView.xib in Resources */,
 				0223BAA4282D4C140090314C /* EmptyStateView.xib in Resources */,
 				B1B005DE29D5DA5D0041D61A /* Web.storyboard in Resources */,
+				02A60CE22D0A291300B0FA80 /* Onboarding+Localizable.xcstrings in Resources */,
 				02C4F41F2C8FAC0100D20CAD /* Feedback+Localizable.xcstrings in Resources */,
 				B1FC54742710CAF800E8F4D1 /* SkillsView.xib in Resources */,
 				021CE8752CEDD7E000C53CFE /* Home+Localizable.xcstrings in Resources */,

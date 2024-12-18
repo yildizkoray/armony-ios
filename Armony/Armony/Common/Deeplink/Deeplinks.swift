@@ -21,6 +21,7 @@ public extension Deeplink {
     static let logOut: Deeplink = "/logout"
     static let policy: Deeplink = "/policy"
     static let registration: Deeplink = "/registration"
+    static let regions: Deeplink = "/regions"
     static let settings: Deeplink = "/settings"
     static let visitedAccount: Deeplink = "/visited-account"
     static let web: Deeplink = "/web"

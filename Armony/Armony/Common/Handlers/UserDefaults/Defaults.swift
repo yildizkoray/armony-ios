@@ -24,6 +24,7 @@ final class Defaults: ResetHandling {
         self.configReader = configReader
     }
 
+    /// Bool
     subscript(key: DefaultsKeys) -> Bool {
         get {
             return defaults.bool(forKey: key.key(configurator: configReader))
@@ -32,7 +33,17 @@ final class Defaults: ResetHandling {
             defaults.set(newValue, forKey: key.key(configurator: configReader))
         }
     }
-
+    
+    /// String
+    subscript(key: DefaultsKeys) -> String? {
+        get {
+            return defaults.string(forKey: key.key(configurator: configReader))
+        }
+        set {
+            defaults.set(newValue, forKey: key.key(configurator: configReader))
+        }
+    }
+    
     func reset() {
         allKeys.forEach {
             defaults.removeObject(forKey: $0)

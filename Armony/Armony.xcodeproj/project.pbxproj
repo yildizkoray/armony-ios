@@ -155,6 +155,10 @@
 		0294989728F712800075F36F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294989628F712800075F36F /* Localization.swift */; };
 		0294989928F713100075F36F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294989828F713100075F36F /* Localizable.swift */; };
 		0295882728F45E910009CFFA /* RefreshControlShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295882628F45E910009CFFA /* RefreshControlShowing.swift */; };
+		0297CD132D122E490014D208 /* RegionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297CD122D122E490014D208 /* RegionsView.swift */; };
+		0297CD152D122EC00014D208 /* RegionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297CD142D122EC00014D208 /* RegionsViewModel.swift */; };
+		0297CD172D123AE70014D208 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297CD162D123AE70014D208 /* Region.swift */; };
+		0297CD192D123B0D0014D208 /* RegionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297CD182D123B0D0014D208 /* RegionsCoordinator.swift */; };
 		029C1912291572780087C37F /* PaginatableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C1911291572780087C37F /* PaginatableTask.swift */; };
 		029E5BE5288DB24E0043D327 /* AnySelectionPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029E5BE4288DB24E0043D327 /* AnySelectionPresentation.swift */; };
 		02A1DB4F2809AA3A00E5B89E /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1DB4E2809AA3A00E5B89E /* ForgotPasswordView.swift */; };
@@ -599,6 +603,10 @@
 		0294989628F712800075F36F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		0294989828F713100075F36F /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		0295882628F45E910009CFFA /* RefreshControlShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlShowing.swift; sourceTree = "<group>"; };
+		0297CD122D122E490014D208 /* RegionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsView.swift; sourceTree = "<group>"; };
+		0297CD142D122EC00014D208 /* RegionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsViewModel.swift; sourceTree = "<group>"; };
+		0297CD162D123AE70014D208 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		0297CD182D123B0D0014D208 /* RegionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsCoordinator.swift; sourceTree = "<group>"; };
 		029C1911291572780087C37F /* PaginatableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatableTask.swift; sourceTree = "<group>"; };
 		029E5BE4288DB24E0043D327 /* AnySelectionPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySelectionPresentation.swift; sourceTree = "<group>"; };
 		02A1DB4E2809AA3A00E5B89E /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
@@ -1707,6 +1715,25 @@
 				02587C7A2C86746B0045FF30 /* Common+Localizable.xcstrings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		0297CD112D122E1E0014D208 /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				0297CD1A2D1240910014D208 /* Model */,
+				0297CD122D122E490014D208 /* RegionsView.swift */,
+				0297CD142D122EC00014D208 /* RegionsViewModel.swift */,
+				0297CD182D123B0D0014D208 /* RegionsCoordinator.swift */,
+			);
+			path = Regions;
+			sourceTree = "<group>";
+		};
+		0297CD1A2D1240910014D208 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0297CD162D123AE70014D208 /* Region.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		02A1DB4D2809AA1B00E5B89E /* ForgotPassword */ = {
@@ -3156,6 +3183,7 @@
 				B1A6FB2127A9B46300E1BEA5 /* Registration */,
 				0231101F2841390A00CB2488 /* Settings */,
 				B17DFAB427B67FE100A82C41 /* Splash */,
+				0297CD112D122E1E0014D208 /* Regions */,
 				B10F0AEA294679EA002FD531 /* VisitedAccount */,
 				B1B005DC29D5DA3F0041D61A /* Web */,
 				02C33AD12C9A39D000AB332B /* AdvertListing */,
@@ -3613,6 +3641,7 @@
 				02E443F32C35DCF600AE0A13 /* DefaultRepresentation.swift in Sources */,
 				027E8E182934584B001EFDFA /* Analytic.swift in Sources */,
 				B10CCD792741055000BB313D /* GetAdvertsTask.swift in Sources */,
+				0297CD172D123AE70014D208 /* Region.swift in Sources */,
 				0240C78E292D6C56009A9727 /* MessageSectionHeaderView.swift in Sources */,
 				02CAA4AE284BCEA1004C118D /* ProfileUpdatePutTask.swift in Sources */,
 				026DF39128C2106600B73427 /* URLMatchResult.swift in Sources */,
@@ -3642,6 +3671,7 @@
 				025E0821284649D900063827 /* ProfileCoordinator.swift in Sources */,
 				B13997EC2A62D6E500D948DE /* MessageCountSocketHandler.swift in Sources */,
 				B171155F279F239D00563A42 /* MusicGenresView.swift in Sources */,
+				0297CD152D122EC00014D208 /* RegionsViewModel.swift in Sources */,
 				B1B9F52326E927090036252D /* UICollectionView+Extensions.swift in Sources */,
 				B13997EF2A62D72E00D948DE /* MessageCount.swift in Sources */,
 				0223BAA0282D42EB0090314C /* EmptyStateView.swift in Sources */,
@@ -3655,6 +3685,7 @@
 				02A261F12B24D10D004D26A1 /* DeleteAccountFeedbackSelection.swift in Sources */,
 				026DF38E28C2106600B73427 /* URLNavigator.swift in Sources */,
 				024B0DFB2B2525B600BCCAEB /* DeleteAdvertFeedbackSelection.swift in Sources */,
+				0297CD132D122E490014D208 /* RegionsView.swift in Sources */,
 				0215BAE92AE03B43007BB949 /* VisitedAccountYoutubeMediaCell.swift in Sources */,
 				B1B9F52E26E92E9D0036252D /* AdvertsPresentation.swift in Sources */,
 				B13515E129A6D8A600AF3722 /* Rules.swift in Sources */,
@@ -3686,6 +3717,7 @@
 				B1CF33BB29F0872C00B686A9 /* NSObject+Extensions.swift in Sources */,
 				B177347B26D43F2000BD7D39 /* NibLoadable.swift in Sources */,
 				B1A77A9F26D2C7EE00CE94FA /* Coordinator.swift in Sources */,
+				0297CD192D123B0D0014D208 /* RegionsCoordinator.swift in Sources */,
 				020476EE2B37349500C41C57 /* PlaceAdvertFirebasveEventsHandler.swift in Sources */,
 				024BDA0128ECE37900391AA4 /* PlaceAdvertViewController.swift in Sources */,
 				B195F6282798A0F300315C68 /* NavigationBarCustomizing.swift in Sources */,

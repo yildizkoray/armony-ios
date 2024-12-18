@@ -68,7 +68,6 @@ public extension Alamofire.Session {
 
         // TODO: - Localizable
         defaultHeaders["Language"] = Locale.preferredLanguages.first?.components(separatedBy: String.hyphen).first
-        defaultHeaders["Region"] = Locale.current.regionCode
         defaultHeaders["Accept"] = "application/json"
         defaultHeaders["AppVersion"] = Bundle.main.version
 

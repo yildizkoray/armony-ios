@@ -159,10 +159,7 @@ private extension AppDelegate {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
-
-        if #available(iOS 15, *) {
-            UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
-        }
+        UINavigationBar.appearance().compactScrollEdgeAppearance = appearance
     }
 
     func clearKeychainIfneeded() {

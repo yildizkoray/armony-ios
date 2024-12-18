@@ -35,11 +35,20 @@ final class RestAPIMiddleware: RequestInterceptor {
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Swift.Result<URLRequest, Error>) -> Void) {
 
         var urlRequest = urlRequest
-        urlRequest.setValue("IOS", forHTTPHeaderField: "Client-Type") // TODO: - Localizable
+        urlRequest.setValue("IOS", forHTTPHeaderField: "Client-Type")
+        
+        if Defaults.shared[.isRegionActive] {
+            if let region = Defaults.shared[.region], region.isNotEmpty {
+                urlRequest.setValue(region, forHTTPHeaderField: "Region")
+            }
+        }
+        else {
+            urlRequest.setValue(Locale.current.regionCode, forHTTPHeaderField: "Region")
+        }
 
         if let timeZoneName = timeZone.localizedName(for: .standard, locale: locale) {
-            urlRequest.setValue(timeZoneName, forHTTPHeaderField: "Time-Zone-Name") // TODO: - Localizable
-            urlRequest.setValue(timeZone.abbreviation(), forHTTPHeaderField: "Time-Zone") // TODO: - Localizable
+            urlRequest.setValue(timeZoneName, forHTTPHeaderField: "Time-Zone-Name")
+            urlRequest.setValue(timeZone.abbreviation(), forHTTPHeaderField: "Time-Zone")
         }
 
         for (key, value) in authenticator.additionalHTTPHeaders where value.isNotEmpty {

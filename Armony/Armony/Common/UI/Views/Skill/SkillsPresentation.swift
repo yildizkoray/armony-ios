@@ -16,7 +16,7 @@ public struct SkillsPresentation {
     let skills: [SkillItemPresentation]
 
     init(type: `Type`,
-         title: NSAttributedString = "Çaldığım Enstrümanlar".attributed(color: .white, font: .lightBody),
+         title: NSAttributedString = String("InstrumentsSkill", table: .common).attributed(color: .white, font: .lightBody),
          separatorPresentation: GradientPresentation = .separator,
          skillTitleStyle skillTitleStylePresentation: TextAppearancePresentation,
          skills: [Skill]) {

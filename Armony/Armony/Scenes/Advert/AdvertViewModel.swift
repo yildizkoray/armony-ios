@@ -344,8 +344,9 @@ extension AdvertViewModel: ViewModelLifeCycle {
                 let genreItems: [MusicGenreItemPresentation] = response.data.genres.lazy.map {
                     MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
                 }
+                let text = String("MusicGenre", table: .common)
                 let genresPresentation = MusicGenresPresentation(
-                    title: "Müzik Tarzı".attributed(color: .white, font: .lightBody), // TODO: - Localizable
+                    title: text.attributed(color: .white, font: .lightBody),
                     cellBorderColor: response.data.type.colorCode.colorFromHEX,
                     items: genreItems
                 )
@@ -356,8 +357,9 @@ extension AdvertViewModel: ViewModelLifeCycle {
                     let genreItems: [MusicGenreItemPresentation] = response.data.serviceTypes.lazy.map {
                         MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
                     }
+                    let text = String("LessonFormat", table: .common)
                     let genresPresentation = MusicGenresPresentation(
-                        title: "Eğitim Şekli".attributed(color: .white, font: .lightBody), // TODO: - Localizable
+                        title: text.attributed(color: .white, font: .lightBody),
                         cellBorderColor: response.data.type.colorCode.colorFromHEX,
                         items: genreItems
                     )

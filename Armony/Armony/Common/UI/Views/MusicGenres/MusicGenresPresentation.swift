@@ -24,7 +24,7 @@ public struct MusicGenresPresentation {
         return Constants.cellHeight
     }
 
-    init(title: NSAttributedString = "Müzik Tarzım".attributed(color: .white, font: .lightBody),
+    init(title: NSAttributedString = String("MusicGenre", table: .common).attributed(color: .white, font: .lightBody),
          cellBorderColor: UIColor,
          separator gradient: GradientPresentation = .separator,
          items: [MusicGenreItemPresentation],

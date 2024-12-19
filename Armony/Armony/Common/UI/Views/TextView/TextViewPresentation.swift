@@ -16,7 +16,7 @@ struct TextViewPresentation {
     static let empty = TextViewPresentation(placeholder: .empty, numberOfMinimumChar: .zero, numberOfMaximumChar: 250)
 
     static let feedback = TextViewPresentation(
-        placeholder: Localization.CommonUI.TextView.feedbackPlaceholder.localized([15]),
+        placeholder: "Please enter description. Minimum 15 character",
         numberOfMinimumChar: 15,
         numberOfMaximumChar: 250
     )

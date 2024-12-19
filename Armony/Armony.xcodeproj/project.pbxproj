@@ -404,8 +404,6 @@
 		B1B9F53026E92EBD0036252D /* AdvertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B9F52F26E92EBD0036252D /* AdvertPresentation.swift */; };
 		B1BA9AB82A16853000EF98E0 /* ReportSubjectSelectionPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BA9AB72A16853000EF98E0 /* ReportSubjectSelectionPresentation.swift */; };
 		B1BDF44026D843E0003212CB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDF43F26D843E0003212CB /* TabBarController.swift */; };
-		B1C702BB294364BF001DBC5E /* CommonUI+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C702BA294364BF001DBC5E /* CommonUI+Localizable.swift */; };
-		B1C702BD29436888001DBC5E /* CommonUI+Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1C702BC29436888001DBC5E /* CommonUI+Localizable.strings */; };
 		B1C85DBE27BC1B2D00C3CE05 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C85DBD27BC1B2D00C3CE05 /* AuthenticationService.swift */; };
 		B1C85DC427BC1DFC00C3CE05 /* UIButton+ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C85DC327BC1DFC00C3CE05 /* UIButton+ActivityIndicatorView.swift */; };
 		B1C85DC727BC1F6B00C3CE05 /* LoginCrenditial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C85DC627BC1F6B00C3CE05 /* LoginCrenditial.swift */; };
@@ -853,8 +851,6 @@
 		B1B9F52F26E92EBD0036252D /* AdvertPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertPresentation.swift; sourceTree = "<group>"; };
 		B1BA9AB72A16853000EF98E0 /* ReportSubjectSelectionPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSubjectSelectionPresentation.swift; sourceTree = "<group>"; };
 		B1BDF43F26D843E0003212CB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		B1C702BA294364BF001DBC5E /* CommonUI+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommonUI+Localizable.swift"; sourceTree = "<group>"; };
-		B1C702BC29436888001DBC5E /* CommonUI+Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "CommonUI+Localizable.strings"; sourceTree = "<group>"; };
 		B1C85DBD27BC1B2D00C3CE05 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		B1C85DC327BC1DFC00C3CE05 /* UIButton+ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+ActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		B1C85DC627BC1F6B00C3CE05 /* LoginCrenditial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCrenditial.swift; sourceTree = "<group>"; };
@@ -2935,15 +2931,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		B1C702B929436495001DBC5E /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				B1C702BA294364BF001DBC5E /* CommonUI+Localizable.swift */,
-				B1C702BC29436888001DBC5E /* CommonUI+Localizable.strings */,
-			);
-			path = Localization;
-			sourceTree = "<group>";
-		};
 		B1C85DBF27BC1B5300C3CE05 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -3035,7 +3022,6 @@
 				0223BA9E282D42D60090314C /* EmptyState */,
 				B188BB2C274994ED002FF3D4 /* Gradient */,
 				B1FEFB1D29D8E98300F03EA0 /* Labels */,
-				B1C702B929436495001DBC5E /* Localization */,
 				B171155D279F1A5E00563A42 /* MusicGenres */,
 				B1E71DDC27941C7800E7D6C1 /* NavigationTitle */,
 				02C9538C285A817D00A2B107 /* NotchView */,
@@ -3313,7 +3299,6 @@
 			knownRegions = (
 				en,
 				Base,
-				tr,
 			);
 			mainGroup = B1B55C7926CEFADC00FDE884;
 			packageReferences = (
@@ -3393,7 +3378,6 @@
 				B1B55C8D26CEFADD00FDE884 /* Home.storyboard in Resources */,
 				024BDA0428ECE46400391AA4 /* PlaceAdvert.storyboard in Resources */,
 				026B1E582B9111C2002D38F6 /* DebugConfiguration.xcconfig in Resources */,
-				B1C702BD29436888001DBC5E /* CommonUI+Localizable.strings in Resources */,
 				026B1E572B9111BD002D38F6 /* ReleaseConfiguration.xcconfig in Resources */,
 				023731B928612B23005F1522 /* Settings.storyboard in Resources */,
 				B1772B402710CE05001E544B /* SkillCell.xib in Resources */,
@@ -3725,7 +3709,6 @@
 				B1E6D76127A72BA5003C86C6 /* UIView+IBInspectable.swift in Sources */,
 				B14055A226D9740D00D1E565 /* RestArrayResponse.swift in Sources */,
 				B140559526D96CCB00D1E565 /* Service.swift in Sources */,
-				B1C702BB294364BF001DBC5E /* CommonUI+Localizable.swift in Sources */,
 				02D00FCF2913383000B84DD7 /* PutAvatarUpdateTask.swift in Sources */,
 				02156E32287B2F1F002DE494 /* LogOutBottomViewController.swift in Sources */,
 				023069A32929188900BDC42B /* GetLiveChatMessagesTask.swift in Sources */,

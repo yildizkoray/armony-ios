@@ -114,7 +114,12 @@ final class AdvertsViewModel: ViewModel {
     func fetchAdverts() {
         Task {
             do {
-                let response = try await homeData()
+                var response = try await homeData()
+                
+                if Locale.current.regionCode != "TR" {
+                    response.bannerResponse.data.banners.removeFirst()
+                }
+                
                 safeSync {
                     sliderPresentation = BannerSliderPresentation(
                         isActive: response.bannerResponse.data.isActive,
@@ -291,7 +296,7 @@ private extension EmptyStatePresentation {
 
 struct BannerSliderResponse: Decodable {
     let isActive: Bool
-    let banners: [BannerSlider]
+    var banners: [BannerSlider]
 }
 
 struct BannerSlider: Decodable {

@@ -18,10 +18,6 @@ class RestService: Service {
 
     private let addOperationQueue = DispatchQueue(label: "addOperationQueue", attributes: .concurrent)
 
-    private var isNewAsyncAwaitEnabled: Bool {
-        return RemoteConfigService.shared[.isNewAsyncAwaitEnabled]
-    }
-
     required init(backend: RestAPI) {
         self.backend = backend
         self.operations = [String: DataRequest]()
@@ -35,17 +31,13 @@ class RestService: Service {
 
 //    MARK: - Execute Operations
     func execute<R>(task operataion: RestAPI.Operation, type: R.Type) async throws -> R where R : APIResponse {
-        guard isNewAsyncAwaitEnabled else {
-            return try await executeWithCheckedThrowingContinuation(task: operataion, type: type)
+        operations[operataion.description]?.cancel()
+        guard internetConnectionService.isConnected else {
+            FirebaseCrashlyticsLogger.shared.log(exception: .init(name: "RestService", reason: "internet is not connected"))
+            throw APIError.network
         }
-
+        
         do {
-            operations[operataion.description]?.cancel()
-            guard internetConnectionService.isConnected else {
-                FirebaseCrashlyticsLogger.shared.log(exception: .init(name: "RestService", reason: "internet is not connected"))
-                throw APIError.network
-            }
-
             let dataRequest = try? backend.execute(operation: operataion)
             addOperation(key: operataion.description, value: dataRequest)
 
@@ -82,24 +74,7 @@ class RestService: Service {
             return decodedObject
         }
     }
-
-    private func executeWithCheckedThrowingContinuation<R>(task operataion: RestAPI.Operation, type: R.Type) async throws -> R where R : APIResponse {
-        return try await withCheckedThrowingContinuation({ continuation in
-            execute(task: operataion, type: type) { result in
-                switch result {
-                case .success(let data):
-                    safeSync {
-                        continuation.resume(returning: data)
-                    }
-
-                case .failure(let error):
-                    continuation.resume(throwing: error)
-                    FirebaseCrashlyticsLogger.shared.log(error: error)
-                }
-            }
-        })
-    }
-
+    
     func execute<R>(task operataion: HTTPTask, type: R.Type, completion: @escaping Callback<NetworkResult<R>>) where R : APIResponse {
         operations[operataion.description]?.cancel()
         guard internetConnectionService.isConnected else {

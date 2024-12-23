@@ -48,7 +48,7 @@ final class LoginViewModel: ViewModel {
 
                 self.notifier.post(name: .passwordResetEmailDidFail, object: self)
 
-                AlertService.show(message: "\(email) adresine parolanizi sifirlamaniz icin email gonderildi.", actions: await [.okay(action: { [weak self] in
+                AlertService.show(message: "An email has been sent to address \(email) to reset your password.", actions: await [.okay(action: { [weak self] in
                     self?.notifier.post(name: .passwordResetEmailDidSend, object: self)
                 })])
             }

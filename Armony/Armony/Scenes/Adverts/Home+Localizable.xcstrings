@@ -23,6 +23,17 @@
         }
       }
     },
+    "Advert.DeleteAd" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete advert"
+          }
+        }
+      }
+    },
     "Advert.Expire.Warning" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -30,6 +41,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The 30-day publication period for your ad has ended, and it has been removed."
+          }
+        }
+      }
+    },
+    "Advert.RepostAd" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publish again"
           }
         }
       }

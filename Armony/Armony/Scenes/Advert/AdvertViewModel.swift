@@ -483,10 +483,11 @@ extension AdvertViewModel: DeleteAdvertFeedbackSelectionDelegate {
             feedbackSubject: FeedbackSubject(id: output.id, title: output.title),
             message: .space
         )
-        let removeAction = AlertService.action(title: "İlanı Sil", style: .destructive, action: { [weak self] in
+        let removeAction = AlertService.action(title: String("Advert.DeleteAd", table: .home),
+                                               style: .destructive, action: { [weak self] in
             self?.remove(feedback: request)
         })
-        AlertService.show(message: "İlanı silmek istediginizden emin misiniz?",
+        AlertService.show(message: "Are you sure you want to delete this ad?",
                           actions: [removeAction, .cancel()])
     }
 }

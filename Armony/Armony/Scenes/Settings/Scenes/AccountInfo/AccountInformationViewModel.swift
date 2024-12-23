@@ -158,10 +158,10 @@ extension AccountInformationViewModel: DeleteAccountFeedbackSelectionDelegate {
             feedbackSubject: FeedbackSubject(id: output.id, title: output.title),
             message: .empty
         )
-        let removeAction = AlertService.action(title: "Hesabını Sil", style: .destructive, action: { [weak self] in
+        let removeAction = AlertService.action(title: "Delete Account", style: .destructive, action: { [weak self] in
             self?.deleteAccount(feedback: request)
         })
-        AlertService.show(message: "Hesabınızı silmek istediğinizden emin misiniz ?",
+        AlertService.show(message: "Are you sure you want to delete your account?",
                           actions: [removeAction, .cancel()])
     }
 }

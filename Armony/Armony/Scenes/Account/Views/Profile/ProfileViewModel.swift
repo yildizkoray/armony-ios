@@ -124,24 +124,29 @@ final class ProfileViewModel: ViewModel {
         if let title = presentation.title {
             selectedItemIDs.append(title.id)
         }
-
-        service.execute(task: GetTitlesTask(), type: RestArrayResponse<UserDetail.Title>.self) { [weak self] result in
-            self?.view?.stopTitleDropdownViewActivityIndicatorView()
-            switch result {
-            case .success(let response):
-                let items: [TitleSelectionInput] = response.data.compactMap { title in
-                    return TitleSelectionInput(
-                        id: title.id,
-                        title: title.title,
-                        isSelected: self?.selectedItemIDs.contains(title.id) ?? false
-                    )
+        
+        Task {
+            do {
+                let response  = try await service.execute(
+                    task: GetTitlesTask(),
+                    type: RestArrayResponse<UserDetail.Title>.self
+                )
+                safeSync {
+                    view?.stopTitleDropdownViewActivityIndicatorView()
+                    let items: [TitleSelectionInput] = response.data.compactMap { title in
+                        return TitleSelectionInput(
+                            id: title.id,
+                            title: title.title,
+                            isSelected: selectedItemIDs.contains(title.id)
+                        )
+                    }
+                    let selectionPresentation = TitleSelectionPresentation(delegate: self, items: items)
+                    coordinator.profileSelection(presentation: selectionPresentation)
+                    selectedItemIDs = .empty
                 }
-                let selectionPresentation = TitleSelectionPresentation(delegate: self, items: items)
-                self?.coordinator.profileSelection(presentation: selectionPresentation)
-                self?.selectedItemIDs = .empty
-
-            case .failure(let error):
-                AlertService.show(message: error.description, actions: [.okay()])
+            }
+            catch {
+                error.showAlert()
             }
         }
     }
@@ -151,24 +156,29 @@ final class ProfileViewModel: ViewModel {
         if let skills = presentation.skills {
             selectedItemIDs = skills.map { $0.id }
         }
-
-        service.execute(task: GetSkillsTask(for: 1), type: RestArrayResponse<Skill>.self) { [weak self] result in
-            self?.view?.stopSkillsDropdownViewActivityIndicatorView()
-            switch result {
-            case .success(let response):
-                let items: [SkillsSelectionInput] = response.data.compactMap { skill in
-                    return SkillsSelectionInput(
-                        id: skill.id,
-                        title: skill.title,
-                        isSelected: self?.selectedItemIDs.contains(skill.id) ?? false
-                    )
+        
+        Task {
+            do {
+                let response  = try await service.execute(
+                    task: GetSkillsTask(for: 1),
+                    type: RestArrayResponse<Skill>.self
+                )
+                safeSync {
+                    view?.stopSkillsDropdownViewActivityIndicatorView()
+                    let items: [SkillsSelectionInput] = response.data.compactMap { skill in
+                        return SkillsSelectionInput(
+                            id: skill.id,
+                            title: skill.title,
+                            isSelected: selectedItemIDs.contains(skill.id)
+                        )
+                    }
+                    let selectionPresentation = SkillsSelectionPresentation(delegate: self, items: items)
+                    coordinator.profileSelection(presentation: selectionPresentation)
+                    selectedItemIDs = .empty
                 }
-                let selectionPresentation = SkillsSelectionPresentation(delegate: self, items: items)
-                self?.coordinator.profileSelection(presentation: selectionPresentation)
-                self?.selectedItemIDs = .empty
-
-            case .failure(let error):
-                AlertService.show(message: error.description, actions: [.okay()])
+            }
+            catch {
+                error.showAlert()
             }
         }
     }
@@ -178,23 +188,29 @@ final class ProfileViewModel: ViewModel {
         if let location = presentation.location {
             selectedItemIDs.append(location.id)
         }
-        service.execute(task: GetLocationTask(), type: RestArrayResponse<Location>.self) { [weak self] result in
-            self?.view?.stopLocationDropdownViewActivityIndicatorView()
-            switch result {
-            case .success(let response):
-                let items: [LocationSelectionInput] = response.data.compactMap { location in
-                    return LocationSelectionInput(
-                        id: location.id,
-                        title: location.title,
-                        isSelected: self?.selectedItemIDs.contains(location.id) ?? false
-                    )
+        
+        Task {
+            do {
+                let response  = try await service.execute(
+                    task: GetSkillsTask(for: 1),
+                    type: RestArrayResponse<Skill>.self
+                )
+                safeSync {
+                    view?.stopLocationDropdownViewActivityIndicatorView()
+                    let items: [LocationSelectionInput] = response.data.compactMap { location in
+                        return LocationSelectionInput(
+                            id: location.id,
+                            title: location.title,
+                            isSelected: selectedItemIDs.contains(location.id)
+                        )
+                    }
+                    let selectionPresentation = LocationSelectionPresentation(delegate: self, items: items)
+                    coordinator.profileSelection(presentation: selectionPresentation)
+                    selectedItemIDs = .empty
                 }
-                let selectionPresentation = LocationSelectionPresentation(delegate: self, items: items)
-                self?.coordinator.profileSelection(presentation: selectionPresentation)
-                self?.selectedItemIDs = .empty
-
-            case .failure(let error):
-                AlertService.show(message: error.description, actions: [.okay()])
+            }
+            catch {
+                error.showAlert()
             }
         }
     }
@@ -204,23 +220,29 @@ final class ProfileViewModel: ViewModel {
         if let musicGenres = presentation.musicGenres {
             selectedItemIDs = musicGenres.map { $0.id }
         }
-        service.execute(task: GetMusicGenresTask(), type: RestArrayResponse<MusicGenre>.self) { [weak self] result in
-            self?.view?.stopMusicGenresDropdownViewActivityIndicatorView()
-            switch result {
-            case .success(let response):
-                let items: [MusicGenresSelectionInput] = response.data.compactMap { musicGenre in
-                    return MusicGenresSelectionInput(
-                        id: musicGenre.id,
-                        title: musicGenre.name,
-                        isSelected: self?.selectedItemIDs.contains(musicGenre.id) ?? false
-                    )
+        
+        Task {
+            do {
+                let response  = try await service.execute(
+                    task: GetMusicGenresTask(),
+                    type: RestArrayResponse<MusicGenre>.self
+                )
+                safeSync {
+                    view?.stopMusicGenresDropdownViewActivityIndicatorView()
+                    let items: [MusicGenresSelectionInput] = response.data.compactMap { musicGenre in
+                        return MusicGenresSelectionInput(
+                            id: musicGenre.id,
+                            title: musicGenre.name,
+                            isSelected: selectedItemIDs.contains(musicGenre.id)
+                        )
+                    }
+                    let selectionPresentation = MusicGenresSelectionPresentation(delegate: self, items: items)
+                    coordinator.profileSelection(presentation: selectionPresentation)
+                    selectedItemIDs = .empty
                 }
-                let selectionPresentation = MusicGenresSelectionPresentation(delegate: self, items: items)
-                self?.coordinator.profileSelection(presentation: selectionPresentation)
-                self?.selectedItemIDs = .empty
-
-            case .failure(let error):
-                AlertService.show(message: error.description, actions: [.okay()])
+            }
+            catch {
+                error.showAlert()
             }
         }
     }

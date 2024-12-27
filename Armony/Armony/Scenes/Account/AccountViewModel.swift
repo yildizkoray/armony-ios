@@ -49,52 +49,64 @@ final class AccountViewModel: ViewModel {
     }
 
     private func fetchUserDetail() {
-        service.execute(task: GetUserTask(id: authenticator.userID), type: RestObjectResponse<UserDetail>.self) { [weak self] result in
-
-            self?.stopActivityIndicatorViews()
-
-            switch result {
-            case .success(let response):
-                self?.response = response.data
-
-                let avatar = AvatarPresentation(
-                    kind: .custom(.init(size: .medium, radius: .medium)), 
-                    source: .url(response.data.avatarURL)
+        Task {
+            do {
+                let response = try await service.execute(
+                    task: GetUserTask(id: authenticator.userID),
+                    type: RestObjectResponse<UserDetail>.self
                 )
-                let userSummaryPresentation = UserSummaryPresentation(
-                    avatarPresentation: avatar,
-                    name: response.data.name.attributed(color: .white, font: .regularHeading),
-                    title: response.data.title?.title.attributed(color: .white, font: .lightBody),
-                    location: response.data.location?.title.attributed(color: .white, font: .regularBody), 
-                    cardTitle: .empty, 
-                    updateDate: nil
-                )
+                
+                self.response = response.data
+                
+                safeSync {
+                    stopActivityIndicatorViews()
+                    
+                    view?.setBioLabelText(response.data.bio)
+                    prepareUserSummary(response)
+                    prepareSkillsAndGenres(response)
 
-                self?.view?.configureUserSummaryView(with: userSummaryPresentation)
-                self?.view?.setBioLabelText(response.data.bio)
-
-                let skils = SkillsPresentation(
-                    type: .profile(imageViewContainerBackgroundColor: .armonyBlue),
-                    separatorPresentation: .separator,
-                    skillTitleStyle: .init(color: .white, font: .lightBody),
-                    skills: response.data.skills
-                )
-                let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
-                let genreItems: [MusicGenreItemPresentation] = response.data.genres.lazy.map {
-                    MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                    view?.selectSegment(at: currentSelectedSegmentIndex)
                 }
-                let genres = MusicGenresPresentation(cellBorderColor: .armonyBlue, items: genreItems)
-                self?.view?.configurePager(
-                    skills: skils,
-                    musicGenres: genres
-                )
-
-                self?.view?.selectSegment(at: self?.currentSelectedSegmentIndex ?? .zero)
-
-            case .failure(let error):
-                AlertService.show(message: error.description, actions: [.cancel()])
+            }
+            catch {
+                error.showAlert()
             }
         }
+    }
+    
+    private func prepareUserSummary(_ response: RestObjectResponse<UserDetail>) {
+        let avatar = AvatarPresentation(
+            kind: .custom(.init(size: .medium, radius: .medium)),
+            source: .url(response.data.avatarURL)
+        )
+        let userSummaryPresentation = UserSummaryPresentation(
+            avatarPresentation: avatar,
+            name: response.data.name.attributed(color: .white, font: .regularHeading),
+            title: response.data.title?.title.attributed(color: .white, font: .lightBody),
+            location: response.data.location?.title.attributed(color: .white, font: .regularBody),
+            cardTitle: .empty,
+            updateDate: nil
+        )
+
+        view?.configureUserSummaryView(with: userSummaryPresentation)
+    }
+    
+    private func prepareSkillsAndGenres(_ response: RestObjectResponse<UserDetail>) {
+        let skils = SkillsPresentation(
+            type: .profile(imageViewContainerBackgroundColor: .armonyBlue),
+            separatorPresentation: .separator,
+            skillTitleStyle: .init(color: .white, font: .lightBody),
+            skills: response.data.skills
+        )
+        let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
+        let genreItems: [MusicGenreItemPresentation] = response.data.genres.lazy.map {
+            MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+        }
+        let genres = MusicGenresPresentation(cellBorderColor: .armonyBlue, items: genreItems)
+        view?.configurePager(
+            skills: skils,
+            musicGenres: genres
+        )
     }
 
     func resetViews() {

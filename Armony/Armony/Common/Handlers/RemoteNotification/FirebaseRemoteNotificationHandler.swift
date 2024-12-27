@@ -34,14 +34,16 @@ extension FirebaseRemoteNotificationHandler: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         if authenticator.isAuthenticated, let token = fcmToken {
             let request = PutFCMTokenRequest(fcmToken: token)
-            service.execute(task: PutFCMToken(userID: authenticator.userID, request: request),
-                            type: RestObjectResponse<EmptyResponse>.self) { result in
-                switch result {
-                case .failure:
+            Task {
+                do {
+                    let _ = try await service.execute(
+                        task: PutFCMToken(userID: authenticator.userID, request: request),
+                        type: RestObjectResponse<EmptyResponse>.self
+                    )
+                }
+                catch {
                     let model = Exception(name: "FCMTokenUpdate", reason: "")
                     FirebaseCrashlyticsLogger.shared.log(exception: model)
-                default:
-                    break
                 }
             }
         }

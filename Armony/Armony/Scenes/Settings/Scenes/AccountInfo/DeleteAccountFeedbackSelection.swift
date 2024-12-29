@@ -16,7 +16,7 @@ struct DeleteAccountFeedbackSelection: SelectionPresentation {
     typealias Output = SingleSelectionOutput<DeleteAccountFeedbackSelectionInput>
 
     var items: [DeleteAccountFeedbackSelectionInput]
-    var headerTitle: String = "Hesabınızı neden kalıcı olarak silmek istiyorsunuz?"
+    var headerTitle: String = "Why do you want to delete your account?"
     var isMultipleSelectionAllowed: Bool = false
     weak var delegate: DeleteAccountFeedbackSelectionDelegate?
 

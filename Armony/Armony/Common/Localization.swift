@@ -13,6 +13,7 @@ public struct Localization {
         case chat
         case common
         case home
+        case onboarding
         case placeAdvert
 
         public var description: String {

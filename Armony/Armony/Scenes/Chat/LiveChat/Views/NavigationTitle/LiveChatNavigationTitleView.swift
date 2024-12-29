@@ -18,6 +18,7 @@ final class LiveChatNavigationTitleView: UIView {
 
     private var avatarView: AvatarView = {
         let avatar = AvatarView()
+        avatar.configure(with: .liveChat)
         avatar.translatesAutoresizingMaskIntoConstraints = false
         return avatar
     }()
@@ -44,7 +45,14 @@ final class LiveChatNavigationTitleView: UIView {
     }
 
     func configure(presentation: LiveChatNavigationTitlePresentation) {
-        avatarView.configure(with: .init(kind: .circled(.init(size: .custom(40))), source: .url(presentation.avatarURL)))
+        avatarView.update(source: .url(presentation.avatarURL))
         nameLabel.text = presentation.name
     }
+}
+
+// MARK: - AvatarPresentation
+private extension AvatarPresentation {
+    static let liveChat: AvatarPresentation = {
+        .init(kind: .circled(.init(size: .custom(44))), source: .static(.avatarPlaceholder))
+    }()
 }

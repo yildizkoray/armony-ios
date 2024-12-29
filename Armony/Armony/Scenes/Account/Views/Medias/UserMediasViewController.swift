@@ -59,9 +59,10 @@ final class UserMediasViewController: UIViewController, ViewController, UITextFi
             safeSync {
                 if isEmpty {
                     let title = String(localized: "MyPerformances.EmptyState.Button.Title", table: "Account+Localizable")
+                    let message = String(localized: "MyPerformances.Alert.Message", table: "Account+Localizable")
                     self?.showEmptyStateView(with: .noContent) { _ in
                         AlertService.show(title: title,
-                                          message: "YouTube video linkini buradan ekleyebilirsin.",
+                                          message: message,
                                           actions: [.okay(action: {
                             if let url = self?.youtubeURLString?.url {
                                 self?.emptyStateView.actionButton.startActivityIndicatorView()

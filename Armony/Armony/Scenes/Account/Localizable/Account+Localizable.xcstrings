@@ -1,6 +1,50 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "AccountInformation.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account Settings"
+          }
+        }
+      }
+    },
+    "AccountInformation.Update.Succes.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account information has been updated"
+          }
+        }
+      }
+    },
+    "ChangePassword.Success.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password has been updated"
+          }
+        }
+      }
+    },
+    "DeleteAccount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete account"
+          }
+        }
+      }
+    },
     "Edit.Profile" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8,12 +52,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Edit profile"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profili düzenle"
           }
         }
       }
@@ -26,12 +64,6 @@
             "state" : "translated",
             "value" : "Musical Profile"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Müzikal Profil"
-          }
         }
       }
     },
@@ -42,12 +74,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Build profile"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil oluştur"
           }
         }
       }
@@ -60,12 +86,6 @@
             "state" : "translated",
             "value" : "Set up your musician profile in minutes and post your first ad for free"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Müzisyen profilini kolayca oluştur ve ücretsiz ilk ilanını paylaş!"
-          }
         }
       }
     },
@@ -77,28 +97,15 @@
             "state" : "translated",
             "value" : "My Ads"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İlanlarım"
-          }
         }
       }
     },
     "My.Performances" : {
-      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "My Performances"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Performanslarım"
           }
         }
       }
@@ -111,11 +118,16 @@
             "state" : "translated",
             "value" : "The link you entered is not valid YouTube link. Please enter valid link please"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "MyPerformances.Alert.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yüklemek istediğiniz link YouTube içeriği değildi. Lütfen linki kontrol ediniz."
+            "value" : "You can add YouTube link here"
           }
         }
       }
@@ -128,12 +140,6 @@
             "state" : "translated",
             "value" : "Delete video"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Videoyu sil"
-          }
         }
       }
     },
@@ -144,12 +150,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upload video"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "YouTube videolarını ekleyerek performanslarını sergileyebilirsin"
           }
         }
       }
@@ -162,12 +162,6 @@
             "state" : "translated",
             "value" : "You can upload YouTube videos and share your performance"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Video ekle"
-          }
         }
       }
     },
@@ -178,12 +172,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profile"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil"
           }
         }
       }
@@ -196,12 +184,6 @@
             "state" : "translated",
             "value" : "Who are you? Share your story!"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kendini tanıt"
-          }
         }
       }
     },
@@ -211,13 +193,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your profile has been updated succesfully"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profilin başarı ile güncellendi"
+            "value" : "Your profile has been updated successfully"
           }
         }
       }
@@ -230,12 +206,6 @@
             "state" : "translated",
             "value" : "Post an ad"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İlan ver"
-          }
         }
       }
     },
@@ -247,11 +217,52 @@
             "state" : "translated",
             "value" : "Manage and view your published ads in this section"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "VisitedAccount.Ads" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yayınladığın ilanlarını bu alanda yönetebilirsin"
+            "value" : "Adverts"
+          }
+        }
+      }
+    },
+    "VisitedAccount.Medias.EmptyState.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No performances available"
+          }
+        }
+      }
+    },
+    "VisitedAccount.Musical.Profile" : {
+      "extractionState" : "manual"
+    },
+    "VisitedAccount.MusicalProfile.EmptyState.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile has not been completed"
+          }
+        }
+      }
+    },
+    "VisitedAccount.Performances" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performances"
           }
         }
       }

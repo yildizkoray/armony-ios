@@ -60,6 +60,8 @@ final class RegistrationViewController: UIViewController, ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
+        
+        titleLabel.text = String("SignUp", table: .common)
 
         view.addTapGestureRecognizer { _ in
             self.view.endEditing(true)
@@ -94,29 +96,29 @@ final class RegistrationViewController: UIViewController, ViewController {
 
 //    MARK: - Configuration TextFields
     private func configureNameTextField() {
-        nameTextField.placeholder = "İsim Soyisim" // TODO: - Localizable
+        nameTextField.placeholder = String("FullName", table: .common)
 
         nameTextField.autocapitalizationType = .words
         nameTextField.autocorrectionType = .no
 
         nameTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 3, max: 40, error: "En az 3 en fazla 40 karakter giriniz")
+                Validation.Rule.Length(min: 3, max: 40, error: String("Common.Validation.Name.Error", table: .common))
             ]
         )
 
-        okayButton.setTitle("Üye Ol".needLocalization, for: .normal)
+        okayButton.setTitle(String("SignUp", table: .common), for: .normal)
         okayButton.setTitleColor(.armonyWhite, for: .normal)
         okayButton.setTitleColor(.armonyWhite.withAlphaComponent(AppTheme.Alpha.medium.rawValue), for: .disabled)
         okayButton.titleLabel?.font = .semiboldHeading
 
-        goLoginButton.setTitle("Zaten Üyeliğim Var".needLocalization, for: .normal)
+        goLoginButton.setTitle(String("AlreadyHaveAccount", table: .common), for: .normal)
         goLoginButton.titleLabel?.font = .lightBody
         goLoginButton.setTitleColor(.armonyWhite, for: .normal)
     }
 
     private func configureEmailTextField() {
-        emailTextField.placeholder = "E-posta".needLocalization
+        emailTextField.placeholder = "E-mail"
         emailTextField.autocapitalizationType = .none
         emailTextField.autocorrectionType = .no
         emailTextField.keyboardType = .emailAddress
@@ -129,7 +131,7 @@ final class RegistrationViewController: UIViewController, ViewController {
     }
 
     private func configurePasswordTextField() {
-        passwordTextField.placeholder = "Şifre".needLocalization
+        passwordTextField.placeholder = String("Password", table: .common)
 
         passwordTextField.autocapitalizationType = .none
         passwordTextField.autocorrectionType = .no
@@ -140,7 +142,7 @@ final class RegistrationViewController: UIViewController, ViewController {
 
         passwordTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 6, max: 300, error: "Şifreniz minimum 6 karakter olmalı")
+                Validation.Rule.Length(min: 6, max: 300, error: String("Common.Validation.Password.Error", table: .common))
             ]
         )
     }
@@ -162,10 +164,10 @@ final class RegistrationViewController: UIViewController, ViewController {
     }
 
     fileprivate func configureTermsAndConditionLabel() {
-        let termsAndCondition = "Hizmet Şartları"
-        let cookie = "Çerez Kullanımı"
-        let nondisclosureAgreement = "Gizlilik Sözleşmesi"
-        let fullText = "Kaydolduğunda Hizmet Şartları'nı ve Çerez Kullanımı dahil olmak üzere Gizlilik Sözleşmesi'ni kabul etmiş olursun."
+        let termsAndCondition = String("TermsAndConditions", table: .common)
+        let cookie = String("CookieUsage", table: .common)
+        let nondisclosureAgreement = String("PrivacyPolicy", table: .common)
+        let fullText = String("TermsConditionFullText", table: .common)
 
         let termsAndConditionLink = LabelLink(title: termsAndCondition, color: .armonyBlue, font: .semiboldBody)
         let cookieLink = LabelLink(title: cookie, color: .armonyBlue, font: .semiboldBody)
@@ -181,15 +183,15 @@ final class RegistrationViewController: UIViewController, ViewController {
             switch tappedLink {
             case termsAndConditionLink:
                 let url = "https://armony.app/sartlar-ve-kosullar.html"
-                webCoordinator.start(with: url, title: "Şartlar ve Koşullar")
+                webCoordinator.start(with: url, title: termsAndCondition)
 
             case cookieLink:
                 let url = "https://armony.app/sartlar-ve-kosullar.html"
-                webCoordinator.start(with: url, title: "Şartlar ve Koşullar")
+                webCoordinator.start(with: url, title: termsAndCondition)
 
             case nondisclosureAgreementLink:
                 let url = "https://armony.app/gizlilik-sozlesmesi.html"
-                webCoordinator.start(with: url, title: "Gizlilik Sözleşmesi")
+                webCoordinator.start(with: url, title: nondisclosureAgreement)
 
             default:
                 break

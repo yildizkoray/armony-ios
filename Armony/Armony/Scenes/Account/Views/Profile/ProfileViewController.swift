@@ -223,7 +223,7 @@ extension ProfileViewController: ProfileViewDelegate {
 extension ProfileViewController: ImagePickerHandlerDelegate {
     func imagePicker(_ picker: UIImagePickerController, didSelectImage image: UIImage) {
         newAvatarImage = image
-        avatarView.configure(with: AvatarPresentation(kind: .circled(.init(size: .custom(88))), source: .static(image)))
+        avatarView.update(source: .static(image))
     }
 }
 

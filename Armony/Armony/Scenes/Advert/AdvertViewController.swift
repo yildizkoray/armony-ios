@@ -170,7 +170,7 @@ extension AdvertViewController: AdvertViewDelegate {
 
         // FIX IT
         if let _ = viewModel.advert?.externalLink {
-            sendMessageButton.setTitle("Eğitime Git".needLocalization, for: .normal)
+            sendMessageButton.setTitle("Eğitime Git", for: .normal)
         }
         else {
             sendMessageButton.setTitle(String("Advert.SendMessage", table: .home), for: .normal)

@@ -74,16 +74,20 @@ final class LiveChatViewController: MessageKit.MessagesViewController, ViewContr
     }
 
     @objc func dotsRightButtonDidTap() {
-        let report = AlertService.action(title: "Şikayet Et") { [weak self] in
+        let reportText = String("Report", table: .common)
+        let blockText = String("Block", table: .common)
+        let confirmation = String("Advert.Block.Confirmation", table: .home)
+        let description = String("Advert.Block.Description", table: .home)
+        let report = AlertService.action(title: reportText) { [weak self] in
             self?.viewModel.reportActionDidTap()
         }
-        let block = AlertService.action(title: "Engelle", style: .destructive) {
-            let blockAction = AlertService.action(title: "Engelle", style: .destructive) {
+        let block = AlertService.action(title: blockText, style: .destructive) {
+            let blockAction = AlertService.action(title: blockText, style: .destructive) {
                 self.viewModel.blockUser()
             }
             AlertService
-                .show(title: "Engellemek istediğine emin misin?",
-                      message: "Kullanıcıyı engellediğinizde kullanıcıya ait profil, ilan ve mesajları göremeyeceksiniz.",
+                .show(title: confirmation,
+                      message: description,
                       actions: [blockAction, .cancel()])
         }
         AlertService

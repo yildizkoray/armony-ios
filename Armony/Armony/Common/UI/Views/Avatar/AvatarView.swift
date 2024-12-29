@@ -44,4 +44,8 @@ final class AvatarView: UIView, NibLoadable {
             }
         }
     }
+    
+    func update(source: ImageSource) {
+        imageView.setImage(source: source)
+    }
 }

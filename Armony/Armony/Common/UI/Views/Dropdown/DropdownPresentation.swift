@@ -29,8 +29,8 @@ struct DropdownPresentation {
     static let location = DropdownPresentation(title: String("Location",table: .common))
 
     static let feedback = DropdownPresentation(
-        title: Localization.CommonUI.Dropdown.feedbackTitle.localized,
-        placeholder: Localization.CommonUI.Dropdown.feedbackPlaceholder.localized
+        title: "Subject",
+        placeholder: "Subject"
     )
     static let advertType = DropdownPresentation(title: String("AdType",table: .common))
 

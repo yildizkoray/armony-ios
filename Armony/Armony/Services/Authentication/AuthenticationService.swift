@@ -94,13 +94,13 @@ final class AuthenticationErrorHandler {
 
         switch errorType {
         case .emailExist:
-            return "Girdiğiniz e-postaya kayıtlı üyelik bulunmaktadır."
+            return "An account is already registered with this email. Try logging in instead."
 
         case .emailNotFound:
-            return "Girdiğiniz e-postaya kayıtlı üyelik bulunmamaktadır."
+            return "The email you provided is not linked to any existing account."
 
         case .invalidPassword:
-            return "E-posta veya şifre hatalı"
+            return "Email or password is incorrect"
 
         case .unknown:
             return APIError.emptyData.description

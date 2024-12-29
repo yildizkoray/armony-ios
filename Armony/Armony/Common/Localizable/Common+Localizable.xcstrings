@@ -9,17 +9,30 @@
             "state" : "translated",
             "value" : "Ad type"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "AlreadyHaveAccount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlan Türü"
+            "value" : "Already have account?"
           }
         }
       }
     },
     "API.ERROR" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unexpected error"
+          }
+        }
+      }
     },
     "Apply" : {
       "extractionState" : "manual",
@@ -28,12 +41,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apply"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uygula"
           }
         }
       }
@@ -46,11 +53,16 @@
             "state" : "translated",
             "value" : "Block"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "ChangePassword" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Engelle"
+            "value" : "Change Password"
           }
         }
       }
@@ -63,12 +75,6 @@
             "state" : "translated",
             "value" : "Clear"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temizle"
-          }
         }
       }
     },
@@ -79,12 +85,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vazgeç"
           }
         }
       }
@@ -97,12 +97,6 @@
             "state" : "translated",
             "value" : "Continue"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Devam Et"
-          }
         }
       }
     },
@@ -113,11 +107,16 @@
             "state" : "translated",
             "value" : "Ok"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "Common.Report.Success" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tamam"
+            "value" : "We have received your report. Thanks."
           }
         }
       }
@@ -130,12 +129,6 @@
             "state" : "translated",
             "value" : "Save"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kaydet"
-          }
         }
       }
     },
@@ -146,12 +139,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Please select no more than 10 items"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maksimum 10 tane seçebilirsiniz"
           }
         }
       }
@@ -164,11 +151,49 @@
             "state" : "translated",
             "value" : "Please enter a valid email address"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "Common.Validation.Name.Error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lütfen geçerli bir e-posta adresi giriniz"
+            "value" : "Full name must be between 3 and 40 characters"
+          }
+        }
+      }
+    },
+    "Common.Validation.Password.Error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password must contains minimum 6 characters"
+          }
+        }
+      }
+    },
+    "CookieUsage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cookie Usage"
+          }
+        }
+      }
+    },
+    "CurrentPassword" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Password"
           }
         }
       }
@@ -181,12 +206,6 @@
             "state" : "translated",
             "value" : "Edit"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Düzenle"
-          }
         }
       }
     },
@@ -198,11 +217,38 @@
             "state" : "translated",
             "value" : "Filters"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "ForgetPassword" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Filtrele"
+            "state" : "translated",
+            "value" : "Forget password"
+          }
+        }
+      }
+    },
+    "ForgetPassword.Subtitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter e-mail addresss"
+          }
+        }
+      }
+    },
+    "FullName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full name"
           }
         }
       }
@@ -226,12 +272,6 @@
             "state" : "translated",
             "value" : "Skill"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Çaldığım Enstrümanlar"
-          }
         }
       }
     },
@@ -242,12 +282,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "less"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "daha az"
           }
         }
       }
@@ -260,12 +294,6 @@
             "state" : "translated",
             "value" : "Lesson format"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Eğitim Şekli"
-          }
         }
       }
     },
@@ -276,12 +304,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lessons"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verilen Eğitimler"
           }
         }
       }
@@ -294,11 +316,27 @@
             "state" : "translated",
             "value" : "Location"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "LogOut" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Konum"
+            "value" : "Log Out"
+          }
+        }
+      }
+    },
+    "LogOut.Confirmation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure?"
           }
         }
       }
@@ -311,12 +349,6 @@
             "state" : "translated",
             "value" : "more"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "daha fazla"
-          }
         }
       }
     },
@@ -328,11 +360,38 @@
             "state" : "translated",
             "value" : "Music genre"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "NewPassword" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Müzik Tarzım"
+            "value" : "New Password"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        }
+      }
+    },
+    "PrivacyPolicy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
           }
         }
       }
@@ -345,12 +404,6 @@
             "state" : "translated",
             "value" : "Title"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil Türü"
-          }
         }
       }
     },
@@ -361,12 +414,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Report"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Şikayet Et"
           }
         }
       }
@@ -390,12 +437,6 @@
             "state" : "translated",
             "value" : "Services"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verilen Hizmetler"
-          }
         }
       }
     },
@@ -407,11 +448,49 @@
             "state" : "translated",
             "value" : "Settings"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "SignIn" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ayarlar"
+            "value" : "Sign In"
+          }
+        }
+      }
+    },
+    "SignUp" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Up"
+          }
+        }
+      }
+    },
+    "TermsAndConditions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms and Conditions of Service"
+          }
+        }
+      }
+    },
+    "TermsConditionFullText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By signing up, you agree to the Terms and Conditions of Service, Privacy Policy, and Cookie Usage"
           }
         }
       }
@@ -423,12 +502,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upload photo"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotoğraf yükle"
           }
         }
       }

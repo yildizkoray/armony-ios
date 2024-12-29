@@ -24,6 +24,9 @@ public extension URLNavigation {
         SettingsCoordinator.register(navigator: navigation)
         VisitedAccountCoordinator.register(navigator: navigation)
         WebCoordinator.register(navigator: navigation)
+        if #available(iOS 16, *) {
+            RegionsCoordinator.register(navigator: navigation)
+        }
         return navigation
     }
 }

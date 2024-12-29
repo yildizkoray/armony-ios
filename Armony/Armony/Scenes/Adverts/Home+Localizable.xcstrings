@@ -23,6 +23,17 @@
         }
       }
     },
+    "Advert.DeleteAd" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete advert"
+          }
+        }
+      }
+    },
     "Advert.Expire.Warning" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -31,11 +42,16 @@
             "state" : "translated",
             "value" : "The 30-day publication period for your ad has ended, and it has been removed."
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "Advert.RepostAd" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanınızın 30 günlük yayın süresi dolduğu için yayından kaldırılmıştır"
+            "value" : "Publish again"
           }
         }
       }
@@ -48,12 +64,6 @@
             "state" : "translated",
             "value" : "Send Message"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mesaj Gönder"
-          }
         }
       }
     },
@@ -65,12 +75,6 @@
             "state" : "translated",
             "value" : "All ads"
           }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tüm ilanları gör"
-          }
         }
       }
     },
@@ -81,12 +85,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No ads available yet"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Henüz hiçbir ilan yok"
           }
         }
       }

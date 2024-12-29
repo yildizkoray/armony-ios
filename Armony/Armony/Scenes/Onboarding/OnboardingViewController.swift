@@ -97,11 +97,13 @@ extension OnboardingViewController: OnboardingViewDelegate {
         view.backgroundColor = .armonyBlack
 
         registerButton.setTitleColor(.armonyWhite, for: .normal)
-        registerButton.setTitle("Giriş Yap", for: .normal)
+        registerButton.setTitle(String("SignUp", table: .common),
+                                for: .normal)
         registerButton.titleLabel?.font = .regularSubheading
 
         homePageButton.setTitleColor(.armonyWhite, for: .normal)
-        homePageButton.setTitle("Anasayfa", for: .normal)
+        homePageButton.setTitle(String("Home", table: .common),
+                                for: .normal)
         homePageButton.titleLabel?.font = .regularSubheading
     }
 

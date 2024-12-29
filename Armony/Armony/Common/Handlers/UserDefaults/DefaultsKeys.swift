@@ -14,6 +14,8 @@ protocol DefaultsKeyProtocol {
 enum DefaultsKeys: String, CaseIterable {
     case onboardingHasSeen = "onboardingHasSeen"
     case isFirtRun = "isFirstRun"
+    case region
+    case isRegionActive
 }
 
 // MARK: - DefaultsKeyProtocol

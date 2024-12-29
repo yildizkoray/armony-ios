@@ -41,23 +41,23 @@ final class LogOutBottomPopUpViewController: BottomPopupViewController, ViewCont
     }
 
     private func configureLabels() {
-        titleLabel.text = "Çıkış Yap"
+        titleLabel.text = String("LogOut", table: .common)
         titleLabel.font = .semiboldTitle
         titleLabel.textColor = .armonyWhite
 
 
-        subtitleLabel.text = "Uygulamadan çıkmak istediğinizden emin misiniz ?"
+        subtitleLabel.text = String("LogOut.Confirmation", table: .common)
         subtitleLabel.font = .lightBody
         subtitleLabel.textColor = .armonyWhite
     }
 
     private func configureActionButtons() {
-        logOutButton.setTitle("Çıkış Yap", for: .normal)
+        logOutButton.setTitle(String("LogOut", table: .common), for: .normal)
         logOutButton.backgroundColor = .armonyPurple
         logOutButton.setTitleColor(.armonyWhite, for: .normal)
         logOutButton.titleLabel?.font = .semiboldHeading
 
-        cancelButton.setTitle("Vazgeç", for: .normal)
+        cancelButton.setTitle(String("Common.Cancel", table: .common), for: .normal)
         cancelButton.backgroundColor = .clear
         cancelButton.setTitleColor(.armonyWhite, for: .normal)
         cancelButton.titleLabel?.font = .lightBody

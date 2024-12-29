@@ -344,8 +344,9 @@ extension AdvertViewModel: ViewModelLifeCycle {
                 let genreItems: [MusicGenreItemPresentation] = response.data.genres.lazy.map {
                     MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
                 }
+                let text = String("MusicGenre", table: .common)
                 let genresPresentation = MusicGenresPresentation(
-                    title: "Müzik Tarzı".attributed(color: .white, font: .lightBody), // TODO: - Localizable
+                    title: text.attributed(color: .white, font: .lightBody),
                     cellBorderColor: response.data.type.colorCode.colorFromHEX,
                     items: genreItems
                 )
@@ -356,8 +357,9 @@ extension AdvertViewModel: ViewModelLifeCycle {
                     let genreItems: [MusicGenreItemPresentation] = response.data.serviceTypes.lazy.map {
                         MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
                     }
+                    let text = String("LessonFormat", table: .common)
                     let genresPresentation = MusicGenresPresentation(
-                        title: "Eğitim Şekli".attributed(color: .white, font: .lightBody), // TODO: - Localizable
+                        title: text.attributed(color: .white, font: .lightBody),
                         cellBorderColor: response.data.type.colorCode.colorFromHEX,
                         items: genreItems
                     )
@@ -438,7 +440,8 @@ extension AdvertViewModel: ReportSubjectSelectionDelegate {
                     view?.stopSendMessageButtonActivityIndicatorView()
                 }
 
-                await AlertService.show(message: "Geri bildirimini aldık", actions: [.okay()])
+                await AlertService.show(message: String("Common.Report.Success", table: .common), 
+                                        actions: [.okay()])
             }
             catch let error {
                 safeSync {
@@ -480,10 +483,11 @@ extension AdvertViewModel: DeleteAdvertFeedbackSelectionDelegate {
             feedbackSubject: FeedbackSubject(id: output.id, title: output.title),
             message: .space
         )
-        let removeAction = AlertService.action(title: "İlanı Sil", style: .destructive, action: { [weak self] in
+        let removeAction = AlertService.action(title: String("Advert.DeleteAd", table: .home),
+                                               style: .destructive, action: { [weak self] in
             self?.remove(feedback: request)
         })
-        AlertService.show(message: "İlanı silmek istediginizden emin misiniz?",
+        AlertService.show(message: "Are you sure you want to delete this ad?",
                           actions: [removeAction, .cancel()])
     }
 }

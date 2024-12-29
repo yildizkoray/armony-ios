@@ -81,17 +81,17 @@ final class ChangePasswordViewController: UIViewController, ViewController {
 
     private func configurePasswordTextFields() {
         currentPasswordTextField.isSecureTextEntry = true
-        currentPasswordTextField.placeholder = "Mevcut Sifre".needLocalization
+        currentPasswordTextField.placeholder = String("CurrentPassword", table: .common)
 
         newPasswordTextField.isSecureTextEntry = true
-        newPasswordTextField.placeholder = "Yeni Sifre".needLocalization
+        newPasswordTextField.placeholder = String("NewPassword", table: .common)
 
         newPasswordTextField.rightView = hideShowPasswordButton
         newPasswordTextField.rightViewMode = .always
 
         newPasswordTextField.rules = ValidationRuleSet(
             rules: [
-                Validation.Rule.Length(min: 6, max: 300, error: "Şifreniz minimum 6 karakter olmalı")
+                Validation.Rule.Length(min: 6, max: 300, error: String("Common.Validation.Password.Error", table: .common))
             ]
         )
     }
@@ -107,7 +107,7 @@ extension ChangePasswordViewController: ChangePasswordViewDelegate {
     func configureUI() {
         configurePasswordTextFields()
         configureSaveButton()
-        title = "Şifre Değiştir"
+        title = String("ChangePassword", table: .common)
     }
     func startSaveButtonActivityIndicatorView() {
         saveButton.startActivityIndicatorView()

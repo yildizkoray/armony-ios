@@ -43,7 +43,7 @@ public final class ForgotPasswordView: MessageView, NibLoadable {
     fileprivate func configureActionButton() {
         actionButton.isEnabled = false
         actionButton.backgroundColor = .armonyPurpleLow
-        actionButton.setTitle("Tamam".needLocalization, for: .normal)
+        actionButton.setTitle(String("Common.OK", table: .common), for: .normal)
         actionButton.setTitleColor(.armonyWhite, for: .normal)
         actionButton.setTitleColor(.armonyWhiteMedium, for: .disabled)
         actionButton.titleLabel?.font = .semiboldHeading
@@ -62,7 +62,9 @@ public final class ForgotPasswordView: MessageView, NibLoadable {
         configureEmailTextField()
         configureActionButton()
 
+        title.text = String("ForgetPassword", table: .common)
         title.font = .semiboldTitle
+        subtitleLabel.text = String("ForgetPassword.Subtitle", table: .common)
         subtitleLabel.font = .lightBody
 
         validationResponders.didValidate = { [weak self] result in
@@ -86,7 +88,7 @@ public final class ForgotPasswordView: MessageView, NibLoadable {
     }
 
     private func configureEmailTextField() {
-        emailTextField.placeholder = "E-posta".needLocalization
+        emailTextField.placeholder = "E-mail"
 
         emailTextField.autocapitalizationType = .none
         emailTextField.autocorrectionType = .no

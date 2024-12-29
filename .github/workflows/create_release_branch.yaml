@@ -3,10 +3,16 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
     workflow_dispatch:
       inputs:
-        version:
-          description: 'Version'     
+        version_type:
+          type: choice
+          description: 'Version increment type'
           required: true
-          default: '1.2.0'
+          default: 'patch'
+          options:
+            - patch
+            - minor
+            - major
+
 jobs:
   create-branch:
     runs-on: macos-latest
@@ -14,26 +20,46 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        ref: development
+        fetch-depth: 0
 
     - name: Set up Git
       run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "koray.yildizz@gmail.com"
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    
+    - name: Get current version and increment version
+      id: version
+      run: |
+        cd Armony
+        CURRENT_VERSION=$(agvtool what-marketing-version -terse1)
+        IFS='.' read -r major minor patch <<< "$CURRENT_VERSION"
+        
+        if [ "${{ github.event.inputs.version_type }}" = "major" ]; then
+          NEW_VERSION="$((major + 1)).0.0"
+        elif [ "${{ github.event.inputs.version_type }}" = "minor" ]; then
+          NEW_VERSION="$major.$((minor + 1)).0"
+        else
+          NEW_VERSION="$major.$minor.$((patch + 1))"
+        fi
+        
+        echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
       
     - name: Create new branch
       run: |
-        git checkout -b Releases/Release${{ github.event.inputs.version }}
+        git checkout -b Releases/Release${{ steps.version.outputs.new_version }}
 
     - name: Update marketing version
       run: |
         cd Armony
-        xcrun agvtool new-marketing-version ${{ github.event.inputs.version }}
+        xcrun agvtool new-marketing-version ${{ steps.version.outputs.new_version }}
 
     - name: Git add, commit and push
       run: |
         git add .
-        git commit -m "Bump version number to ${{ github.event.inputs.version }}"
-        git push origin Releases/Release${{ github.event.inputs.version }}
+        git commit -m "Bump version number to ${{ steps.version.outputs.new_version }}"
+        git push origin Releases/Release${{ steps.version.outputs.new_version }}
       env:
         GITHUB_TOKEN: ${{ secrets.TEST }}
 

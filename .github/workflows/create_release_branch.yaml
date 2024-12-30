@@ -45,10 +45,26 @@ jobs:
         fi
         
         echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+
+    - name: Check if branch exists
+      id: check_branch
+      run: |
+        BRANCH_NAME="Releases/Release${{ steps.version.outputs.new_version }}"
+        if git ls-remote --heads origin $BRANCH_NAME | grep -q $BRANCH_NAME; then
+          echo "exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "exists=false" >> $GITHUB_OUTPUT
+        fi
+        echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+    - name: Delete existing branch if exists
+      if: steps.check_branch.outputs.exists == 'true'
+      run: |
+        git push origin --delete ${{ steps.check_branch.outputs.branch_name }}
       
     - name: Create new branch
       run: |
-        git checkout -b Releases/Release${{ steps.version.outputs.new_version }}
+        git checkout -b ${{ steps.check_branch.outputs.branch_name }}
 
     - name: Update marketing version
       run: |
@@ -59,7 +75,7 @@ jobs:
       run: |
         git add .
         git commit -m "Bump version number to ${{ steps.version.outputs.new_version }}"
-        git push origin Releases/Release${{ steps.version.outputs.new_version }}
+        git push origin ${{ steps.check_branch.outputs.branch_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.TEST }}
 

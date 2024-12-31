@@ -73,8 +73,25 @@ public extension Alamofire.Session {
 
         let configuration = URLSessionConfiguration.af.default
         configuration.headers = defaultHeaders
-
-        self.init(configuration: configuration, interceptor: interceptor)
+        
+        do {
+            let publicKey: String = RemoteConfigService.shared[.publicKey]
+            let data = try SecurityKeyConverter.createDataFromPEM(publicKey)
+            let secKey = try SecurityKeyConverter.convertPublicKeyToSecretKey(data)
+            
+            let evaluators: [String: ServerTrustEvaluating] = [
+                RemoteConfigService.shared[.apiHost]: PublicKeysTrustEvaluator(keys: [secKey])
+            ]
+            let serverTrustManager = ServerTrustManager(evaluators: evaluators)
+            self.init(configuration: configuration, interceptor: interceptor, serverTrustManager: serverTrustManager)
+        }
+        catch {
+            let evaluators: [String: ServerTrustEvaluating] = [
+                RemoteConfigService.shared[.apiHost]: PublicKeysTrustEvaluator()
+            ]
+            let serverTrustManager = ServerTrustManager(evaluators: evaluators)
+            self.init(configuration: configuration, interceptor: interceptor, serverTrustManager: serverTrustManager)
+        }
     }
 }
 

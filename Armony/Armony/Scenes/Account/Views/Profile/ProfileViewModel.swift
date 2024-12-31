@@ -192,8 +192,8 @@ final class ProfileViewModel: ViewModel {
         Task {
             do {
                 let response  = try await service.execute(
-                    task: GetSkillsTask(for: 1),
-                    type: RestArrayResponse<Skill>.self
+                    task: GetLocationTask(),
+                    type: RestArrayResponse<Location>.self
                 )
                 safeSync {
                     view?.stopLocationDropdownViewActivityIndicatorView()

@@ -13,16 +13,16 @@ extension Validation {
 
 struct ValidationRuleSet<Input> {
 
-    fileprivate struct AnyRule<Input>: Validation.Rule {
+    fileprivate struct AnyRule<T>: Validation.Rule {
         let error: String
-        let validation: (Input?) -> Bool
+        let validation: (T?) -> Bool
 
-        public init<R: Validation.Rule>(base: R) where R.Input == Input {
+        public init<R: Validation.Rule>(base: R) where R.Input == T {
             error = base.error
             validation = base.validate
         }
 
-        func validate(input: Input?) -> Bool {
+        func validate(input: T?) -> Bool {
             return validation(input)
         }
     }

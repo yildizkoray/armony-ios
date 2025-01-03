@@ -79,7 +79,7 @@ public extension UIButton {
 public extension UIButton {
 
     private struct AssociationKeys {
-        static var touchUpInsideBlock = "armony_button_touchUpInsideBlock"
+        static var touchUpInsideBlock: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "armony_button_touchUpInsideBlock".hashValue)!
     }
 
     var touchUpInsideAction: Callback<UIButton>? {

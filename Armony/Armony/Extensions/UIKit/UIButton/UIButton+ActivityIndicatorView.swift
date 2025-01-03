@@ -10,18 +10,18 @@ import UIKit
 public extension UIButton {
 
     private struct AssociationKeys {
-        static var activityIndicatorView = "button_activityIndicatorView"
-        static var disabledTitle = "button_disabledTitle"
-        static var disabledAttributedTitle = "button_disabledAttributedTitle"
-        static var koray = "TestKoray"
+        static var activityIndicatorView: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "button_activityIndicatorView".hashValue)!
+        static var disabledTitle: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "button_disabledTitle".hashValue)!
+        static var disabledAttributedTitle: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "button_disabledAttributedTitle".hashValue)!
+        static var originalImage: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "button_originalImage".hashValue)!
     }
 
     private var image: UIImage? {
         get {
-            return objc_getAssociatedObject(self, &AssociationKeys.koray) as? UIImage
+            return objc_getAssociatedObject(self, &AssociationKeys.originalImage) as? UIImage
         }
         set {
-            objc_setAssociatedObject(self, &AssociationKeys.koray, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociationKeys.originalImage, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 
@@ -63,12 +63,6 @@ public extension UIButton {
                 activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor)
             ]
         )
-
-//        addConstraints(NSLayoutConstraint.constraints(
-//                        withVisualFormat: "H:|-[activityIndicatorView]-|",
-//                        options: [.alignAllCenterX],
-//                        metrics: [:],
-//                        views: ["activityIndicatorView": activityIndicatorView]))
 
         objc_setAssociatedObject(self, &AssociationKeys.activityIndicatorView,
                                  activityIndicatorView, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)

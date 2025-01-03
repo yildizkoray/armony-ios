@@ -10,7 +10,8 @@ import UIKit
 public extension UIApplication {
 
     static var window: UIWindow? {
-        guard let window = Self.shared.windows.first(where: { $0.isKeyWindow }) else {
+        guard let scene = Self.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene,
+              let window = scene.windows.first(where: { $0.isKeyWindow }) else {
             return nil
         }
         return window

@@ -33,10 +33,12 @@ extension UIViewController {
 
     class var topMostViewController: UIViewController? {
         var rootViewController: UIViewController?
-        let windows = UIApplication.shared.windows
-        if let windowRootViewController = windows.first(where: { $0.isKeyWindow })?.rootViewController {
-            rootViewController = windowRootViewController
+        
+        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene,
+           let window = scene.windows.first(where: { $0.isKeyWindow }) {
+            rootViewController = window.rootViewController
         }
+        
         return topMostViewController(of: rootViewController)
     }
 

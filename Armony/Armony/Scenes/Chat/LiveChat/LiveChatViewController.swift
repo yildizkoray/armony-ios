@@ -241,6 +241,9 @@ extension LiveChatViewController: InputBarAccessoryViewDelegate, UITextViewDeleg
             self?.resetInputBar()
             inputBar.sendButton.stopAnimating()
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            AppRatingService.shared.requestReviewIfNeeded()
+        }
     }
 }
 

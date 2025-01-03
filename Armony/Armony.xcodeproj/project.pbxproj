@@ -209,6 +209,8 @@
 		02D00FCD2913254100B84DD7 /* HTTPUploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D00FCC2913254100B84DD7 /* HTTPUploadTask.swift */; };
 		02D00FCF2913383000B84DD7 /* PutAvatarUpdateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D00FCE2913383000B84DD7 /* PutAvatarUpdateTask.swift */; };
 		02D00FD12913CE9F00B84DD7 /* FormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D00FD02913CE9F00B84DD7 /* FormData.swift */; };
+		02D3283D2D276E6200B7E4BE /* AppRatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3283B2D276E6200B7E4BE /* AppRatingService.swift */; };
+		02D328402D2777E700B7E4BE /* UserIDEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3283E2D2777E700B7E4BE /* UserIDEncryptor.swift */; };
 		02D8C9D62916ECC5008E80D0 /* PostLogoutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C9D52916ECC5008E80D0 /* PostLogoutTask.swift */; };
 		02D8C9D82916F349008E80D0 /* PostForgetPasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C9D72916F349008E80D0 /* PostForgetPasswordTask.swift */; };
 		02D90D0F28568EB5005B5162 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D90D0E28568EB5005B5162 /* Onboarding.storyboard */; };
@@ -654,6 +656,8 @@
 		02D00FCC2913254100B84DD7 /* HTTPUploadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPUploadTask.swift; sourceTree = "<group>"; };
 		02D00FCE2913383000B84DD7 /* PutAvatarUpdateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutAvatarUpdateTask.swift; sourceTree = "<group>"; };
 		02D00FD02913CE9F00B84DD7 /* FormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormData.swift; sourceTree = "<group>"; };
+		02D3283B2D276E6200B7E4BE /* AppRatingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRatingService.swift; sourceTree = "<group>"; };
+		02D3283E2D2777E700B7E4BE /* UserIDEncryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserIDEncryptor.swift; sourceTree = "<group>"; };
 		02D8C9D52916ECC5008E80D0 /* PostLogoutTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogoutTask.swift; sourceTree = "<group>"; };
 		02D8C9D72916F349008E80D0 /* PostForgetPasswordTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostForgetPasswordTask.swift; sourceTree = "<group>"; };
 		02D90D0E28568EB5005B5162 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -1874,6 +1878,23 @@
 			path = NotchView;
 			sourceTree = "<group>";
 		};
+		02D3283C2D276E6200B7E4BE /* AppRating */ = {
+			isa = PBXGroup;
+			children = (
+				02D3283B2D276E6200B7E4BE /* AppRatingService.swift */,
+			);
+			path = AppRating;
+			sourceTree = "<group>";
+		};
+		02D3283F2D2777E700B7E4BE /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				0284079D2D237D730041C43D /* SecurityKeyConverter.swift */,
+				02D3283E2D2777E700B7E4BE /* UserIDEncryptor.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
 		02D8C9D42916EC90008E80D0 /* Task */ = {
 			isa = PBXGroup;
 			children = (
@@ -2400,12 +2421,12 @@
 		B177347926D43F0E00BD7D39 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				02D3283F2D2777E700B7E4BE /* Security */,
 				026C4FD0280D5FA800C0B967 /* CommonConstants.swift */,
 				B1E2947F299FE22200602819 /* HashableKey.swift */,
 				B1E29481299FE24900602819 /* HashableKey+Keys.swift */,
 				0294989628F712800075F36F /* Localization.swift */,
 				B16CEF3629B9333F00D95FA9 /* Logger.swift */,
-				0284079D2D237D730041C43D /* SecurityKeyConverter.swift */,
 				0231F2A6284FA3AE0012928F /* TypeDefinitions.swift */,
 				027E8E162934580C001EFDFA /* Analytics */,
 				021E714C28EDFA9700795BC8 /* Backend */,
@@ -2558,10 +2579,11 @@
 			children = (
 				B1C85DC927BC290F00C3CE05 /* Alert */,
 				0271506E293295310063A8C3 /* AppLaunch */,
+				02D3283C2D276E6200B7E4BE /* AppRating */,
 				B1C85DBF27BC1B5300C3CE05 /* Authentication */,
 				B1197D3227BEF54C0045E059 /* Firebase */,
-				02707983293177D600199298 /* RemoteNotification */,
 				B152FB9B298F1253001D2F00 /* InternetConnection */,
+				02707983293177D600199298 /* RemoteNotification */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -3517,6 +3539,7 @@
 				02C4D6F6288BFD2D00FDF55F /* EmptyProfileSelectionPresentation.swift in Sources */,
 				B187858F29CCEA3D00CB2C00 /* LinkLabel.swift in Sources */,
 				02BBC48D283D5605007F7E51 /* GetUserAdvertsTask.swift in Sources */,
+				02D328402D2777E700B7E4BE /* UserIDEncryptor.swift in Sources */,
 				B17ECF9C26DA39F600DD535D /* ViewModel.swift in Sources */,
 				B15F22E227A0886B001F5B78 /* LoginCoordinator.swift in Sources */,
 				B1C9095F294680ED0080804C /* VisitedAccountViewModel.swift in Sources */,
@@ -3683,6 +3706,7 @@
 				024D903A288490C5007B6DFA /* FeedbackViewController.swift in Sources */,
 				B1FEFB1F29D8E9AD00F03EA0 /* ExpandableLabel.swift in Sources */,
 				B1ED10F4274A5E18008B8745 /* TextAppearancePresentation.swift in Sources */,
+				02D3283D2D276E6200B7E4BE /* AppRatingService.swift in Sources */,
 				024D9041288493F2007B6DFA /* FeedbacksPresentation.swift in Sources */,
 				B10CCD7E274110C600BB313D /* SkillCellPresentation.swift in Sources */,
 				02B7CA6729259F400055B181 /* ChatsCoordinator.swift in Sources */,

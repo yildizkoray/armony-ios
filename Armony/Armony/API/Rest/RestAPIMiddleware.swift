@@ -38,7 +38,7 @@ final class RestAPIMiddleware: RequestInterceptor {
         urlRequest.setValue("IOS", forHTTPHeaderField: "Client-Type")
         
         if Defaults.shared[.isRegionActive] {
-            if let region = Defaults.shared[.region], region.isNotEmpty {
+            if let region: String = Defaults.shared[.region], region.isNotEmpty {
                 urlRequest.setValue(region, forHTTPHeaderField: "Region")
             }
         }

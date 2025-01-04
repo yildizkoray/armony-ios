@@ -8,6 +8,8 @@
 import Foundation
 
 protocol DefaultsKeyProtocol {
+    var authticator: AuthenticationService { get }
+    var encryptor: UserIDEncryptor { get }
     func key(configurator: ConfigReader) -> String
 }
 
@@ -21,6 +23,13 @@ enum DefaultsKeys: String, CaseIterable {
 
 // MARK: - DefaultsKeyProtocol
 extension DefaultsKeys: DefaultsKeyProtocol {
+    var authticator: AuthenticationService {
+        .shared
+    }
+    
+    var encryptor: UserIDEncryptor {
+        .shared
+    }
     
     private var nonUserBasedKeys: [DefaultsKeys] {
         return [
@@ -31,18 +40,16 @@ extension DefaultsKeys: DefaultsKeyProtocol {
     
     func key(configurator: ConfigReader = .shared) -> String {
         let baseKey = "\(configurator.environment.rawValue)-\(rawValue)"
-        let userID = AuthenticationService.shared.userID
         
         guard !nonUserBasedKeys.contains(self) else {
             return baseKey
         }
         
-        guard userID.isNotEmpty else {
+        guard authticator.userID.isNotEmpty, authticator.isAuthenticated else {
             return baseKey
         }
         
-        let encryptedID = UserIDEncryptor.shared.encrypt(userID)
+        let encryptedID = encryptor.encrypt(authticator.userID)
         return "\(baseKey)-\(encryptedID)"
-        
     }
 }

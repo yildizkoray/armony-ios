@@ -38,7 +38,7 @@ protocol EmptyInitializable {
     init()
 }
 
-struct EmptyDefault<Value: EmptyInitializable>: DefaultRepresentation {
+struct Empty<Value: EmptyInitializable>: DefaultRepresentation {
     static var defaultValue: Value {
         .init()
     }

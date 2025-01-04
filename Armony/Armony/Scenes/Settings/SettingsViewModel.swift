@@ -46,7 +46,7 @@ final class SettingsViewModel: ViewModel {
         Task {
             do {
                 let response = try await service.execute(task: GetSettingsTask(), type: RestArrayResponse<Setting>.self)
-                presentation = SettingsPresentation(settings: response.data.filter { $0.isVisible })
+                presentation = SettingsPresentation(settings: response.data)
             }
             catch {
                 presentation = .empty

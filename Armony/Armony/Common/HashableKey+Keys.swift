@@ -33,6 +33,5 @@ public extension HashableKey {
     static let apiVersion: HashableKey = "API_VERSION"
     static let apiHost: HashableKey = "API_HOST"
     static let apiScheme: HashableKey = "API_SCHEME"
-    static let settingsData: HashableKey = "SettingsData_136"
-    static let bannerSliderData: HashableKey = "HOME_BANNER_DATA"
+    static let publicKey: HashableKey = "PUBLIC_KEY"
 }

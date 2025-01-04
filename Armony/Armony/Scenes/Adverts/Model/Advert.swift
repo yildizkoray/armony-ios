@@ -35,16 +35,19 @@ public struct Advert: Decodable {
     let description: String?
     let type: Advert.Properties
 
-    @DefaultDecodable<EmptyDefault>
+    @DefaultDecodable<Empty>
     var genres: [MusicGenre]
 
     let isActive: Bool
-    let skills: [Skill]
+    
+    @DefaultDecodable<Empty>
+    var skills: [Skill]
+    
     let user: ArmonyUser
     let status: Advert.Status
     let updateDate: String
 
-    @DefaultDecodable<EmptyDefault>
+    @DefaultDecodable<Empty>
     var serviceTypes: [ServiceResponse]
 
     var externalLink: URL?

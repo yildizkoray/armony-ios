@@ -24,48 +24,62 @@ final class VisitedAccountViewModel: ViewModel {
     }
 
     private func fetchUserDetail() {
-        service.execute(task: GetUserTask(id: userID), type: RestObjectResponse<UserDetail>.self) { [weak self] result in
-
-            switch result {
-            case .success(let response):
-                self?.response = response.data
-
-                let _ = self?.userID != self?.authenticator.userID
-                let avatar = AvatarPresentation(kind: .custom(.init(size: .custom(72), radius: .medium)), source: .url(response.data.avatarURL))
-                let userSummaryPresentation = UserSummaryPresentation(
-                    avatarPresentation: avatar,
-                    shouldShowDotsButton: false,
-                    name: response.data.name.attributed(color: .white, font: .regularHeading),
-                    title: response.data.title?.title.attributed(color: .white, font: .lightBody),
-                    location: response.data.location?.title.attributed(color: .white, font: .regularBody),
-                    cardTitle: .empty, 
-                    updateDate: nil
+        Task {
+            do {
+                let response = try await service.execute(
+                    task: GetUserTask(id: userID),
+                    type: RestObjectResponse<UserDetail>.self
                 )
-
-                self?.view?.configureUserSummaryView(with: userSummaryPresentation)
-                self?.view?.setBioLabelText(response.data.bio)
-
-                let skils = SkillsPresentation(
-                    type: .profile(imageViewContainerBackgroundColor: .armonyBlue),
-                    separatorPresentation: .separator,
-                    skillTitleStyle: .init(color: .white, font: .lightBody),
-                    skills: response.data.skills
-                )
-                let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
-                let genreItems: [MusicGenreItemPresentation] = response.data.genres.lazy.map {
-                    MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                
+                self.response = response.data
+                
+                await MainActor.run {
+                    prepareUserSummary(response.data)
+                    view?.setBioLabelText(response.data.bio)
+                    prepareSkillsAndGenres(response.data)
                 }
-                let genres = MusicGenresPresentation(cellBorderColor: .armonyBlue, items: genreItems)
-                self?.view?.configurePager(
-                    skills: skils,
-                    musicGenres: genres,
-                    userID: self?.userID ?? .empty
-                )
-
-            case .failure(let error):
-                AlertService.show(error: error, actions: [.cancel()])
+            }
+            catch {
+                error.showAlert()
             }
         }
+    }
+    
+    private func prepareUserSummary(_ data: UserDetail) {
+        let avatar = AvatarPresentation(
+            kind: .custom(.init(size: .custom(72), radius: .medium)),
+            source: .url(data.avatarURL)
+        )
+        let userSummary = UserSummaryPresentation(
+            avatarPresentation: avatar,
+            shouldShowDotsButton: false,
+            name: data.name.attributed(color: .white, font: .regularHeading),
+            title: data.title?.title.attributed(color: .white, font: .lightBody),
+            location: data.location?.title.attributed(color: .white, font: .regularBody),
+            cardTitle: .empty,
+            updateDate: nil
+        )
+        
+        view?.configureUserSummaryView(with: userSummary)
+    }
+    
+    private func prepareSkillsAndGenres(_ data: UserDetail) {
+        let skils = SkillsPresentation(
+            type: .profile(imageViewContainerBackgroundColor: .armonyBlue),
+            separatorPresentation: .separator,
+            skillTitleStyle: .init(color: .white, font: .lightBody),
+            skills: data.skills
+        )
+        let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
+        let genreItems: [MusicGenreItemPresentation] = data.genres.lazy.map {
+            MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+        }
+        let genres = MusicGenresPresentation(cellBorderColor: .armonyBlue, items: genreItems)
+        view?.configurePager(
+            skills: skils,
+            musicGenres: genres,
+            userID: userID
+        )
     }
 
     private func resetViews() {

@@ -300,110 +300,123 @@ extension AdvertViewModel: ViewModelLifeCycle {
         view?.setApplyButtonButtonVisibility(isHidden: isRemovingActive)
         view?.setDismissButton(completion: nil)
         view?.setNavigationBarBackgroundColor(color: colorCode.colorFromHEX)
-
-        service.execute(task: GetAdvertTask(id: id), type: RestObjectResponse<Advert>.self) { [weak self] result in
-            self?.view?.stopActivityIndicatorView()
-
-            switch result {
-            case .success(let response):
-                self?.view?.setContentStackViewVisibility(isHidden: false, animated: false)
-                self?.advert = response.data
-                self?.colorCode = response.data.type.colorCode
-                self?.view?.setNavigationBarBackgroundColor(color: response.data.type.colorCode.colorFromHEX)
+        
+        Task {
+            do {
+                let response = try await service.execute(
+                    task: GetAdvertTask(id: id),
+                    type: RestObjectResponse<Advert>.self
+                )
                 
-                self?.view?.setTitle(response.data.type.title)
-                self?.view?.setNavigationBarTitleAttributes(
-                    [.foregroundColor: AppTheme.Color.white.uiColor]
-                )
+                await MainActor.run {
+                    view?.stopActivityIndicatorView()
+                    view?.setContentStackViewVisibility(isHidden: false, animated: false)
+                    advert = response.data
+                    colorCode = response.data.type.colorCode
+                    view?.setNavigationBarBackgroundColor(color: response.data.type.colorCode.colorFromHEX)
+                    
+                    view?.setTitle(response.data.type.title)
+                    view?.setNavigationBarTitleAttributes(
+                        [.foregroundColor: AppTheme.Color.white.uiColor]
+                    )
 
-                // UserSummary
-                let shouldShowDotsButton = response.data.user.id != AuthenticationService.shared.userID
-                let avatarPresentation = AvatarPresentation(
-                    kind: .custom(.init(size: .custom(72), radius: .medium)),
-                    source: .url(response.data.user.avatarURL)
-                )
-                let userSummaryPresentation = UserSummaryPresentation(
-                    avatarPresentation: avatarPresentation,
-                    shouldShowDotsButton: shouldShowDotsButton,
-                    name: response.data.user.name.attributed(color: .white, font: .regularHeading),
-                    location: response.data.location.title.attributed(color: .white, font: .regularBody), 
-                    cardTitle: .empty,
-                    updateDate: response.data.updateDate.attributed(color: .white, font: .regularBody)
-                )
-                self?.view?.configureUserSummaryView(with: userSummaryPresentation)
-                self?.view?.setRemoveAdvertsButtonVisibility(isHidden: response.data.user.id != AuthenticationService.shared.userID)
+                    prepareUserSummary(response.data)
+                    view?.setRemoveAdvertsButtonVisibility(isHidden: response.data.user.id != AuthenticationService.shared.userID)
 
-                let isOwner = (response.data.user.id == AuthenticationService.shared.userID)
-                let isApplyButtonHidden = AuthenticationService.shared.isAuthenticated ? isOwner : false
-                self?.view?.setApplyButtonButtonVisibility(isHidden: isApplyButtonHidden)
+                    let isOwner = (response.data.user.id == AuthenticationService.shared.userID)
+                    let isApplyButtonHidden = AuthenticationService.shared.isAuthenticated ? isOwner : false
+                    view?.setApplyButtonButtonVisibility(isHidden: isApplyButtonHidden)
 
-                self?.view?.setDescriptionLabel(description: response.data.description.emptyIfNil)
-
-                // Genre
-                let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
-                let genreItems: [MusicGenreItemPresentation] = response.data.genres.lazy.map {
-                    MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                    view?.setDescriptionLabel(description: response.data.description.emptyIfNil)
+                    
+                    prepareGenres(response.data)
+                    prepareOtherSections(response.data)
                 }
-                let text = String("MusicGenre", table: .common)
-                let genresPresentation = MusicGenresPresentation(
-                    title: text.attributed(color: .white, font: .lightBody),
-                    cellBorderColor: response.data.type.colorCode.colorFromHEX,
-                    items: genreItems
-                )
-                self?.view?.configureGenresView(with: genresPresentation)
-
-                // Instruction Type
-                if response.data.type.id == 4 {
-                    let genreItems: [MusicGenreItemPresentation] = response.data.serviceTypes.lazy.map {
-                        MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
-                    }
-                    let text = String("LessonFormat", table: .common)
-                    let genresPresentation = MusicGenresPresentation(
-                        title: text.attributed(color: .white, font: .lightBody),
-                        cellBorderColor: response.data.type.colorCode.colorFromHEX,
-                        items: genreItems
-                    )
-                    self?.view?.configureInstructionTypesView(with: genresPresentation)
-
-                    // Skills
-
-                    let instructionServices: [MusicGenreItemPresentation] = response.data.skills.lazy.map {
-                        MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
-                    }
-                    let instructionServicesPresentation = MusicGenresPresentation(
-                        title: response.data.type.skillTitle.attributed(color: .white, font: .lightBody), // TODO: - Localizable
-                        cellBorderColor: response.data.type.colorCode.colorFromHEX,
-                        items: instructionServices
-                    )
-
-                    self?.view?.configureGenresView(with: instructionServicesPresentation)
-                    self?.view?.configureSkillsView(with: .empty)
-                } else if [3,5].contains(response.data.type.id) {
-                    let instructionServices: [MusicGenreItemPresentation] = response.data.skills.lazy.map {
-                        MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
-                    }
-                    let instructionServicesPresentation = MusicGenresPresentation(
-                        title: response.data.type.skillTitle.attributed(color: .white, font: .lightBody), // TODO: - Localizable
-                        cellBorderColor: response.data.type.colorCode.colorFromHEX,
-                        items: instructionServices
-                    )
-
-                    self?.view?.configureGenresView(with: instructionServicesPresentation)
-                    self?.view?.configureSkillsView(with: .empty)
-                } else {
-                    // Skills
-                    let skillsPresentation = SkillsPresentation(
-                        type: .advert(imageViewContainerViewBorderColor: response.data.type.colorCode.colorFromHEX),
-                        title: response.data.type.skillTitle.attributed(color: .white, font: .lightBody),
-                        skillTitleStyle: .init(color: .white, font: .lightBody),
-                        skills: response.data.skills
-                    )
-                    self?.view?.configureSkillsView(with: skillsPresentation)
-                }
-
-            case .failure(let error):
-                AlertService.show(message: error.description, actions: [.okay()])
             }
+            catch {
+                error.showAlert()
+            }
+        }
+    }
+    
+    private func prepareUserSummary(_ advert: Advert) {
+        let shouldShowDotsButton = advert.user.id != AuthenticationService.shared.userID
+        let avatarPresentation = AvatarPresentation(
+            kind: .custom(.init(size: .custom(72), radius: .medium)),
+            source: .url(advert.user.avatarURL)
+        )
+        let userSummaryPresentation = UserSummaryPresentation(
+            avatarPresentation: avatarPresentation,
+            shouldShowDotsButton: shouldShowDotsButton,
+            name: advert.user.name.attributed(color: .white, font: .regularHeading),
+            location: advert.location.title.attributed(color: .white, font: .regularBody),
+            cardTitle: .empty,
+            updateDate: advert.updateDate.attributed(color: .white, font: .regularBody)
+        )
+        view?.configureUserSummaryView(with: userSummaryPresentation)
+    }
+    
+    private func prepareGenres(_ advert: Advert) {
+        let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
+        let genreItems: [MusicGenreItemPresentation] = advert.genres.lazy.map {
+            MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+        }
+        let text = String("MusicGenre", table: .common)
+        let genresPresentation = MusicGenresPresentation(
+            title: text.attributed(color: .white, font: .lightBody),
+            cellBorderColor: advert.type.colorCode.colorFromHEX,
+            items: genreItems
+        )
+        view?.configureGenresView(with: genresPresentation)
+    }
+    
+    private func prepareOtherSections(_ advert: Advert) {
+        let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
+        if advert.type.id == 4 {
+            let genreItems: [MusicGenreItemPresentation] = advert.serviceTypes.lazy.map {
+                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+            }
+            let text = String("LessonFormat", table: .common)
+            let genresPresentation = MusicGenresPresentation(
+                title: text.attributed(color: .white, font: .lightBody),
+                cellBorderColor: advert.type.colorCode.colorFromHEX,
+                items: genreItems
+            )
+            view?.configureInstructionTypesView(with: genresPresentation)
+
+            // Skills
+            let instructionServices: [MusicGenreItemPresentation] = advert.skills.lazy.map {
+                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+            }
+            let instructionServicesPresentation = MusicGenresPresentation(
+                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                cellBorderColor: advert.type.colorCode.colorFromHEX,
+                items: instructionServices
+            )
+
+            view?.configureGenresView(with: instructionServicesPresentation)
+            view?.configureSkillsView(with: .empty)
+        } else if [3,5].contains(advert.type.id) {
+            let instructionServices: [MusicGenreItemPresentation] = advert.skills.lazy.map {
+                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+            }
+            let instructionServicesPresentation = MusicGenresPresentation(
+                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                cellBorderColor: advert.type.colorCode.colorFromHEX,
+                items: instructionServices
+            )
+
+            view?.configureGenresView(with: instructionServicesPresentation)
+            view?.configureSkillsView(with: .empty)
+        } else {
+            // Skills
+            let skillsPresentation = SkillsPresentation(
+                type: .advert(imageViewContainerViewBorderColor: advert.type.colorCode.colorFromHEX),
+                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                skillTitleStyle: .init(color: .white, font: .lightBody),
+                skills: advert.skills
+            )
+            view?.configureSkillsView(with: skillsPresentation)
         }
     }
 

@@ -22,8 +22,21 @@ final class FeedbackViewModel: ViewModel {
 
     func subjectDropdownViewDidTap() {
         view?.startFeedbackSubjectActivityIndicatorView()
-        service.execute(task: GetFeedbackSubjectsTask(), type: RestArrayResponse<FeedbackSubject>.self) { [weak self] result in
-            self?.handleFeedbackSubjectsResult(result: result)
+        Task {
+            do {
+                let response = try await service.execute(
+                    task: GetFeedbackSubjectsTask(),
+                    type: RestArrayResponse<FeedbackSubject>.self
+                )
+                
+                await MainActor.run {
+                    view?.stopFeedbackSubjectActivityIndicatorView()
+                    handleFeedbackSubjectsResult(response: response)
+                }
+            }
+            catch {
+                error.showAlert()
+            }
         }
     }
 
@@ -40,36 +53,36 @@ final class FeedbackViewModel: ViewModel {
         let request = FeedbackRequest(feedbackSubject: feedbackSubject,
                                       message: view.detailText)
         view.startSendButtonActivityIndicatorView()
-        service.execute(task: PostFeedbackTask(request: request), type: RestObjectResponse<EmptyResponse>.self) { [weak self] result in
-            self?.view?.stopSendButtonActivityIndicatorView()
-            switch result {
-            case .success:
-                let message = String(localized: "Feedback.Submission.Succes.Title", table: "Feedback+Localizable")
-                AlertService.show(message: message, actions: [.okay(action: {
-                    self?.coordinator.pop()
-                })])
-
-            case .failure(let error):
-                AlertService.show(error: error.api, actions: [.okay()])
+        Task {
+            do {
+                let _ = try await service.execute(
+                    task: PostFeedbackTask(request: request),
+                    type: RestObjectResponse<EmptyResponse>.self
+                )
+                
+                await MainActor.run {
+                    view.stopSendButtonActivityIndicatorView()
+                    let message = String(localized: "Feedback.Submission.Succes.Title", table: "Feedback+Localizable")
+                    AlertService.show(message: message, actions: [.okay(action: {
+                        self.coordinator.pop()
+                    })])
+                }
+            }
+            catch {
+                error.showAlert()
             }
         }
     }
 
-    private func handleFeedbackSubjectsResult(result: NetworkResult<RestArrayResponse<FeedbackSubject>>) {
-        view?.stopFeedbackSubjectActivityIndicatorView()
-        switch result {
-        case .success(let response):
-            let items: [FeedbackSubjectSelectionInput] = response.data.map { subject in
-                return FeedbackSubjectSelectionInput(
-                    id: subject.id, title: subject.title, isSelected: subject.id == selectedSubjectID.ifNil(.max)
-                )
-            }
-            presentation = FeedbacksPresentation(data: response.data)
-            let selectionPresentation = FeedbackSubjectSelectionPresentation(delegate: self, items: items)
-            coordinator.selectionBottomPopUp(with: selectionPresentation)
-        case .failure(let error):
-            AlertService.show(message: error.description, actions: [.okay()])
+    private func handleFeedbackSubjectsResult(response: RestArrayResponse<FeedbackSubject>) {
+        let items: [FeedbackSubjectSelectionInput] = response.data.map { subject in
+            return FeedbackSubjectSelectionInput(
+                id: subject.id, title: subject.title, isSelected: subject.id == selectedSubjectID.ifNil(.max)
+            )
         }
+        presentation = FeedbacksPresentation(data: response.data)
+        let selectionPresentation = FeedbackSubjectSelectionPresentation(delegate: self, items: items)
+        coordinator.selectionBottomPopUp(with: selectionPresentation)
     }
 }
 

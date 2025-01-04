@@ -23,6 +23,8 @@ public extension String {
     static let hyphen = "-"
     /// /
     static let slash = "/"
+    /// /
+    static let newLine = "\n"
 
     var appColor: AppTheme.Color {
         return AppTheme.Color(rawValue: self)!

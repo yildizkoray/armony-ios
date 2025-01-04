@@ -40,9 +40,30 @@ class RestService: Service {
         do {
             let dataRequest = try? backend.execute(operation: operataion)
             addOperation(key: operataion.description, value: dataRequest)
+            return try await handleExecution(for: dataRequest, type: type)
+        }
+    }
 
+//    MARK: - Upload Operations
+    func upload<R>(task operataion: RestAPI.UploadOperation, type: R.Type) async throws -> R where R : APIResponse {
+        operations[operataion.description]?.cancel()
+        guard internetConnectionService.isConnected else {
+            FirebaseCrashlyticsLogger.shared.log(exception: .init(name: "RestService", reason: "internet is not connected"))
+            throw APIError.network
+        }
+        
+        do {
+            let dataRequest = try? backend.upload(operation: operataion)
+            addOperation(key: operataion.description, value: dataRequest)
+            return try await handleExecution(for: dataRequest, type: type)
+        }
+    }
+    
+    
+    private func handleExecution<R: APIResponse>(for executable: RestAPI.Executable?, type: R.Type) async throws -> R where R : APIResponse {
+        do {
             /// Throw operation create error
-            guard let dataRequest = dataRequest else {
+            guard let dataRequest = executable else {
                 throw APIError.operationCreate
             }
 
@@ -72,114 +93,6 @@ class RestService: Service {
             /// Return decoded data
             let decodedObject = try JSONDecoder().decode(type, from: data)
             return decodedObject
-        }
-    }
-    
-    func execute<R>(task operataion: HTTPTask, type: R.Type, completion: @escaping Callback<NetworkResult<R>>) where R : APIResponse {
-        operations[operataion.description]?.cancel()
-        guard internetConnectionService.isConnected else {
-            completion(.failure(.network))
-            FirebaseCrashlyticsLogger.shared.log(exception: .init(name: "RestService", reason: "internet is not connected"))
-            return
-        }
-
-        do {
-            let dataRequest = try backend.execute(operation: operataion)
-            addOperation(key: operataion.description, value: dataRequest)
-            handleExecution(for: dataRequest, type: R.self, completion: completion)
-        } catch let error {
-            debugPrint(error)
-            completion(.failure(.operationCreate))
-        }
-    }
-
-//    MARK: - Upload Operations
-    func upload<R>(task operataion: RestAPI.UploadOperation, type: R.Type) async throws -> R where R : APIResponse {
-        return try await withCheckedThrowingContinuation({ continuation in
-            upload(task: operataion, type: type) { result in
-                switch result {
-                case .success(let data):
-                    safeSync {
-                        continuation.resume(returning: data)
-                    }
-
-                case .failure(let error):
-                    continuation.resume(throwing: error)
-                    FirebaseCrashlyticsLogger.shared.log(error: error)
-                }
-            }
-        })
-    }
-
-    func upload<R>(task operataion: RestAPI.UploadOperation, type: R.Type, completion: @escaping Callback<NetworkResult<R>>) where R : APIResponse {
-        operations[operataion.description]?.cancel()
-        guard internetConnectionService.isConnected else {
-            completion(.failure(.network))
-            return
-        }
-
-        do {
-            let dataRequest = try backend.upload(operation: operataion)
-            addOperation(key: operataion.description, value: dataRequest)
-            handleExecution(for: dataRequest, type: R.self, completion: completion)
-        } catch let error {
-            debugPrint(error)
-            completion(.failure(.operationCreate))
-        }
-    }
-
-    private func handleExecution<R: APIResponse>(for executable: RestAPI.Executable, type: R.Type, completion: @escaping Callback<NetworkResult<R>>) {
-        executable.response { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    guard let data = data else {
-                        completion(.failure(.noData))
-                        return
-                    }
-
-                    /// Throw  API Error object
-                    let error = try JSONDecoder().decode(RestErrorResponse.self, from: data)
-                    try error.throwErrorIfFailure()
-
-                    /// Return decoded data
-                    let decodedObject = try JSONDecoder().decode(type, from: data)
-                    try decodedObject.throwErrorIfFailure()
-                    completion(.success(decodedObject))
-
-                } catch let error {
-                    if let apiError = error.api {
-                        completion(.failure(apiError))
-                    }
-                    else {
-                        debugPrint(error)
-                        completion(.failure(.decoding))
-                    }
-                }
-            case .failure(let error):
-                guard let afError = error.asAFError,
-                      !(afError.isExplicitlyCancelledError ||
-                        afError.isSessionDeinitializedError) else {
-                    return
-                }
-                let statusCode = response.response?.statusCode
-                let data = response.data
-
-                if statusCode == NSHTTPURLResponseTokenExpiredStatusCode,
-                   let data = data {
-                    do {
-                        let error = try JSONDecoder().decode(RestErrorResponse.self, from: data)
-                        try error.throwErrorIfFailure()
-                    }
-                    catch let error {
-                        if let decodedError = error.api {
-                            completion(.failure(decodedError))
-                            return
-                        }
-                    }
-                }
-                completion(.failure(.network))
-            }
         }
     }
 

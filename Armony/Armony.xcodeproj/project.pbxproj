@@ -148,6 +148,7 @@
 		027F8E3F2B8E1D820083A56D /* PutActivateAdvertTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F8E3E2B8E1D820083A56D /* PutActivateAdvertTask.swift */; };
 		02826C40284EA810008A5893 /* TextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02826C3F284EA810008A5893 /* TextView.xib */; };
 		02826C42284EA8EC008A5893 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02826C41284EA8EC008A5893 /* TextView.swift */; };
+		0284079E2D237D730041C43D /* SecurityKeyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284079D2D237D730041C43D /* SecurityKeyConverter.swift */; };
 		0286883F2899A59B00AF801A /* PostRefreshTokenTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286883E2899A59B00AF801A /* PostRefreshTokenTask.swift */; };
 		028B54C12CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 028B54C02CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings */; };
 		028C4AFD2892E40500707101 /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C4AFC2892E40500707101 /* SignupRequest.swift */; };
@@ -594,6 +595,7 @@
 		027F8E3E2B8E1D820083A56D /* PutActivateAdvertTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutActivateAdvertTask.swift; sourceTree = "<group>"; };
 		02826C3F284EA810008A5893 /* TextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextView.xib; sourceTree = "<group>"; };
 		02826C41284EA8EC008A5893 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		0284079D2D237D730041C43D /* SecurityKeyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityKeyConverter.swift; sourceTree = "<group>"; };
 		0286883E2899A59B00AF801A /* PostRefreshTokenTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRefreshTokenTask.swift; sourceTree = "<group>"; };
 		028B54C02CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "PlaceAdvert+Localizable.xcstrings"; sourceTree = "<group>"; };
 		028C4AFC2892E40500707101 /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
@@ -2403,6 +2405,7 @@
 				B1E29481299FE24900602819 /* HashableKey+Keys.swift */,
 				0294989628F712800075F36F /* Localization.swift */,
 				B16CEF3629B9333F00D95FA9 /* Logger.swift */,
+				0284079D2D237D730041C43D /* SecurityKeyConverter.swift */,
 				0231F2A6284FA3AE0012928F /* TypeDefinitions.swift */,
 				027E8E162934580C001EFDFA /* Analytics */,
 				021E714C28EDFA9700795BC8 /* Backend */,
@@ -3659,6 +3662,7 @@
 				B1B9F52326E927090036252D /* UICollectionView+Extensions.swift in Sources */,
 				B13997EF2A62D72E00D948DE /* MessageCount.swift in Sources */,
 				0223BAA0282D42EB0090314C /* EmptyStateView.swift in Sources */,
+				0284079E2D237D730041C43D /* SecurityKeyConverter.swift in Sources */,
 				B1C90966294685980080804C /* VisitedAccountAdvertsViewModel.swift in Sources */,
 				0263B52B281424F500E9378F /* AccountMusicalProfileCoordinator.swift in Sources */,
 				B1782A262A7590D400F4E19B /* SocketResponseDecoder.swift in Sources */,

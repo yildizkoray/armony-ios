@@ -33,6 +33,28 @@
           }
         }
       }
+    },
+    "Chat.Delete.Alert.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Chat"
+          }
+        }
+      }
+    },
+    "Chat.Delete.Alert.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete this chat?"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

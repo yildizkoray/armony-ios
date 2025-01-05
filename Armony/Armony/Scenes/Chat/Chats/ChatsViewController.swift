@@ -77,10 +77,19 @@ extension ChatsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            viewModel.deleteMessage(at: indexPath)
+            AlertService.show(
+                title: String("Chat.Delete.Alert.Title", table: .chat),
+                message: String("Chat.Delete.Alert.Message", table: .chat),
+                actions: [
+                    .cancel(),
+                    AlertService.action(title: String("Chat.Delete.Button", table: .chat), style: .destructive, action: { [weak self] in
+                        self?.viewModel.deleteMessage(at: indexPath)
+                    })
+                ]
+            )
         }
     }
-    
+
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return String("Chat.Delete.Button", table: .chat)
     }

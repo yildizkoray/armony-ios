@@ -153,6 +153,7 @@
 		028B54C12CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 028B54C02CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings */; };
 		028C4AFD2892E40500707101 /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C4AFC2892E40500707101 /* SignupRequest.swift */; };
 		028C4AFF2892E4A800707101 /* PostSignupTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C4AFE2892E4A800707101 /* PostSignupTask.swift */; };
+		02929C032D2B33240088A21B /* DeleteChatTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02929C022D2B33230088A21B /* DeleteChatTask.swift */; };
 		0294989728F712800075F36F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294989628F712800075F36F /* Localization.swift */; };
 		0294989928F713100075F36F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294989828F713100075F36F /* Localizable.swift */; };
 		0295882728F45E910009CFFA /* RefreshControlShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295882628F45E910009CFFA /* RefreshControlShowing.swift */; };
@@ -602,6 +603,7 @@
 		028B54C02CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "PlaceAdvert+Localizable.xcstrings"; sourceTree = "<group>"; };
 		028C4AFC2892E40500707101 /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		028C4AFE2892E4A800707101 /* PostSignupTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSignupTask.swift; sourceTree = "<group>"; };
+		02929C022D2B33230088A21B /* DeleteChatTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteChatTask.swift; sourceTree = "<group>"; };
 		0294989628F712800075F36F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		0294989828F713100075F36F /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		0295882628F45E910009CFFA /* RefreshControlShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlShowing.swift; sourceTree = "<group>"; };
@@ -1241,6 +1243,7 @@
 		022F98612928158800D8D783 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				02929C022D2B33230088A21B /* DeleteChatTask.swift */,
 				022F985F292809DC00D8D783 /* GetChatsTask.swift */,
 			);
 			path = Task;
@@ -3656,6 +3659,7 @@
 				02CAA4AE284BCEA1004C118D /* ProfileUpdatePutTask.swift in Sources */,
 				026DF39128C2106600B73427 /* URLMatchResult.swift in Sources */,
 				B1C92E48279F45EA00E7E3DC /* MusicGenreCellPresentation.swift in Sources */,
+				02929C032D2B33240088A21B /* DeleteChatTask.swift in Sources */,
 				024F7AD02B758AC600073278 /* GetBannersTask.swift in Sources */,
 				02E0AAD02B29289D00ED545A /* GetArmonyAppDetailsTask.swift in Sources */,
 				0215BAE72AE03A22007BB949 /* VisitedAccountMediasViewModel.swift in Sources */,

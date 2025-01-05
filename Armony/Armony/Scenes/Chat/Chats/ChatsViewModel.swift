@@ -16,7 +16,7 @@ final class ChatsViewModel: ViewModel {
     private lazy var paginator = Paginator(task: getChatsTask)
     private var shouldFetchMessagesAtViewWillAppear = false
 
-    private var messages: [ChatItemPresentation] = .empty {
+    private var chats: [ChatItemPresentation] = .empty {
         didSet {
             safeSync {
                 toggleEmptyState()
@@ -31,11 +31,11 @@ final class ChatsViewModel: ViewModel {
     private lazy var authenticator = AuthenticationService.shared
 
     var numberOfItemsInSections: Int {
-        return messages.count
+        return chats.count
     }
 
     func message(at indexPath: IndexPath) -> ChatItemPresentation {
-        return messages[indexPath.row]
+        return chats[indexPath.row]
     }
 
     init(view: ChatsViewDelegate) {
@@ -48,7 +48,7 @@ final class ChatsViewModel: ViewModel {
             do {
                 let response = try await paginator.execute(service: service, type: RestArrayResponse<Chat>.self)
 
-                messages = response.data.map {
+                chats = response.data.map {
                     return ChatItemPresentation(
                         id: $0.id,
                         avatarURL: $0.user.avatarURL,
@@ -90,7 +90,7 @@ final class ChatsViewModel: ViewModel {
                 }
 
                 safeSync {
-                    messages.append(contentsOf: newPresentations)
+                    chats.append(contentsOf: newPresentations)
                     view?.reloadData()
                 }
             }
@@ -101,7 +101,7 @@ final class ChatsViewModel: ViewModel {
     }
 
     func toggleEmptyState() {
-        if messages.isEmpty {
+        if chats.isEmpty {
             view?.showEmptyStateView(with: .noContent)
         }
         else {
@@ -111,6 +111,26 @@ final class ChatsViewModel: ViewModel {
 
     @objc private func newMessageDidSend() {
         shouldFetchMessagesAtViewWillAppear = true
+    }
+
+    func deleteMessage(at indexPath: IndexPath) {
+        Task {
+            do {
+                let chatdID = chats[indexPath.row].id
+                let _ = try await service.execute(
+                    task: DeleteChatTask(userID: authenticator.userID, chatID: chatdID.string),
+                    type: RestObjectResponse<EmptyResponse>.self
+                )
+
+                safeSync {
+                    chats.remove(at: indexPath.row)
+                    view?.reloadData()
+                    toggleEmptyState()
+                }
+            } catch let error {
+                await AlertService.show(error: error.api, actions: [.okay()])
+            }
+        }
     }
 }
 

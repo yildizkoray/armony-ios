@@ -1,13 +1,24 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Chat.Delete.Button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
     "Chat.EmptyState.Title" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "You haven’t started any chats yet"
+            "value" : "You haven't started any chats yet"
           }
         }
       }

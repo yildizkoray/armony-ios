@@ -70,6 +70,20 @@ extension ChatsViewController: UITableViewDataSource {
         cell.configure(with: message)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            viewModel.deleteMessage(at: indexPath)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return String("Chat.Delete.Button", table: .chat)
+    }
 }
 
 // MARK: - UITableViewDataSource

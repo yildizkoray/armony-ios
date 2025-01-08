@@ -46,6 +46,11 @@ final class ChatsViewController: UIViewController, ViewController {
         viewModel.viewWillAppear()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @objc private func refresh() {
         viewModel.fetchMessages()
     }
@@ -72,7 +77,7 @@ extension ChatsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        return RemoteConfigService.shared[.isDeleteChatActive]
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

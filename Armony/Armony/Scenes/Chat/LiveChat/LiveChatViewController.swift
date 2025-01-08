@@ -50,6 +50,11 @@ final class LiveChatViewController: MessageKit.MessagesViewController, ViewContr
         IQKeyboardManager.shared.enable = false
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     deinit {
         IQKeyboardManager.shared.enable = true
     }

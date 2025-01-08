@@ -35,4 +35,9 @@ final class AvatarViewController: UIViewController, ViewController, NavigationBa
 
         avatar.setImage(source: viewModel.imageSource)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
 }

@@ -29,6 +29,11 @@ final class SettingsViewController: UIViewController, ViewController {
         viewModel.fetchSettingsData()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     func configureUI() {
         tableView.setHidden(true)
         view.backgroundColor = .armonyBlack

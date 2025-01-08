@@ -8,6 +8,10 @@
 import UIKit
 
 extension UIViewController {
+    
+    static var className: String {
+        return String(describing: self)
+    }
 
     var navigator: Navigator? {
         return navigationController ?? self as? Navigator

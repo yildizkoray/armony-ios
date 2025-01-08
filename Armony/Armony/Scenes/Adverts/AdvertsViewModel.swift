@@ -266,14 +266,6 @@ extension AdvertsViewModel: ViewModelLifeCycle {
         handleDeletedAdvert()
         handleAdvertDidCreate()
 
-
-        ScreenViewFirebaseEvent(
-            name: "screenView",
-            parameters: [
-                "screen": "Adverts - HomePage",
-            ]
-        ).send()
-
         MixPanelScreenViewEvent(
             parameters: [
                 "screen": "Adverts - HomePage",

@@ -129,15 +129,6 @@ final class AdvertViewModel: ViewModel {
 
     private func handleSendMessage() {
         if !authenticator.isAuthenticated {
-            ScreenViewFirebaseEvent(
-                name: "buttonClicked",
-                parameters: [
-                    "screen": "Advert",
-                    "advertID": id.string,
-                    "buttonType": "Send Message",
-                    "isAuthenticated": "false"
-                ]
-            ).send()
 
             MixPanelClickEvent(parameters: [
                 "screen": "Advert",
@@ -165,15 +156,6 @@ final class AdvertViewModel: ViewModel {
 
         }
         else {
-            ScreenViewFirebaseEvent(
-                name: "buttonClicked",
-                parameters: [
-                    "screen": "Advert",
-                    "advertID": id.string,
-                    "buttonType": "Send Message",
-                    "isAuthenticated": "true"
-                ]
-            ).send()
 
             MixPanelClickEvent(parameters: [
                 "screen": "Advert",
@@ -422,13 +404,6 @@ extension AdvertViewModel: ViewModelLifeCycle {
 
     func viewWillAppear() {
         view?.setNavigationBarBackgroundColor(color: colorCode.colorFromHEX)
-        ScreenViewFirebaseEvent(
-            name: "screenView",
-            parameters: [
-                "screen": "Advert",
-                "advertID": id.string
-            ]
-        ).send()
 
         MixPanelScreenViewEvent(
             parameters: [

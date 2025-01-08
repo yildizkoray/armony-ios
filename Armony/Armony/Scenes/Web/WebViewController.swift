@@ -31,6 +31,11 @@ final class WebViewController: UIViewController, ViewController, ActivityIndicat
         }
         title = viewModel.title
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
 }
 
 // MARK: - WKNavigationDelegate

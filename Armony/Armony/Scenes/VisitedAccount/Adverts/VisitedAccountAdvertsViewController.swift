@@ -31,6 +31,11 @@ final class VisitedAccountAdvertsViewController: UIViewController, ViewControlle
         super.viewDidLoad()
         viewModel.viewDidLoad()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
 }
 
 // MARK: - UserAdvertsViewDelegate

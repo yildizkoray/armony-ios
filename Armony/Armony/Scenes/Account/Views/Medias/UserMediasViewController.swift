@@ -77,6 +77,11 @@ final class UserMediasViewController: UIViewController, ViewController, UITextFi
             }
         }
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
 }
 
 // MARK: - UITableViewDelegate

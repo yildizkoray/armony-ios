@@ -26,6 +26,11 @@ final class VisitedAccountMusicalProfileViewController: UIViewController, ViewCo
         viewModel.viewDidLoad()
         view.backgroundColor = .clear
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
 }
 
 // MARK: - AccountMusicalProfileViewDelegate

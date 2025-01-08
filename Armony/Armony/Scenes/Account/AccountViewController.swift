@@ -64,6 +64,11 @@ final class AccountViewController: UIViewController, ViewController {
         viewModel.viewWillAppear()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @objc private func settingsButtonTapped() {
         viewModel.coordinator.settings()
     }

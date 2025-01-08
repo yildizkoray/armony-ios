@@ -70,6 +70,11 @@ final class ProfileViewController: UIViewController, ViewController {
         self.bioTextView.delegate = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @IBAction private func saveButtonDidTap() {
         bioTextView.textView.resignFirstResponder()
         viewModel.saveButtonDidTap()

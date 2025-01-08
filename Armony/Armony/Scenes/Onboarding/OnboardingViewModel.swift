@@ -45,12 +45,6 @@ extension OnboardingViewModel: ViewModelLifeCycle {
         view.configureCollectionView()
 
         Defaults.shared[.onboardingHasSeen] = true
-        ScreenViewFirebaseEvent(
-            name: "screenView",
-            parameters: [
-                "screen": "Onboarding",
-            ]
-        ).send()
 
         MixPanelScreenViewEvent(
             parameters: [

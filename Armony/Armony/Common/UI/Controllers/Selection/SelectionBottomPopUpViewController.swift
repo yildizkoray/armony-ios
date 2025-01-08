@@ -38,6 +38,11 @@ final class SelectionBottomPopUpViewController: BottomPopupViewController, ViewC
         viewModel.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let possibleHeight = min(

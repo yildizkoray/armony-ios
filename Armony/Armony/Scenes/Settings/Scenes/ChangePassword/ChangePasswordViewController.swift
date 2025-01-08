@@ -66,6 +66,11 @@ final class ChangePasswordViewController: UIViewController, ViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     private func configureSaveButton() {
         saveButton.setTitle(
             String(localized: "Common.Save", table: "Common+Localizable"), 

@@ -17,6 +17,7 @@ protocol FirebaseEvent: Event {
     var label: String { get }
     var action: String { get }
 
+    var defaultParameters: Payload { get }
     var parameters: Payload { get }
 }
 

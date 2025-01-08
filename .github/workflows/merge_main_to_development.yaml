@@ -1,0 +1,43 @@
+name: Sync Development from Main
+run-name: ${{ github.actor }} is syncing development with main 🔄
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_branch:
+        description: 'Source branch to merge into development (default: main)'
+        required: false
+        default: 'main'
+        type: string
+  workflow_run:
+    workflows: ["Merge Release to Main"]
+    types:
+      - completed
+
+jobs:
+  sync-development:
+    runs-on: macos-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event.workflow_run == null }}
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: development
+        
+    - name: Set up Git
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    
+    - name: Merge into development
+      run: |
+        git fetch origin
+        git checkout development
+        git pull origin development
+        git merge origin/${SOURCE_BRANCH} --no-ff
+        git push origin development
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SOURCE_BRANCH: ${{ github.event.inputs.source_branch || 'main' }} 

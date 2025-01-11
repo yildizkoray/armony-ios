@@ -123,8 +123,8 @@ protocol SwiftUICoordinator: Coordinator {
     associatedtype Content: View
 }
 
-extension SwiftUICoordinator where Controller: UIViewController {
-    
+extension SwiftUICoordinator where Controller == UIHostingController<Content> {
+
     func createHostingViewController(rootView: any View) -> Controller {
         let hosting = Controller.hosting(rootView: rootView)
         hosting.view.backgroundColor = .armonyBlack

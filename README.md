@@ -165,19 +165,11 @@ public protocol Coordinator {
     func createViewController() -> Controller
     func createNavigatorWithRootViewController() -> (navigator: Navigator, view: Controller)
 }
+
 protocol SwiftUICoordinator: Coordinator {
     associatedtype Content: View
 }
 ```
-
-This helps us:
-* Handle SwiftUI navigation
-* Connect SwiftUI views with UIKit navigation
-* Keep navigation code organized
-* Use SwiftUI views anywhere in the app
-* Mix UIKit and SwiftUI screens
-* Control all navigation from coordinators
-* Use SwiftUI in tab bars
 
 ### Implementation Example
 ```swift
@@ -230,9 +222,7 @@ public extension Deeplink {
 * Handles URL patterns
 * Checks if user is logged in
 * Works with coordinators
-* Prevents typing mistakes
 * Can pass data through URLs
-* Uses app's own URL format
 
 #### URLNavigatable Protocol
 ```swift

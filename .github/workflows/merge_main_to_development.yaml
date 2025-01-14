@@ -1,4 +1,4 @@
-name: Sync Development from Main
+name: Merge Main into Development
 run-name: ${{ github.actor }} is syncing development with main 🔄
 
 on:

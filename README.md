@@ -4,6 +4,10 @@
 <img src="/screenshots/armony.png" width="200"/>
 </p>
 
+Armony helps musicians connect with each other. Users can create profiles showing their musical skills and find other musicians to work with. It's perfect for musicians, songwriters, composers, sound engineers, music teachers, producers, and more. You can find it on the App Store or visit [Armony](https://armony.app) for more info.
+
+## Screenshots
+
 <p align="center">
 <img src="/screenshots/Home.png" width="300"/>
 <img src="/screenshots/LiveChat.png" width="300"/>
@@ -13,9 +17,6 @@
 <img src="/screenshots/onboarding.png" width="300"/>
 <img src="/screenshots/registration.png" width="300"/>
 </p>
-Armony helps musicians connect with each other. Users can create profiles showing their musical skills and find other musicians to work with. It's perfect for musicians, songwriters, composers, sound engineers, music teachers, producers, and more. You can find it on the App Store or visit [Armony.app](https://armony.app/) for more info.
-
-## Screenshots
 
 
 ## Table of Contents
@@ -44,8 +45,8 @@ Armony helps musicians connect with each other. Users can create profiles showin
 * UI Frameworks: UIKit & SwiftUI
 * Minimum iOS Version: 15.0
 * Design Pattern: MVVM-C
-* Dependency  Manager: Swift Package Manager
-* Dependencies: Alamofire, AlamofireImage and [UIScrollView-InfiniteScroll](https://github.com/pronebird/UIScrollView-InfiniteScroll)
+* Package Manager: Swift Package Manager
+* Main Libraries: Alamofire, AlamofireImage and [UIScrollView-InfiniteScroll](https://github.com/pronebird/UIScrollView-InfiniteScroll)
 * Style Guide: [Raywenderlich](https://github.com/raywenderlich/swift-style-guide)
 * Powered by ❤️
 
@@ -155,38 +156,39 @@ We use MVVM-C pattern to handle navigation in both UIKit and SwiftUI screens.
 
 ### SwiftUI Coordinator Integration
 ```swift
+public typealias Navigator = UINavigationController
+
+public protocol Coordinator {
+    associatedtype Controller: ViewController
+    var navigator: Navigator? { get }
+    
+    func createViewController() -> Controller
+    func createNavigatorWithRootViewController() -> (navigator: Navigator, view: Controller)
+}
+
 protocol SwiftUICoordinator: Coordinator {
     associatedtype Content: View
 }
 ```
 
-This helps us:
-* Handle SwiftUI navigation
-* Connect SwiftUI views with UIKit navigation
-* Keep navigation code organized
-* Use SwiftUI views anywhere in the app
-* Mix UIKit and SwiftUI screens
-* Control all navigation from coordinators
-* Use SwiftUI in tab bars
-
 ### Implementation Example
 ```swift
-final class RegionsCoordinator: SwiftUICoordinator {
+final class MyCoordinator: SwiftUICoordinator {
     var navigator: Navigator?
     
-    typealias Content = RegionsView
-    typealias Controller = UIHostingController<RegionsView>
+    typealias Content = MySwiftUIView
+    typealias Controller = UIHostingController<MySwiftUIView>
     
     init(navigator: Navigator? = nil) {
         self.navigator = navigator
     }
     
     func start() {
-        let viewModel = RegionsViewModel()
+        let viewModel = MySwiftUIViewModel()
         viewModel.coordinator = self
-        let view = RegionsView(viewModel: viewModel)
+        let view = MySwiftUIView(viewModel: viewModel)
         let hosting = createHostingViewController(rootView: view)
-        hosting.title = "Region Seç"
+        hosting.title = "TITLE"
         navigator?.pushViewController(hosting, animated: true)
     }
 }
@@ -220,9 +222,7 @@ public extension Deeplink {
 * Handles URL patterns
 * Checks if user is logged in
 * Works with coordinators
-* Prevents typing mistakes
 * Can pass data through URLs
-* Uses app's own URL format
 
 #### URLNavigatable Protocol
 ```swift

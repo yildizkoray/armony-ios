@@ -30,7 +30,7 @@ extension SocketClientDelegate {
 }
 
 public class SocketClient {
-    private let socket: WebSocket
+    private var socket: WebSocket
 
     private weak var delegate: SocketClientDelegate?
 
@@ -41,16 +41,31 @@ public class SocketClient {
 
     private let internetConnectionService: InternetConnectionService = .shared
 
+    private lazy var tokenRestService: RestService = RestService(backend: .factory())
+
+    private let authenticator: AuthenticationService = .shared
+
     private var isConnected: Bool = false
+    private let socketURL: URL
 
     init(socketURL: URL, delegate: SocketClientDelegate, pingTimeInterval: TimeInterval = 5.0) {
-        var request = URLRequest(url: socketURL)
-        request.timeoutInterval = 10.0
+        self.socketURL = socketURL
+        var urlRequest = URLRequest(url: socketURL)
+        urlRequest.timeoutInterval = 10.0
+        urlRequest.addAuthentication(authenticator: .shared)
         self.delegate = delegate
         self.pingTimeInterval = pingTimeInterval
-        self.socket = WebSocket(request: request)
+        self.socket = WebSocket(request: urlRequest)
         self.socket.delegate = self
         self.addAppStateObservers()
+    }
+
+    private func configureWebSocket() {
+        var urlRequest = URLRequest(url: socketURL)
+        urlRequest.timeoutInterval = 10.0
+        urlRequest.addAuthentication(authenticator: .shared)
+        self.socket = WebSocket(request: urlRequest)
+        self.socket.delegate = self
     }
 
     deinit {
@@ -123,6 +138,32 @@ public class SocketClient {
     @objc private func applicationWillEnterForeground(notification: Notification) {
         openConnection()
     }
+
+    private func refreshToken() {
+        Task {
+            do {
+                let request = RefreshTokenRequest(refreshToken: authenticator.refreshToken)
+                let response = try await tokenRestService.execute(
+                    task: PostRefreshTokenTask(request: request), type: RestObjectResponse<RefreshTokenResponse>.self
+                )
+                safeSync {
+                    authenticator.identify(accessToken: response.data.access, refreshToken: response.data.refresh)
+                    configureWebSocket()
+                    openConnection()
+                }
+            }
+            catch {
+                safeSync {
+                    authenticator.unauthenticate()
+                    LoginCoordinator().start { [weak self] in
+                        self?.openConnection()
+                    } registrationCompletion: { [weak self] in
+                        self?.openConnection()
+                    }
+                }
+            }
+        }
+    }
 }
 
 // MARK: - WebSocketDelegate
@@ -140,8 +181,19 @@ extension SocketClient: WebSocketDelegate {
 
         case .error(let error):
             isConnected = false
-            delegate?.socket(self, didDisconnectWithError: error)
-            FirebaseCrashlyticsLogger.shared.log(error: error)
+            if let error = error as? HTTPUpgradeError {
+                switch error {
+                case .notAnUpgrade(let statusCode, _):
+                    if statusCode == NSHTTPURLResponseTokenExpiredStatusCode {
+                         refreshToken()
+                    }
+                case .invalidData: break
+                }
+            }
+            else {
+                delegate?.socket(self, didDisconnectWithError: error)
+                FirebaseCrashlyticsLogger.shared.log(error: error)
+            }
 
         case .text(let response):
             SocketResponseLogger.log(response: response, url: socket.request.url?.absoluteString ?? .empty)

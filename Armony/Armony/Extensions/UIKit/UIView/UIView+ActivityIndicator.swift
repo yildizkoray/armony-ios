@@ -10,7 +10,7 @@ import UIKit
 extension UIView {
 
     private struct AssociationKeys {
-        static var activityIndicatorView = "armony_activityIndicatorView"
+        static var activityIndicatorView: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "armony_activityIndicatorView".hashValue)!
     }
 
     @objc var activityIndicatorView: UIActivityIndicatorView {

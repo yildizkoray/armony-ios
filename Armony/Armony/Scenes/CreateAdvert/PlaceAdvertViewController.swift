@@ -143,6 +143,11 @@ final class PlaceAdvertViewController: UIViewController, ViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     fileprivate func configureSubmitButton() {
         submitButton.isEnabled = false
         submitButton.setTitle(

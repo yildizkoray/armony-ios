@@ -41,6 +41,11 @@ final class VisitedAccountMediasViewController: UIViewController, ViewController
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     fileprivate func prepareViews() {
         view.addSubviewAndConstraintsToSafeArea(tableView)
 

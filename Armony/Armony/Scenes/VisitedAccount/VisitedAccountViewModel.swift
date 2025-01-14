@@ -85,7 +85,7 @@ final class VisitedAccountViewModel: ViewModel {
     private func resetViews() {
         view?.configureUserSummaryView(with: .empty())
         view?.setBioLabelText(.empty)
-        view?.configurePager(skills: .empty, musicGenres: .empty, userID: .empty)
+        // view?.configurePager(skills: .empty, musicGenres: .empty, userID: .empty)
     }
 }
 

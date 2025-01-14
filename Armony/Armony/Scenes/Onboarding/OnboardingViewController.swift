@@ -44,15 +44,13 @@ final class OnboardingViewController: UIViewController, ViewController {
         viewModel.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @IBAction private func registerButtonDidTap() {
         viewModel.coordinator.registration(didRegister: dismisAndSelectAccountTab)
-        ScreenViewFirebaseEvent(
-            name: "buttonClicked",
-            parameters: [
-                "screen": "Onboarding",
-                "buttonType": "Register",
-            ]
-        ).send()
 
         MixPanelClickEvent(
             parameters: [
@@ -64,14 +62,6 @@ final class OnboardingViewController: UIViewController, ViewController {
 
     @IBAction private func homePageButtonDidTap() {
         viewModel.coordinator.dismiss(animated: true, completion: nil)
-        ScreenViewFirebaseEvent(
-            name: "buttonClicked",
-            parameters: [
-                "screen": "Onboarding",
-                "buttonType": "Home Page",
-            ]
-        ).send()
-
 
         MixPanelClickEvent(
             parameters: [

@@ -43,6 +43,11 @@ final class VisitedAccountViewController: UIViewController, ViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         makeNavigationBarTransparent()

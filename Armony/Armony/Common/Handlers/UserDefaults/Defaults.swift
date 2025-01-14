@@ -9,38 +9,45 @@ import Foundation
 
 final class Defaults: ResetHandling {
 
-    static let shared = Defaults(defaults: .standard, configReader: .shared)
+    static let shared = Defaults(defaults: .standard)
 
     private let defaults: UserDefaults
-    private let configReader: ConfigReader
 
     private lazy var allKeys: [String] = DefaultsKeys.allCases.map {
-        $0.key(configurator: configReader)
+        $0.key()
     }
 
-    init(defaults: UserDefaults,
-         configReader: ConfigReader) {
+    init(defaults: UserDefaults) {
         self.defaults = defaults
-        self.configReader = configReader
     }
 
     /// Bool
     subscript(key: DefaultsKeys) -> Bool {
         get {
-            return defaults.bool(forKey: key.key(configurator: configReader))
+            return defaults.bool(forKey: key.key())
         }
         set {
-            defaults.set(newValue, forKey: key.key(configurator: configReader))
+            defaults.set(newValue, forKey: key.key())
         }
     }
     
     /// String
     subscript(key: DefaultsKeys) -> String? {
         get {
-            return defaults.string(forKey: key.key(configurator: configReader))
+            return defaults.string(forKey: key.key())
         }
         set {
-            defaults.set(newValue, forKey: key.key(configurator: configReader))
+            defaults.set(newValue, forKey: key.key())
+        }
+    }
+    
+    /// TimeInterval
+    subscript(key: DefaultsKeys) -> TimeInterval? {
+        get {
+            return defaults.double(forKey: key.key())
+        }
+        set {
+            defaults.set(newValue, forKey: key.key())
         }
     }
     

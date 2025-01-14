@@ -45,6 +45,11 @@ final class AccountInformationViewController: UIViewController, ViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @IBAction private func saveButtonTapped() {
         viewModel.saveButtonTapped(name: nameTextField.text.emptyIfNil)
     }

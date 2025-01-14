@@ -39,6 +39,7 @@ final class UserAdvertsViewController: UIViewController, ViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.viewDidAppear()
+        trackScreenView()
     }
 }
 

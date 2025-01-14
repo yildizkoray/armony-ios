@@ -46,6 +46,11 @@ final class ChatsViewController: UIViewController, ViewController {
         viewModel.viewWillAppear()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @objc private func refresh() {
         viewModel.fetchMessages()
     }
@@ -69,6 +74,29 @@ extension ChatsViewController: UITableViewDataSource {
         let message = viewModel.message(at: indexPath)
         cell.configure(with: message)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return RemoteConfigService.shared[.isDeleteChatActive]
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            AlertService.show(
+                title: String("Chat.Delete.Alert.Title", table: .chat),
+                message: String("Chat.Delete.Alert.Message", table: .chat),
+                actions: [
+                    .cancel(),
+                    AlertService.action(title: String("Chat.Delete.Button", table: .chat), style: .destructive, action: { [weak self] in
+                        self?.viewModel.deleteMessage(at: indexPath)
+                    })
+                ]
+            )
+        }
+    }
+
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return String("Chat.Delete.Button", table: .chat)
     }
 }
 

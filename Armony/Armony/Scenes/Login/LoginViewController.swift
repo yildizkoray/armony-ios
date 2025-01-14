@@ -65,7 +65,11 @@ final class LoginViewController: UIViewController, ViewController {
             self?.loginButton.isEnabled = result.isValid
             self?.loginButton.backgroundColor = result.isValid ? .armonyPurple : .armonyPurpleLow
         }
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
     }
 
     @IBAction private func forgetPasswordButtonTapped() {

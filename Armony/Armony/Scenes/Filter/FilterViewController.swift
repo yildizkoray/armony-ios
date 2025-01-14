@@ -116,6 +116,11 @@ final class FilterViewController: UIViewController, ViewController {
             self?.viewModel.coordinator.dismiss(animated: true)
         }
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
 }
 
 // MARK: - FilterViewDelegate

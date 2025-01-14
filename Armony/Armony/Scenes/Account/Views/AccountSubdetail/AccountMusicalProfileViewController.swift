@@ -26,6 +26,11 @@ final class AccountMusicalProfileViewController: UIViewController, ViewControlle
         view.backgroundColor = .clear
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     func startEmptyStateButtonActivityIndicatorView() {
         emptyStateView.actionButton.activityIndicatorView.color = .gray
         emptyStateView.actionButton.startActivityIndicatorView()

@@ -78,6 +78,11 @@ final class RegistrationViewController: UIViewController, ViewController {
         configureTermsAndConditionLabel()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @IBAction private func okayButtonTapped() {
         let credential = SignupCredential(
             name: nameTextField.text.emptyIfNil,

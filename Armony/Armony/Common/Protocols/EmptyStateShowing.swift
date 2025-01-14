@@ -8,7 +8,7 @@
 import UIKit
 
 private struct AssociationKeys {
-    static var emptyStateView = "ui_emptyStateView"
+    static var emptyStateView: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "ui_emptyStateView".hashValue)!
 }
 
 protocol EmptyStateShowing {

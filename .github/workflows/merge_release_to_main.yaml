@@ -1,0 +1,52 @@
+name: Merge Release to Main
+run-name: ${{ github.actor }} is merging release branch to main 🚀
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_branch:
+        description: 'Release branch to merge (leave empty for latest)'
+        required: false
+        type: string
+
+jobs:
+  merge-to-main:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: main
+        
+    - name: Set up Git
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    
+    - name: Get latest release branch
+      id: get_branch
+      run: |
+        if [ -n "${{ github.event.inputs.release_branch }}" ]; then
+          BRANCH_NAME="${{ github.event.inputs.release_branch }}"
+        else
+          BRANCH_NAME=$(git branch -r | grep 'origin/Releases/Release' | sort -V | tail -n 1 | sed 's/origin\///')
+        fi
+        
+        if [ -z "$BRANCH_NAME" ]; then
+          echo "No release branch found"
+          exit 1
+        fi
+        
+        echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+        
+    - name: Merge release branch to main
+      run: |
+        git fetch origin
+        git checkout main
+        git pull origin main
+        git merge origin/${{ steps.get_branch.outputs.branch_name }} --no-ff -m "Merge ${{ steps.get_branch.outputs.branch_name }} into main"
+        git push origin main
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

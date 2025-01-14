@@ -115,6 +115,11 @@ final class AdvertViewController: UIViewController, ViewController {
         viewModel.dismissCompletion?(false)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     func configureUI() {
         view.backgroundColor = .armonyDarkBlue
         sendMessageButton.makeAllCornersRounded(radius: .medium)

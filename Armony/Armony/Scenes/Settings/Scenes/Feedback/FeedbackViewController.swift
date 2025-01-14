@@ -63,11 +63,14 @@ final class FeedbackViewController: UIViewController, ViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     @IBAction private func sendButtonDidTap() {
         viewModel.sendButtonDidTap()
     }
-
-
 
     private func configureUI() {
         view.backgroundColor = .armonyBlack

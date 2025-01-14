@@ -8,14 +8,6 @@
 import Foundation
 import FirebaseAnalytics
 
-struct ScreenViewFirebaseEvent: FirebaseEvent {
-    var category: String = .empty
-    var label: String = .empty
-    var action: String = .empty
-    var name: String
-    var parameters: Payload
-}
-
 struct LoginFirebaseEvent: FirebaseEvent {
     var category: String = "User Interaction"
     var label: String
@@ -39,4 +31,22 @@ struct LogoutFirebaseEvent: FirebaseEvent {
     var action: String = "Logout"
     var name: String = "logout"
     var parameters: Payload = .empty
+}
+
+protocol FirebaseManuelScreenViewing {
+    func trackScreenView(parameters: FirebaseEvent.Payload)
+}
+
+struct FirebaseManuelScreenViewEvent: FirebaseEvent {
+    var name: String = AnalyticsEventScreenView
+    var defaultParameters: Payload
+    var parameters: Payload
+
+    init(scene: String, sceneClassName: String, parameters: Payload = .empty) {
+        self.defaultParameters = [
+            AnalyticsParameterScreenName: scene,
+            AnalyticsParameterScreenClass: sceneClassName
+        ]
+        self.parameters = parameters
+    }
 }

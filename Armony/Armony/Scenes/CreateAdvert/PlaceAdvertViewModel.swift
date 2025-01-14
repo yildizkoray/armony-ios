@@ -224,6 +224,10 @@ final class PlaceAdvertViewModel: ViewModel {
                     notification: .newAdvertDidPlace,
                     userInfo: [.advert: response.data]
                 )
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    AppRatingService.shared.requestReviewIfNeeded()
+                }
             }
             catch let error {
                 safeSync {

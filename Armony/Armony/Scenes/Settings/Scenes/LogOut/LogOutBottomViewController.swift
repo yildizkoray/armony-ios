@@ -40,6 +40,11 @@ final class LogOutBottomPopUpViewController: BottomPopupViewController, ViewCont
         viewModel.coordinator.dismiss()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     private func configureLabels() {
         titleLabel.text = String("LogOut", table: .common)
         titleLabel.font = .semiboldTitle

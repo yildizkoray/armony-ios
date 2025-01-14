@@ -91,7 +91,6 @@ extension RegistrationViewModel: ViewModelLifeCycle {
         view?.configureUI()
         view?.makeNavigationBarTransparent()
         view?.setDismissButton(completion: nil)
-        ScreenViewFirebaseEvent(name: "screenView", parameters: ["screen":"Registration"]).send()
         MixPanelScreenViewEvent(parameters: ["screen": "Registration"]).send()
     }
 }

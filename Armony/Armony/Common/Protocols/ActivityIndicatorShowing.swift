@@ -8,8 +8,8 @@
 import UIKit
 
 private struct AssociationKeys {
-    static var activityIndicatorView = "armony_rightBar_ActivityIndicator"
-    static var rightBarButtonItem = "armony_rightBar_Button"
+    static var activityIndicatorView: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "armony_rightBar_ActivityIndicator".hashValue)!
+    static var rightBarButtonItem: UnsafeRawPointer = UnsafeRawPointer(bitPattern: "armony_rightBar_Button".hashValue)!
 }
 
 protocol ActivityIndicatorShowing {

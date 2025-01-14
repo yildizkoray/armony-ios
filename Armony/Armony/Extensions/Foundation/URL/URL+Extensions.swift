@@ -26,3 +26,11 @@ extension URL {
         return Deeplink(stringLiteral: absoluteString)
     }
 }
+
+extension URLRequest {
+    mutating func addAuthentication(authenticator: AuthenticationService) {
+        for (key, value) in authenticator.additionalHTTPHeaders where value.isNotEmpty {
+            setValue(value, forHTTPHeaderField: key)
+        }
+    }
+}

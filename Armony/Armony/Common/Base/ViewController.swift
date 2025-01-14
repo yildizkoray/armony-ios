@@ -43,3 +43,14 @@ extension ViewController where Self: UIViewController {
         return UIHostingController(rootView: rootView) as! Self
     }
 }
+
+extension FirebaseManuelScreenViewing where Self: UIViewController {
+    func trackScreenView(parameters: FirebaseEvent.Payload = .empty) {
+        guard let sceneName = Self.className.components(separatedBy: Constants.seperator).first else {
+            preconditionFailure("Unable to parse view controller with name \(self)")
+        }
+        FirebaseManuelScreenViewEvent(scene: sceneName, sceneClassName: Self.className, parameters: parameters).send()
+    }
+}
+
+extension UIViewController: FirebaseManuelScreenViewing { }

@@ -50,6 +50,11 @@ final class LiveChatViewController: MessageKit.MessagesViewController, ViewContr
         IQKeyboardManager.shared.enable = false
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        trackScreenView()
+    }
+
     deinit {
         IQKeyboardManager.shared.enable = true
     }
@@ -240,6 +245,9 @@ extension LiveChatViewController: InputBarAccessoryViewDelegate, UITextViewDeleg
         viewModel.sendMessage(text: text) { [weak self] in
             self?.resetInputBar()
             inputBar.sendButton.stopAnimating()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            AppRatingService.shared.requestReviewIfNeeded()
         }
     }
 }

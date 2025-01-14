@@ -39,6 +39,14 @@ Armony helps musicians connect with each other. Users can create profiles showin
   - [Deep Link Structure](#deep-link-structure)
   - [Key Components](#key-components)
   - [Implementation Example](#implementation-example-1)
+- [GitHub Actions Scripts](#github-actions-scripts)
+  - [Create Release Branch](#create-release-branch)
+  - [Merge Release to Main](#merge-release-to-main)
+  - [Merge Main to Development](#merge-main-to-development)
+- [CI Scripts](#ci-scripts)
+  - [Pre-Xcodebuild Script](#pre-xcodebuild-script)
+  - [Post-Clone Script](#post-clone-script)
+  - [Post-Xcodebuild Script](#post-xcodebuild-script)
 
 ## Project Tech Stack
 * Language: Swift
@@ -250,3 +258,73 @@ extension MyCoordinator: URLNavigatable {
     }
 }
 ```
+
+## GitHub Actions Scripts
+
+Our project uses GitHub Actions for automated workflows. Here are the main workflows:
+
+### Create Release Branch
+This workflow automates the creation of release branches with version increments:
+```yaml
+# Triggered manually with version type choice
+- Automatically increments version (major, minor, or patch)
+- Creates a new release branch from development
+- Updates the marketing version in Xcode project
+```
+
+### Merge Release to Main
+This workflow handles merging release branches to the main branch:
+```yaml
+# Can be triggered manually or automatically
+- Merges the latest release branch to main
+- Supports manual selection of release branch
+- Uses no-fast-forward merge strategy
+```
+
+### Merge Main to Development
+This workflow keeps the development branch in sync with main:
+```yaml
+# Triggers:
+- Automatically after successful release merge
+- Manually when needed
+- Ensures development branch stays updated with main
+```
+
+## CI Scripts
+
+Our project includes several CI scripts in the `ci_scripts` directory that handle different stages of the build process. These scripts are designed to work with both Xcode Cloud and other CI environments.
+
+### Pre-Xcodebuild Script
+`ci_pre_xcodebuild.sh` runs before the build process starts:
+```bash
+# Main responsibilities:
+- Validates required environment variables
+- Sets up configuration files for different environments (Debug/Release)
+- Configures third-party service integrations
+- Updates necessary plists and configuration files
+```
+
+### Post-Clone Script
+`ci_post_clone.sh` runs after repository cloning:
+```bash
+# Main responsibilities:
+- Creates necessary directory structure
+- Sets up configuration files
+- Initializes required plists
+- Prepares the environment for building
+```
+
+### Post-Xcodebuild Script
+`ci_post_xcodebuild.sh` runs after the build process:
+```bash
+# Main responsibilities:
+- Handles debug symbol uploads
+- Processes build artifacts
+- Performs necessary post-build tasks
+```
+
+Note: 
+- These scripts require specific environment variables to be set
+- Some features need additional configuration in your CI environment
+- Scripts include error handling and detailed logging
+- Color-coded output for better visibility in CI logs

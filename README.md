@@ -47,6 +47,7 @@ Armony helps musicians connect with each other. Users can create profiles showin
   - [Pre-Xcodebuild Script](#pre-xcodebuild-script)
   - [Post-Clone Script](#post-clone-script)
   - [Post-Xcodebuild Script](#post-xcodebuild-script)
+- [Networking](#networking)
 
 ## Project Tech Stack
 * Language: Swift
@@ -253,7 +254,8 @@ extension MyCoordinator: URLNavigatable {
     
     static func register(navigator: URLNavigation) {
         navigator.register(coordinator: instance, pattern: .myScreen) { result in
-            MyCoordinator(navigator: result.navigator).start()
+        if let id = result.value(forKey: "id") as? String {
+            MyCoordinator(navigator: result.navigator, id: id).start()
         }
     }
 }
@@ -323,8 +325,54 @@ Our project includes several CI scripts in the `ci_scripts` directory that handl
 - Performs necessary post-build tasks
 ```
 
-Note: 
-- These scripts require specific environment variables to be set
-- Some features need additional configuration in your CI environment
-- Scripts include error handling and detailed logging
-- Color-coded output for better visibility in CI logs
+## Networking
+
+Our project uses a layered networking architecture that provides type-safe API requests. Here's how it works:
+
+### RestService
+The core service class that handles all network operations:
+```swift
+class RestService: Service {
+    func execute<R: APIResponse>(task: HTTPTask, type: R.Type) async throws -> R
+}
+```
+
+### Response Types
+- `RestObjectResponse<T>`: For single object responses
+- `RestArrayResponse<T>`: For array responses
+- Built-in error handling with `RestErrorResponse`
+
+### HTTPTask Protocol
+Each API endpoint is represented by a task that implements `HTTPTask`:
+```swift
+struct GetMyNetworkTask: HTTPTask {
+    var method: HTTPMethod = .get
+    var path: String = "/my-network"
+    var urlQueryItems: [URLQueryItem]?
+    
+    init(userID: String) {
+        urlQueryItems = [
+            URLQueryItem(name: "userID", value: userID)
+        ]
+    }
+}
+```
+
+### Usage Example
+```swift
+// Create the task
+let task = GetMyNetworkTask(userID: "123")
+
+// Execute the request
+Task { 
+    do {
+        let response = try await restService.execute(
+            task: task, 
+            type: RestArrayResponse<MyNetworkModel>.self
+        )
+        // Handle response
+    } catch {
+        // Handle error
+    }
+}
+```

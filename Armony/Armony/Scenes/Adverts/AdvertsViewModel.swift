@@ -239,6 +239,12 @@ final class AdvertsViewModel: ViewModel {
         if !Defaults.shared[.onboardingHasSeen] {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: coordinator.onboarding)
         }
+
+        if AppLaunchService.shared.isLaunchedClosedStateWithNotification,
+           let deeplink = AppLaunchService.shared.deeplink {
+            coordinator.open(deeplink: deeplink)
+            AppLaunchService.shared.reset()
+        }
     }
 }
 

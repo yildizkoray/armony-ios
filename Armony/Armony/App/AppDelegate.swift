@@ -50,6 +50,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseAnalytic.shared.start()
         AdjustAnaltic().start()
 
+        AppLaunchService.shared.handleLaunch(launchOptions: launchOptions)
+
         // App start
         AppCoordinator(window: window!).start()
 
@@ -86,7 +88,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     public func application(_ app: UIApplication,
                             open url: URL,
                             options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        //        DeeplinkService().navigate(url.absoluteString)
         return !navigation.open(url.deeplink, dismissToRoot: true)
     }
     

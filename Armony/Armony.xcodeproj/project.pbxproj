@@ -113,8 +113,6 @@
 		026395A328845E320014CE0A /* Validation+Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026395A228845E320014CE0A /* Validation+Responder.swift */; };
 		0263B529281424D700E9378F /* AccountMusicalProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263B528281424D700E9378F /* AccountMusicalProfileViewModel.swift */; };
 		0263B52B281424F500E9378F /* AccountMusicalProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263B52A281424F500E9378F /* AccountMusicalProfileCoordinator.swift */; };
-		026B1E572B9111BD002D38F6 /* ReleaseConfiguration.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 026B1E562B9111BD002D38F6 /* ReleaseConfiguration.xcconfig */; };
-		026B1E582B9111C2002D38F6 /* DebugConfiguration.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 02FA80DD2B9105670072D25F /* DebugConfiguration.xcconfig */; };
 		026C4FD1280D5FA800C0B967 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026C4FD0280D5FA800C0B967 /* CommonConstants.swift */; };
 		026C4FD4280DA55900C0B967 /* GetUserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026C4FD3280DA55900C0B967 /* GetUserTask.swift */; };
 		026DF38E28C2106600B73427 /* URLNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DF38728C2106600B73427 /* URLNavigator.swift */; };
@@ -3327,7 +3325,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					B1B55C8126CEFADC00FDE884 = {
 						CreatedOnToolsVersion = 12.4;
@@ -3427,8 +3425,6 @@
 				B1E71DE027941CE800E7D6C1 /* NavigationHeaderView.xib in Resources */,
 				B1B55C8D26CEFADD00FDE884 /* Home.storyboard in Resources */,
 				024BDA0428ECE46400391AA4 /* PlaceAdvert.storyboard in Resources */,
-				026B1E582B9111C2002D38F6 /* DebugConfiguration.xcconfig in Resources */,
-				026B1E572B9111BD002D38F6 /* ReleaseConfiguration.xcconfig in Resources */,
 				023731B928612B23005F1522 /* Settings.storyboard in Resources */,
 				B1772B402710CE05001E544B /* SkillCell.xib in Resources */,
 				02826C40284EA810008A5893 /* TextView.xib in Resources */,
@@ -4084,7 +4080,6 @@
 		B1B55CB026CEFAE300FDE884 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6ZP8CMS8A;
@@ -4106,7 +4101,6 @@
 		B1B55CB126CEFAE300FDE884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6ZP8CMS8A;
@@ -4128,7 +4122,6 @@
 		B1B55CB326CEFAE300FDE884 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
 				INFOPLIST_FILE = ArmonyUITests/Info.plist;
@@ -4148,7 +4141,6 @@
 		B1B55CB426CEFAE300FDE884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
 				INFOPLIST_FILE = ArmonyUITests/Info.plist;

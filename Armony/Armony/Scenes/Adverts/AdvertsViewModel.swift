@@ -53,9 +53,9 @@ final class AdvertsViewModel: ViewModel {
         return presentation.cards.count
     }
 
-    init(view: AdvertsViewDelegate) {
+    init(view: AdvertsViewDelegate, service: RestService = .init(backend: .factory())) {
         self.view = view
-        super.init()
+        super.init(service: service)
     }
 
     func card(at indexPath: IndexPath) -> CardPresentation {

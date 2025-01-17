@@ -174,6 +174,8 @@
 		02AF996C28ED944E006669F4 /* PlaceAdvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */; };
 		02AF996E28ED9476006669F4 /* PlaceAdvertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */; };
 		02AF997028ED9C95006669F4 /* DropdownPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */; };
+		02B786762D3ADB2700A8B6AE /* FeedbackViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */; };
+		02B786772D3ADB2700A8B6AE /* MockFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */; };
 		02B7CA6129259B1F0055B181 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7CA6029259B1F0055B181 /* ChatsViewController.swift */; };
 		02B7CA6329259B2F0055B181 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B7CA6229259B2F0055B181 /* Chat.storyboard */; };
 		02B7CA6529259F210055B181 /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7CA6429259F210055B181 /* ChatsViewModel.swift */; };
@@ -624,6 +626,8 @@
 		02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertViewModel.swift; sourceTree = "<group>"; };
 		02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertCoordinator.swift; sourceTree = "<group>"; };
 		02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPresentation.swift; sourceTree = "<group>"; };
+		02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModelTests.swift; sourceTree = "<group>"; };
+		02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeedbackView.swift; sourceTree = "<group>"; };
 		02B7CA6029259B1F0055B181 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		02B7CA6229259B2F0055B181 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		02B7CA6429259F210055B181 /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
@@ -1766,6 +1770,23 @@
 			path = Reset;
 			sourceTree = "<group>";
 		};
+		02B786742D3ADB2700A8B6AE /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */,
+				02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		02B786752D3ADB2700A8B6AE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				02B786742D3ADB2700A8B6AE /* Feedback */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		02B7CA5F29259AE10055B181 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -2862,6 +2883,7 @@
 		B1B55C9B26CEFAE300FDE884 /* ArmonyTests */ = {
 			isa = PBXGroup;
 			children = (
+				02B786752D3ADB2700A8B6AE /* Scenes */,
 				0205A49F2C53EF7600D5821D /* Common */,
 				02A824822881B1E8004351D0 /* CommonMocks */,
 				02FA5A4C2882292600E8AD5C /* Account */,
@@ -3806,6 +3828,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B55C9D26CEFAE300FDE884 /* AccountViewModelTests.swift in Sources */,
+				02B786762D3ADB2700A8B6AE /* FeedbackViewModelTests.swift in Sources */,
+				02B786772D3ADB2700A8B6AE /* MockFeedbackView.swift in Sources */,
 				0205A49E2C53E5C600D5821D /* DropdownViewSnapshotTests.swift in Sources */,
 				02A824842881B202004351D0 /* MockRestService.swift in Sources */,
 				02FA5A4E2882293000E8AD5C /* MockAccountView.swift in Sources */,
@@ -4284,7 +4308,7 @@
 			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.17.2;
+				minimumVersion = 1.17.4;
 			};
 		};
 		02FFF11E291EFEE300352D3C /* XCRemoteSwiftPackageReference "netfox" */ = {

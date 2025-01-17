@@ -14,10 +14,10 @@ final class FeedbackViewModel: ViewModel {
     private var presentation: FeedbacksPresentation = .empty
     
     private var selectedSubjectID: Int? = nil
-    
-    init(view: FeedbackViewDelegate) {
+
+    init(view: FeedbackViewDelegate, service: RestService = .init(backend: .factory())) {
         self.view = view
-        super.init()
+        super.init(service: service)
     }
 
     func subjectDropdownViewDidTap() {
@@ -99,4 +99,9 @@ extension FeedbackViewModel: FeedbackSubjectSelectionDelegate {
         selectedSubjectID = subject?.id
         view?.setSubjectDropdownText(subject?.title)
     }
+}
+
+
+final class MockFeedbackCoordinator: FeedbackCoordinator {
+    override func selectionBottomPopUp(with presentation: any SelectionPresentation) { }
 }

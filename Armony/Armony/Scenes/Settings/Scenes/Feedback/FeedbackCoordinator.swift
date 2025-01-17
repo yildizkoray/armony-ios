@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FeedbackCoordinator: Coordinator {
+class FeedbackCoordinator: Coordinator {
 
     typealias Controller = FeedbackViewController
     

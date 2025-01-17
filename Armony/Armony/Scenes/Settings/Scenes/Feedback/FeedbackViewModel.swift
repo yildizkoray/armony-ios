@@ -63,8 +63,8 @@ final class FeedbackViewModel: ViewModel {
                 await MainActor.run {
                     view.stopSendButtonActivityIndicatorView()
                     let message = String(localized: "Feedback.Submission.Succes.Title", table: "Feedback+Localizable")
-                    AlertService.show(message: message, actions: [.okay(action: {
-                        self.coordinator.pop()
+                    AlertService.show(message: message, actions: [.okay(action: { [weak self] in
+                        self?.coordinator.pop()
                     })])
                 }
             }

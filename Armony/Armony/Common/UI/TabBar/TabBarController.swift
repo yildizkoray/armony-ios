@@ -35,7 +35,7 @@ final class TabBarController: UITabBarController {
         }
     }
 
-    private var selectedTab: Common.Tab {
+    private var _selectedTab: Common.Tab {
         guard let tab = Common.Tab(rawValue: selectedIndex) else {
             return .home
         }
@@ -44,7 +44,7 @@ final class TabBarController: UITabBarController {
 
     override var selectedIndex: Int {
         didSet {
-            tabBar.tintColor = selectedTab.tabBarColor.uiColor
+            tabBar.tintColor = _selectedTab.tabBarColor.uiColor
         }
     }
 
@@ -104,7 +104,7 @@ extension TabBarController: UITabBarControllerDelegate {
     }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        tabBar.tintColor = selectedTab.tabBarColor.uiColor
+        tabBar.tintColor = _selectedTab.tabBarColor.uiColor
     }
 }
 

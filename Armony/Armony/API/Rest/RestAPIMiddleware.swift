@@ -61,9 +61,11 @@ final class RestAPIMiddleware: RequestInterceptor {
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         let requestURLString = request.request?.url?.absoluteString
         let isWhiteListRequest = whiteListForRetry.first(where: { requestURLString.emptyIfNil.contains($0)}).isNil
+
         if let response = request.response {
             if response.statusCode == NSHTTPURLResponseTokenExpiredStatusCode,
-               isWhiteListRequest {
+               isWhiteListRequest,
+               request.retryCount < 4 {
                 FirebaseCrashlyticsLogger.shared.log(exception:
                         .init(name: "RestService",
                               reason: "NSHTTPURLResponseTokenExpiredStatusCode")

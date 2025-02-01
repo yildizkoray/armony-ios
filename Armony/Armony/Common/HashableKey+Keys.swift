@@ -34,6 +34,7 @@ public extension HashableKey {
     static let apiHost: HashableKey = "API_HOST"
     static let apiScheme: HashableKey = "API_SCHEME"
     static let publicKey: HashableKey = "PUBLIC_KEY"
+    static let isSSLPinningActive: HashableKey = "IS_SSL_PINNIG_ACTIVE"
     static let pepper: HashableKey = "PEPPER"
     static let isDeleteChatActive: HashableKey = "IS_DELETE_CHAT_ACTIVE"
 }

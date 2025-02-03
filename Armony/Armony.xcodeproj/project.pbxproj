@@ -113,8 +113,6 @@
 		026395A328845E320014CE0A /* Validation+Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026395A228845E320014CE0A /* Validation+Responder.swift */; };
 		0263B529281424D700E9378F /* AccountMusicalProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263B528281424D700E9378F /* AccountMusicalProfileViewModel.swift */; };
 		0263B52B281424F500E9378F /* AccountMusicalProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263B52A281424F500E9378F /* AccountMusicalProfileCoordinator.swift */; };
-		026B1E572B9111BD002D38F6 /* ReleaseConfiguration.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 026B1E562B9111BD002D38F6 /* ReleaseConfiguration.xcconfig */; };
-		026B1E582B9111C2002D38F6 /* DebugConfiguration.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 02FA80DD2B9105670072D25F /* DebugConfiguration.xcconfig */; };
 		026C4FD1280D5FA800C0B967 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026C4FD0280D5FA800C0B967 /* CommonConstants.swift */; };
 		026C4FD4280DA55900C0B967 /* GetUserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026C4FD3280DA55900C0B967 /* GetUserTask.swift */; };
 		026DF38E28C2106600B73427 /* URLNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DF38728C2106600B73427 /* URLNavigator.swift */; };
@@ -174,6 +172,8 @@
 		02AF996C28ED944E006669F4 /* PlaceAdvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */; };
 		02AF996E28ED9476006669F4 /* PlaceAdvertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */; };
 		02AF997028ED9C95006669F4 /* DropdownPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */; };
+		02B786762D3ADB2700A8B6AE /* FeedbackViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */; };
+		02B786772D3ADB2700A8B6AE /* MockFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */; };
 		02B7CA6129259B1F0055B181 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7CA6029259B1F0055B181 /* ChatsViewController.swift */; };
 		02B7CA6329259B2F0055B181 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B7CA6229259B2F0055B181 /* Chat.storyboard */; };
 		02B7CA6529259F210055B181 /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7CA6429259F210055B181 /* ChatsViewModel.swift */; };
@@ -624,6 +624,8 @@
 		02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertViewModel.swift; sourceTree = "<group>"; };
 		02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertCoordinator.swift; sourceTree = "<group>"; };
 		02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPresentation.swift; sourceTree = "<group>"; };
+		02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModelTests.swift; sourceTree = "<group>"; };
+		02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeedbackView.swift; sourceTree = "<group>"; };
 		02B7CA6029259B1F0055B181 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		02B7CA6229259B2F0055B181 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		02B7CA6429259F210055B181 /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
@@ -1766,6 +1768,23 @@
 			path = Reset;
 			sourceTree = "<group>";
 		};
+		02B786742D3ADB2700A8B6AE /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */,
+				02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		02B786752D3ADB2700A8B6AE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				02B786742D3ADB2700A8B6AE /* Feedback */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		02B7CA5F29259AE10055B181 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -2862,6 +2881,7 @@
 		B1B55C9B26CEFAE300FDE884 /* ArmonyTests */ = {
 			isa = PBXGroup;
 			children = (
+				02B786752D3ADB2700A8B6AE /* Scenes */,
 				0205A49F2C53EF7600D5821D /* Common */,
 				02A824822881B1E8004351D0 /* CommonMocks */,
 				02FA5A4C2882292600E8AD5C /* Account */,
@@ -3305,7 +3325,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					B1B55C8126CEFADC00FDE884 = {
 						CreatedOnToolsVersion = 12.4;
@@ -3405,8 +3425,6 @@
 				B1E71DE027941CE800E7D6C1 /* NavigationHeaderView.xib in Resources */,
 				B1B55C8D26CEFADD00FDE884 /* Home.storyboard in Resources */,
 				024BDA0428ECE46400391AA4 /* PlaceAdvert.storyboard in Resources */,
-				026B1E582B9111C2002D38F6 /* DebugConfiguration.xcconfig in Resources */,
-				026B1E572B9111BD002D38F6 /* ReleaseConfiguration.xcconfig in Resources */,
 				023731B928612B23005F1522 /* Settings.storyboard in Resources */,
 				B1772B402710CE05001E544B /* SkillCell.xib in Resources */,
 				02826C40284EA810008A5893 /* TextView.xib in Resources */,
@@ -3806,6 +3824,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B55C9D26CEFAE300FDE884 /* AccountViewModelTests.swift in Sources */,
+				02B786762D3ADB2700A8B6AE /* FeedbackViewModelTests.swift in Sources */,
+				02B786772D3ADB2700A8B6AE /* MockFeedbackView.swift in Sources */,
 				0205A49E2C53E5C600D5821D /* DropdownViewSnapshotTests.swift in Sources */,
 				02A824842881B202004351D0 /* MockRestService.swift in Sources */,
 				02FA5A4E2882293000E8AD5C /* MockAccountView.swift in Sources */,
@@ -3999,6 +4019,7 @@
 				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = U6ZP8CMS8A;
+				ENABLE_DEBUG_DYLIB = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Armony/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Armony-Debug";
@@ -4033,6 +4054,7 @@
 				DEBUG_ACTIVITY_MODE = "";
 				"DEBUG_ACTIVITY_MODE[arch=*]" = disable;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_DEBUG_DYLIB = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Armony/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Armony;
@@ -4058,7 +4080,6 @@
 		B1B55CB026CEFAE300FDE884 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6ZP8CMS8A;
@@ -4080,7 +4101,6 @@
 		B1B55CB126CEFAE300FDE884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6ZP8CMS8A;
@@ -4102,7 +4122,6 @@
 		B1B55CB326CEFAE300FDE884 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
 				INFOPLIST_FILE = ArmonyUITests/Info.plist;
@@ -4122,7 +4141,6 @@
 		B1B55CB426CEFAE300FDE884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VALK7BP96F;
 				INFOPLIST_FILE = ArmonyUITests/Info.plist;
@@ -4282,7 +4300,7 @@
 			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.17.2;
+				minimumVersion = 1.17.4;
 			};
 		};
 		02FFF11E291EFEE300352D3C /* XCRemoteSwiftPackageReference "netfox" */ = {

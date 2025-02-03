@@ -9,25 +9,47 @@
 import Foundation
 
 final class MockRestService: RestService {
-
     static var shared: MockRestService = MockRestService(backend: .factory())
-
-    var mockResult: NetworkResult<APIResponse>? = nil
-
-    override func execute<R>(task operataion: HTTPTask,
-                             type: R.Type,
-                             completion: @escaping Callback<NetworkResult<R>>) where R : APIResponse {
-        switch mockResult {
-        case .success(let response):
-            completion(.success(response as! R))
-
-        case .failure(let error):
-            completion(.failure(error))
-        case .none:
-            break
+    
+    var stubbedResult: APIResponse?
+    var error: Error?
+    
+    override func execute<R>(task operation: RestAPI.Operation, type: R.Type) async throws -> R where R : APIResponse {
+        if let error = error {
+            throw error
         }
+        
+        if let result = stubbedResult as? R {
+            return result
+        }
+        
+        throw APIError.noData
     }
-
+    
+    override func upload<R>(task operation: RestAPI.UploadOperation, type: R.Type) async throws -> R where R : APIResponse {
+        if let error = error {
+            throw error
+        }
+        
+        if let result = stubbedResult as? R {
+            return result
+        }
+        
+        throw APIError.noData
+    }
+    
+    override func load<R>(from jsonString: String, type: R.Type) throws -> R where R : APIResponse {
+        if let error = error {
+            throw error
+        }
+        
+        if let result = stubbedResult as? R {
+            return result
+        }
+        
+        throw APIError.noData
+    }
+    
     override func load<R>(fromJSONFile fileName: String, type: R.Type) -> R where R : APIResponse {
         let bundle = Bundle(for: MockRestService.self)
         let filePath = bundle.url(forResource: fileName, withExtension: ".json")

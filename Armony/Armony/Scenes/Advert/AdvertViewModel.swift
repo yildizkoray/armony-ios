@@ -481,10 +481,10 @@ extension AdvertViewModel: DeleteAdvertFeedbackSelectionDelegate {
 }
 
 struct DeleteAdvertFirebaseEvent: FirebaseEvent {
-    var name: String = "remove_card"
+    var name: String = "delete_card"
     var category: String = "Card"
     var label: String
-    var action: String = "Remove"
+    var action: String = "Delete"
 
     var parameters: Payload
 }

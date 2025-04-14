@@ -12,6 +12,7 @@ protocol LocationSelectionDelegate: AnyObject {
 }
 
 struct LocationSelectionPresentation: SelectionPresentation {
+    
     typealias Input = LocationSelectionInput
     typealias Output = SingleSelectionOutput<LocationSelectionInput>
 
@@ -20,6 +21,7 @@ struct LocationSelectionPresentation: SelectionPresentation {
 
     var headerTitle: String = String("Location", table: .common)
     var isMultipleSelectionAllowed: Bool = false
+    var isDeselectionAllowed: Bool = true
 
     func continueButtonTapped() {
         delegate?.locationDidSelect(location: output.output)

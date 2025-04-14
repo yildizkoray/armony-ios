@@ -74,6 +74,7 @@ final class AdvertsViewModel: ViewModel {
     }
 
     @objc func refresh() {
+        RefreshAdvertsFirebaseEvent().send()
         fetchAdverts()
     }
 
@@ -302,4 +303,10 @@ struct BannerSlider: Decodable {
     let image: URL
     let backgroundColor: AppTheme.Color
     let deeplink: Deeplink
+}
+
+struct RefreshAdvertsFirebaseEvent: FirebaseEvent {
+    var name: String = "refresh_home"
+    var category: String = "Home"
+    var action: String = "refresh"
 }

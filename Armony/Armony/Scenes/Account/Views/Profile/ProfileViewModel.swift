@@ -369,7 +369,7 @@ struct CreateProfileAdjustEvent: AdjustEvent {
 struct CreateProfileFirebaseEvent: FirebaseEvent {
     var category: String = "Profile"
     var name: String = "create_profile"
-    var action: String = "Complete"
+    var action: String = "Create"
     var parameters: Payload
 }
 

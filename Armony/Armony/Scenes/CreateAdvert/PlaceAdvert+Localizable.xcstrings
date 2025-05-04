@@ -1,61 +1,61 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "LargeTitle": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Place an Ad"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "LargeTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create Ad"
           }
         }
       }
     },
-    "PlaceAdvert": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Place ad"
+    "PlaceAdvert" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create Ad"
           }
         }
       }
     },
-    "TabBarTitle": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Place Ad"
+    "TabBarTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create Ad"
           }
         }
       }
     },
-    "TextViewDescription": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add description"
+    "TextViewDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add description"
           }
         }
       }
     },
-    "TitleDescription": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Place your ad and build your music network"
+    "TitleDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create your ad and build your music network"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

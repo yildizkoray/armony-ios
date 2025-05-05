@@ -49,7 +49,14 @@ extension FirebaseEvent {
     }
 
     var eventParameters: Payload {
-        return defaultParameters.merging(parameters) { _, new in new }
+        let events = defaultParameters.merging(parameters) { _, new in new }
+        if !shouldRemoveIfEventValueEmpty {
+            return events
+        }
+
+        return events.filter { _, value in
+            return value.isNotEmpty
+        }
     }
 }
 

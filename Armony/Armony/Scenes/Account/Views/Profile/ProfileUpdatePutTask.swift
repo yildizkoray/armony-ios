@@ -50,3 +50,23 @@ struct PutProfileUpdateRequest: Encodable {
     // MARK: - EMPTY
     static let empty = PutProfileUpdateRequest()
 }
+
+extension Array where Element: Hashable {
+    func difference(from other: [Element]) -> [Element] {
+        let thisSet = Set(self)
+        let otherSet = Set(other)
+        return Array(thisSet.symmetricDifference(otherSet))
+    }
+}
+
+extension PutProfileUpdateRequest {
+    func eventParameters() -> [String: String] {
+        return [
+            "bio": bio.emptyIfNil,
+            "skills": skills.ifNil(.empty).map { $0.title }.joined(separator: .comma),
+            "music_genre": genres.ifNil(.empty).map { $0.name }.joined(separator: .comma),
+            "location": location?.title ?? .empty,
+            "title": title?.title ?? .empty
+        ]
+    }
+}

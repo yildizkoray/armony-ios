@@ -179,7 +179,7 @@ struct DeleteAccountFirebaseEvent: FirebaseEvent {
 
     init(explanation: String) {
         parameters = [
-            "explanation": explanation
+            "reason": explanation
         ]
     }
 }

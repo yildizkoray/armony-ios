@@ -65,3 +65,15 @@ public struct Advert: Decodable {
         case externalLink = "external_link"
     }
 }
+
+extension Advert {
+    func eventParameters() -> [String: String] {
+        return [
+            "skills": skills.map { $0.title }.joined(separator: .comma),
+            "music_genre": genres.map { $0.name }.joined(separator: .comma),
+            "lesson_format": serviceTypes.map { $0.title }.joined(separator: .comma),
+            "location": location.title,
+            "description": description.ifNil(.empty)
+        ]
+    }
+}

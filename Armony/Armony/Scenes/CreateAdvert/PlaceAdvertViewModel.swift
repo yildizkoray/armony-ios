@@ -208,26 +208,13 @@ final class PlaceAdvertViewModel: ViewModel {
                                                          type: RestObjectResponse<Advert>.self)
 
                 PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
-
                 PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
 
-                let skills = request.skills?.compactMap {
-                    $0.title
-                }.joined(separator: .comma)
-
-                let musicGenres = request.genres?.compactMap {
-                    $0.name
-                }.joined(separator: .comma)
-
-                let location = request.location?.title
                 let adTitle = advertsResponse.first { $0.id == request.advertTypeID }?.title
 
                 PlaceAdvertFirebaseEvents(
-                    advertType: adTitle.emptyIfNil,
-                    skills: skills.emptyIfNil,
-                    musicGenres: musicGenres.emptyIfNil,
-                    location: location.emptyIfNil,
-                    explanation: request.description.emptyIfNil
+                    label: adTitle.emptyIfNil,
+                    parameters: request.eventParameters()
                 ).send()
 
                 view?.stopSubmitButtonActivityIndicatorView()

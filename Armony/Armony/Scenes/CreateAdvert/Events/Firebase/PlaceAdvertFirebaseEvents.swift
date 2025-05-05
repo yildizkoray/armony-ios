@@ -8,27 +8,19 @@
 import Foundation
 
 struct PlaceAdvertFirebaseEvents: FirebaseEvent {
+    var name: String = "create_card"
     var category: String = "Card"
     var action: String = "Create"
+    var label: String
+
     var parameters: Payload
-    let location: String
-    let explanation: String
 
-    var label: String = "KORAY"
+    var shouldRemoveIfEventValueEmpty: Bool {
+        true
+    }
 
-    var name: String = "create_card"
-
-    init(advertType: String,
-         skills: String,
-         musicGenres: String,
-         location: String,
-         explanation: String) {
-        self.label = advertType
-        self.location = location
-        self.explanation = explanation
-        self.parameters = [
-            "location": location,
-            "explanation": explanation
-        ]
+    init(label: String, parameters: Payload) {
+        self.label = label
+        self.parameters = parameters
     }
 }

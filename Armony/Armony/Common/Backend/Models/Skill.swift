@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Skill: Codable {
+struct Skill: Codable, Hashable {
     let id: Int
     let iconURL: URL?
     let title: String

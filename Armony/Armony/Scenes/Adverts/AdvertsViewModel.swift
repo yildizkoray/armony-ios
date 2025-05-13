@@ -308,5 +308,5 @@ struct BannerSlider: Decodable {
 struct RefreshAdvertsFirebaseEvent: FirebaseEvent {
     var name: String = "refresh_home"
     var category: String = "Home"
-    var action: String = "refresh"
+    var action: String = "Refresh"
 }

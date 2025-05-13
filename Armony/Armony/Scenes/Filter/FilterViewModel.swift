@@ -38,6 +38,8 @@ final class FilterViewModel: ViewModel {
 
     var filterDidUpdate: Callback<FilterViewModel.Filters>? = nil
 
+    private let isEmptyFilters: Bool
+
     private weak var view: FilterViewDelegate?
     weak var delegate: FilterViewModelDelegate?
     var coordinator: FilterCoordinator!
@@ -50,6 +52,7 @@ final class FilterViewModel: ViewModel {
 
     init(view: FilterViewDelegate?, selectedFilters: Filters = .empty) {
         self.view = view
+        self.isEmptyFilters = selectedFilters.isEmpty
         self.filters = selectedFilters
     }
 
@@ -99,8 +102,23 @@ final class FilterViewModel: ViewModel {
     }
 
     func applyButtonTapped() {
+        handleEvents()
         coordinator.dismiss { [weak self] in
             self?.delegate?.applyButtonTapped(filters: self?.filters ?? .empty)
+        }
+    }
+
+    private func handleEvents() {
+        if filters.isEmpty, !isEmptyFilters {
+            ClearFilterFirebaseEvent().send()
+        }
+
+        if !filters.isEmpty {
+            let params = [
+                "ad_type": filters.advert?.title ?? .empty,
+                "location": filters.location?.title ?? .empty
+            ]
+            ApplyFilterFirebaseEvent(parameters: params).send()
         }
     }
 }
@@ -131,5 +149,18 @@ extension FilterViewModel: LocationSelectionDelegate {
         }
         view?.updateLocation(title: location?.title)
     }
+}
+
+struct ApplyFilterFirebaseEvent: FirebaseEvent {
+    var name: String = "apply_filter"
+    var category: String = "Filter"
+    var action: String = "Apply"
+    var parameters: Payload
+}
+
+struct ClearFilterFirebaseEvent: FirebaseEvent {
+    var name: String = "clear_filter"
+    var category: String = "Filter"
+    var action: String = "Clear"
 }
 

@@ -149,3 +149,9 @@ extension FilterViewController: FilterViewDelegate {
         locationDropdownView.updateText(title)
     }
 }
+
+struct ClearFiltersFirebaseEvent: FirebaseEvent {
+    var name: String = "clear_filter"
+    var category: String = "Filter"
+    var action: String = "clear"
+}

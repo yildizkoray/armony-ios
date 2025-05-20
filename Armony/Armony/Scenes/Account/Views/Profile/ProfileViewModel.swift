@@ -25,11 +25,14 @@ final class ProfileViewModel: ViewModel {
     private var request: PutProfileUpdateRequest
     private var selectedItemIDs: [Int] = .empty
 
+    private let isEmptyUser: Bool
+
     init(view: ProfileViewDelegate,
          presentation: ProfilePresentation,
          delegate: ProfileViewModelDelegate?) {
         self.view = view
         self.presentation = presentation
+        self.isEmptyUser = presentation.isEmpty()
         self.delegate = delegate
         self.request = presentation.createProfileUpdateRequest()
         super.init()
@@ -42,6 +45,19 @@ final class ProfileViewModel: ViewModel {
     func saveButtonDidTap() {
         view?.startSaveButtonActivityIndicatorView()
         let profileTask = PutProfileTask(userID: authenticator.userID, request: request)
+
+        if isEmptyUser {
+            CreateProfileFirebaseEvent(parameters: presentation.eventParameters()).send()
+        }
+        let musicGenreDiff = presentation.musicGenres?.difference(from: request.genres.ifNil(.empty))
+        let skillsDiff = presentation.skills?.difference(from: request.skills.ifNil(.empty))
+
+        if presentation.title?.id != request.title?.id ||
+            !musicGenreDiff.ifNil(.empty).isEmpty ||
+            !skillsDiff.ifNil(.empty).isEmpty ||
+            presentation.location?.id != request.location?.id {
+            EditProfileFirebaseEvent(parameters: request.eventParameters()).send()
+        }
 
         if let avatarImageData = view?.newAvatarImageData {
 
@@ -307,7 +323,6 @@ extension ProfileViewModel: TitleSelectionDelegate {
         if let title = title {
             let title = UserDetail.Title(id: title.id, title: title.title)
             request.title = title
-            presentation.title = title
         }
         else {
             presentation.title = nil
@@ -326,7 +341,6 @@ extension ProfileViewModel: SkillsSelectionDelegate {
                          title: item.title,
                          colorCode: nil)
         }
-        presentation.skills = selectedSkills
         request.skills = selectedSkills
         view?.updateSkills(title: skills?.title)
     }
@@ -338,7 +352,6 @@ extension ProfileViewModel: MusicGenresSelectionDelegate {
         let musicGenres: [MusicGenre]? = genres?.compactMap { item in
             return MusicGenre(id: item.id, name: item.title)
         }
-        presentation.musicGenres = musicGenres
         request.genres = musicGenres
         view?.updateMusicGenres(title: genres?.title)
     }
@@ -353,7 +366,6 @@ extension ProfileViewModel: LocationSelectionDelegate {
             presentation.location = location
         }
         else {
-            presentation.location = nil
             request.location = nil
         }
         view?.updateLocation(title: location?.title)
@@ -369,7 +381,13 @@ struct CreateProfileAdjustEvent: AdjustEvent {
 struct CreateProfileFirebaseEvent: FirebaseEvent {
     var category: String = "Profile"
     var name: String = "create_profile"
-    var action: String = "Complete"
+    var action: String = "Create"
     var parameters: Payload
 }
 
+struct EditProfileFirebaseEvent: FirebaseEvent {
+    var category: String = "Profile"
+    var name: String = "edit_profile"
+    var action: String = "Edit"
+    var parameters: Payload
+}

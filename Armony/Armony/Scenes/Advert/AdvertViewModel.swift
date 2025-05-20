@@ -73,7 +73,7 @@ final class AdvertViewModel: ViewModel {
     func remove(feedback: FeedbackRequest) {
         view?.startDeleteButtonActivityIndicatorView()
         let firebaseEventParameters: [String:String] = [
-            "explanation": feedback.feedbackSubject.title
+            "reason": feedback.feedbackSubject.title
         ]
 
         Task {
@@ -250,12 +250,17 @@ final class AdvertViewModel: ViewModel {
     }
 
     func activateAdvertButtonTapped() {
+        guard (advert?.user.id == authenticator.userID) else {
+            return
+        }
+
         view?.startActivateAdvertButtonActivityIndicatorView()
         Task {
             guard let advert = advert else { return }
             let task = PutActivateAdvertTask(advertID: advert.id.string, userID: authenticator.userID)
             do {
                 let _ = try await service.execute(task: task, type: RestObjectResponse<EmptyResponse>.self)
+                ActivateAdvertFirebaseEvent(label: advert.type.title, parameters: advert.eventParameters()).send()
                 safeSync {
                     view?.stopActivateAdvertButtonActivityIndicatorView()
                     coordinator.dismiss(animated: true) { [weak self] in
@@ -481,10 +486,10 @@ extension AdvertViewModel: DeleteAdvertFeedbackSelectionDelegate {
 }
 
 struct DeleteAdvertFirebaseEvent: FirebaseEvent {
-    var name: String = "remove_card"
+    var name: String = "delete_card"
     var category: String = "Card"
     var label: String
-    var action: String = "Remove"
+    var action: String = "Delete"
 
     var parameters: Payload
 }
@@ -500,3 +505,16 @@ struct ZuhalAcademyActionFirebaseEvent: FirebaseEvent {
     var action: String = "Click Button"
 }
 
+struct ActivateAdvertFirebaseEvent: FirebaseEvent {
+    var name: String = "recreate_card"
+    var category: String = "Card"
+    var action: String = "Recreate"
+    var label: String
+
+    var parameters: Payload
+
+    init(label: String, parameters: Payload) {
+        self.label = label
+        self.parameters = parameters
+    }
+}

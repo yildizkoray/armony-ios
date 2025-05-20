@@ -33,14 +33,14 @@ final class UserMediasViewModel: ViewModel {
             let task = PostMediasTask(userID: authenticator.userID, request: request)
 
             let firebaseEventParameteres = [
-                "video_count": "1"
+                "performance_count": "1"
             ]
 
             do {
                 let _ = try await service.execute(task: task, type: RestObjectResponse<EmptyResponse>.self)
 
                 UploadYoutubeVideoAdjustEvent().send()
-                UploadYoutubeVideoFirebaseEvent(label: url, parameters: firebaseEventParameteres).send()
+                UploadYoutubeVideoFirebaseEvent(parameters: firebaseEventParameteres).send()
 
                 self.fetchMedias()
             }
@@ -61,7 +61,7 @@ final class UserMediasViewModel: ViewModel {
         Task {
             let task = DeleteMediasTask(userID: authenticator.userID, id: id)
             let firebaseEventParameteres = [
-                "video_count": "0"
+                "performance_count": "0"
             ]
 
             do {
@@ -113,17 +113,17 @@ struct DeleteYoutubeVideoAdjustEvent: AdjustEvent {
 }
 
 struct UploadYoutubeVideoFirebaseEvent: FirebaseEvent {
-    var category: String = "Video"
-    var label: String
-    var action: String = "Completed"
-    var name: String = "adding_video"
+    var category: String = "Performance"
+    var label: String = "YouTube"
+    var action: String = "Add"
+    var name: String = "add_performance"
     var parameters: Payload
 }
 
 struct DeleteYoutubeVideoFirebaseEvent: FirebaseEvent {
-    var category: String = "Video"
-    var label: String
-    var action: String = "Deleted"
-    var name: String = "deleting_video"
+    var category: String = "Performance"
+    var label: String = "YouTube"
+    var action: String = "Delete"
+    var name: String = "delete_performance"
     var parameters: Payload
 }

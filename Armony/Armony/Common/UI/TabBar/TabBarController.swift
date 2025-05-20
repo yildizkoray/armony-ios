@@ -92,7 +92,6 @@ extension TabBarController: UITabBarControllerDelegate {
         if let navigationController = viewController as? UINavigationController {
             if navigationController.viewControllers.count < 2 {
                 TabBarItemScrollToTopFirebaseEvent().send()
-                TabBarItemScrollToTopMixPanelEvent().send()
                 navigationController.rootViewController?.scrollToTop(animated: true)
             }
         }
@@ -108,11 +107,9 @@ extension TabBarController: UITabBarControllerDelegate {
     }
 }
 
-// MARK: - Kivilcim istedi Events
+// MARK: - TabBarItemScrollToTopFirebaseEvent
 struct TabBarItemScrollToTopFirebaseEvent: FirebaseEvent {
-    var name: String = "kivilcim_istedi"
-}
-
-struct TabBarItemScrollToTopMixPanelEvent: FirebaseEvent {
-    var name: String = "kivilcim_istedi"
+    var name: String = "scroll_to_top_on_home"
+    var action: String = "Scroll"
+    var category: String = "Home"
 }

@@ -45,3 +45,16 @@ struct PlaceAdvertRequest: Encodable {
         serviceTypes: .empty
     )
 }
+
+
+extension PlaceAdvertRequest {
+    func eventParameters() -> [String: String] {
+        return [
+            "skills": skills.ifNil(.empty).compactMap { $0.title }.joined(separator: .comma),
+            "music_genre": genres.ifNil(.empty).compactMap { $0.name }.joined(separator: .comma),
+            "lesson_format": serviceTypes.ifNil(.empty).compactMap { $0.title }.joined(separator: .comma),
+            "location": location.ifNil(.empty).title,
+            "description": description.ifNil(.empty)
+        ]
+    }
+}

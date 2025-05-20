@@ -17,7 +17,15 @@ protocol Analytic {
     func send(event: Event)
 }
 
-protocol Event: Sendable { }
+protocol Event: Sendable {
+    var shouldRemoveIfEventValueEmpty: Bool { get }
+}
+
+extension Event {
+    var shouldRemoveIfEventValueEmpty: Bool {
+        false
+    }
+}
 
 
 

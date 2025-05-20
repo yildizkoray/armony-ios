@@ -97,7 +97,9 @@ final class AccountInformationViewModel: ViewModel {
                     type: RestObjectResponse<EmptyResponse>.self
                 )
 
-                DeleteAccountFirebaseEvent(explanation: feedback.feedbackSubject.title).send()
+                DeleteAccountFirebaseEvent(
+                    explanation: feedback.feedbackSubject.title
+                ).send()
                 DeleteAccountAdjustEvent().send()
 
                 safeSync {
@@ -171,14 +173,13 @@ extension AccountInformationViewModel: DeleteAccountFeedbackSelectionDelegate {
 
 struct DeleteAccountFirebaseEvent: FirebaseEvent {
     var name: String = "delete_account"
-    var category: String = "User Interaction"
-    var label: String = AuthenticationService.shared.userID
-    var action: String = "Deleted"
+    var category: String = "Account"
+    var action: String = "Delete"
     var parameters: Payload
 
     init(explanation: String) {
         parameters = [
-            "explanation": explanation
+            "reason": explanation
         ]
     }
 }

@@ -35,5 +35,9 @@ struct UserDetail: Decodable {
             case id
             case title = "name"
         }
+
+        func isEmpty() -> Bool {
+            return title.isEmpty
+        }
     }
 }

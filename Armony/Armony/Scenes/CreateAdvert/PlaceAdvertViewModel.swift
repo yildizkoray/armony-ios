@@ -208,7 +208,15 @@ final class PlaceAdvertViewModel: ViewModel {
                                                          type: RestObjectResponse<Advert>.self)
 
                 PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
-                PlaceAdvertFirebasveEventsHandler.track(request: request)
+                PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
+
+                let adTitle = advertsResponse.first { $0.id == request.advertTypeID }?.title
+
+                PlaceAdvertFirebaseEvents(
+                    label: adTitle.emptyIfNil,
+                    parameters: request.eventParameters()
+                ).send()
+
                 view?.stopSubmitButtonActivityIndicatorView()
                 resetInputs()
 

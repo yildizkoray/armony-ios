@@ -9,6 +9,12 @@
             "state" : "translated",
             "value" : "Account Settings"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap Ayarları"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Account information has been updated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap bilgileriniz güncellendi"
           }
         }
       }
@@ -31,6 +43,12 @@
             "state" : "translated",
             "value" : "Password has been updated"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifreniz güncellendi"
+          }
         }
       }
     },
@@ -41,6 +59,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete account"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı Sil"
           }
         }
       }
@@ -53,6 +77,12 @@
             "state" : "translated",
             "value" : "Edit profile"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profili Düzenle"
+          }
         }
       }
     },
@@ -63,6 +93,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Musical Profile"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzisyen Profili"
           }
         }
       }
@@ -75,6 +111,12 @@
             "state" : "translated",
             "value" : "Build profile"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil Oluştur"
+          }
         }
       }
     },
@@ -85,6 +127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set up your musician profile in minutes and post your first ad for free"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzisyen profilinizi dakikalar içinde oluşturun ve ilk ilanınızı ücretsiz yayınlayın"
           }
         }
       }
@@ -97,6 +145,12 @@
             "state" : "translated",
             "value" : "My Ads"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlanlarım"
+          }
         }
       }
     },
@@ -106,6 +160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "My Performances"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performanslarım"
           }
         }
       }
@@ -118,6 +178,12 @@
             "state" : "translated",
             "value" : "The link you entered is not valid YouTube link. Please enter valid link please"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Girdiğiniz bağlantı geçerli bir YouTube bağlantısı değil. Lütfen geçerli bir bağlantı girin"
+          }
         }
       }
     },
@@ -128,6 +194,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "You can add YouTube link here"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "YouTube bağlantınızı buraya ekleyebilirsiniz"
           }
         }
       }
@@ -140,6 +212,12 @@
             "state" : "translated",
             "value" : "Delete video"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Videoyu Sil"
+          }
         }
       }
     },
@@ -150,6 +228,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upload video"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video Ekle"
           }
         }
       }
@@ -162,6 +246,12 @@
             "state" : "translated",
             "value" : "You can upload YouTube videos and share your performance"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "YouTube videolarınızı ekleyerek performansınızı paylaşabilirsiniz"
+          }
         }
       }
     },
@@ -172,6 +262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profile"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
           }
         }
       }
@@ -184,6 +280,12 @@
             "state" : "translated",
             "value" : "Who are you? Share your story!"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzik yolculuğunuzu anlatın!"
+          }
         }
       }
     },
@@ -194,6 +296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your profile has been updated successfully"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profiliniz başarıyla güncellendi"
           }
         }
       }
@@ -206,6 +314,12 @@
             "state" : "translated",
             "value" : "Post an ad"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlan Yayınla"
+          }
         }
       }
     },
@@ -216,6 +330,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Manage and view your published ads in this section"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yayınladığınız ilanları bu bölümden görüntüleyebilir ve yönetebilirsiniz"
           }
         }
       }
@@ -228,6 +348,12 @@
             "state" : "translated",
             "value" : "Adverts"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlanlar"
+          }
         }
       }
     },
@@ -239,11 +365,31 @@
             "state" : "translated",
             "value" : "No performances available"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz performans videosu eklenmemiş"
+          }
         }
       }
     },
     "VisitedAccount.Musical.Profile" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Musical Profile"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzisyen Profili"
+          }
+        }
+      }
     },
     "VisitedAccount.MusicalProfile.EmptyState.Title" : {
       "extractionState" : "manual",
@@ -252,6 +398,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profile has not been completed"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil henüz oluşturulmamış"
           }
         }
       }
@@ -263,6 +415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Performances"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Performanslar"
           }
         }
       }

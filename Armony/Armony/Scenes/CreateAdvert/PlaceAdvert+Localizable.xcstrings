@@ -9,6 +9,12 @@
             "state" : "translated",
             "value" : "Create Ad"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlan Oluştur"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Create Ad"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlan Oluştur"
           }
         }
       }
@@ -31,6 +43,12 @@
             "state" : "translated",
             "value" : "Create Ad"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlan Oluştur"
+          }
         }
       }
     },
@@ -42,6 +60,12 @@
             "state" : "translated",
             "value" : "Add description"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açıklama Ekle"
+          }
         }
       }
     },
@@ -52,6 +76,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Create your ad and build your music network"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlanınızı oluşturun ve müzik ağınızı genişletin"
           }
         }
       }

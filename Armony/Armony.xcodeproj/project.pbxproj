@@ -169,6 +169,7 @@
 		02A824842881B202004351D0 /* MockRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A824832881B202004351D0 /* MockRestService.swift */; };
 		02AC514128343DF1004C82E4 /* EmptyStatePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */; };
 		02AC514328343E65004C82E4 /* EmptyStateShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514228343E65004C82E4 /* EmptyStateShowing.swift */; };
+		02AD97AD2DEB92CE00B51B0C /* Title+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02AD97AC2DEB92CE00B51B0C /* Title+Localizable.xcstrings */; };
 		02AF996C28ED944E006669F4 /* PlaceAdvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */; };
 		02AF996E28ED9476006669F4 /* PlaceAdvertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */; };
 		02AF997028ED9C95006669F4 /* DropdownPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */; };
@@ -621,6 +622,7 @@
 		02A824832881B202004351D0 /* MockRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestService.swift; sourceTree = "<group>"; };
 		02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStatePresentation.swift; sourceTree = "<group>"; };
 		02AC514228343E65004C82E4 /* EmptyStateShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateShowing.swift; sourceTree = "<group>"; };
+		02AD97AC2DEB92CE00B51B0C /* Title+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Title+Localizable.xcstrings"; sourceTree = "<group>"; };
 		02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertViewModel.swift; sourceTree = "<group>"; };
 		02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertCoordinator.swift; sourceTree = "<group>"; };
 		02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPresentation.swift; sourceTree = "<group>"; };
@@ -1719,6 +1721,7 @@
 		0294989A28F715BE0075F36F /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
+				02AD97A92DEB929000B51B0C /* Backend */,
 				02587C7A2C86746B0045FF30 /* Common+Localizable.xcstrings */,
 			);
 			path = Localizable;
@@ -1758,6 +1761,14 @@
 				02A824832881B202004351D0 /* MockRestService.swift */,
 			);
 			path = CommonMocks;
+			sourceTree = "<group>";
+		};
+		02AD97A92DEB929000B51B0C /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				02AD97AC2DEB92CE00B51B0C /* Title+Localizable.xcstrings */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 		02B644592BB6CD3F002520B6 /* Reset */ = {
@@ -3347,6 +3358,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = B1B55C7926CEFADC00FDE884;
 			packageReferences = (
@@ -3415,6 +3427,7 @@
 				B188BB3027499518002FF3D4 /* GradientView.xib in Resources */,
 				B15D9AC526DFFCAE00FE71A9 /* Poppins-SemiBold.ttf in Resources */,
 				02E7D6AE2844FE0A0006780A /* DropdownView.xib in Resources */,
+				02AD97AD2DEB92CE00B51B0C /* Title+Localizable.xcstrings in Resources */,
 				02B7CA6329259B2F0055B181 /* Chat.storyboard in Resources */,
 				021EC05C2CF3B06B002A48BB /* Chat+Localizable.xcstrings in Resources */,
 				B1E0C4FC26DAD0460067DE6F /* AvatarView.xib in Resources */,

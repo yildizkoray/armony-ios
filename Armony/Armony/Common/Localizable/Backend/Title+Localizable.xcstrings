@@ -1,138 +1,156 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Advert.Block.Confirmation" : {
+    "Title_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Do you want to block this user?"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bu kullanıcıyı engellemek istiyor musunuz?"
+            "value" : "Songwriter"
           }
         }
       }
     },
-    "Advert.Block.Description" : {
+    "Title_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "When you block a user, their profile, ads, and messages will no longer be visible to you."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bir kullanıcıyı engellediğinizde, onların profili, ilanları ve mesajları artık size görünmeyecektir."
+            "value" : "Composer"
           }
         }
       }
     },
-    "Advert.DeleteAd" : {
+    "Title_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Delete advert"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İlanı Sil"
+            "value" : "Musician"
           }
         }
       }
     },
-    "Advert.Expire.Warning" : {
+    "Title_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The 30-day publication period for your ad has ended, and it has been removed."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İlanınızın 30 günlük yayın süresi sona erdi ve kaldırıldı."
+            "value" : "Mix & Mastering"
           }
         }
       }
     },
-    "Advert.RepostAd" : {
+    "Title_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Publish again"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tekrar Yayınla"
+            "value" : "Podcast Editing & Mastering"
           }
         }
       }
     },
-    "Advert.SendMessage" : {
+    "Title_6" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Send Message"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mesaj Gönder"
+            "value" : "Arranger"
           }
         }
       }
     },
-    "Adverts.EmptyState.Button.Title" : {
+    "Title_7" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "All ads"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tüm İlanlar"
+            "value" : "Producer"
           }
         }
       }
     },
-    "Adverts.EmptyState.Title" : {
+    "Title_8" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No ads available yet"
+            "value" : "Prodüksiyon Ses Mikseri"
           }
-        },
-        "tr" : {
+        }
+      }
+    },
+    "Title_9" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Henüz ilan bulunmuyor"
+            "value" : "Remixing"
+          }
+        }
+      }
+    },
+    "Title_10" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restorasyon"
+          }
+        }
+      }
+    },
+    "Title_11" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Design"
+          }
+        }
+      }
+    },
+    "Title_12" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat Makers"
+          }
+        }
+      }
+    },
+    "Title_13" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audio Engineer"
+          }
+        }
+      }
+    },
+    "Title_14" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzik Eğitmeni"
           }
         }
       }

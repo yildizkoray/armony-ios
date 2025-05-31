@@ -9,6 +9,12 @@
             "state" : "translated",
             "value" : "Delete"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sil"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "You haven't started any chats yet"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz bir sohbet başlatmadınız"
           }
         }
       }
@@ -31,6 +43,12 @@
             "state" : "translated",
             "value" : "Chats"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mesajlar"
+          }
         }
       }
     },
@@ -42,6 +60,12 @@
             "state" : "translated",
             "value" : "Delete Chat"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sohbeti Sil"
+          }
         }
       }
     },
@@ -52,6 +76,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Are you sure you want to delete this chat?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu sohbeti silmek istediğinizden emin misiniz?"
           }
         }
       }

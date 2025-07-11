@@ -25,6 +25,7 @@ struct GetChatsTask: HTTPTask, PaginatableTask {
 struct SocketMessageReadCountTask: HTTPTask {
     var method: Alamofire.HTTPMethod = .get
     var path: String
+    var apiVersion: String = "v2"
 
     init(userID: String) {
         path = "/users/\(userID)/unread-messages-count"

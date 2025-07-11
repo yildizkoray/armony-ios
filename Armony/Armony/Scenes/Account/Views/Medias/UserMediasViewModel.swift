@@ -98,8 +98,8 @@ final class UserMediasViewModel: ViewModel {
 }
 
 public extension Error {
-    func showAlert() {
-        AlertService.show(error: self.api, actions: [.okay()])
+    func showAlert(action: VoidCallback? = nil) {
+        AlertService.show(error: self.api, actions: [.okay(action: action)])
     }
 }
 

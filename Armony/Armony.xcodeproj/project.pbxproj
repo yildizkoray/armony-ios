@@ -59,6 +59,9 @@
 		02301B58292CED4A00F78449 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02301B57292CED4A00F78449 /* UIStackView+Extensions.swift */; };
 		023069A32929188900BDC42B /* GetLiveChatMessagesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023069A22929188900BDC42B /* GetLiveChatMessagesTask.swift */; };
 		023069A7292918A100BDC42B /* LiveChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023069A6292918A100BDC42B /* LiveChatMessage.swift */; };
+		02306BE42E450D6800A27979 /* Armony.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 02306BE32E450D6800A27979 /* Armony.storekit */; };
+		02306BE62E450E2D00A27979 /* Armony-Debug.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 02306BE52E450E2D00A27979 /* Armony-Debug.storekit */; };
+		02306BE92E45388600A27979 /* RevenueCatPurchaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02306BE82E45388300A27979 /* RevenueCatPurchaseStorageService.swift */; };
 		023110212841392100CB2488 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023110202841392100CB2488 /* SettingsViewController.swift */; };
 		02311023284139A500CB2488 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02311022284139A500CB2488 /* SettingsViewModel.swift */; };
 		0231102528413A6600CB2488 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231102428413A6600CB2488 /* SettingsCoordinator.swift */; };
@@ -97,6 +100,8 @@
 		02511B9C2B8D4E1400B67F27 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02511B9B2B8D4E1400B67F27 /* InfoView.swift */; };
 		025130A22B0C222900D12FB0 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025130A12B0C222900D12FB0 /* UIScrollView+Extensions.swift */; };
 		0257855D289C069A00A0BF55 /* SettingsVersionInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257855C289C069A00A0BF55 /* SettingsVersionInformationView.swift */; };
+		02587B1B2E2CCEB400562F02 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 02587B1A2E2CCEB400562F02 /* RevenueCat */; };
+		02587B1D2E2CCEB400562F02 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 02587B1C2E2CCEB400562F02 /* RevenueCatUI */; };
 		02587C7B2C86746B0045FF30 /* Common+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02587C7A2C86746B0045FF30 /* Common+Localizable.xcstrings */; };
 		025E081D2846416600063827 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E081C2846416600063827 /* ProfileViewController.swift */; };
 		025E081F284641AB00063827 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E081E284641AB00063827 /* ProfileViewModel.swift */; };
@@ -167,6 +172,7 @@
 		02A261F32B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A261F22B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift */; };
 		02A60CE22D0A291300B0FA80 /* Onboarding+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02A60CE12D0A291300B0FA80 /* Onboarding+Localizable.xcstrings */; };
 		02A824842881B202004351D0 /* MockRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A824832881B202004351D0 /* MockRestService.swift */; };
+		02A9C1F72E3D615A0031A636 /* RevenueCatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9C1F62E3D614A0031A636 /* RevenueCatService.swift */; };
 		02AC514128343DF1004C82E4 /* EmptyStatePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */; };
 		02AC514328343E65004C82E4 /* EmptyStateShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514228343E65004C82E4 /* EmptyStateShowing.swift */; };
 		02AF996C28ED944E006669F4 /* PlaceAdvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */; };
@@ -521,6 +527,9 @@
 		02301B57292CED4A00F78449 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		023069A22929188900BDC42B /* GetLiveChatMessagesTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLiveChatMessagesTask.swift; sourceTree = "<group>"; };
 		023069A6292918A100BDC42B /* LiveChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatMessage.swift; sourceTree = "<group>"; };
+		02306BE32E450D6800A27979 /* Armony.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Armony.storekit; sourceTree = "<group>"; };
+		02306BE52E450E2D00A27979 /* Armony-Debug.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Armony-Debug.storekit"; sourceTree = "<group>"; };
+		02306BE82E45388300A27979 /* RevenueCatPurchaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatPurchaseStorageService.swift; sourceTree = "<group>"; };
 		023110202841392100CB2488 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		02311022284139A500CB2488 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0231102428413A6600CB2488 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
@@ -619,6 +628,7 @@
 		02A261F22B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDeleteAccountFeedbackTask.swift; sourceTree = "<group>"; };
 		02A60CE12D0A291300B0FA80 /* Onboarding+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Onboarding+Localizable.xcstrings"; sourceTree = "<group>"; };
 		02A824832881B202004351D0 /* MockRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestService.swift; sourceTree = "<group>"; };
+		02A9C1F62E3D614A0031A636 /* RevenueCatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatService.swift; sourceTree = "<group>"; };
 		02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStatePresentation.swift; sourceTree = "<group>"; };
 		02AC514228343E65004C82E4 /* EmptyStateShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateShowing.swift; sourceTree = "<group>"; };
 		02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertViewModel.swift; sourceTree = "<group>"; };
@@ -924,6 +934,7 @@
 				B1A6F7272A2D174E000014A5 /* StoreKit.framework in Frameworks */,
 				02BDBB0D2ADCA4A3008BB2A3 /* YouTubeiOSPlayerHelper in Frameworks */,
 				02C4E1142ADF263500645D4C /* SnapKit in Frameworks */,
+				02587B1D2E2CCEB400562F02 /* RevenueCatUI in Frameworks */,
 				02472AB22810B0F200A6A327 /* SwiftMessages in Frameworks */,
 				B1FEFB1C29D8B84500F03EA0 /* FacebookCore in Frameworks */,
 				027B37522918609500CC8AE8 /* FirebaseCrashlytics in Frameworks */,
@@ -931,6 +942,7 @@
 				B1FA8B91298341E300BD7D31 /* UIScrollView_InfiniteScroll in Frameworks */,
 				02472AAF2810B0CD00A6A327 /* KeychainAccess in Frameworks */,
 				027E8E1329344D9B001EFDFA /* AdSupport.framework in Frameworks */,
+				02587B1B2E2CCEB400562F02 /* RevenueCat in Frameworks */,
 				025E1EE8284A8301005D2F83 /* BottomPopup in Frameworks */,
 				02754D34293013A40066AA07 /* Starscream in Frameworks */,
 				027B37542918609500CC8AE8 /* FirebaseRemoteConfig in Frameworks */,
@@ -1758,6 +1770,15 @@
 				02A824832881B202004351D0 /* MockRestService.swift */,
 			);
 			path = CommonMocks;
+			sourceTree = "<group>";
+		};
+		02A9C1F52E3D613D0031A636 /* RevenueCat */ = {
+			isa = PBXGroup;
+			children = (
+				02306BE82E45388300A27979 /* RevenueCatPurchaseStorageService.swift */,
+				02A9C1F62E3D614A0031A636 /* RevenueCatService.swift */,
+			);
+			path = RevenueCat;
 			sourceTree = "<group>";
 		};
 		02B644592BB6CD3F002520B6 /* Reset */ = {
@@ -2606,6 +2627,7 @@
 				B1197D3227BEF54C0045E059 /* Firebase */,
 				B152FB9B298F1253001D2F00 /* InternetConnection */,
 				02707983293177D600199298 /* RemoteNotification */,
+				02A9C1F52E3D613D0031A636 /* RevenueCat */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -3181,6 +3203,8 @@
 		B1FCC88526D11E89009A7F8A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				02306BE32E450D6800A27979 /* Armony.storekit */,
+				02306BE52E450E2D00A27979 /* Armony-Debug.storekit */,
 				B1B55C9326CEFAE300FDE884 /* Info.plist */,
 				B1B55C8E26CEFAE300FDE884 /* Assets.xcassets */,
 				B106BCF026E428EB001CE109 /* Colors.xcassets */,
@@ -3272,6 +3296,8 @@
 				B1A6F7222A2D1419000014A5 /* Adjust */,
 				02BDBB0C2ADCA4A3008BB2A3 /* YouTubeiOSPlayerHelper */,
 				02C4E1132ADF263500645D4C /* SnapKit */,
+				02587B1A2E2CCEB400562F02 /* RevenueCat */,
+				02587B1C2E2CCEB400562F02 /* RevenueCatUI */,
 			);
 			productName = Armony;
 			productReference = B1B55C8226CEFADC00FDE884 /* Armony.app */;
@@ -3368,6 +3394,7 @@
 				02BDBB0B2ADCA4A3008BB2A3 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 				02C4E1122ADF263500645D4C /* XCRemoteSwiftPackageReference "SnapKit" */,
 				02DAE1452C550E06001F4931 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 			);
 			productRefGroup = B1B55C8326CEFADC00FDE884 /* Products */;
 			projectDirPath = "";
@@ -3391,9 +3418,11 @@
 				02587C7B2C86746B0045FF30 /* Common+Localizable.xcstrings in Resources */,
 				B15F22DC27A0879B001F5B78 /* Login.storyboard in Resources */,
 				027F615C284195CF00A46049 /* SettingCell.xib in Resources */,
+				02306BE42E450D6800A27979 /* Armony.storekit in Resources */,
 				B15D9AC426DFFCAE00FE71A9 /* Poppins-Light.ttf in Resources */,
 				02B7CA6C2925A0950055B181 /* ChatCell.xib in Resources */,
 				02D90D0F28568EB5005B5162 /* Onboarding.storyboard in Resources */,
+				02306BE62E450E2D00A27979 /* Armony-Debug.storekit in Resources */,
 				B1C9097029468CCC0080804C /* VisitedAccount.storyboard in Resources */,
 				B179B6FD29CFB01E002DD9F3 /* GoogleService-Info.plist in Resources */,
 				B17DFAB627B6800800A82C41 /* Splash.storyboard in Resources */,
@@ -3670,6 +3699,7 @@
 				021E2F782889F4E700132DBB /* GetFeedbackSubjectsTask.swift in Sources */,
 				02511B9C2B8D4E1400B67F27 /* InfoView.swift in Sources */,
 				02E443F32C35DCF600AE0A13 /* DefaultRepresentation.swift in Sources */,
+				02306BE92E45388600A27979 /* RevenueCatPurchaseStorageService.swift in Sources */,
 				027E8E182934584B001EFDFA /* Analytic.swift in Sources */,
 				B10CCD792741055000BB313D /* GetAdvertsTask.swift in Sources */,
 				0297CD172D123AE70014D208 /* Region.swift in Sources */,
@@ -3812,6 +3842,7 @@
 				02BDBB0A2ADCA3E5008BB2A3 /* YoutubeMediaCell.swift in Sources */,
 				025E1EF5284A9030005D2F83 /* SelectionInput.swift in Sources */,
 				B1E4218B27B4360200EBC232 /* Error+Extensions.swift in Sources */,
+				02A9C1F72E3D615A0031A636 /* RevenueCatService.swift in Sources */,
 				B152FB9A298F073F001D2F00 /* DeleteAccountTask.swift in Sources */,
 				B111223726DA7777009C7B3E /* UIViewController+Extensions.swift in Sources */,
 				02C33AD52C9A3A0900AB332B /* AdvertListingCoordinator.swift in Sources */,
@@ -4247,6 +4278,14 @@
 				minimumVersion = 9.0.6;
 			};
 		};
+		02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		025E1EE6284A8301005D2F83 /* XCRemoteSwiftPackageReference "BottomPopup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ergunemr/BottomPopup.git";
@@ -4380,6 +4419,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 02472AB02810B0F200A6A327 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
+		};
+		02587B1A2E2CCEB400562F02 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		02587B1C2E2CCEB400562F02 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCatUI;
 		};
 		025E1EE7284A8301005D2F83 /* BottomPopup */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -39,14 +39,16 @@
 	<dict>
 		<key>ADJUST_TOKEN</key>
 		<string>${ADJUST_TOKEN}</string>
-		<key>MIXPANEL_TOKEN</key>
-		<string>${MIXPANEL_TOKEN}</string>
 		<key>API_HOST</key>
 		<string>$(API_HOST)</string>
 		<key>API_SCHEME</key>
 		<string>$(API_SCHEME)</string>
 		<key>ENVIRONMENT</key>
 		<string>$(CONFIGURATION)</string>
+		<key>MIXPANEL_TOKEN</key>
+		<string>${MIXPANEL_TOKEN}</string>
+		<key>REVENUECAT_API_KEY</key>
+		<string>${REVENUECAT_API_KEY}</string>
 	</dict>
 	<key>FacebookAppID</key>
 	<string>${FACEBOOK_APP_ID}</string>

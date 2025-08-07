@@ -40,10 +40,13 @@ final class PlaceAdvertViewModel: ViewModel {
     var coordinator: PlaceAdvertCoordinator!
     private weak var view: PlaceAdvertViewDelegate?
     private let notificationService: PlaceAdvertNotificationService = .shared
+    private let authenticator: AuthenticationService = .shared
 
     private var selectedIDStorage: SelectedIDStorage = .empty
     private var request: PlaceAdvertRequest
     private var advertsResponse: [Advert.Properties] = .empty
+    private(set) var hasUserAdverts: Bool = false
+    private(set) var userAdsCountRequestError: Error?
     private var description: String? = nil {
         didSet {
             self.request.description = description.isNotNilOrEmpty ? description : nil
@@ -132,7 +135,6 @@ final class PlaceAdvertViewModel: ViewModel {
                                                          type: RestArrayResponse<Skill>.self)
 
                 let items = response.itemsForSelection(selectedIDs: selectedIDStorage.skills)
-//                let headerTitle: String = String("Lessons", table: .common)
                 let selectionPresentation = SkillsSelectionPresentation(delegate: self,
                                                                         items: items,
                                                                         headerTitle: .empty)
@@ -200,14 +202,13 @@ final class PlaceAdvertViewModel: ViewModel {
     }
 
 
-    func submitButtonTapped() {
+    func submitButtonTapped(transactionID: String?) {
         view?.startSubmitButtonActivityIndicatorView()
         Task { @MainActor in
             do {
                 let response = try await service.execute(task: PostPlaceAdvertTask(request: request),
                                                          type: RestObjectResponse<Advert>.self)
 
-                PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
                 PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
 
                 let adTitle = advertsResponse.first { $0.id == request.advertTypeID }?.title
@@ -236,12 +237,32 @@ final class PlaceAdvertViewModel: ViewModel {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     AppRatingService.shared.requestReviewIfNeeded()
                 }
+
+                if let transactionID {
+                    RevenueCatPurchaseStorageService.shared.remove(transactionID: transactionID)
+                }
             }
             catch let error {
                 safeSync {
                     view?.stopSubmitButtonActivityIndicatorView()
                 }
                 AlertService.show(message: error.api.ifNil(.network).description, actions: [.okay()])
+            }
+        }
+    }
+
+    func fetchAdverts() {
+        Task {
+            do {
+                let response = try await service.execute(
+                    task: GetUserAdvertsTask(userID: authenticator.userID),
+                    type: RestArrayResponse<Advert>.self
+                )
+                hasUserAdverts = !response.data.isEmpty
+                userAdsCountRequestError = nil
+            }
+            catch let error {
+                userAdsCountRequestError = error
             }
         }
     }

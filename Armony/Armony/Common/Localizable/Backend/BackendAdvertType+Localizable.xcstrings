@@ -1,156 +1,172 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Title_1" : {
+    "Advert_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Songwriter"
+            "value" : "Find a Band"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grup Ara"
           }
         }
       }
     },
-    "Title_2" : {
+    "Advert_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Composer"
+            "value" : "Find a Musician"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzisyen Ara"
           }
         }
       }
     },
-    "Title_3" : {
+    "Advert_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Musician"
+            "value" : "Event Services"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etkinlik Hizmetleri"
           }
         }
       }
     },
-    "Title_4" : {
+    "Advert_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mix & Mastering"
+            "value" : "Music Lessons"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzik Dersleri"
           }
         }
       }
     },
-    "Title_5" : {
+    "Advert_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Podcast Editing & Mastering"
+            "value" : "Industry Services"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sektör Hizmetleri"
           }
         }
       }
     },
-    "Title_6" : {
+    "AdvertSkillTitle_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Arranger"
+            "value" : "Skills"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yetenekler"
           }
         }
       }
     },
-    "Title_7" : {
+    "AdvertSkillTitle_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Producer"
+            "value" : "Skills"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yetenekler"
           }
         }
       }
     },
-    "Title_8" : {
+    "AdvertSkillTitle_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prodüksiyon Ses Mikseri"
+            "value" : "Services"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hizmetler"
           }
         }
       }
     },
-    "Title_9" : {
+    "AdvertSkillTitle_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Remixing"
+            "value" : "Lessons"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dersler"
           }
         }
       }
     },
-    "Title_10" : {
+    "AdvertSkillTitle_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Restorasyon"
+            "value" : "Services"
           }
-        }
-      }
-    },
-    "Title_11" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
+        },
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sound Design"
-          }
-        }
-      }
-    },
-    "Title_12" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beat Makers"
-          }
-        }
-      }
-    },
-    "Title_13" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Audio Engineer"
-          }
-        }
-      }
-    },
-    "Title_14" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Müzik Eğitmeni"
+            "value" : "Hizmetler"
           }
         }
       }

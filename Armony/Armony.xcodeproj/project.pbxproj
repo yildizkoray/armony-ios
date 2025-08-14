@@ -136,6 +136,8 @@
 		027B37502918609500CC8AE8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 027B374F2918609500CC8AE8 /* FirebaseAnalytics */; };
 		027B37522918609500CC8AE8 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 027B37512918609500CC8AE8 /* FirebaseCrashlytics */; };
 		027B37542918609500CC8AE8 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 027B37532918609500CC8AE8 /* FirebaseRemoteConfig */; };
+		027D25C02E4E6EA40074737C /* BackendSettings+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25BF2E4E6EA40074737C /* BackendSettings+Localizable.xcstrings */; };
+		027D25C22E4E865E0074737C /* BackendAdvertType+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25C12E4E865E0074737C /* BackendAdvertType+Localizable.xcstrings */; };
 		027E8E1329344D9B001EFDFA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027E8E1129344D8C001EFDFA /* AdSupport.framework */; };
 		027E8E182934584B001EFDFA /* Analytic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E8E172934584B001EFDFA /* Analytic.swift */; };
 		027E8E1B29346061001EFDFA /* FirebaseAnalytic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E8E1A29346061001EFDFA /* FirebaseAnalytic.swift */; };
@@ -169,7 +171,7 @@
 		02A824842881B202004351D0 /* MockRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A824832881B202004351D0 /* MockRestService.swift */; };
 		02AC514128343DF1004C82E4 /* EmptyStatePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */; };
 		02AC514328343E65004C82E4 /* EmptyStateShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514228343E65004C82E4 /* EmptyStateShowing.swift */; };
-		02AD97AD2DEB92CE00B51B0C /* Title+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02AD97AC2DEB92CE00B51B0C /* Title+Localizable.xcstrings */; };
+		02AD97AD2DEB92CE00B51B0C /* BackendTitle+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02AD97AC2DEB92CE00B51B0C /* BackendTitle+Localizable.xcstrings */; };
 		02AF996C28ED944E006669F4 /* PlaceAdvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */; };
 		02AF996E28ED9476006669F4 /* PlaceAdvertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */; };
 		02AF997028ED9C95006669F4 /* DropdownPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */; };
@@ -589,6 +591,8 @@
 		0273AE332B6BC72C000AD05B /* BannerSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderView.swift; sourceTree = "<group>"; };
 		0273AE352B6BD15B000AD05B /* BannerSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderCell.swift; sourceTree = "<group>"; };
 		02754D3629304EB20066AA07 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		027D25BF2E4E6EA40074737C /* BackendSettings+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendSettings+Localizable.xcstrings"; sourceTree = "<group>"; };
+		027D25C12E4E865E0074737C /* BackendAdvertType+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendAdvertType+Localizable.xcstrings"; sourceTree = "<group>"; };
 		027E8E1129344D8C001EFDFA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		027E8E172934584B001EFDFA /* Analytic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytic.swift; sourceTree = "<group>"; };
 		027E8E1A29346061001EFDFA /* FirebaseAnalytic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalytic.swift; sourceTree = "<group>"; };
@@ -622,7 +626,7 @@
 		02A824832881B202004351D0 /* MockRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestService.swift; sourceTree = "<group>"; };
 		02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStatePresentation.swift; sourceTree = "<group>"; };
 		02AC514228343E65004C82E4 /* EmptyStateShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateShowing.swift; sourceTree = "<group>"; };
-		02AD97AC2DEB92CE00B51B0C /* Title+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Title+Localizable.xcstrings"; sourceTree = "<group>"; };
+		02AD97AC2DEB92CE00B51B0C /* BackendTitle+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendTitle+Localizable.xcstrings"; sourceTree = "<group>"; };
 		02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertViewModel.swift; sourceTree = "<group>"; };
 		02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertCoordinator.swift; sourceTree = "<group>"; };
 		02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPresentation.swift; sourceTree = "<group>"; };
@@ -1766,7 +1770,9 @@
 		02AD97A92DEB929000B51B0C /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				02AD97AC2DEB92CE00B51B0C /* Title+Localizable.xcstrings */,
+				02AD97AC2DEB92CE00B51B0C /* BackendTitle+Localizable.xcstrings */,
+				027D25BF2E4E6EA40074737C /* BackendSettings+Localizable.xcstrings */,
+				027D25C12E4E865E0074737C /* BackendAdvertType+Localizable.xcstrings */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -3427,11 +3433,12 @@
 				B188BB3027499518002FF3D4 /* GradientView.xib in Resources */,
 				B15D9AC526DFFCAE00FE71A9 /* Poppins-SemiBold.ttf in Resources */,
 				02E7D6AE2844FE0A0006780A /* DropdownView.xib in Resources */,
-				02AD97AD2DEB92CE00B51B0C /* Title+Localizable.xcstrings in Resources */,
+				02AD97AD2DEB92CE00B51B0C /* BackendTitle+Localizable.xcstrings in Resources */,
 				02B7CA6329259B2F0055B181 /* Chat.storyboard in Resources */,
 				021EC05C2CF3B06B002A48BB /* Chat+Localizable.xcstrings in Resources */,
 				B1E0C4FC26DAD0460067DE6F /* AvatarView.xib in Resources */,
 				B18F7FF02955F8650006B975 /* CardView.xib in Resources */,
+				027D25C02E4E6EA40074737C /* BackendSettings+Localizable.xcstrings in Resources */,
 				B15D9AC826DFFCAE00FE71A9 /* Poppins-Regular.ttf in Resources */,
 				02A1DB512809AAB600E5B89E /* ForgotPasswordView.xib in Resources */,
 				028B54C12CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings in Resources */,
@@ -3440,6 +3447,7 @@
 				024BDA0428ECE46400391AA4 /* PlaceAdvert.storyboard in Resources */,
 				023731B928612B23005F1522 /* Settings.storyboard in Resources */,
 				B1772B402710CE05001E544B /* SkillCell.xib in Resources */,
+				027D25C22E4E865E0074737C /* BackendAdvertType+Localizable.xcstrings in Resources */,
 				02826C40284EA810008A5893 /* TextView.xib in Resources */,
 				02312E952CEBD9BD002F4925 /* InfoPlist.xcstrings in Resources */,
 				B1A6FB2327A9B4AB00E1BEA5 /* Registration.storyboard in Resources */,

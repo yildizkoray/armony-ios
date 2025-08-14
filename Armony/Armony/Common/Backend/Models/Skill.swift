@@ -75,9 +75,11 @@ extension RestArrayResponse where T == Advert.Properties {
 
     func itemsForSelection(selectedID: Int?) -> [AdvertTypeSelectionInput] {
         let items: [AdvertTypeSelectionInput] = data.compactMap { advertType in
+            let localizedCardTitleKey = "Advert_" + advertType.id.string
+            let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
             return AdvertTypeSelectionInput(
                 id: advertType.id,
-                title: advertType.title,
+                title: localizedCardTitle,
                 isSelected: selectedID == advertType.id
             )
         }

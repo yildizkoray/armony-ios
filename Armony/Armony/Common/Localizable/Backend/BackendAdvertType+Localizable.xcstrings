@@ -1,138 +1,172 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Advert.Block.Confirmation" : {
+    "Advert_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Do you want to block this user?"
+            "value" : "Find a Band"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bu kullanıcıyı engellemek istiyor musunuz?"
+            "value" : "Grup Ara"
           }
         }
       }
     },
-    "Advert.Block.Description" : {
+    "Advert_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "When you block a user, their profile, ads, and messages will no longer be visible to you."
+            "value" : "Find a Musician"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bir kullanıcıyı engellediğinizde, onların profili, ilanları ve mesajları artık size görünmeyecektir."
+            "value" : "Müzisyen Ara"
           }
         }
       }
     },
-    "Advert.DeleteAd" : {
+    "Advert_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Delete advert"
+            "value" : "Event Services"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanı Sil"
+            "value" : "Etkinlik Hizmetleri"
           }
         }
       }
     },
-    "Advert.Expire.Warning" : {
+    "Advert_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The 30-day publication period for your ad has ended, and it has been removed."
+            "value" : "Music Lessons"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanınızın 30 günlük yayın süresi sona erdi ve kaldırıldı."
+            "value" : "Müzik Dersleri"
           }
         }
       }
     },
-    "Advert.RepostAd" : {
+    "Advert_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Publish again"
+            "value" : "Industry Services"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tekrar Yayınla"
+            "value" : "Sektör Hizmetleri"
           }
         }
       }
     },
-    "Advert.SendMessage" : {
+    "AdvertSkillTitle_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Send Message"
+            "value" : "Skills"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mesaj Gönder"
+            "value" : "Yetenekler"
           }
         }
       }
     },
-    "Adverts.EmptyState.Button.Title" : {
+    "AdvertSkillTitle_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "All ads"
+            "value" : "Skills"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tüm İlanlar"
+            "value" : "Yetenekler"
           }
         }
       }
     },
-    "Adverts.EmptyState.Title" : {
+    "AdvertSkillTitle_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No ads available yet"
+            "value" : "Services"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Henüz ilan bulunmuyor"
+            "value" : "Hizmetler"
+          }
+        }
+      }
+    },
+    "AdvertSkillTitle_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lessons"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dersler"
+          }
+        }
+      }
+    },
+    "AdvertSkillTitle_5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Services"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hizmetler"
           }
         }
       }

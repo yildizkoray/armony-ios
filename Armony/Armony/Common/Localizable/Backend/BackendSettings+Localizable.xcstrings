@@ -1,138 +1,172 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Advert.Block.Confirmation" : {
+    "Settings_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Do you want to block this user?"
+            "value" : "Account Info"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bu kullanıcıyı engellemek istiyor musunuz?"
+            "value" : "Hesap Bilgileri"
           }
         }
       }
     },
-    "Advert.Block.Description" : {
+    "Settings_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "When you block a user, their profile, ads, and messages will no longer be visible to you."
+            "value" : "Update Email"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bir kullanıcıyı engellediğinizde, onların profili, ilanları ve mesajları artık size görünmeyecektir."
+            "value" : "E-posta Güncelle"
           }
         }
       }
     },
-    "Advert.DeleteAd" : {
+    "Settings_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Delete advert"
+            "value" : "Change Password"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanı Sil"
+            "value" : "Şifre Değiştir"
           }
         }
       }
     },
-    "Advert.Expire.Warning" : {
+    "Settings_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The 30-day publication period for your ad has ended, and it has been removed."
+            "value" : "Manage Notifications"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanınızın 30 günlük yayın süresi sona erdi ve kaldırıldı."
+            "value" : "Bildirimleri Yönet"
           }
         }
       }
     },
-    "Advert.RepostAd" : {
+    "Settings_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Publish again"
+            "value" : "Terms of Use"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tekrar Yayınla"
+            "value" : "Kullanım Şartları"
           }
         }
       }
     },
-    "Advert.SendMessage" : {
+    "Settings_6" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Send Message"
+            "value" : "Privacy Policy"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mesaj Gönder"
+            "value" : "Gizlilik Politikası"
           }
         }
       }
     },
-    "Adverts.EmptyState.Button.Title" : {
+    "Settings_7" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "All ads"
+            "value" : "Support & Contact"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tüm İlanlar"
+            "value" : "Destek ve İletişim"
           }
         }
       }
     },
-    "Adverts.EmptyState.Title" : {
+    "Settings_8" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No ads available yet"
+            "value" : "Switch Region - %@"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Henüz ilan bulunmuyor"
+            "value" : "Bölge Değiştir - %@"
+          }
+        }
+      }
+    },
+    "Settings_9" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Out"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çıkış Yap"
+          }
+        }
+      }
+    },
+    "Settings1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account Info"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap Bilgileri"
           }
         }
       }

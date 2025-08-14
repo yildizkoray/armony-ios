@@ -301,8 +301,11 @@ extension AdvertViewModel: ViewModelLifeCycle {
                     advert = response.data
                     colorCode = response.data.type.colorCode
                     view?.setNavigationBarBackgroundColor(color: response.data.type.colorCode.colorFromHEX)
-                    
-                    view?.setTitle(response.data.type.title)
+
+                    let localizedCardTitleKey = "Advert_" + response.data.type.id.string
+                    let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
+
+                    view?.setTitle(localizedCardTitle)
                     view?.setNavigationBarTitleAttributes(
                         [.foregroundColor: AppTheme.Color.white.uiColor]
                     )
@@ -359,6 +362,9 @@ extension AdvertViewModel: ViewModelLifeCycle {
     
     private func prepareOtherSections(_ advert: Advert) {
         let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
+        let localizedCardTitleKey = "Advert_" + advert.type.id.string
+        let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
+
         if advert.type.id == 4 {
             let genreItems: [MusicGenreItemPresentation] = advert.serviceTypes.lazy.map {
                 MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
@@ -375,8 +381,9 @@ extension AdvertViewModel: ViewModelLifeCycle {
             let instructionServices: [MusicGenreItemPresentation] = advert.skills.lazy.map {
                 MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
             }
+
             let instructionServicesPresentation = MusicGenresPresentation(
-                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                title: localizedCardTitle.attributed(color: .white, font: .lightBody),
                 cellBorderColor: advert.type.colorCode.colorFromHEX,
                 items: instructionServices
             )
@@ -388,7 +395,7 @@ extension AdvertViewModel: ViewModelLifeCycle {
                 MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
             }
             let instructionServicesPresentation = MusicGenresPresentation(
-                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                title: localizedCardTitle.attributed(color: .white, font: .lightBody),
                 cellBorderColor: advert.type.colorCode.colorFromHEX,
                 items: instructionServices
             )
@@ -399,7 +406,7 @@ extension AdvertViewModel: ViewModelLifeCycle {
             // Skills
             let skillsPresentation = SkillsPresentation(
                 type: .advert(imageViewContainerViewBorderColor: advert.type.colorCode.colorFromHEX),
-                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                title: localizedCardTitle.attributed(color: .white, font: .lightBody),
                 skillTitleStyle: .init(color: .white, font: .lightBody),
                 skills: advert.skills
             )

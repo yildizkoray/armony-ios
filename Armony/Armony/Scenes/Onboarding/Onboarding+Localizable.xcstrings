@@ -9,6 +9,12 @@
             "state" : "translated",
             "value" : "Musicians and \nBands"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzisyenler ve \nMüzik Grupları"
+          }
         }
       }
     },
@@ -20,6 +26,12 @@
             "state" : "translated",
             "value" : "Music Coaching and \nEvent Solutions"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzik Eğitmenliği ve \nEtkinlik Çözümleri"
+          }
         }
       }
     },
@@ -30,6 +42,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "High-Quality Professional \nMusic Services"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yüksek Kaliteli Profesyonel \nMüzik Hizmetleri"
           }
         }
       }

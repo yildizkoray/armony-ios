@@ -15,6 +15,9 @@ public struct Localization {
         case home
         case onboarding
         case placeAdvert
+        case backendSettings
+        case backendTitle
+        case backendAdvertType
 
         public var description: String {
             return rawValue.titled + "+Localizable"

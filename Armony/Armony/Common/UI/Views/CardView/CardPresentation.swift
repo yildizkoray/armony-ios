@@ -43,22 +43,29 @@ public struct CardPresentation: Identifiable, Hashable {
             kind: .custom(.init(size: .custom(72), radius: .medium)),
             source: .url(advert.user.avatarURL)
         )
+
+        let localizedCardTitleKey = "Advert_" + advert.type.id.string
+        let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
+
         userSummaryPresentation = UserSummaryPresentation(
             avatarPresentation: avatarPresentation,
             name: advert.user.name.attributed(color: .white, font: .regularBody),
             location: advert.location.title.attributed(color: .white, font: .regularBody), 
-            cardTitle: advert.type.title.attributed(.armonyWhite, font: .semiboldHeading), 
+            cardTitle: localizedCardTitle.attributed(.armonyWhite, font: .semiboldHeading),
             updateDate: nil
         )
 
+        let localizedCardSkillTitleKey = "AdvertSkillTitle_" + advert.type.id.string
+        let localizedCardSkillTitle = String(localizedCardSkillTitleKey, table: .backendAdvertType)
+
         skillsPresentation = SkillsPresentation(
             type: .adverts(imageViewContainerBackgroundColor: colorCode.colorFromHEX),
-            title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+            title: localizedCardSkillTitle.attributed(color: .white, font: .lightBody),
             skillTitleStyle: TextAppearancePresentation(color: .white, font: .regularBody),
             skills: advert.skills
         )
 
-        if  ![1,2].contains(advert.type.id)  {
+        if  ![1,2].contains(advert.type.id) {
             let items = advert.skills.map { item in
                 return MusicGenreItemPresentation(
                     genre: .init(id: item.id, name: item.title),
@@ -66,7 +73,7 @@ public struct CardPresentation: Identifiable, Hashable {
                 )
             }
             genrePresentation = MusicGenresPresentation(
-                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                title: localizedCardSkillTitle.attributed(color: .white, font: .lightBody),
                 cellBorderColor: advert.type.colorCode.colorFromHEX, separator: .separator, items: items,
                 shouldAdjustCellHeight: true)
         }

@@ -14,13 +14,29 @@
 
   ],
   "products" : [
-
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6751057134",
+      "localizations" : [
+        {
+          "description" : "Satın Al",
+          "displayName" : "Satın Al",
+          "locale" : "tr"
+        }
+      ],
+      "productID" : "com.armonyapp.armony.create_ad",
+      "referenceName" : "Create Ad",
+      "type" : "Consumable"
+    }
   ],
   "settings" : {
     "_applicationInternalID" : "1662284112",
     "_developerTeamID" : "U6ZP8CMS8A",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 776277354.81964803,
+    "_lastSynchronizedDate" : 776887258.05554795,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
     "_storeKitErrors" : [
       {
         "current" : null,

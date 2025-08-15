@@ -43,6 +43,8 @@ protocol PlaceAdvertViewDelegate: AnyObject, NavigationBarCustomizing {
 
     func updateValidators(validator: PlaceAdvertViewController.Validators)
 
+    func showPaywall()
+
     func resetTextView()
 }
 
@@ -120,8 +122,6 @@ final class PlaceAdvertViewController: UIViewController, ViewController {
         descriptionTextView.delegate = self
         descriptionTextView.configure(with: .description)
 
-        viewModel.fetchAdverts()
-
         view.addTapGestureRecognizer(cancelsTouches: false) { [weak self] _ in
             self?.view.endEditing(true)
         }
@@ -167,21 +167,7 @@ final class PlaceAdvertViewController: UIViewController, ViewController {
     }
 
     @objc private func submitButtonTapped() {
-        if viewModel.userAdsCountRequestError.isNil {
-            if viewModel.hasUserAdverts,
-               RevenueCatPurchaseStorageService.shared.identifiers.isEmpty {
-                let controller = PaywallViewController()
-                controller.delegate = self
-                present(controller, animated: true, completion: nil)
-            }
-            else {
-                view.endEditing(true)
-                viewModel.submitButtonTapped(transactionID: RevenueCatPurchaseStorageService.shared.identifiers.first)
-            }
-        }
-        else {
-            viewModel.fetchAdverts()
-        }
+        viewModel.submitButtonTapped()
     }
 
     private func prepareDropdowns() {
@@ -331,6 +317,12 @@ extension PlaceAdvertViewController: PlaceAdvertViewDelegate {
     func resetTextView() {
         descriptionTextView.updateText(.empty)
     }
+
+    func showPaywall() {
+        let controller = PaywallViewController()
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
 }
 
 // MARK: - TextViewDelegate
@@ -354,7 +346,7 @@ extension PlaceAdvertViewController: PaywallViewControllerDelegate {
     ) {
         if let transaction {
             RevenueCatPurchaseStorageService.shared.store(transactionID: transaction.id)
-            viewModel.submitButtonTapped(transactionID: transaction.id)
+            viewModel.createAd(transactionID: transaction.id)
         }
     }
 }

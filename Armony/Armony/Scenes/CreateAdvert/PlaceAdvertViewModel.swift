@@ -202,7 +202,29 @@ final class PlaceAdvertViewModel: ViewModel {
     }
 
 
-    func submitButtonTapped(transactionID: String?) {
+    func submitButtonTapped() {
+        view?.startSubmitButtonActivityIndicatorView()
+
+        Task { @MainActor in
+            do {
+                let hasUserAds = try await hasUserAds()
+                view?.stopSubmitButtonActivityIndicatorView()
+                if hasUserAds, RevenueCatPurchaseStorageService.shared.identifiers.isEmpty {
+                    view?.showPaywall()
+                }
+                else {
+                    createAd(transactionID: nil)
+                }
+            }
+            catch let error {
+                view?.stopSubmitButtonActivityIndicatorView()
+                AlertService.show(message: error.api.ifNil(.network).description, actions: [.okay()])
+            }
+        }
+    }
+
+
+    func createAd(transactionID: String?) {
         view?.startSubmitButtonActivityIndicatorView()
         Task { @MainActor in
             do {
@@ -233,7 +255,7 @@ final class PlaceAdvertViewModel: ViewModel {
                     notification: .newAdvertDidPlace,
                     userInfo: [.advert: response.data]
                 )
-                
+
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     AppRatingService.shared.requestReviewIfNeeded()
                 }
@@ -243,28 +265,18 @@ final class PlaceAdvertViewModel: ViewModel {
                 }
             }
             catch let error {
-                safeSync {
-                    view?.stopSubmitButtonActivityIndicatorView()
-                }
+                view?.stopSubmitButtonActivityIndicatorView()
                 AlertService.show(message: error.api.ifNil(.network).description, actions: [.okay()])
             }
         }
     }
 
-    func fetchAdverts() {
-        Task {
-            do {
-                let response = try await service.execute(
-                    task: GetUserAdvertsTask(userID: authenticator.userID),
-                    type: RestArrayResponse<Advert>.self
-                )
-                hasUserAdverts = !response.data.isEmpty
-                userAdsCountRequestError = nil
-            }
-            catch let error {
-                userAdsCountRequestError = error
-            }
-        }
+    func hasUserAds() async throws -> Bool {
+        let response = try await service.execute(
+            task: GetUserAdvertsTask(userID: authenticator.userID),
+            type: RestArrayResponse<Advert>.self
+        )
+        return !response.data.isEmpty
     }
 }
 

@@ -17,6 +17,7 @@ final class RevenueCatPurchaseStorageService {
     static let shared = RevenueCatPurchaseStorageService()
 
     private let keychain: Keychain
+    private let authenticator: AuthenticationService = .shared
 
     private(set) var identifiers: [String] {
         get {
@@ -25,7 +26,7 @@ final class RevenueCatPurchaseStorageService {
         set {
             if let data = try? JSONSerialization.data(withJSONObject: newValue, options: []),
                let jsonString = String(data: data, encoding: .utf8) {
-                try? keychain.set(jsonString, key: "Test")
+                try? keychain.set(jsonString, key: "identifiers-\(authenticator.userID)")
             }
         }
     }
@@ -45,7 +46,7 @@ final class RevenueCatPurchaseStorageService {
     }
 
     private func keychainArray() -> [String] {
-        guard let jsonString = keychain["identifiers"],
+        guard let jsonString = keychain["identifiers-\(authenticator.userID)"],
               let data = jsonString.data(using: .utf8),
               let dictionary = try? JSONSerialization.jsonObject(with: data, options: []) as? [String] else {
             return []

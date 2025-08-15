@@ -255,12 +255,35 @@ final class AdvertViewModel: ViewModel {
         }
 
         view?.startActivateAdvertButtonActivityIndicatorView()
+
+        Task { @MainActor in
+            do {
+                let hasUserAds = try await hasUserAds()
+                if hasUserAds, RevenueCatPurchaseStorageService.shared.identifiers.isEmpty {
+                    view?.showPaywall()
+                }
+                else {
+                    activateAd(transactionID: RevenueCatPurchaseStorageService.shared.identifiers.first)
+                }
+            }
+            catch let error {
+                view?.stopActivateAdvertButtonActivityIndicatorView()
+                error.showAlert()
+            }
+        }
+    }
+
+    func activateAd(transactionID: String?) {
+        view?.startActivateAdvertButtonActivityIndicatorView()
         Task {
             guard let advert = advert else { return }
             let task = PutActivateAdvertTask(advertID: advert.id.string, userID: authenticator.userID)
             do {
                 let _ = try await service.execute(task: task, type: RestObjectResponse<EmptyResponse>.self)
                 ActivateAdvertFirebaseEvent(label: advert.type.title, parameters: advert.eventParameters()).send()
+                if let transactionID {
+                    RevenueCatPurchaseStorageService.shared.remove(transactionID: transactionID)
+                }
                 safeSync {
                     view?.stopActivateAdvertButtonActivityIndicatorView()
                     coordinator.dismiss(animated: true) { [weak self] in
@@ -275,6 +298,14 @@ final class AdvertViewModel: ViewModel {
                 error.showAlert()
             }
         }
+    }
+
+    func hasUserAds() async throws -> Bool {
+        let response = try await service.execute(
+            task: GetUserAdvertsTask(userID: authenticator.userID),
+            type: RestArrayResponse<Advert>.self
+        )
+        return !response.data.isEmpty
     }
 }
 

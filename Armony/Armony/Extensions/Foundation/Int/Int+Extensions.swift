@@ -20,6 +20,11 @@ extension Int {
     static var invalid: Int {
         return NSNotFound
     }
+
+    func backendLocalizedText(table: Localization.Table.Backend) -> String {
+        let key = String(table.rawValue.titled.dropLast() + "_\(self)")
+        return String(localized: String.LocalizationValue(key), table: table.description + "+Localizable")
+    }
 }
 
 

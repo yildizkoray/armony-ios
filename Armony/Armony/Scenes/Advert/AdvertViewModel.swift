@@ -333,10 +333,9 @@ extension AdvertViewModel: ViewModelLifeCycle {
                     colorCode = response.data.type.colorCode
                     view?.setNavigationBarBackgroundColor(color: response.data.type.colorCode.colorFromHEX)
 
-                    let localizedCardTitleKey = "Advert_" + response.data.type.id.string
-                    let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
+                    let localizedTitle = response.data.type.id.backendLocalizedText(table: .advertTypes)
 
-                    view?.setTitle(localizedCardTitle)
+                    view?.setTitle(localizedTitle)
                     view?.setNavigationBarTitleAttributes(
                         [.foregroundColor: AppTheme.Color.white.uiColor]
                     )
@@ -393,12 +392,11 @@ extension AdvertViewModel: ViewModelLifeCycle {
     
     private func prepareOtherSections(_ advert: Advert) {
         let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
-        let localizedCardTitleKey = "Advert_" + advert.type.id.string
-        let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
+        let localizedCardTitle = advert.type.id.backendLocalizedText(table: .advertTypes)
 
         if advert.type.id == 4 {
             let genreItems: [MusicGenreItemPresentation] = advert.serviceTypes.lazy.map {
-                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                MusicGenreItemPresentation(service: $0, titleStyle: genreItemTitleStyle)
             }
             let text = String("LessonFormat", table: .common)
             let genresPresentation = MusicGenresPresentation(
@@ -410,7 +408,7 @@ extension AdvertViewModel: ViewModelLifeCycle {
 
             // Skills
             let instructionServices: [MusicGenreItemPresentation] = advert.skills.lazy.map {
-                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                MusicGenreItemPresentation(skill: $0, titleStyle: genreItemTitleStyle)
             }
 
             let instructionServicesPresentation = MusicGenresPresentation(
@@ -423,7 +421,7 @@ extension AdvertViewModel: ViewModelLifeCycle {
             view?.configureSkillsView(with: .empty)
         } else if [3,5].contains(advert.type.id) {
             let instructionServices: [MusicGenreItemPresentation] = advert.skills.lazy.map {
-                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                MusicGenreItemPresentation(skill: $0, titleStyle: genreItemTitleStyle)
             }
             let instructionServicesPresentation = MusicGenresPresentation(
                 title: localizedCardTitle.attributed(color: .white, font: .lightBody),

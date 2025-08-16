@@ -20,16 +20,19 @@ struct MusicGenreItemPresentation {
 
     init(genre: MusicGenre, titleStyle: TextAppearancePresentation) {
         self.id = genre.id
-        self.title = genre.name.attributed(titleStyle.color, font: titleStyle.font)
+        let localizedTitle = genre.id.backendLocalizedText(table: .genres)
+        self.title = localizedTitle.attributed(titleStyle.color, font: titleStyle.font)
     }
 
-    init(genre: ServiceResponse, titleStyle: TextAppearancePresentation) {
-        self.id = genre.id
-        self.title = genre.title.attributed(titleStyle.color, font: titleStyle.font)
+    init(service: ServiceResponse, titleStyle: TextAppearancePresentation) {
+        self.id = service.id
+        let localizedTitle = service.id.backendLocalizedText(table: .serviceTypes)
+        self.title = localizedTitle.attributed(titleStyle.color, font: titleStyle.font)
     }
 
-    init(genre: Skill, titleStyle: TextAppearancePresentation) {
-        self.id = genre.id
-        self.title = genre.title.attributed(titleStyle.color, font: titleStyle.font)
+    init(skill: Skill, titleStyle: TextAppearancePresentation) {
+        self.id = skill.id
+        let localizedTitle = skill.id.backendLocalizedText(table: .serviceTypes)
+        self.title = localizedTitle.attributed(titleStyle.color, font: titleStyle.font)
     }
 }

@@ -75,11 +75,9 @@ extension RestArrayResponse where T == Advert.Properties {
 
     func itemsForSelection(selectedID: Int?) -> [AdvertTypeSelectionInput] {
         let items: [AdvertTypeSelectionInput] = data.compactMap { advertType in
-            let localizedCardTitleKey = "Advert_" + advertType.id.string
-            let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
             return AdvertTypeSelectionInput(
                 id: advertType.id,
-                title: localizedCardTitle,
+                title: advertType.title,
                 isSelected: selectedID == advertType.id
             )
         }
@@ -91,11 +89,11 @@ extension RestArrayResponse where T == Advert.Properties {
 extension RestArrayResponse where T == MusicGenre {
 
     func itemsForSelection(selectedIDs: [Int]) -> [MusicGenresSelectionInput] {
-        let items: [MusicGenresSelectionInput] = data.compactMap { advertType in
+        let items: [MusicGenresSelectionInput] = data.compactMap { genre in
             return MusicGenresSelectionInput(
-                id: advertType.id,
-                title: advertType.name,
-                isSelected: selectedIDs.contains(advertType.id)
+                id: genre.id,
+                title: genre.name,
+                isSelected: selectedIDs.contains(genre.id)
             )
         }
         return items

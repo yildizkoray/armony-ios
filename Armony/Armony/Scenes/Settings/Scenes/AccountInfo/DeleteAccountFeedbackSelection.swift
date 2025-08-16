@@ -33,6 +33,7 @@ final class DeleteAccountFeedbackSelectionInput: SelectionInput {
     init(id: Int, isSelected: Bool, title: String) {
         self.id = id
         self.isSelected = isSelected
-        self.title = title
+        let localizedTitle = id.backendLocalizedText(table: .feedbackTopics)
+        self.title = localizedTitle
     }
 }

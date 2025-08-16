@@ -33,6 +33,6 @@ final class DeleteAdvertFeedbackSelectionInput: SelectionInput {
     init(id: Int, isSelected: Bool, title: String) {
         self.id = id
         self.isSelected = isSelected
-        self.title = title
+        self.title = id.backendLocalizedText(table: .feedbackTopics)
     }
 }

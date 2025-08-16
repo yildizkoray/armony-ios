@@ -1,0 +1,754 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Genre_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Acoustic",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Akustik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Afrobeat",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Afrobeat",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Anatolian Rock",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Anadolu Rock",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Blues",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Blues",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Chill",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Chill",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Choir",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Koro",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Classical",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klasik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_8" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Country",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Country",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_9" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Dubstep",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Dubstep",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_10" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "EDM",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "EDM",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_11" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Electronic Pop",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Elektronik Pop",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_12" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Electronic",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Elektronik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_13" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Folk Music",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Halk Müziği",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_14" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Funk",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Funk",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_15" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Gospel",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Gospel",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_16" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Heavy Metal",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Heavy Metal",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_18" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Hip Hop",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Hip Hop",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_19" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "House",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "House",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_20" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Indie",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bağımsız",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_21" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Jazz",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Caz",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_22" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Latin",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Latin",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_23" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Pop",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Pop",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_24" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Pop - Rock",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Pop - Rock",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_25" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Psychedelic",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Psikedelik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_26" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Punk",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Punk",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_27" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "R&B",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "R&B",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_28" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Rap",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Rap",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_29" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Reggae",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Reggae",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_30" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Rock",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Rock",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_31" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Soft Pop",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Yumuşak Pop",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_32" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Soundtrack",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Film Müziği",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_33" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Techno",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Tekno",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_34" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trance",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trance",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_35" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trap",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trap",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_36" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Turkish Classical Music",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Türk Klasik Müziği",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_37" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Turkish Folk Music",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Türk Halk Müziği",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_38" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Alternative Pop",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Alternatif Pop",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_39" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Alternative Rock",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Alternatif Rock",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_40" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Dance",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Dans",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_41" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Metal",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Metal",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_42" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Industrial Music",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Endüstriyel Müzik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_43" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Instrumental",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Enstrümantal",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_44" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "K-Pop",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "K-Pop",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Genre_45" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Opera",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Opera",
+            "state" : "translated"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

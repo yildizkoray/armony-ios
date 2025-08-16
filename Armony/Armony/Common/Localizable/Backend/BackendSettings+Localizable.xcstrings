@@ -1,7 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Settings_1" : {
+    "Setting_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -18,7 +18,7 @@
         }
       }
     },
-    "Settings_2" : {
+    "Setting_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -35,7 +35,7 @@
         }
       }
     },
-    "Settings_3" : {
+    "Setting_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -52,7 +52,7 @@
         }
       }
     },
-    "Settings_4" : {
+    "Setting_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -69,7 +69,7 @@
         }
       }
     },
-    "Settings_5" : {
+    "Setting_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -86,7 +86,7 @@
         }
       }
     },
-    "Settings_6" : {
+    "Setting_6" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "Settings_7" : {
+    "Setting_7" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -120,7 +120,7 @@
         }
       }
     },
-    "Settings_8" : {
+    "Setting_8" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -137,7 +137,7 @@
         }
       }
     },
-    "Settings_9" : {
+    "Setting_9" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -150,23 +150,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çıkış Yap"
-          }
-        }
-      }
-    },
-    "Settings1" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Account Info"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hesap Bilgileri"
           }
         }
       }

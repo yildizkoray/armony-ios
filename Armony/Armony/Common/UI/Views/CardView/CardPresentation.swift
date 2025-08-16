@@ -44,9 +44,7 @@ public struct CardPresentation: Identifiable, Hashable {
             source: .url(advert.user.avatarURL)
         )
 
-        let localizedCardTitleKey = "Advert_" + advert.type.id.string
-        let localizedCardTitle = String(localizedCardTitleKey, table: .backendAdvertType)
-
+        let localizedCardTitle = advert.type.id.backendLocalizedText(table: .advertTypes)
         userSummaryPresentation = UserSummaryPresentation(
             avatarPresentation: avatarPresentation,
             name: advert.user.name.attributed(color: .white, font: .regularBody),
@@ -56,7 +54,7 @@ public struct CardPresentation: Identifiable, Hashable {
         )
 
         let localizedCardSkillTitleKey = "AdvertSkillTitle_" + advert.type.id.string
-        let localizedCardSkillTitle = String(localizedCardSkillTitleKey, table: .backendAdvertType)
+        let localizedCardSkillTitle = String(localizedCardSkillTitleKey, table: .backend(.advertTypes))
 
         skillsPresentation = SkillsPresentation(
             type: .adverts(imageViewContainerBackgroundColor: colorCode.colorFromHEX),

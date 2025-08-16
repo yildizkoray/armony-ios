@@ -16,7 +16,7 @@ struct DeleteAdvertFeedbackSelection: SelectionPresentation {
     typealias Output = SingleSelectionOutput<DeleteAdvertFeedbackSelectionInput>
 
     var items: [DeleteAdvertFeedbackSelectionInput]
-    var headerTitle: String = "Why do you want to delete your ad?"
+    var headerTitle: String = "Why do you want to delete your ad?".needLocalization
     var isMultipleSelectionAllowed: Bool = false
     weak var delegate: DeleteAdvertFeedbackSelectionDelegate?
 

@@ -52,6 +52,23 @@
         }
       }
     },
+    "Advert.DeleteAd.Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete this ad?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlanı silmek istediğinden emin misin?"
+          }
+        }
+      }
+    },
     "Advert.Expire.Warning" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -516,7 +516,7 @@ extension AdvertViewModel: DeleteAdvertFeedbackSelectionDelegate {
                                                style: .destructive, action: { [weak self] in
             self?.remove(feedback: request)
         })
-        AlertService.show(message: "Are you sure you want to delete this ad?",
+        AlertService.show(message: String("Advert.DeleteAd.Message", table: .home),
                           actions: [removeAction, .cancel()])
     }
 }

@@ -20,8 +20,7 @@ struct MusicGenreItemPresentation {
 
     init(genre: MusicGenre, titleStyle: TextAppearancePresentation) {
         self.id = genre.id
-        let localizedTitle = genre.id.backendLocalizedText(table: .genres)
-        self.title = localizedTitle.attributed(titleStyle.color, font: titleStyle.font)
+        self.title = genre.name.attributed(titleStyle.color, font: titleStyle.font)
     }
 
     init(service: ServiceResponse, titleStyle: TextAppearancePresentation) {
@@ -32,7 +31,7 @@ struct MusicGenreItemPresentation {
 
     init(skill: Skill, titleStyle: TextAppearancePresentation) {
         self.id = skill.id
-        let localizedTitle = skill.id.backendLocalizedText(table: .serviceTypes)
+        let localizedTitle = skill.id.backendLocalizedText(table: .skills)
         self.title = localizedTitle.attributed(titleStyle.color, font: titleStyle.font)
     }
 }

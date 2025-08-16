@@ -66,7 +66,7 @@ public struct CardPresentation: Identifiable, Hashable {
         if  ![1,2].contains(advert.type.id) {
             let items = advert.skills.map { item in
                 return MusicGenreItemPresentation(
-                    genre: .init(id: item.id, name: item.title),
+                    genre: .init(id: item.id, name: item.id.backendLocalizedText(table: .skills)),
                     titleStyle: TextAppearancePresentation(color: .white, font: .regularBody)
                 )
             }

@@ -52,6 +52,23 @@
         }
       }
     },
+    "Feedback.TextView.Placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter description. Minimum 15 character\""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lütfen açıklama girin. Minimum 15 karakter"
+          }
+        }
+      }
+    },
     "Feedback.Title" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -35,6 +35,23 @@
         }
       }
     },
+    "Advert.Delete.Feedback.Selection.Header.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why do you want to delete your ad?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlanınızı neden silmek istiyorsunuz?"
+          }
+        }
+      }
+    },
     "Advert.DeleteAd" : {
       "extractionState" : "manual",
       "localizations" : {

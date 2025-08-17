@@ -69,6 +69,23 @@
         }
       }
     },
+    "DeleteAccount.Alert.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete your account?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabınızı silmek istediğinizden emin misiniz?"
+          }
+        }
+      }
+    },
     "Edit.Profile" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -302,6 +319,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profiliniz başarıyla güncellendi"
+          }
+        }
+      }
+    },
+    "Settings.DeleteAccount.PopUp.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why do you want to delete your account?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabınızı neden silmek istiyorsunuz?"
           }
         }
       }

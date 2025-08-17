@@ -58,6 +58,10 @@ public extension String {
         self.init(localized: key, table: table.description)
     }
 
+    func localized(table: Localization.Table) -> String {
+        String(self, table: table)
+    }
+
     func attributed(_ color: UIColor, font: UIFont) -> NSAttributedString {
         return NSAttributedString(string: self, attributes: [.foregroundColor: color,
                                                              .font: font])

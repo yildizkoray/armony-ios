@@ -265,6 +265,7 @@ final class AdvertViewModel: ViewModel {
                 else {
                     activateAd(transactionID: RevenueCatPurchaseStorageService.shared.identifiers.first)
                 }
+                view?.stopActivateAdvertButtonActivityIndicatorView()
             }
             catch let error {
                 view?.stopActivateAdvertButtonActivityIndicatorView()

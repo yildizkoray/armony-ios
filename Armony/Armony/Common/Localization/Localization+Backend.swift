@@ -9,6 +9,7 @@ extension Localization.Table {
     public enum Backend: String, CustomStringConvertible {
         case settings
         case titles
+        case advertSkillTitles
         case advertTypes
         case skills
         case genres

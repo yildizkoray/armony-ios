@@ -393,7 +393,7 @@ extension AdvertViewModel: ViewModelLifeCycle {
     
     private func prepareOtherSections(_ advert: Advert) {
         let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
-        let localizedCardTitle = advert.type.id.backendLocalizedText(table: .advertTypes)
+        let localizedCardTitle = advert.type.id.backendLocalizedText(table: .advertSkillTitles)
 
         if advert.type.id == 4 {
             let genreItems: [MusicGenreItemPresentation] = advert.serviceTypes.lazy.map {

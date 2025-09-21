@@ -71,6 +71,7 @@
 		023731B5286121A1005F1522 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023731B4286121A1005F1522 /* UIApplication+Extensions.swift */; };
 		023731B928612B23005F1522 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023731B828612B23005F1522 /* Settings.storyboard */; };
 		0240C78E292D6C56009A9727 /* MessageSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0240C78C292D6C56009A9727 /* MessageSectionHeaderView.swift */; };
+		024556212E80A61D0029B80C /* BackendAdvertSkillTitles+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 024556202E80A61D0029B80C /* BackendAdvertSkillTitles+Localizable.xcstrings */; };
 		02472AA32810B03300A6A327 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 02472AA22810B03300A6A327 /* Alamofire */; };
 		02472AA62810B07600A6A327 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02472AA52810B07600A6A327 /* IQKeyboardManagerSwift */; };
 		02472AA92810B09300A6A327 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 02472AA82810B09300A6A327 /* AlamofireImage */; };
@@ -546,6 +547,7 @@
 		023731B4286121A1005F1522 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		023731B828612B23005F1522 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		0240C78C292D6C56009A9727 /* MessageSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSectionHeaderView.swift; sourceTree = "<group>"; };
+		024556202E80A61D0029B80C /* BackendAdvertSkillTitles+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendAdvertSkillTitles+Localizable.xcstrings"; sourceTree = "<group>"; };
 		0248038C2861C6CF0012D6CF /* AccountInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationViewController.swift; sourceTree = "<group>"; };
 		0248038E2861C85D0012D6CF /* AccountInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationViewModel.swift; sourceTree = "<group>"; };
 		024803912861DB190012D6CF /* AccountInformationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformationCoordinator.swift; sourceTree = "<group>"; };
@@ -1803,6 +1805,7 @@
 		02AD97A92DEB929000B51B0C /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				024556202E80A61D0029B80C /* BackendAdvertSkillTitles+Localizable.xcstrings */,
 				027D25C12E4E865E0074737C /* BackendAdvertTypes+Localizable.xcstrings */,
 				027D25C52E5094DB0074737C /* BackendFeedbackTopics+Localizable.xcstrings */,
 				027D25C32E506F940074737C /* BackendGenres+Localizable.xcstrings */,
@@ -3505,6 +3508,7 @@
 				02826C40284EA810008A5893 /* TextView.xib in Resources */,
 				02312E952CEBD9BD002F4925 /* InfoPlist.xcstrings in Resources */,
 				B1A6FB2327A9B4AB00E1BEA5 /* Registration.storyboard in Resources */,
+				024556212E80A61D0029B80C /* BackendAdvertSkillTitles+Localizable.xcstrings in Resources */,
 				02312E972CEBDC2A002F4925 /* Account+Localizable.xcstrings in Resources */,
 				B1B9F52B26E928BB0036252D /* AdvertCell.xib in Resources */,
 				B10E918D29DDE16F00072D93 /* GoogleService-Info-Debug.plist in Resources */,

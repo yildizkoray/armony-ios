@@ -11,6 +11,7 @@ import Alamofire
 struct SocketLiveChatTask: HTTPTask {
     var method: HTTPMethod = .get
     var path: String
+    var apiVersion: String = "v2"
 
     init(userID: String, chatID: Int) {
         path = "/users/\(userID)/chats/\(chatID)"

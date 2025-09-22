@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,6 +59,9 @@
 		02301B58292CED4A00F78449 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02301B57292CED4A00F78449 /* UIStackView+Extensions.swift */; };
 		023069A32929188900BDC42B /* GetLiveChatMessagesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023069A22929188900BDC42B /* GetLiveChatMessagesTask.swift */; };
 		023069A7292918A100BDC42B /* LiveChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023069A6292918A100BDC42B /* LiveChatMessage.swift */; };
+		02306BE42E450D6800A27979 /* Armony.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 02306BE32E450D6800A27979 /* Armony.storekit */; };
+		02306BE62E450E2D00A27979 /* Armony-Debug.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 02306BE52E450E2D00A27979 /* Armony-Debug.storekit */; };
+		02306BE92E45388600A27979 /* RevenueCatPurchaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02306BE82E45388300A27979 /* RevenueCatPurchaseStorageService.swift */; };
 		023110212841392100CB2488 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023110202841392100CB2488 /* SettingsViewController.swift */; };
 		02311023284139A500CB2488 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02311022284139A500CB2488 /* SettingsViewModel.swift */; };
 		0231102528413A6600CB2488 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231102428413A6600CB2488 /* SettingsCoordinator.swift */; };
@@ -97,6 +100,8 @@
 		02511B9C2B8D4E1400B67F27 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02511B9B2B8D4E1400B67F27 /* InfoView.swift */; };
 		025130A22B0C222900D12FB0 /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025130A12B0C222900D12FB0 /* UIScrollView+Extensions.swift */; };
 		0257855D289C069A00A0BF55 /* SettingsVersionInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257855C289C069A00A0BF55 /* SettingsVersionInformationView.swift */; };
+		02587B1B2E2CCEB400562F02 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 02587B1A2E2CCEB400562F02 /* RevenueCat */; };
+		02587B1D2E2CCEB400562F02 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 02587B1C2E2CCEB400562F02 /* RevenueCatUI */; };
 		02587C7B2C86746B0045FF30 /* Common+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02587C7A2C86746B0045FF30 /* Common+Localizable.xcstrings */; };
 		025E081D2846416600063827 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E081C2846416600063827 /* ProfileViewController.swift */; };
 		025E081F284641AB00063827 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E081E284641AB00063827 /* ProfileViewModel.swift */; };
@@ -136,6 +141,13 @@
 		027B37502918609500CC8AE8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 027B374F2918609500CC8AE8 /* FirebaseAnalytics */; };
 		027B37522918609500CC8AE8 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 027B37512918609500CC8AE8 /* FirebaseCrashlytics */; };
 		027B37542918609500CC8AE8 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 027B37532918609500CC8AE8 /* FirebaseRemoteConfig */; };
+		027D25C02E4E6EA40074737C /* BackendSettings+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25BF2E4E6EA40074737C /* BackendSettings+Localizable.xcstrings */; };
+		027D25C22E4E865E0074737C /* BackendAdvertTypes+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25C12E4E865E0074737C /* BackendAdvertTypes+Localizable.xcstrings */; };
+		027D25C42E506F940074737C /* BackendGenres+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25C32E506F940074737C /* BackendGenres+Localizable.xcstrings */; };
+		027D25C62E5094DB0074737C /* BackendFeedbackTopics+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25C52E5094DB0074737C /* BackendFeedbackTopics+Localizable.xcstrings */; };
+		027D25C82E5095D70074737C /* BackendReportTopics+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25C72E5095D70074737C /* BackendReportTopics+Localizable.xcstrings */; };
+		027D25CA2E5096B80074737C /* BackendServiceTypes+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25C92E5096B80074737C /* BackendServiceTypes+Localizable.xcstrings */; };
+		027D25CC2E509A2D0074737C /* BackendSkills+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 027D25CB2E509A2D0074737C /* BackendSkills+Localizable.xcstrings */; };
 		027E8E1329344D9B001EFDFA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027E8E1129344D8C001EFDFA /* AdSupport.framework */; };
 		027E8E182934584B001EFDFA /* Analytic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E8E172934584B001EFDFA /* Analytic.swift */; };
 		027E8E1B29346061001EFDFA /* FirebaseAnalytic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E8E1A29346061001EFDFA /* FirebaseAnalytic.swift */; };
@@ -152,7 +164,6 @@
 		028C4AFD2892E40500707101 /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C4AFC2892E40500707101 /* SignupRequest.swift */; };
 		028C4AFF2892E4A800707101 /* PostSignupTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C4AFE2892E4A800707101 /* PostSignupTask.swift */; };
 		02929C032D2B33240088A21B /* DeleteChatTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02929C022D2B33230088A21B /* DeleteChatTask.swift */; };
-		0294989728F712800075F36F /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294989628F712800075F36F /* Localization.swift */; };
 		0294989928F713100075F36F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294989828F713100075F36F /* Localizable.swift */; };
 		0295882728F45E910009CFFA /* RefreshControlShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295882628F45E910009CFFA /* RefreshControlShowing.swift */; };
 		0297CD132D122E490014D208 /* RegionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0297CD122D122E490014D208 /* RegionsView.swift */; };
@@ -167,8 +178,10 @@
 		02A261F32B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A261F22B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift */; };
 		02A60CE22D0A291300B0FA80 /* Onboarding+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02A60CE12D0A291300B0FA80 /* Onboarding+Localizable.xcstrings */; };
 		02A824842881B202004351D0 /* MockRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A824832881B202004351D0 /* MockRestService.swift */; };
+		02A9C1F72E3D615A0031A636 /* RevenueCatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9C1F62E3D614A0031A636 /* RevenueCatService.swift */; };
 		02AC514128343DF1004C82E4 /* EmptyStatePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */; };
 		02AC514328343E65004C82E4 /* EmptyStateShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC514228343E65004C82E4 /* EmptyStateShowing.swift */; };
+		02AD97AD2DEB92CE00B51B0C /* BackendTitles+Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 02AD97AC2DEB92CE00B51B0C /* BackendTitles+Localizable.xcstrings */; };
 		02AF996C28ED944E006669F4 /* PlaceAdvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */; };
 		02AF996E28ED9476006669F4 /* PlaceAdvertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */; };
 		02AF997028ED9C95006669F4 /* DropdownPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */; };
@@ -521,6 +534,9 @@
 		02301B57292CED4A00F78449 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		023069A22929188900BDC42B /* GetLiveChatMessagesTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLiveChatMessagesTask.swift; sourceTree = "<group>"; };
 		023069A6292918A100BDC42B /* LiveChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChatMessage.swift; sourceTree = "<group>"; };
+		02306BE32E450D6800A27979 /* Armony.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Armony.storekit; sourceTree = "<group>"; };
+		02306BE52E450E2D00A27979 /* Armony-Debug.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Armony-Debug.storekit"; sourceTree = "<group>"; };
+		02306BE82E45388300A27979 /* RevenueCatPurchaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatPurchaseStorageService.swift; sourceTree = "<group>"; };
 		023110202841392100CB2488 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		02311022284139A500CB2488 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0231102428413A6600CB2488 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
@@ -588,6 +604,13 @@
 		0273AE332B6BC72C000AD05B /* BannerSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderView.swift; sourceTree = "<group>"; };
 		0273AE352B6BD15B000AD05B /* BannerSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSliderCell.swift; sourceTree = "<group>"; };
 		02754D3629304EB20066AA07 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		027D25BF2E4E6EA40074737C /* BackendSettings+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendSettings+Localizable.xcstrings"; sourceTree = "<group>"; };
+		027D25C12E4E865E0074737C /* BackendAdvertTypes+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendAdvertTypes+Localizable.xcstrings"; sourceTree = "<group>"; };
+		027D25C32E506F940074737C /* BackendGenres+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendGenres+Localizable.xcstrings"; sourceTree = "<group>"; };
+		027D25C52E5094DB0074737C /* BackendFeedbackTopics+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendFeedbackTopics+Localizable.xcstrings"; sourceTree = "<group>"; };
+		027D25C72E5095D70074737C /* BackendReportTopics+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendReportTopics+Localizable.xcstrings"; sourceTree = "<group>"; };
+		027D25C92E5096B80074737C /* BackendServiceTypes+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendServiceTypes+Localizable.xcstrings"; sourceTree = "<group>"; };
+		027D25CB2E509A2D0074737C /* BackendSkills+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendSkills+Localizable.xcstrings"; sourceTree = "<group>"; };
 		027E8E1129344D8C001EFDFA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		027E8E172934584B001EFDFA /* Analytic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytic.swift; sourceTree = "<group>"; };
 		027E8E1A29346061001EFDFA /* FirebaseAnalytic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalytic.swift; sourceTree = "<group>"; };
@@ -604,7 +627,6 @@
 		028C4AFC2892E40500707101 /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		028C4AFE2892E4A800707101 /* PostSignupTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSignupTask.swift; sourceTree = "<group>"; };
 		02929C022D2B33230088A21B /* DeleteChatTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteChatTask.swift; sourceTree = "<group>"; };
-		0294989628F712800075F36F /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		0294989828F713100075F36F /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		0295882628F45E910009CFFA /* RefreshControlShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlShowing.swift; sourceTree = "<group>"; };
 		0297CD122D122E490014D208 /* RegionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsView.swift; sourceTree = "<group>"; };
@@ -619,8 +641,10 @@
 		02A261F22B24DBE0004D26A1 /* PostDeleteAccountFeedbackTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDeleteAccountFeedbackTask.swift; sourceTree = "<group>"; };
 		02A60CE12D0A291300B0FA80 /* Onboarding+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Onboarding+Localizable.xcstrings"; sourceTree = "<group>"; };
 		02A824832881B202004351D0 /* MockRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestService.swift; sourceTree = "<group>"; };
+		02A9C1F62E3D614A0031A636 /* RevenueCatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatService.swift; sourceTree = "<group>"; };
 		02AC514028343DF1004C82E4 /* EmptyStatePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStatePresentation.swift; sourceTree = "<group>"; };
 		02AC514228343E65004C82E4 /* EmptyStateShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateShowing.swift; sourceTree = "<group>"; };
+		02AD97AC2DEB92CE00B51B0C /* BackendTitles+Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "BackendTitles+Localizable.xcstrings"; sourceTree = "<group>"; };
 		02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertViewModel.swift; sourceTree = "<group>"; };
 		02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertCoordinator.swift; sourceTree = "<group>"; };
 		02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPresentation.swift; sourceTree = "<group>"; };
@@ -903,6 +927,10 @@
 		B1FEFB1E29D8E9AD00F03EA0 /* ExpandableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		027D25CF2E50AEFB0074737C /* Localization */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Localization; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		B1B55C7F26CEFADC00FDE884 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -924,6 +952,7 @@
 				B1A6F7272A2D174E000014A5 /* StoreKit.framework in Frameworks */,
 				02BDBB0D2ADCA4A3008BB2A3 /* YouTubeiOSPlayerHelper in Frameworks */,
 				02C4E1142ADF263500645D4C /* SnapKit in Frameworks */,
+				02587B1D2E2CCEB400562F02 /* RevenueCatUI in Frameworks */,
 				02472AB22810B0F200A6A327 /* SwiftMessages in Frameworks */,
 				B1FEFB1C29D8B84500F03EA0 /* FacebookCore in Frameworks */,
 				027B37522918609500CC8AE8 /* FirebaseCrashlytics in Frameworks */,
@@ -931,6 +960,7 @@
 				B1FA8B91298341E300BD7D31 /* UIScrollView_InfiniteScroll in Frameworks */,
 				02472AAF2810B0CD00A6A327 /* KeychainAccess in Frameworks */,
 				027E8E1329344D9B001EFDFA /* AdSupport.framework in Frameworks */,
+				02587B1B2E2CCEB400562F02 /* RevenueCat in Frameworks */,
 				025E1EE8284A8301005D2F83 /* BottomPopup in Frameworks */,
 				02754D34293013A40066AA07 /* Starscream in Frameworks */,
 				027B37542918609500CC8AE8 /* FirebaseRemoteConfig in Frameworks */,
@@ -1719,6 +1749,7 @@
 		0294989A28F715BE0075F36F /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
+				02AD97A92DEB929000B51B0C /* Backend */,
 				02587C7A2C86746B0045FF30 /* Common+Localizable.xcstrings */,
 			);
 			path = Localizable;
@@ -1758,6 +1789,30 @@
 				02A824832881B202004351D0 /* MockRestService.swift */,
 			);
 			path = CommonMocks;
+			sourceTree = "<group>";
+		};
+		02A9C1F52E3D613D0031A636 /* RevenueCat */ = {
+			isa = PBXGroup;
+			children = (
+				02306BE82E45388300A27979 /* RevenueCatPurchaseStorageService.swift */,
+				02A9C1F62E3D614A0031A636 /* RevenueCatService.swift */,
+			);
+			path = RevenueCat;
+			sourceTree = "<group>";
+		};
+		02AD97A92DEB929000B51B0C /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				027D25C12E4E865E0074737C /* BackendAdvertTypes+Localizable.xcstrings */,
+				027D25C52E5094DB0074737C /* BackendFeedbackTopics+Localizable.xcstrings */,
+				027D25C32E506F940074737C /* BackendGenres+Localizable.xcstrings */,
+				027D25C72E5095D70074737C /* BackendReportTopics+Localizable.xcstrings */,
+				027D25C92E5096B80074737C /* BackendServiceTypes+Localizable.xcstrings */,
+				027D25BF2E4E6EA40074737C /* BackendSettings+Localizable.xcstrings */,
+				027D25CB2E509A2D0074737C /* BackendSkills+Localizable.xcstrings */,
+				02AD97AC2DEB92CE00B51B0C /* BackendTitles+Localizable.xcstrings */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 		02B644592BB6CD3F002520B6 /* Reset */ = {
@@ -2447,7 +2502,6 @@
 				026C4FD0280D5FA800C0B967 /* CommonConstants.swift */,
 				B1E2947F299FE22200602819 /* HashableKey.swift */,
 				B1E29481299FE24900602819 /* HashableKey+Keys.swift */,
-				0294989628F712800075F36F /* Localization.swift */,
 				B16CEF3629B9333F00D95FA9 /* Logger.swift */,
 				0231F2A6284FA3AE0012928F /* TypeDefinitions.swift */,
 				027E8E162934580C001EFDFA /* Analytics */,
@@ -2456,6 +2510,7 @@
 				B149349527414EAA005E33C8 /* ConfigReader */,
 				026DF39528C26C8600B73427 /* Deeplink */,
 				0231F2A8284FA55D0012928F /* Handlers */,
+				027D25CF2E50AEFB0074737C /* Localization */,
 				0294989A28F715BE0075F36F /* Localizable */,
 				B18FEB4927B5AF1F00C8A2C0 /* Notifications */,
 				02E443F12C35DCE900AE0A13 /* PropertyWrappers */,
@@ -2606,6 +2661,7 @@
 				B1197D3227BEF54C0045E059 /* Firebase */,
 				B152FB9B298F1253001D2F00 /* InternetConnection */,
 				02707983293177D600199298 /* RemoteNotification */,
+				02A9C1F52E3D613D0031A636 /* RevenueCat */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -3181,6 +3237,8 @@
 		B1FCC88526D11E89009A7F8A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				02306BE32E450D6800A27979 /* Armony.storekit */,
+				02306BE52E450E2D00A27979 /* Armony-Debug.storekit */,
 				B1B55C9326CEFAE300FDE884 /* Info.plist */,
 				B1B55C8E26CEFAE300FDE884 /* Assets.xcassets */,
 				B106BCF026E428EB001CE109 /* Colors.xcassets */,
@@ -3249,6 +3307,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				027D25CF2E50AEFB0074737C /* Localization */,
+			);
 			name = Armony;
 			packageProductDependencies = (
 				02472AA22810B03300A6A327 /* Alamofire */,
@@ -3272,6 +3333,8 @@
 				B1A6F7222A2D1419000014A5 /* Adjust */,
 				02BDBB0C2ADCA4A3008BB2A3 /* YouTubeiOSPlayerHelper */,
 				02C4E1132ADF263500645D4C /* SnapKit */,
+				02587B1A2E2CCEB400562F02 /* RevenueCat */,
+				02587B1C2E2CCEB400562F02 /* RevenueCatUI */,
 			);
 			productName = Armony;
 			productReference = B1B55C8226CEFADC00FDE884 /* Armony.app */;
@@ -3347,6 +3410,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = B1B55C7926CEFADC00FDE884;
 			packageReferences = (
@@ -3368,6 +3432,7 @@
 				02BDBB0B2ADCA4A3008BB2A3 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 				02C4E1122ADF263500645D4C /* XCRemoteSwiftPackageReference "SnapKit" */,
 				02DAE1452C550E06001F4931 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 			);
 			productRefGroup = B1B55C8326CEFADC00FDE884 /* Products */;
 			projectDirPath = "";
@@ -3389,11 +3454,17 @@
 				02ED3B4B28F21CD6003D849F /* SegmentCell.xib in Resources */,
 				02ED3B4628F21C00003D849F /* SegmentedControlView.xib in Resources */,
 				02587C7B2C86746B0045FF30 /* Common+Localizable.xcstrings in Resources */,
+				027D25C62E5094DB0074737C /* BackendFeedbackTopics+Localizable.xcstrings in Resources */,
 				B15F22DC27A0879B001F5B78 /* Login.storyboard in Resources */,
+				027D25C42E506F940074737C /* BackendGenres+Localizable.xcstrings in Resources */,
 				027F615C284195CF00A46049 /* SettingCell.xib in Resources */,
+				02306BE42E450D6800A27979 /* Armony.storekit in Resources */,
 				B15D9AC426DFFCAE00FE71A9 /* Poppins-Light.ttf in Resources */,
 				02B7CA6C2925A0950055B181 /* ChatCell.xib in Resources */,
 				02D90D0F28568EB5005B5162 /* Onboarding.storyboard in Resources */,
+				02306BE62E450E2D00A27979 /* Armony-Debug.storekit in Resources */,
+				027D25CC2E509A2D0074737C /* BackendSkills+Localizable.xcstrings in Resources */,
+				027D25CA2E5096B80074737C /* BackendServiceTypes+Localizable.xcstrings in Resources */,
 				B1C9097029468CCC0080804C /* VisitedAccount.storyboard in Resources */,
 				B179B6FD29CFB01E002DD9F3 /* GoogleService-Info.plist in Resources */,
 				B17DFAB627B6800800A82C41 /* Splash.storyboard in Resources */,
@@ -3415,10 +3486,12 @@
 				B188BB3027499518002FF3D4 /* GradientView.xib in Resources */,
 				B15D9AC526DFFCAE00FE71A9 /* Poppins-SemiBold.ttf in Resources */,
 				02E7D6AE2844FE0A0006780A /* DropdownView.xib in Resources */,
+				02AD97AD2DEB92CE00B51B0C /* BackendTitles+Localizable.xcstrings in Resources */,
 				02B7CA6329259B2F0055B181 /* Chat.storyboard in Resources */,
 				021EC05C2CF3B06B002A48BB /* Chat+Localizable.xcstrings in Resources */,
 				B1E0C4FC26DAD0460067DE6F /* AvatarView.xib in Resources */,
 				B18F7FF02955F8650006B975 /* CardView.xib in Resources */,
+				027D25C02E4E6EA40074737C /* BackendSettings+Localizable.xcstrings in Resources */,
 				B15D9AC826DFFCAE00FE71A9 /* Poppins-Regular.ttf in Resources */,
 				02A1DB512809AAB600E5B89E /* ForgotPasswordView.xib in Resources */,
 				028B54C12CF12CF60057D933 /* PlaceAdvert+Localizable.xcstrings in Resources */,
@@ -3426,7 +3499,9 @@
 				B1B55C8D26CEFADD00FDE884 /* Home.storyboard in Resources */,
 				024BDA0428ECE46400391AA4 /* PlaceAdvert.storyboard in Resources */,
 				023731B928612B23005F1522 /* Settings.storyboard in Resources */,
+				027D25C82E5095D70074737C /* BackendReportTopics+Localizable.xcstrings in Resources */,
 				B1772B402710CE05001E544B /* SkillCell.xib in Resources */,
+				027D25C22E4E865E0074737C /* BackendAdvertTypes+Localizable.xcstrings in Resources */,
 				02826C40284EA810008A5893 /* TextView.xib in Resources */,
 				02312E952CEBD9BD002F4925 /* InfoPlist.xcstrings in Resources */,
 				B1A6FB2327A9B4AB00E1BEA5 /* Registration.storyboard in Resources */,
@@ -3495,7 +3570,6 @@
 				0212F8ED2857AF1B0019A8B4 /* OnboardingCoordinator.swift in Sources */,
 				B188BB2E274994FD002FF3D4 /* GradientView.swift in Sources */,
 				B1C909612946821D0080804C /* VisitedAccountCoordinator.swift in Sources */,
-				0294989728F712800075F36F /* Localization.swift in Sources */,
 				B1B005E229D5DB420041D61A /* WebCoordinator.swift in Sources */,
 				B10825C1274C3BE60089F561 /* ArmonyUser.swift in Sources */,
 				B14745D6297890E5004AECBF /* OnboardingPresentation.swift in Sources */,
@@ -3670,6 +3744,7 @@
 				021E2F782889F4E700132DBB /* GetFeedbackSubjectsTask.swift in Sources */,
 				02511B9C2B8D4E1400B67F27 /* InfoView.swift in Sources */,
 				02E443F32C35DCF600AE0A13 /* DefaultRepresentation.swift in Sources */,
+				02306BE92E45388600A27979 /* RevenueCatPurchaseStorageService.swift in Sources */,
 				027E8E182934584B001EFDFA /* Analytic.swift in Sources */,
 				B10CCD792741055000BB313D /* GetAdvertsTask.swift in Sources */,
 				0297CD172D123AE70014D208 /* Region.swift in Sources */,
@@ -3812,6 +3887,7 @@
 				02BDBB0A2ADCA3E5008BB2A3 /* YoutubeMediaCell.swift in Sources */,
 				025E1EF5284A9030005D2F83 /* SelectionInput.swift in Sources */,
 				B1E4218B27B4360200EBC232 /* Error+Extensions.swift in Sources */,
+				02A9C1F72E3D615A0031A636 /* RevenueCatService.swift in Sources */,
 				B152FB9A298F073F001D2F00 /* DeleteAccountTask.swift in Sources */,
 				B111223726DA7777009C7B3E /* UIViewController+Extensions.swift in Sources */,
 				02C33AD52C9A3A0900AB332B /* AdvertListingCoordinator.swift in Sources */,
@@ -4247,6 +4323,14 @@
 				minimumVersion = 9.0.6;
 			};
 		};
+		02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		025E1EE6284A8301005D2F83 /* XCRemoteSwiftPackageReference "BottomPopup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ergunemr/BottomPopup.git";
@@ -4380,6 +4464,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 02472AB02810B0F200A6A327 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
+		};
+		02587B1A2E2CCEB400562F02 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		02587B1C2E2CCEB400562F02 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02587B192E2CCEB400562F02 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCatUI;
 		};
 		025E1EE7284A8301005D2F83 /* BottomPopup */ = {
 			isa = XCSwiftPackageProductDependency;

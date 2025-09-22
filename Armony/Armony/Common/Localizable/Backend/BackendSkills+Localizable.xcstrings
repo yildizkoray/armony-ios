@@ -1,0 +1,3138 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Skill_1" : {
+      "extractionState" : "manual",
+      "comment" : "Accordion instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Accordion",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Akordeon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_2" : {
+      "extractionState" : "manual",
+      "comment" : "Harp instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Harp",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Arp",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_3" : {
+      "extractionState" : "manual",
+      "comment" : "Banjo instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Banjo",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Banjo",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_4" : {
+      "extractionState" : "manual",
+      "comment" : "Bass Guitar instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bass Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bas Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_5" : {
+      "extractionState" : "manual",
+      "comment" : "Drums instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Drums",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bateri",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_6" : {
+      "extractionState" : "manual",
+      "comment" : "Cello instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Cello",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Çello",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_7" : {
+      "extractionState" : "manual",
+      "comment" : "DJ skill - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_8" : {
+      "extractionState" : "manual",
+      "comment" : "Electric Guitar instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Electric Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Elektro Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_9" : {
+      "extractionState" : "manual",
+      "comment" : "Flute instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Flute",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Flüt",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_10" : {
+      "extractionState" : "manual",
+      "comment" : "Bagpipes instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bagpipes",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Gayda",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_11" : {
+      "extractionState" : "manual",
+      "comment" : "Classical Guitar instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Classical Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klasik Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_12" : {
+      "extractionState" : "manual",
+      "comment" : "Violin instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Violin",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Keman",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_13" : {
+      "extractionState" : "manual",
+      "comment" : "Clarinet instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Clarinet",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klarnet",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_14" : {
+      "extractionState" : "manual",
+      "comment" : "Keyboard instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Keyboard",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klavye",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_15" : {
+      "extractionState" : "manual",
+      "comment" : "Mandolin instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Mandolin",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mandolin",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_16" : {
+      "extractionState" : "manual",
+      "comment" : "Harmonica instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Harmonica",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mızıka",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_17" : {
+      "extractionState" : "manual",
+      "comment" : "Percussion instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Percussion",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Perküsyon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_18" : {
+      "extractionState" : "manual",
+      "comment" : "Piano instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Piano",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Piyano",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_19" : {
+      "extractionState" : "manual",
+      "comment" : "Saxophone instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Saxophone",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Saksafon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_20" : {
+      "extractionState" : "manual",
+      "comment" : "Timpani instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Timpani",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Timpani",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_21" : {
+      "extractionState" : "manual",
+      "comment" : "Trombone instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trombone",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trombon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_22" : {
+      "extractionState" : "manual",
+      "comment" : "Trumpet instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trumpet",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trompet",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_23" : {
+      "extractionState" : "manual",
+      "comment" : "Tuba instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Tuba",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Tuba",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_24" : {
+      "extractionState" : "manual",
+      "comment" : "Ukulele instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Ukulele",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ukulele",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_25" : {
+      "extractionState" : "manual",
+      "comment" : "Vocals skill - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Vocals",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Vokal",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_26" : {
+      "extractionState" : "manual",
+      "comment" : "Acoustic Guitar instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Acoustic Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Akustik Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_27" : {
+      "extractionState" : "manual",
+      "comment" : "Bassoon instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bassoon",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Fagot",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_28" : {
+      "extractionState" : "manual",
+      "comment" : "French Horn instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "French Horn",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Korno",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_29" : {
+      "extractionState" : "manual",
+      "comment" : "Game Audio skill - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Game Audio",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Oyun Sesi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_30" : {
+      "extractionState" : "manual",
+      "comment" : "Horn instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Horn",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klakson",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_31" : {
+      "extractionState" : "manual",
+      "comment" : "Oboe instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Oboe",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Obua",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_32" : {
+      "extractionState" : "manual",
+      "comment" : "Pedal Steel Guitar instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Pedal Steel Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Pedallı Çelik Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_33" : {
+      "extractionState" : "manual",
+      "comment" : "Drums instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Drums",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Davul",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_34" : {
+      "extractionState" : "manual",
+      "comment" : "Viola instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Viola",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Viyola",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_35" : {
+      "extractionState" : "manual",
+      "comment" : "Zurna instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Zurna",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Zurna",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_36" : {
+      "extractionState" : "manual",
+      "comment" : "Kemençe instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Kemençe",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kemençe",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_37" : {
+      "extractionState" : "manual",
+      "comment" : "Darbuka instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Darbuka",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Darbuka",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_38" : {
+      "extractionState" : "manual",
+      "comment" : "Def instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Def",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Def",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_39" : {
+      "extractionState" : "manual",
+      "comment" : "Qanun instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Qanun",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kanun",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_40" : {
+      "extractionState" : "manual",
+      "comment" : "Oud instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Oud",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ud",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_41" : {
+      "extractionState" : "manual",
+      "comment" : "Yayli Tambur instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Yaylı Tambur",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Yaylı Tambur",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_42" : {
+      "extractionState" : "manual",
+      "comment" : "Kabak Kemane instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Kabak Kemane",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kabak Kemane",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_43" : {
+      "extractionState" : "manual",
+      "comment" : "Bağlama instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bağlama",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bağlama",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_44" : {
+      "extractionState" : "manual",
+      "comment" : "Xylophone instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Ksilofon",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ksilofon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_45" : {
+      "extractionState" : "manual",
+      "comment" : "Maracas instrument - ad_type_id: 1 (musician looking for band)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Marakas",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Marakas",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_46" : {
+      "extractionState" : "manual",
+      "comment" : "Accordionist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Accordionist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Akordeoncu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_47" : {
+      "extractionState" : "manual",
+      "comment" : "Harpist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Harpist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Arpist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_48" : {
+      "extractionState" : "manual",
+      "comment" : "Banjo player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Banjo",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Banjo",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_49" : {
+      "extractionState" : "manual",
+      "comment" : "Bass Guitarist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bass Guitarist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bas Gitarist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_50" : {
+      "extractionState" : "manual",
+      "comment" : "Drummer - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Drummer",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Baterist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_51" : {
+      "extractionState" : "manual",
+      "comment" : "Cellist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Cellist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Çellist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_52" : {
+      "extractionState" : "manual",
+      "comment" : "DJ - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_53" : {
+      "extractionState" : "manual",
+      "comment" : "Electric Guitarist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Electric Guitarist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Elektro Gitarist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_54" : {
+      "extractionState" : "manual",
+      "comment" : "Flutist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Flutist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Flütçü",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_55" : {
+      "extractionState" : "manual",
+      "comment" : "Bagpiper - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bagpiper",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Gaydacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_56" : {
+      "extractionState" : "manual",
+      "comment" : "Classical Guitarist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Classical Guitarist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klasik Gitarist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_57" : {
+      "extractionState" : "manual",
+      "comment" : "Violinist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Violinist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kemancı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_58" : {
+      "extractionState" : "manual",
+      "comment" : "Clarinetist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Clarinetist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klarnetçi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_59" : {
+      "extractionState" : "manual",
+      "comment" : "Keyboardist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Keyboardist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klavyeci",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_60" : {
+      "extractionState" : "manual",
+      "comment" : "Mandolinist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Mandolinist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mandolinci",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_61" : {
+      "extractionState" : "manual",
+      "comment" : "Harmonica Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Harmonica Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mızıkacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_62" : {
+      "extractionState" : "manual",
+      "comment" : "Percussionist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Percussionist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Perküsyoncu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_63" : {
+      "extractionState" : "manual",
+      "comment" : "Pianist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Pianist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Piyanist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_64" : {
+      "extractionState" : "manual",
+      "comment" : "Saxophonist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Saxophonist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Saksafoncu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_65" : {
+      "extractionState" : "manual",
+      "comment" : "Timpanist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Timpanist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Timpanist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_66" : {
+      "extractionState" : "manual",
+      "comment" : "Trombonist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trombonist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Tromboncu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_67" : {
+      "extractionState" : "manual",
+      "comment" : "Trumpeter - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trumpeter",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trompetçi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_68" : {
+      "extractionState" : "manual",
+      "comment" : "Tuba Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Tuba Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Tubacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_69" : {
+      "extractionState" : "manual",
+      "comment" : "Ukulele Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Ukulele Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ukuleleci",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_70" : {
+      "extractionState" : "manual",
+      "comment" : "Vocalist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Vocalist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Vokalist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_71" : {
+      "extractionState" : "manual",
+      "comment" : "Acoustic Guitarist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Acoustic Guitarist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Akustik Gitarist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_72" : {
+      "extractionState" : "manual",
+      "comment" : "Bassoonist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bassoonist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Fagotçu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_73" : {
+      "extractionState" : "manual",
+      "comment" : "French Horn Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "French Horn Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kornocu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_74" : {
+      "extractionState" : "manual",
+      "comment" : "Game Audio Artist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Game Audio Artist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Oyun Sesçisi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_75" : {
+      "extractionState" : "manual",
+      "comment" : "Horn Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Horn Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klaksonsu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_76" : {
+      "extractionState" : "manual",
+      "comment" : "Oboist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Oboist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Obuacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_77" : {
+      "extractionState" : "manual",
+      "comment" : "Pedal Steel Guitarist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Pedal Steel Guitarist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Pedallı Çelik Gitarist",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_78" : {
+      "extractionState" : "manual",
+      "comment" : "Drummer - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Drummer",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Davulcu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_79" : {
+      "extractionState" : "manual",
+      "comment" : "Violist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Violist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Viyolacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_80" : {
+      "extractionState" : "manual",
+      "comment" : "Zurna Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Zurna Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Zurnacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_81" : {
+      "extractionState" : "manual",
+      "comment" : "Kemençe Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Kemençe Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kemençeci",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_82" : {
+      "extractionState" : "manual",
+      "comment" : "Darbuka Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Darbuka Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Darbukacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_83" : {
+      "extractionState" : "manual",
+      "comment" : "Def Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Def Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Dayrenbaz",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_84" : {
+      "extractionState" : "manual",
+      "comment" : "Qanun Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Qanun Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kanuncu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_85" : {
+      "extractionState" : "manual",
+      "comment" : "Oud Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Oud Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Udi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_86" : {
+      "extractionState" : "manual",
+      "comment" : "Yayli Tambur Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Yayli Tambur Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Yaylı Tamburcu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_87" : {
+      "extractionState" : "manual",
+      "comment" : "Kabak Kemane Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Kabak Kemane Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kabak Kemaneci",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_88" : {
+      "extractionState" : "manual",
+      "comment" : "Bağlama Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bağlama Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bağlamacı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_89" : {
+      "extractionState" : "manual",
+      "comment" : "Xylophonist - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Xylophonist",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ksilofoncu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_90" : {
+      "extractionState" : "manual",
+      "comment" : "Maracas Player - ad_type_id: 2 (band looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Maracas Player",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Marakasçı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_91" : {
+      "extractionState" : "manual",
+      "comment" : "Duo Music Group - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Duo Music Group",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Duo Müzik Grubu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_92" : {
+      "extractionState" : "manual",
+      "comment" : "Trio Music Group - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trio Music Group",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trio Müzik Grubu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_93" : {
+      "extractionState" : "manual",
+      "comment" : "Quartet Music Group - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Quartet Music Group",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Quarted Müzik Grubu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_94" : {
+      "extractionState" : "manual",
+      "comment" : "Music Band - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Music Band",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Müzik Grubu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_95" : {
+      "extractionState" : "manual",
+      "comment" : "Jazz Band - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Jazz Band",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Caz Grubu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_96" : {
+      "extractionState" : "manual",
+      "comment" : "Marching Band - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Marching Band",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bando Takımı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_97" : {
+      "extractionState" : "manual",
+      "comment" : "Wedding Orchestra - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Wedding Orchestra",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Düğün Orkestrası",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_98" : {
+      "extractionState" : "manual",
+      "comment" : "Bağlama Ensemble - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bağlama Ensemble",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bağlama Ekibi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_99" : {
+      "extractionState" : "manual",
+      "comment" : "DJ - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_100" : {
+      "extractionState" : "manual",
+      "comment" : "Davul Zurna Ensemble - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Davul Zurna Ensemble",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Davul Zurna Ekibi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_101" : {
+      "extractionState" : "manual",
+      "comment" : "Fasil Ensemble - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Fasil Ensemble",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Fasıl Ekibi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_102" : {
+      "extractionState" : "manual",
+      "comment" : "Accordion instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Accordion",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Akordeon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_103" : {
+      "extractionState" : "manual",
+      "comment" : "Guitar instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_104" : {
+      "extractionState" : "manual",
+      "comment" : "Acoustic Guitar instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Acoustic Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Akustik Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_105" : {
+      "extractionState" : "manual",
+      "comment" : "Bagpipes instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bagpipes",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Gayda",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_106" : {
+      "extractionState" : "manual",
+      "comment" : "Banjo instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Banjo",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Banjo",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_107" : {
+      "extractionState" : "manual",
+      "comment" : "Bass Guitar instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bass Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bas Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_108" : {
+      "extractionState" : "manual",
+      "comment" : "Bassoon instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bassoon",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Fagot",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_109" : {
+      "extractionState" : "manual",
+      "comment" : "Cello instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Cello",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Çello",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_110" : {
+      "extractionState" : "manual",
+      "comment" : "Clarinet instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Clarinet",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klarnet",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_111" : {
+      "extractionState" : "manual",
+      "comment" : "Classical Guitar instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Classical Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klasik Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_112" : {
+      "extractionState" : "manual",
+      "comment" : "Electric Guitar instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Electric Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Elektro Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_113" : {
+      "extractionState" : "manual",
+      "comment" : "Flute instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Flute",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Flüt",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_114" : {
+      "extractionState" : "manual",
+      "comment" : "French Horn instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "French Horn",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Korno",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_115" : {
+      "extractionState" : "manual",
+      "comment" : "Game Audio skill - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Game Audio",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Oyun Sesi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_116" : {
+      "extractionState" : "manual",
+      "comment" : "Harmonica instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Harmonica",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mızıka",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_117" : {
+      "extractionState" : "manual",
+      "comment" : "Harp instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Harp",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Arp",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_118" : {
+      "extractionState" : "manual",
+      "comment" : "Keyboard instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Keyboard",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klavye",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_119" : {
+      "extractionState" : "manual",
+      "comment" : "Mandolin instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Mandolin",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mandolin",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_120" : {
+      "extractionState" : "manual",
+      "comment" : "Oboe instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Oboe",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Obua",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_121" : {
+      "extractionState" : "manual",
+      "comment" : "Pedal Steel Guitar instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Pedal Steel Guitar",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Pedallı Çelik Gitar",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_122" : {
+      "extractionState" : "manual",
+      "comment" : "Percussion instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Percussion",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Perküsyon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_123" : {
+      "extractionState" : "manual",
+      "comment" : "Piano instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Piano",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Piyano",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_124" : {
+      "extractionState" : "manual",
+      "comment" : "Saxophone instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Saxophone",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Saksafon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_125" : {
+      "extractionState" : "manual",
+      "comment" : "DJ skill - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "DJ",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_126" : {
+      "extractionState" : "manual",
+      "comment" : "Vocals skill - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Vocals",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Şan (Vokal)",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_127" : {
+      "extractionState" : "manual",
+      "comment" : "Timpani instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Timpani",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Timpani",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_128" : {
+      "extractionState" : "manual",
+      "comment" : "Trombone instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trombone",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trombon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_129" : {
+      "extractionState" : "manual",
+      "comment" : "Trumpet instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Trumpet",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Trompet",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_130" : {
+      "extractionState" : "manual",
+      "comment" : "Tuba instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Tuba",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Tuba",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_131" : {
+      "extractionState" : "manual",
+      "comment" : "Ukulele instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Ukulele",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ukulele",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_132" : {
+      "extractionState" : "manual",
+      "comment" : "Viola instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Viola",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Viyola",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_133" : {
+      "extractionState" : "manual",
+      "comment" : "Violin instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Violin",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Keman",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_134" : {
+      "extractionState" : "manual",
+      "comment" : "Drums instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Drums",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bateri",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_135" : {
+      "extractionState" : "manual",
+      "comment" : "Bağlama instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Bağlama",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bağlama",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_136" : {
+      "extractionState" : "manual",
+      "comment" : "Qanun instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Qanun",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kanun",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_137" : {
+      "extractionState" : "manual",
+      "comment" : "Kemençe instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Kemençe",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Kemençe",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_138" : {
+      "extractionState" : "manual",
+      "comment" : "Zurna instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Zurna",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Zurna",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_139" : {
+      "extractionState" : "manual",
+      "comment" : "Def instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Def",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Def",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_140" : {
+      "extractionState" : "manual",
+      "comment" : "Tambur instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Tambur",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Tambur",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_141" : {
+      "extractionState" : "manual",
+      "comment" : "Oud instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Oud",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ud",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_142" : {
+      "extractionState" : "manual",
+      "comment" : "Darbuka instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Darbuka",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Darbuka",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_143" : {
+      "extractionState" : "manual",
+      "comment" : "Ney instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Ney",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ney",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_144" : {
+      "extractionState" : "manual",
+      "comment" : "Xylophone instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Xylophone",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ksilofon",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_145" : {
+      "extractionState" : "manual",
+      "comment" : "Maracas instrument - ad_type_id: 3 (musician looking for musician)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Maracas",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Marakas",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_146" : {
+      "extractionState" : "manual",
+      "comment" : "Composition skill - ad_type_id: 4 (musician looking for service)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Composition",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Bestecilik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_147" : {
+      "extractionState" : "manual",
+      "comment" : "Mixing skill - ad_type_id: 4 (musician looking for service)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Mixing",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mixing",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_148" : {
+      "extractionState" : "manual",
+      "comment" : "Mastering skill - ad_type_id: 4 (musician looking for service)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Mastering",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mastering",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_149" : {
+      "extractionState" : "manual",
+      "comment" : "Songwriting skill - ad_type_id: 4 (musician looking for service)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Songwriting",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Söz Yazarlığı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_150" : {
+      "extractionState" : "manual",
+      "comment" : "Sound Design skill - ad_type_id: 4 (musician looking for service)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Sound Design",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ses Tasarımı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_151" : {
+      "extractionState" : "manual",
+      "comment" : "Voice Acting/Dubbing skill - ad_type_id: 4 (musician looking for service)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Voice Acting / Dubbing",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Seslendirme / Dublaj",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_152" : {
+      "extractionState" : "manual",
+      "comment" : "Stage Lighting skill - ad_type_id: 4 (musician looking for service)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Stage Lighting",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Sahne Işığı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_153" : {
+      "extractionState" : "manual",
+      "comment" : "Composition skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Composition",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Beste",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_154" : {
+      "extractionState" : "manual",
+      "comment" : "Mixing skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Mixing",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mixing",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_155" : {
+      "extractionState" : "manual",
+      "comment" : "Mastering skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Mastering",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Mastering",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_156" : {
+      "extractionState" : "manual",
+      "comment" : "Songwriting skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Songwriting",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Söz Yazarlığı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_157" : {
+      "extractionState" : "manual",
+      "comment" : "Arrangement skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Arrangement",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Aranje / Düzenleme",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_158" : {
+      "extractionState" : "manual",
+      "comment" : "Music Production skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Music Production",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Müzik Yapımcılığı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_159" : {
+      "extractionState" : "manual",
+      "comment" : "Music Producer skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Music Producer",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Müzik Prodüktörlüğü",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_160" : {
+      "extractionState" : "manual",
+      "comment" : "Sound Engineering skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Sound Engineering",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ses Mühendisiliği",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_161" : {
+      "extractionState" : "manual",
+      "comment" : "Sound Design skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Sound Design",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ses Tasarımı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_162" : {
+      "extractionState" : "manual",
+      "comment" : "Voice Acting/Dubbing skill - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Voice Acting / Dubbing",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Seslendirme / Dublaj",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_163" : {
+      "extractionState" : "manual",
+      "comment" : "Rehearsal/Recording Studio service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Rehearsal / Recording Studio",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Prova / Kayıt Stüdyosu",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_164" : {
+      "extractionState" : "manual",
+      "comment" : "Commercial Music service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Commercial Music",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Reklam Müziği",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_165" : {
+      "extractionState" : "manual",
+      "comment" : "Tonmeister service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Tonmeister",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Tonmaister",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_166" : {
+      "extractionState" : "manual",
+      "comment" : "Roadie service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Roadie",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Rodie",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_167" : {
+      "extractionState" : "manual",
+      "comment" : "Podcast Production service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Podcast Production",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Podcast Yapımcılığı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_168" : {
+      "extractionState" : "manual",
+      "comment" : "Stage Lighting Technician service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Stage Lighting Technician",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Sahne Işıkçısı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_169" : {
+      "extractionState" : "manual",
+      "comment" : "Canvas Designer service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Canvas Designer",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Canvas Tasarımcısı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_170" : {
+      "extractionState" : "manual",
+      "comment" : "Backline service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Backline",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Backline",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_171" : {
+      "extractionState" : "manual",
+      "comment" : "Sound/Light Provider service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Sound / Light Provider",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Ses / Işık Sağlayıcı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_172" : {
+      "extractionState" : "manual",
+      "comment" : "Stage Platform Provider service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Stage Platform Provider",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Podyum Sağlayıcı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_173" : {
+      "extractionState" : "manual",
+      "comment" : "Stage LED Provider service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Stage LED Provider",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Sahne Led Sağlayıcı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "Skill_174" : {
+      "extractionState" : "manual",
+      "comment" : "Music Video Producer service - ad_type_id: 5 (service provider)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Music Video Producer",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Klip Yapımcısı",
+            "state" : "translated"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,172 +1,240 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Advert.Block.Confirmation" : {
+    "Title_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Do you want to block this user?"
+            "value" : "Songwriter"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bu kullanıcıyı engellemek istiyor musunuz?"
+            "value" : "Söz Yazarı"
           }
         }
       }
     },
-    "Advert.Block.Description" : {
+    "Title_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "When you block a user, their profile, ads, and messages will no longer be visible to you."
+            "value" : "Composer"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bir kullanıcıyı engellediğinizde, onların profili, ilanları ve mesajları artık size görünmeyecektir."
+            "value" : "Bestekar"
           }
         }
       }
     },
-    "Advert.Delete.Feedback.Selection.Header.Title" : {
+    "Title_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Why do you want to delete your ad?"
+            "value" : "Musician"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanınızı neden silmek istiyorsunuz?"
+            "value" : "Müzisyen"
           }
         }
       }
     },
-    "Advert.DeleteAd" : {
+    "Title_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Delete advert"
+            "value" : "Mix & Mastering"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanı Sil"
+            "value" : "Miks ve Master"
           }
         }
       }
     },
-    "Advert.DeleteAd.Message" : {
+    "Title_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Are you sure you want to delete this ad?"
+            "value" : "Podcast Editing & Mastering"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanı silmek istediğinden emin misin?"
+            "value" : "Podcast Düzenleme ve Master"
           }
         }
       }
     },
-    "Advert.Expire.Warning" : {
+    "Title_6" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The 30-day publication period for your ad has ended, and it has been removed."
+            "value" : "Arranger"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İlanınızın 30 günlük yayın süresi sona erdi ve kaldırıldı."
+            "value" : "Aranjör"
           }
         }
       }
     },
-    "Advert.RepostAd" : {
+    "Title_7" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Publish again"
+            "value" : "Producer"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tekrar Yayınla"
+            "value" : "Prodüktör"
           }
         }
       }
     },
-    "Advert.SendMessage" : {
+    "Title_8" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Send Message"
+            "value" : "Prodüksiyon Ses Mikseri"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mesaj Gönder"
+            "value" : "Ses Mikseri"
           }
         }
       }
     },
-    "Adverts.EmptyState.Button.Title" : {
+    "Title_9" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "All ads"
+            "value" : "Remixing"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tüm İlanlar"
+            "value" : "Remix"
           }
         }
       }
     },
-    "Adverts.EmptyState.Title" : {
+    "Title_10" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No ads available yet"
+            "value" : "Restorasyon"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Henüz ilan bulunmuyor"
+            "value" : "Ses Restorasyonu"
+          }
+        }
+      }
+    },
+    "Title_11" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Design"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses Tasarımı"
+          }
+        }
+      }
+    },
+    "Title_12" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat Makers"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat Yapımcısı"
+          }
+        }
+      }
+    },
+    "Title_13" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audio Engineer"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses Mühendisi"
+          }
+        }
+      }
+    },
+    "Title_14" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzik Eğitmeni"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Müzik Eğitmeni"
           }
         }
       }

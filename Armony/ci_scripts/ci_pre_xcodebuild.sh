@@ -52,6 +52,7 @@ check_required_env_vars() {
     local analytics_vars=(
         "MIXPANEL_TOKEN"
         "ADJUST_TOKEN"
+        "REVENUECAT_API_KEY"
     )
     
     # Check all variables
@@ -135,6 +136,7 @@ update_analytics_config() {
     local analytics_configs=(
         "MIXPANEL_TOKEN"
         "ADJUST_TOKEN"
+        "REVENUECAT_API_KEY"
     )
     
     for config in "${analytics_configs[@]}"; do

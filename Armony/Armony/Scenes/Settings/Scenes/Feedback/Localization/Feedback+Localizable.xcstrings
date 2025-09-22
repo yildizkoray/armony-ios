@@ -9,6 +9,12 @@
             "state" : "translated",
             "value" : "Subject"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konu"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your feedback has been submitted successfully. Thank you!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geri bildiriminiz başarıyla gönderildi. Teşekkür ederiz!"
           }
         }
       }
@@ -31,6 +43,29 @@
             "state" : "translated",
             "value" : "Submit"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gönder"
+          }
+        }
+      }
+    },
+    "Feedback.TextView.Placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter description. Minimum 15 character\""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lütfen açıklama girin. Minimum 15 karakter"
+          }
         }
       }
     },
@@ -41,6 +76,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contact Us"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bize Ulaşın"
           }
         }
       }

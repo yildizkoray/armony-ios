@@ -50,8 +50,16 @@ public extension String {
         return prefix(1).capitalized + dropFirst()
     }
 
+    init(_ key: String, table: Localization.Table) {
+        self.init(localized: LocalizationValue(key), table: table.description)
+    }
+
     init(_ key: String.LocalizationValue, table: Localization.Table) {
         self.init(localized: key, table: table.description)
+    }
+
+    func localized(table: Localization.Table) -> String {
+        String(self, table: table)
     }
 
     func attributed(_ color: UIColor, font: UIFont) -> NSAttributedString {

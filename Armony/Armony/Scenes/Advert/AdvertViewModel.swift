@@ -255,12 +255,36 @@ final class AdvertViewModel: ViewModel {
         }
 
         view?.startActivateAdvertButtonActivityIndicatorView()
+
+        Task { @MainActor in
+            do {
+                let hasUserAds = try await hasUserAds()
+                if hasUserAds, RevenueCatPurchaseStorageService.shared.identifiers.isEmpty {
+                    view?.showPaywall()
+                }
+                else {
+                    activateAd(transactionID: RevenueCatPurchaseStorageService.shared.identifiers.first)
+                }
+                view?.stopActivateAdvertButtonActivityIndicatorView()
+            }
+            catch let error {
+                view?.stopActivateAdvertButtonActivityIndicatorView()
+                error.showAlert()
+            }
+        }
+    }
+
+    func activateAd(transactionID: String?) {
+        view?.startActivateAdvertButtonActivityIndicatorView()
         Task {
             guard let advert = advert else { return }
             let task = PutActivateAdvertTask(advertID: advert.id.string, userID: authenticator.userID)
             do {
                 let _ = try await service.execute(task: task, type: RestObjectResponse<EmptyResponse>.self)
                 ActivateAdvertFirebaseEvent(label: advert.type.title, parameters: advert.eventParameters()).send()
+                if let transactionID {
+                    RevenueCatPurchaseStorageService.shared.remove(transactionID: transactionID)
+                }
                 safeSync {
                     view?.stopActivateAdvertButtonActivityIndicatorView()
                     coordinator.dismiss(animated: true) { [weak self] in
@@ -275,6 +299,14 @@ final class AdvertViewModel: ViewModel {
                 error.showAlert()
             }
         }
+    }
+
+    func hasUserAds() async throws -> Bool {
+        let response = try await service.execute(
+            task: GetUserAdvertsTask(userID: authenticator.userID),
+            type: RestArrayResponse<Advert>.self
+        )
+        return !response.data.isEmpty
     }
 }
 
@@ -301,8 +333,10 @@ extension AdvertViewModel: ViewModelLifeCycle {
                     advert = response.data
                     colorCode = response.data.type.colorCode
                     view?.setNavigationBarBackgroundColor(color: response.data.type.colorCode.colorFromHEX)
-                    
-                    view?.setTitle(response.data.type.title)
+
+                    let localizedTitle = response.data.type.id.backendLocalizedText(table: .advertTypes)
+
+                    view?.setTitle(localizedTitle)
                     view?.setNavigationBarTitleAttributes(
                         [.foregroundColor: AppTheme.Color.white.uiColor]
                     )
@@ -359,9 +393,11 @@ extension AdvertViewModel: ViewModelLifeCycle {
     
     private func prepareOtherSections(_ advert: Advert) {
         let genreItemTitleStyle = TextAppearancePresentation(color: .white, font: .lightBody)
+        let localizedCardTitle = advert.type.id.backendLocalizedText(table: .advertTypes)
+
         if advert.type.id == 4 {
             let genreItems: [MusicGenreItemPresentation] = advert.serviceTypes.lazy.map {
-                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                MusicGenreItemPresentation(service: $0, titleStyle: genreItemTitleStyle)
             }
             let text = String("LessonFormat", table: .common)
             let genresPresentation = MusicGenresPresentation(
@@ -373,10 +409,11 @@ extension AdvertViewModel: ViewModelLifeCycle {
 
             // Skills
             let instructionServices: [MusicGenreItemPresentation] = advert.skills.lazy.map {
-                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                MusicGenreItemPresentation(skill: $0, titleStyle: genreItemTitleStyle)
             }
+
             let instructionServicesPresentation = MusicGenresPresentation(
-                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                title: localizedCardTitle.attributed(color: .white, font: .lightBody),
                 cellBorderColor: advert.type.colorCode.colorFromHEX,
                 items: instructionServices
             )
@@ -385,10 +422,10 @@ extension AdvertViewModel: ViewModelLifeCycle {
             view?.configureSkillsView(with: .empty)
         } else if [3,5].contains(advert.type.id) {
             let instructionServices: [MusicGenreItemPresentation] = advert.skills.lazy.map {
-                MusicGenreItemPresentation(genre: $0, titleStyle: genreItemTitleStyle)
+                MusicGenreItemPresentation(skill: $0, titleStyle: genreItemTitleStyle)
             }
             let instructionServicesPresentation = MusicGenresPresentation(
-                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                title: localizedCardTitle.attributed(color: .white, font: .lightBody),
                 cellBorderColor: advert.type.colorCode.colorFromHEX,
                 items: instructionServices
             )
@@ -399,7 +436,7 @@ extension AdvertViewModel: ViewModelLifeCycle {
             // Skills
             let skillsPresentation = SkillsPresentation(
                 type: .advert(imageViewContainerViewBorderColor: advert.type.colorCode.colorFromHEX),
-                title: advert.type.skillTitle.attributed(color: .white, font: .lightBody),
+                title: localizedCardTitle.attributed(color: .white, font: .lightBody),
                 skillTitleStyle: .init(color: .white, font: .lightBody),
                 skills: advert.skills
             )
@@ -480,7 +517,7 @@ extension AdvertViewModel: DeleteAdvertFeedbackSelectionDelegate {
                                                style: .destructive, action: { [weak self] in
             self?.remove(feedback: request)
         })
-        AlertService.show(message: "Are you sure you want to delete this ad?",
+        AlertService.show(message: String("Advert.DeleteAd.Message", table: .home),
                           actions: [removeAction, .cancel()])
     }
 }

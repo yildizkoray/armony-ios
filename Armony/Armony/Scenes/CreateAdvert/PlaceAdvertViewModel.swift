@@ -40,10 +40,13 @@ final class PlaceAdvertViewModel: ViewModel {
     var coordinator: PlaceAdvertCoordinator!
     private weak var view: PlaceAdvertViewDelegate?
     private let notificationService: PlaceAdvertNotificationService = .shared
+    private let authenticator: AuthenticationService = .shared
 
     private var selectedIDStorage: SelectedIDStorage = .empty
     private var request: PlaceAdvertRequest
     private var advertsResponse: [Advert.Properties] = .empty
+    private(set) var hasUserAdverts: Bool = false
+    private(set) var userAdsCountRequestError: Error?
     private var description: String? = nil {
         didSet {
             self.request.description = description.isNotNilOrEmpty ? description : nil
@@ -132,7 +135,6 @@ final class PlaceAdvertViewModel: ViewModel {
                                                          type: RestArrayResponse<Skill>.self)
 
                 let items = response.itemsForSelection(selectedIDs: selectedIDStorage.skills)
-//                let headerTitle: String = String("Lessons", table: .common)
                 let selectionPresentation = SkillsSelectionPresentation(delegate: self,
                                                                         items: items,
                                                                         headerTitle: .empty)
@@ -202,12 +204,33 @@ final class PlaceAdvertViewModel: ViewModel {
 
     func submitButtonTapped() {
         view?.startSubmitButtonActivityIndicatorView()
+
+        Task { @MainActor in
+            do {
+                let hasUserAds = try await hasUserAds()
+                view?.stopSubmitButtonActivityIndicatorView()
+                if hasUserAds, RevenueCatPurchaseStorageService.shared.identifiers.isEmpty {
+                    view?.showPaywall()
+                }
+                else {
+                    createAd(transactionID: nil)
+                }
+            }
+            catch let error {
+                view?.stopSubmitButtonActivityIndicatorView()
+                AlertService.show(message: error.api.ifNil(.network).description, actions: [.okay()])
+            }
+        }
+    }
+
+
+    func createAd(transactionID: String?) {
+        view?.startSubmitButtonActivityIndicatorView()
         Task { @MainActor in
             do {
                 let response = try await service.execute(task: PostPlaceAdvertTask(request: request),
                                                          type: RestObjectResponse<Advert>.self)
 
-                PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
                 PlaceAdvertAdjustEventsHandler.track(for: request.advertTypeID)
 
                 let adTitle = advertsResponse.first { $0.id == request.advertTypeID }?.title
@@ -232,18 +255,28 @@ final class PlaceAdvertViewModel: ViewModel {
                     notification: .newAdvertDidPlace,
                     userInfo: [.advert: response.data]
                 )
-                
+
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     AppRatingService.shared.requestReviewIfNeeded()
                 }
+
+                if let transactionID {
+                    RevenueCatPurchaseStorageService.shared.remove(transactionID: transactionID)
+                }
             }
             catch let error {
-                safeSync {
-                    view?.stopSubmitButtonActivityIndicatorView()
-                }
+                view?.stopSubmitButtonActivityIndicatorView()
                 AlertService.show(message: error.api.ifNil(.network).description, actions: [.okay()])
             }
         }
+    }
+
+    func hasUserAds() async throws -> Bool {
+        let response = try await service.execute(
+            task: GetUserAdvertsTask(userID: authenticator.userID),
+            type: RestArrayResponse<Advert>.self
+        )
+        return !response.data.isEmpty
     }
 }
 

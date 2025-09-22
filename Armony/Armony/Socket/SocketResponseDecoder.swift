@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SocketResponseDecoding {
-    func decode<R: Decodable>(response: String, for type: R.Type) -> R?
+    func decode<R: APIResponse>(response: String, for type: R.Type) throws -> R
 }
 
 final class SocketResponseDecoder: SocketResponseDecoding {
@@ -21,18 +21,17 @@ final class SocketResponseDecoder: SocketResponseDecoding {
 
     private lazy var decoder = JSONDecoder()
 
-    func decode<R>(response: String, for type: R.Type) -> R? where R : Decodable {
-        do {
-            guard let data = response.data(using: .utf8) else {
-                throw SocketResponseDecoder.DecoderError.invalidData
-            }
+    func decode<R>(response: String, for type: R.Type) throws -> R where R : APIResponse {
+        guard let data = response.data(using: .utf8) else {
+            throw SocketResponseDecoder.DecoderError.invalidData
+        }
 
-            let response = try decoder.decode(R.self, from: data)
-            return response
-        }
-        catch let error {
-            FirebaseCrashlyticsLogger.shared.log(error: error)
-            return nil
-        }
+        /// Throw  API Error object
+        let error = try JSONDecoder().decode(RestErrorResponse.self, from: data)
+        try error.throwErrorIfFailure()
+
+        let response = try decoder.decode(R.self, from: data)
+        try response.throwErrorIfFailure()
+        return response
     }
 }

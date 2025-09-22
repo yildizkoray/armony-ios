@@ -67,7 +67,12 @@ final class MessageCountSocketHandler: NSObject {
 // MARK: - SocketClientDelegate
 extension MessageCountSocketHandler: SocketClientDelegate {
     func socket(_ client: SocketClient, didReceive response: String) {
-        count = responseDecoder.decode(response: response, for: MessageCount.self).ifNil(.empty)
+        do {
+            count = try responseDecoder.decode(response: response, for: RestObjectResponse<MessageCount>.self).data
+        }
+        catch {
+            print("Error decoding response: \(error)")
+        }
     }
 }
 

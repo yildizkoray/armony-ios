@@ -27,7 +27,7 @@ struct SkillItemPresentation {
 
     init(style skillTitleStylePresentation: TextAppearancePresentation, skill: Skill) {
         id = skill.id
-        title = skill.title.attributed(skillTitleStylePresentation.color, font: skillTitleStylePresentation.font)
+        title = skill.id.backendLocalizedText(table: .skills).attributed(skillTitleStylePresentation.color, font: skillTitleStylePresentation.font)
         colorCode = skill.colorCode.ifNil(.blueColor)
         iconURL = skill.iconURL.ifNil(.localhost)
     }

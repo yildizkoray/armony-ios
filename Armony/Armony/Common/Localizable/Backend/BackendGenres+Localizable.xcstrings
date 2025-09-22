@@ -1,800 +1,750 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "AdType" : {
+    "Genre_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ad type"
+            "value" : "Acoustic",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "İlan tipi"
+            "value" : "Akustik",
+            "state" : "translated"
           }
         }
       }
     },
-    "AlreadyHaveAccount" : {
+    "Genre_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Already have account?"
+            "value" : "Afrobeat",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zaten hesabınız var mı?"
+            "value" : "Afrobeat",
+            "state" : "translated"
           }
         }
       }
     },
-    "API.ERROR" : {
+    "Genre_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unexpected error"
+            "value" : "Anatolian Rock",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beklenmeyen hata"
+            "value" : "Anadolu Rock",
+            "state" : "translated"
           }
         }
       }
     },
-    "Apply" : {
+    "Genre_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apply"
+            "value" : "Blues",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uygula"
+            "value" : "Blues",
+            "state" : "translated"
           }
         }
       }
     },
-    "Block" : {
+    "Genre_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Block"
+            "value" : "Chill",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Engelle"
+            "value" : "Chill",
+            "state" : "translated"
           }
         }
       }
     },
-    "ChangePassword" : {
+    "Genre_6" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Change Password"
+            "value" : "Choir",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Şifre Değiştir"
+            "value" : "Koro",
+            "state" : "translated"
           }
         }
       }
     },
-    "Clear" : {
+    "Genre_7" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clear"
+            "value" : "Classical",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temizle"
+            "value" : "Klasik",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.Cancel" : {
+    "Genre_8" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancel"
+            "value" : "Country",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "İptal"
+            "value" : "Country",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.Continue" : {
+    "Genre_9" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continue"
+            "value" : "Dubstep",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Devam Et"
+            "value" : "Dubstep",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.OK" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ok"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tamam"
-          }
-        }
-      }
-    },
-    "Common.Report.Success" : {
+    "Genre_10" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "We have received your report. Thanks."
+            "value" : "EDM",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Raporunuzu aldık. Teşekkürler."
+            "value" : "EDM",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.Save" : {
+    "Genre_11" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Save"
+            "value" : "Electronic Pop",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kaydet"
+            "value" : "Elektronik Pop",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.SelectionBottomPopUp.Alert.Title" : {
+    "Genre_12" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please select no more than 10 items"
+            "value" : "Electronic",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lütfen en fazla 10 öğe seçin"
+            "value" : "Elektronik",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.Validation.Error.Email" : {
+    "Genre_13" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please enter a valid email address"
+            "value" : "Folk Music",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lütfen geçerli bir e-posta adresi girin"
+            "value" : "Halk Müziği",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.Validation.Name.Error" : {
+    "Genre_14" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Full name must be between 3 and 40 characters"
+            "value" : "Funk",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ad soyad 3 ile 40 karakter arasında olmalıdır"
+            "value" : "Funk",
+            "state" : "translated"
           }
         }
       }
     },
-    "Common.Validation.Password.Error" : {
+    "Genre_15" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Password must contains minimum 6 characters"
+            "value" : "Gospel",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Şifre en az 6 karakter içermelidir"
+            "value" : "Gospel",
+            "state" : "translated"
           }
         }
       }
     },
-    "CookieUsage" : {
+    "Genre_16" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cookie Usage"
+            "value" : "Heavy Metal",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Çerez Kullanımı"
+            "value" : "Heavy Metal",
+            "state" : "translated"
           }
         }
       }
     },
-    "CurrentPassword" : {
+    "Genre_18" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Current Password"
+            "value" : "Hip Hop",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mevcut Şifre"
+            "value" : "Hip Hop",
+            "state" : "translated"
           }
         }
       }
     },
-    "Edit" : {
+    "Genre_19" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edit"
+            "value" : "House",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Düzenle"
+            "value" : "House",
+            "state" : "translated"
           }
         }
       }
     },
-    "Filter.Title" : {
+    "Genre_20" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filters"
+            "value" : "Indie",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filtreler"
+            "value" : "Bağımsız",
+            "state" : "translated"
           }
         }
       }
     },
-    "ForgetPassword" : {
+    "Genre_21" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forget password"
+            "value" : "Jazz",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Şifremi unuttum"
+            "value" : "Caz",
+            "state" : "translated"
           }
         }
       }
     },
-    "ForgetPassword.Subtitle" : {
+    "Genre_22" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please enter e-mail addresss"
+            "value" : "Latin",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lütfen e-posta adresinizi girin"
+            "value" : "Latin",
+            "state" : "translated"
           }
         }
       }
     },
-    "FullName" : {
+    "Genre_23" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Full name"
+            "value" : "Pop",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ad Soyad"
+            "value" : "Pop",
+            "state" : "translated"
           }
         }
       }
     },
-    "Home" : {
+    "Genre_24" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Home"
+            "value" : "Pop - Rock",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ana Sayfa"
+            "value" : "Pop - Rock",
+            "state" : "translated"
           }
         }
       }
     },
-    "InstrumentsSkill" : {
+    "Genre_25" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skill"
+            "value" : "Psychedelic",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Çalma Seviyesi"
+            "value" : "Psikedelik",
+            "state" : "translated"
           }
         }
       }
     },
-    "Less" : {
+    "Genre_26" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "less"
+            "value" : "Punk",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "daha az"
+            "value" : "Punk",
+            "state" : "translated"
           }
         }
       }
     },
-    "LessonFormat" : {
+    "Genre_27" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lesson format"
+            "value" : "R&B",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eğitim Türü"
+            "value" : "R&B",
+            "state" : "translated"
           }
         }
       }
     },
-    "Lessons" : {
+    "Genre_28" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lessons"
+            "value" : "Rap",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Müzik Dersleri"
+            "value" : "Rap",
+            "state" : "translated"
           }
         }
       }
     },
-    "Location" : {
+    "Genre_29" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Location"
+            "value" : "Reggae",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Konum"
+            "value" : "Reggae",
+            "state" : "translated"
           }
         }
       }
     },
-    "LogOut" : {
+    "Genre_30" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Log Out"
+            "value" : "Rock",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Çıkış Yap"
+            "value" : "Rock",
+            "state" : "translated"
           }
         }
       }
     },
-    "LogOut.Confirmation" : {
+    "Genre_31" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Are you sure?"
+            "value" : "Soft Pop",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Emin misiniz?"
+            "value" : "Yumuşak Pop",
+            "state" : "translated"
           }
         }
       }
     },
-    "More" : {
+    "Genre_32" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "more"
+            "value" : "Soundtrack",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "daha fazla"
+            "value" : "Film Müziği",
+            "state" : "translated"
           }
         }
       }
     },
-    "MusicGenre" : {
+    "Genre_33" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Music genre"
+            "value" : "Techno",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Müzik Tarzı"
+            "value" : "Tekno",
+            "state" : "translated"
           }
         }
       }
     },
-    "NewPassword" : {
+    "Genre_34" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "New Password"
+            "value" : "Trance",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yeni Şifre"
+            "value" : "Trance",
+            "state" : "translated"
           }
         }
       }
     },
-    "Password" : {
+    "Genre_35" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Password"
+            "value" : "Trap",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Şifre"
+            "value" : "Trap",
+            "state" : "translated"
           }
         }
       }
     },
-    "PrivacyPolicy" : {
+    "Genre_36" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privacy Policy"
+            "value" : "Turkish Classical Music",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gizlilik Politikası"
+            "value" : "Türk Klasik Müziği",
+            "state" : "translated"
           }
         }
       }
     },
-    "ProfileType" : {
+    "Genre_37" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Title"
+            "value" : "Turkish Folk Music",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil Türü"
+            "value" : "Türk Halk Müziği",
+            "state" : "translated"
           }
         }
       }
     },
-    "Report" : {
+    "Genre_38" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Report"
+            "value" : "Alternative Pop",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bildir"
+            "value" : "Alternatif Pop",
+            "state" : "translated"
           }
         }
       }
     },
-    "ReportReason" : {
+    "Genre_39" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reason for report"
+            "value" : "Alternative Rock",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bildirim nedeni"
+            "value" : "Alternatif Rock",
+            "state" : "translated"
           }
         }
       }
     },
-    "Services" : {
+    "Genre_40" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Services"
+            "value" : "Dance",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hizmetler"
+            "value" : "Dans",
+            "state" : "translated"
           }
         }
       }
     },
-    "Settings" : {
+    "Genre_41" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
+            "value" : "Metal",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayarlar"
+            "value" : "Metal",
+            "state" : "translated"
           }
         }
       }
     },
-    "SignIn" : {
+    "Genre_42" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign In"
+            "value" : "Industrial Music",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Giriş Yap"
+            "value" : "Endüstriyel Müzik",
+            "state" : "translated"
           }
         }
       }
     },
-    "SignUp" : {
+    "Genre_43" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign Up"
+            "value" : "Instrumental",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kayıt Ol"
+            "value" : "Enstrümantal",
+            "state" : "translated"
           }
         }
       }
     },
-    "TermsAndConditions" : {
+    "Genre_44" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terms and Conditions of Service"
+            "value" : "K-Pop",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hizmet Şartları ve Koşulları"
+            "value" : "K-Pop",
+            "state" : "translated"
           }
         }
       }
     },
-    "TermsConditionFullText" : {
+    "Genre_45" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "By signing up, you agree to the Terms and Conditions of Service, Privacy Policy, and Cookie Usage"
+            "value" : "Opera",
+            "state" : "translated"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kayıt olarak, Hizmet Şartları ve Koşulları, Gizlilik Politikası ve Çerez Kullanımını kabul etmiş olursunuz"
-          }
-        }
-      }
-    },
-    "UploadPhoto" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Upload photo"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotoğraf yükle"
-          }
-        }
-      }
-    },
-    "Version" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versiyon"
+            "value" : "Opera",
+            "state" : "translated"
           }
         }
       }

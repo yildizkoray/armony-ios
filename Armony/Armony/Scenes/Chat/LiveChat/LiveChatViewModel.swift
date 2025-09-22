@@ -203,22 +203,26 @@ extension LiveChatViewModel: SocketClientDelegate {
     }
 
     func socket(_ client: SocketClient, didReceive response: String) {
-        guard let message = responseDecoder.decode(response: response, for: LiveChatMessage.self) else {
-            return
-        }
+        do {
+            let message = try responseDecoder.decode(response: response, for: RestObjectResponse<LiveChatMessage>.self).data
 
-        let sender = LiveChatMessagePresentation.Owner(senderId: message.owner.id, displayName: message.owner.name)
-        let newMessage = LiveChatMessagePresentation(
-            sender: sender,
-            messageId: message.id.string,
-            sentDate: message.date,
-            kind: .text(message.content)
-        )
+            let sender = LiveChatMessagePresentation.Owner(senderId: message.owner.id, displayName: message.owner.name)
+            let newMessage = LiveChatMessagePresentation(
+                sender: sender,
+                messageId: message.id.string,
+                sentDate: message.date,
+                kind: .text(message.content)
+            )
 
-        safeSync {
-            NotificationCenter.default.post(notification: .newMessageDidSend)
-            presentation.messages.append(newMessage)
-            view?.insertMessages(indexSet: IndexSet(integer: presentation.messages.count - 1))
+            safeSync {
+                presentation.messages.append(newMessage)
+                view?.insertMessages(indexSet: IndexSet(integer: presentation.messages.count - 1))
+            }
+        } catch let error {
+            error.showAlert {
+                NotificationCenter.default.post(notification: .newMessageDidSend)
+                self.coordinator.pop()
+            }
         }
     }
 }

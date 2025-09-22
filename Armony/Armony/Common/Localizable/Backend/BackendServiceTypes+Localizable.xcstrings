@@ -1,0 +1,40 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "ServiceType_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Online",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Çevrimiçi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ServiceType_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "In person",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Yüz yüze",
+            "state" : "translated"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

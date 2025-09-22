@@ -1,0 +1,142 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "ReportTopic_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Hate Speech or Violence",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Nefret / Şiddet Söylemi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ReportTopic_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Inappropriate Adult Content",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Cinsel İçerik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ReportTopic_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Misinformation or Spam",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Hatalı / Yanıltıcı İçerik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ReportTopic_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Scam or Fraud",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Dolandırıcılık Şüphesi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ReportTopic_5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Hate Speech or Violence",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Nefret / Şiddet Söylemi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ReportTopic_6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Inappropriate Adult Content",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Cinsel İçerik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ReportTopic_7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Misinformation or Spam",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Hatalı / Yanıltıcı İçerik",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "ReportTopic_8" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Scam or Fraud",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Dolandırıcılık Şüphesi",
+            "state" : "translated"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

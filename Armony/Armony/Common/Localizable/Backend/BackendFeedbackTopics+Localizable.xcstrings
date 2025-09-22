@@ -1,0 +1,294 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "FeedbackTopic_1" : {
+      "extractionState" : "manual",
+      "comment" : "Default feedback type - User wants to support app development",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I'd like to support the app's development",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Uygulamanın geliştirilmesini desteklemek istiyorum",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_2" : {
+      "extractionState" : "manual",
+      "comment" : "Default feedback type - User wants to report bugs or issues",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Report a bug or issue",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Hata veya sorun bildir",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_3" : {
+      "extractionState" : "manual",
+      "comment" : "Default feedback type - User interested in advertising and partnerships",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Advertising and partnership opportunities",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Reklam ve ortaklık fırsatları",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_4" : {
+      "extractionState" : "manual",
+      "comment" : "Default feedback type - User wants to report inappropriate content",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Report inappropriate content.",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Uygunsuz içerik bildir",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_5" : {
+      "extractionState" : "manual",
+      "comment" : "Default feedback type - User has other feedback not covered above",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Something else",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Başka bir şey",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_6" : {
+      "extractionState" : "manual",
+      "comment" : "Ad close feedback type - User successfully found connections",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I found the connections I needed",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "İhtiyacım olan bağlantıları buldum",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_7" : {
+      "extractionState" : "manual",
+      "comment" : "Ad close feedback type - User couldn't find desired musician/band",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I couldn't find the musician or band I was looking for",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Aradığım müzisyen veya grubu bulamadım",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_8" : {
+      "extractionState" : "manual",
+      "comment" : "Ad close feedback type - User's ad didn't receive enough attention",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "My ad didn't receive enough attention",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "İlanım yeterince ilgi görmedi",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_9" : {
+      "extractionState" : "manual",
+      "comment" : "Ad close feedback type - User wants to post a new ad",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I'd like to post a new ad",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Yeni bir ilan yayınlamak istiyorum",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_10" : {
+      "extractionState" : "manual",
+      "comment" : "Ad close feedback type - User has other reasons for closing ad",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Other reasons",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Diğer nedenler",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_11" : {
+      "extractionState" : "manual",
+      "comment" : "Account close feedback type - App didn't meet music industry needs",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "The app didn't meet my needs in the music industry",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Uygulama müzik sektöründeki ihtiyaçlarımı karşılamadı",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_12" : {
+      "extractionState" : "manual",
+      "comment" : "Account close feedback type - User successfully found musician/band",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I successfully found the musician or band I needed.",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "İhtiyacım olan müzisyen veya grubu başarıyla buldum",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_13" : {
+      "extractionState" : "manual",
+      "comment" : "Account close feedback type - User is dissatisfied with the app",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I'm dissatisfied with the app",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Uygulamadan memnun değilim",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_14" : {
+      "extractionState" : "manual",
+      "comment" : "Account close feedback type - User receives too many unwanted messages",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I receive too many unwanted messages",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Çok fazla istenmeyen mesaj alıyorum",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_15" : {
+      "extractionState" : "manual",
+      "comment" : "Account close feedback type - User prefers using a different app",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "I prefer using a different app",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Farklı bir uygulama kullanmayı tercih ediyorum",
+            "state" : "translated"
+          }
+        }
+      }
+    },
+    "FeedbackTopic_16" : {
+      "extractionState" : "manual",
+      "comment" : "Account close feedback type - User has other reasons for closing account",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "value" : "Other",
+            "state" : "translated"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "value" : "Diğer",
+            "state" : "translated"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

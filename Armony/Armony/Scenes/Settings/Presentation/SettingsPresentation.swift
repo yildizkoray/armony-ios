@@ -30,7 +30,8 @@ struct SettingPresentation {
         self.deeplink = setting.deeplink
         self.accessoryImageName = setting.accessoryImageName
         self.isVisibile = setting.isVisible
-        self.title = String(format: setting.title, Defaults.shared[.region].emptyIfNil)
+        let localizedTitle = setting.id.backendLocalizedText(table: .settings)
+        self.title = String(format: localizedTitle, Defaults.shared[.region].emptyIfNil)
     }
 
     private init() {

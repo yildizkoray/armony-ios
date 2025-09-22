@@ -52,6 +52,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
         AppLaunchService.shared.handleLaunch(launchOptions: launchOptions)
 
+        // Revenue Cat
+        RevenueCatService.shared.start()
+
         // App start
         AppCoordinator(window: window!).start()
 

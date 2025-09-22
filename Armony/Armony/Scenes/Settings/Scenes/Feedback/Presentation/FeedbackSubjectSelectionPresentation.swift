@@ -36,7 +36,7 @@ final class FeedbackSubjectSelectionInput: SelectionInput {
 
     init(id: Int, title: String, isSelected: Bool) {
         self.id = id
-        self.title = title
+        self.title = id.backendLocalizedText(table: .feedbackTopics)
         self.isSelected = isSelected
     }
 }

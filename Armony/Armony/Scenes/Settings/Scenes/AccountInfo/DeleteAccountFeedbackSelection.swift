@@ -16,7 +16,7 @@ struct DeleteAccountFeedbackSelection: SelectionPresentation {
     typealias Output = SingleSelectionOutput<DeleteAccountFeedbackSelectionInput>
 
     var items: [DeleteAccountFeedbackSelectionInput]
-    var headerTitle: String = "Why do you want to delete your account?"
+    var headerTitle: String = "Settings.DeleteAccount.PopUp.Title".localized(table: .account)
     var isMultipleSelectionAllowed: Bool = false
     weak var delegate: DeleteAccountFeedbackSelectionDelegate?
 
@@ -33,6 +33,7 @@ final class DeleteAccountFeedbackSelectionInput: SelectionInput {
     init(id: Int, isSelected: Bool, title: String) {
         self.id = id
         self.isSelected = isSelected
-        self.title = title
+        let localizedTitle = id.backendLocalizedText(table: .feedbackTopics)
+        self.title = localizedTitle
     }
 }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RevenueCatUI
+import RevenueCat
 
 protocol PlaceAdvertViewDelegate: AnyObject, NavigationBarCustomizing {
     func configureMusicGenreDropdownView(presentation: DropdownPresentation)
@@ -40,6 +42,8 @@ protocol PlaceAdvertViewDelegate: AnyObject, NavigationBarCustomizing {
     func stopSubmitButtonActivityIndicatorView()
 
     func updateValidators(validator: PlaceAdvertViewController.Validators)
+
+    func showPaywall()
 
     func resetTextView()
 }
@@ -163,14 +167,12 @@ final class PlaceAdvertViewController: UIViewController, ViewController {
     }
 
     @objc private func submitButtonTapped() {
-        view.endEditing(true)
         viewModel.submitButtonTapped()
     }
 
     private func prepareDropdowns() {
         advertTypesDropdownView.configure(with: .advertType)
         advertTypesDropdownView.addTapGestureRecognizer(cancelsTouches: false) { [unowned self] _ in
-            self.view.endEditing(true)
             self.viewModel.advertTypeDropdownTapped()
         }
 
@@ -315,6 +317,12 @@ extension PlaceAdvertViewController: PlaceAdvertViewDelegate {
     func resetTextView() {
         descriptionTextView.updateText(.empty)
     }
+
+    func showPaywall() {
+        let controller = PaywallViewController()
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
 }
 
 // MARK: - TextViewDelegate
@@ -324,3 +332,21 @@ extension PlaceAdvertViewController: TextViewDelegate {
     }
 }
 
+// MARK: - PlaceAdvertViewController
+extension PlaceAdvertViewController: PaywallViewControllerDelegate {
+    func paywallViewController(_ controller: PaywallViewController,
+                               didFinishPurchasingWith customerInfo: CustomerInfo) {
+
+    }
+
+    func paywallViewController(
+        _ controller: PaywallViewController,
+        didFinishPurchasingWith customerInfo: CustomerInfo,
+        transaction: StoreTransaction?
+    ) {
+        if let transaction {
+            RevenueCatPurchaseStorageService.shared.store(transactionID: transaction.id)
+            viewModel.createAd(transactionID: transaction.id)
+        }
+    }
+}

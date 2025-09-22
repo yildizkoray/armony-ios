@@ -16,7 +16,7 @@ struct DeleteAdvertFeedbackSelection: SelectionPresentation {
     typealias Output = SingleSelectionOutput<DeleteAdvertFeedbackSelectionInput>
 
     var items: [DeleteAdvertFeedbackSelectionInput]
-    var headerTitle: String = "Why do you want to delete your ad?"
+    var headerTitle: String = "Advert.Delete.Feedback.Selection.Header.Title".localized(table: .home)
     var isMultipleSelectionAllowed: Bool = false
     weak var delegate: DeleteAdvertFeedbackSelectionDelegate?
 
@@ -33,6 +33,6 @@ final class DeleteAdvertFeedbackSelectionInput: SelectionInput {
     init(id: Int, isSelected: Bool, title: String) {
         self.id = id
         self.isSelected = isSelected
-        self.title = title
+        self.title = id.backendLocalizedText(table: .feedbackTopics)
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 import UIKit
 import SafariServices
+import RevenueCatUI
+import RevenueCat
 
 protocol AdvertViewDelegate: AnyObject, ActivityIndicatorShowing, NavigationBarCustomizing {
     func configureUserSummaryView(with presentation: UserSummaryPresentation)
@@ -33,6 +35,8 @@ protocol AdvertViewDelegate: AnyObject, ActivityIndicatorShowing, NavigationBarC
 
     func startActivateAdvertButtonActivityIndicatorView()
     func stopActivateAdvertButtonActivityIndicatorView()
+
+    func showPaywall()
 }
 
 final class AdvertViewController: UIViewController, ViewController {
@@ -243,6 +247,12 @@ extension AdvertViewController: AdvertViewDelegate {
     func stopActivateAdvertButtonActivityIndicatorView() {
         activateAdvertButton.stopActivityIndicatorView()
     }
+
+    func showPaywall() {
+        let controller = PaywallViewController()
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UserSummaryViewDelegate
@@ -280,3 +290,23 @@ extension AdvertViewController: UserSummaryViewDelegate {
         }
     }
 }
+
+// MARK: - PaywallViewControllerDelegate
+extension AdvertViewController: PaywallViewControllerDelegate {
+    func paywallViewController(_ controller: PaywallViewController,
+                               didFinishPurchasingWith customerInfo: CustomerInfo) {
+
+    }
+
+    func paywallViewController(
+        _ controller: PaywallViewController,
+        didFinishPurchasingWith customerInfo: CustomerInfo,
+        transaction: StoreTransaction?
+    ) {
+        if let transaction {
+            RevenueCatPurchaseStorageService.shared.store(transactionID: transaction.id)
+            viewModel.activateAd(transactionID: transaction.id)
+        }
+    }
+}
+

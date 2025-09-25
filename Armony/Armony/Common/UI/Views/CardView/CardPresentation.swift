@@ -53,8 +53,7 @@ public struct CardPresentation: Identifiable, Hashable {
             updateDate: nil
         )
 
-        let localizedCardSkillTitleKey = "AdvertSkillTitle_" + advert.type.id.string
-        let localizedCardSkillTitle = String(localizedCardSkillTitleKey, table: .backend(.advertTypes))
+        let localizedCardSkillTitle = advert.type.id.backendLocalizedText(table: .advertSkillTitles)
 
         skillsPresentation = SkillsPresentation(
             type: .adverts(imageViewContainerBackgroundColor: colorCode.colorFromHEX),

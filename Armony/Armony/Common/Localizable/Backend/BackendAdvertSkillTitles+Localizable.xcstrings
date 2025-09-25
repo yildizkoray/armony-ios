@@ -1,87 +1,87 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "AdvertType_1" : {
+    "AdvertSkillTitle_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Find a Band"
+            "value" : "Skills"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Grup Ara"
+            "value" : "Yetenekler"
           }
         }
       }
     },
-    "AdvertType_2" : {
+    "AdvertSkillTitle_2" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Find a Musician"
+            "value" : "Skills"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Müzisyen Ara"
+            "value" : "Yetenekler"
           }
         }
       }
     },
-    "AdvertType_3" : {
+    "AdvertSkillTitle_3" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Event Services"
+            "value" : "Services"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Etkinlik Hizmetleri"
+            "value" : "Hizmetler"
           }
         }
       }
     },
-    "AdvertType_4" : {
+    "AdvertSkillTitle_4" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Music Lessons"
+            "value" : "Lessons"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Müzik Dersleri"
+            "value" : "Dersler"
           }
         }
       }
     },
-    "AdvertType_5" : {
+    "AdvertSkillTitle_5" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Industry Services"
+            "value" : "Services"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sektör Hizmetleri"
+            "value" : "Hizmetler"
           }
         }
       }

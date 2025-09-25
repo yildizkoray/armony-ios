@@ -414,13 +414,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skill"
+            "value" : "Skills"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Çalma Seviyesi"
+            "value" : "Yetenekler"
           }
         }
       }

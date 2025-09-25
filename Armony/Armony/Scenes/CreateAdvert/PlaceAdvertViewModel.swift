@@ -136,8 +136,7 @@ final class PlaceAdvertViewModel: ViewModel {
 
                 let items = response.itemsForSelection(selectedIDs: selectedIDStorage.skills)
                 let selectionPresentation = SkillsSelectionPresentation(delegate: self,
-                                                                        items: items,
-                                                                        headerTitle: .empty)
+                                                                        items: items)
 
                 safeSync {
                     view?.stopSkillsDropdownViewActivityIndicatorView()

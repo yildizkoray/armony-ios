@@ -33,7 +33,7 @@ final class AccountInformationViewModel: ViewModel {
                         view?.stopSaveButtonActivityIndicatorView()
                         NotificationCenter.default.post(notification: .accountDetailDidUpdateInSettings)
                     }
-                    let message = String("AccountInformation.Update.Succes.Message", table: .common)
+                    let message = String("AccountInformation.Update.Succes.Message", table: .account)
                     await AlertService.show(message: message,
                                             actions: [.okay(action: { [weak self] in
                         self?.coordinator.pop()

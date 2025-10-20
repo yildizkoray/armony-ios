@@ -14,9 +14,9 @@ protocol LoginViewDelegate: AnyObject, NavigationBarCustomizing {
     func stopLoginButtonActivityIndicatorView()
 }
 
-final class LoginViewController: UIViewController, ViewController {
+public final class LoginViewController: UIViewController, ViewController {
 
-    static var storyboardName: UIStoryboard.Name = .login
+    public static var storyboardName: UIStoryboard.Name = .login
 
     @IBOutlet private weak var navigationBarImageView: UIImageView!
     @IBOutlet private weak var gradientView: GradientView!
@@ -57,7 +57,7 @@ final class LoginViewController: UIViewController, ViewController {
         ]
     )
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
 
@@ -67,7 +67,7 @@ final class LoginViewController: UIViewController, ViewController {
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         trackScreenView()
     }

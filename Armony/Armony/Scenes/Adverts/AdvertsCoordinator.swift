@@ -60,3 +60,21 @@ final class AdvertsCoordinator: Coordinator {
         FilterCoordinator().start(navigatee: navigator, delegate: delegate, selectedFilters: selectedFilters)
     }
 }
+
+// MARK: - URLNavigatable
+
+extension AdvertsCoordinator: URLNavigatable {
+    var isAuthenticationRequired: Bool {
+        false
+    }
+
+    static var instance: any URLNavigatable {
+        AdvertsCoordinator()
+    }
+
+    static func register(navigator: any URLNavigation) {
+        navigator.register(coordinator: instance, pattern: .adverts) { _ in
+            selectTab(tab: .home, shouldPopToRoot: true)
+        }
+    }
+}

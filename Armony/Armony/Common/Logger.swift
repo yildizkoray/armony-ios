@@ -32,10 +32,13 @@ final class FirebaseCrashlyticsLogger: Logger {
 
     static let shared = FirebaseCrashlyticsLogger()
 
-    private let crashlytics: Crashlytics!
+    private var crashlytics: Crashlytics
+
+    private let authenticator: AuthenticationProviding = AuthenticationService.shared
 
     init() {
         self.crashlytics = Crashlytics.crashlytics()
+        crashlytics.setCustomValue("userID", forKey: authenticator.userID)
     }
 
     func log(exception: Exception) {

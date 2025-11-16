@@ -16,7 +16,26 @@ private struct Constants {
     }
 }
 
-public final class AuthenticationService: ResetHandling {
+public protocol AuthenticationProviding {
+    var isAuthenticated: Bool { get }
+    var userID: String { get }
+    var refreshToken: String { get }
+    var additionalHTTPHeaders: [String: String] { get }
+
+    func authenticate(accessToken: String, refreshToken: String, userID: String)
+    func unauthenticate()
+    func identify(accessToken: String, refreshToken: String)
+}
+
+public protocol AuthenticationObservable {
+    @discardableResult
+    func addLoginHandler(_ handler: @escaping Callback<Notification>) -> NotificationToken
+
+    @discardableResult
+    func addLogoutHandler(_ handler: @escaping Callback<Notification>) -> NotificationToken
+}
+
+public final class AuthenticationService: ResetHandling, AuthenticationProviding, AuthenticationObservable {
 
     public static let shared = AuthenticationService(keychain: Keychain(service: Bundle.main.bundleIdentifier.emptyIfNil),
                                                      notifier: .default)
@@ -106,5 +125,40 @@ final class AuthenticationErrorHandler {
             return APIError.emptyData.description
         }
 
+    }
+}
+
+public protocol DispatchQueueProtocol {
+    // Sync
+    func sync<T>(work: () throws -> T) rethrows -> T
+
+    // Async
+    func async(execute work: @escaping @convention(block) () -> Void)
+    func asyncAfter(deadline: DispatchTime, execute work: @escaping @convention(block) () -> Void)
+    func asyncAfterNow(delay: Double, execute work: @escaping @convention(block) () -> Void)
+
+    func async(flags: DispatchWorkItemFlags, execute work: @escaping @convention(block) () -> Void)
+}
+
+
+extension DispatchQueue: DispatchQueueProtocol {
+    public func sync<T>(work: () throws -> T) rethrows -> T {
+        return try sync(execute: work)
+    }
+
+    public func async(execute work: @escaping @convention(block) () -> Void) {
+        async(group: nil, qos: .unspecified, flags: [], execute: work)
+    }
+
+    public func asyncAfter(deadline: DispatchTime, execute work: @escaping @convention(block) () -> Void) {
+        asyncAfter(deadline: deadline, qos: .unspecified, flags: [], execute: work)
+    }
+
+    public func asyncAfterNow(delay: Double, execute work: @escaping @convention(block) () -> Void) {
+        asyncAfter(deadline: .now() + delay, execute: work)
+    }
+
+    public func async(flags: DispatchWorkItemFlags, execute work: @escaping @convention(block) () -> Void) {
+        async(group: nil, qos: .unspecified, flags: flags, execute: work)
     }
 }

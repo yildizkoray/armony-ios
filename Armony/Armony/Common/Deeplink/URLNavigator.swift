@@ -8,12 +8,19 @@ public final class URLNavigator: URLNavigation {
 
     private var handlers = [URLPattern: (handler: URLPatternHandler, coordinator: URLNavigatable)]()
 
-    public init(scheme: String) {
-        self.scheme = scheme
-    }
+    private let authenticator: AuthenticationProviding
+    private let dispatcher: DispatchQueueProtocol
+    private var loginCoordinator: LoginCoordinator
 
-    public convenience init() {
-        self.init(scheme: Bundle(for: type(of: self)).urlScheme)
+    public init(
+        authenticator: AuthenticationProviding = AuthenticationService.shared,
+        dispatcher: DispatchQueueProtocol = DispatchQueue.main,
+        loginCoordinator: LoginCoordinator = LoginCoordinator()
+    ) {
+        self.authenticator = authenticator
+        self.dispatcher = dispatcher
+        self.loginCoordinator = loginCoordinator
+        self.scheme = Bundle(for: type(of: self)).urlScheme
     }
 
     private func handler(
@@ -33,9 +40,10 @@ public final class URLNavigator: URLNavigation {
         guard let result = handler(for: deeplink.description),
               let handler = handlers[result.result.pattern]?.handler else { return false }
 
-        let handleBlock = {
-            if result.coordinator.isAuthenticationRequired && !AuthenticationService.shared.isAuthenticated {
-                LoginCoordinator().start {
+        let handleBlock = { [weak self] in
+            guard let self else { return }
+            if result.coordinator.isAuthenticationRequired && !authenticator.isAuthenticated {
+                loginCoordinator.start {
                     handler(result.result)
                 } registrationCompletion: {
                     handler(result.result)
@@ -47,11 +55,11 @@ public final class URLNavigator: URLNavigation {
 
         if dismissToRoot {
             UIViewController.topMostViewController?.dismissToRootViewController(animated: false) {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: handleBlock)
+                self.dispatcher.asyncAfter(deadline: .now() + 0.15, execute: handleBlock)
             }
         }
         else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: handleBlock)
+            self.dispatcher.asyncAfter(deadline: .now() + 0.15, execute: handleBlock)
         }
 
         return true

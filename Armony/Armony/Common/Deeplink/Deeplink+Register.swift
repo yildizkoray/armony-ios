@@ -10,6 +10,7 @@ import Foundation
 public extension URLNavigation {
 
     static func initialize(_ navigation: Self) -> Self {
+        AdvertsCoordinator.register(navigator: navigation)
         AccountCoordinator.register(navigator: navigation)
         AccountInformationCoordinator.register(navigator: navigation)
         AdvertCoordinator.register(navigator: navigation)

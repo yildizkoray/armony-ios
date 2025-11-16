@@ -186,6 +186,11 @@
 		02AF996C28ED944E006669F4 /* PlaceAdvertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */; };
 		02AF996E28ED9476006669F4 /* PlaceAdvertCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */; };
 		02AF997028ED9C95006669F4 /* DropdownPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */; };
+		02B02BD82E8AC11A0088789D /* URLNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B02BD72E8AC11A0088789D /* URLNavigatorTests.swift */; };
+		02B191302EA6BED200E7878D /* DeeplinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1912E2EA6BED200E7878D /* DeeplinkTests.swift */; };
+		02B191332EA6D82500E7878D /* MockDispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B191322EA6D82400E7878D /* MockDispatchQueue.swift */; };
+		02B191352EA6D86000E7878D /* MockLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B191342EA6D85500E7878D /* MockLoginCoordinator.swift */; };
+		02B26C482E931367003EF74E /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B26C472E931365003EF74E /* MockAuthenticationService.swift */; };
 		02B786762D3ADB2700A8B6AE /* FeedbackViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */; };
 		02B786772D3ADB2700A8B6AE /* MockFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */; };
 		02B7CA6129259B1F0055B181 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7CA6029259B1F0055B181 /* ChatsViewController.swift */; };
@@ -650,6 +655,11 @@
 		02AF996B28ED944E006669F4 /* PlaceAdvertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertViewModel.swift; sourceTree = "<group>"; };
 		02AF996D28ED9476006669F4 /* PlaceAdvertCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAdvertCoordinator.swift; sourceTree = "<group>"; };
 		02AF996F28ED9C95006669F4 /* DropdownPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPresentation.swift; sourceTree = "<group>"; };
+		02B02BD72E8AC11A0088789D /* URLNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLNavigatorTests.swift; sourceTree = "<group>"; };
+		02B1912E2EA6BED200E7878D /* DeeplinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkTests.swift; sourceTree = "<group>"; };
+		02B191322EA6D82400E7878D /* MockDispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDispatchQueue.swift; sourceTree = "<group>"; };
+		02B191342EA6D85500E7878D /* MockLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginCoordinator.swift; sourceTree = "<group>"; };
+		02B26C472E931365003EF74E /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
 		02B786722D3ADB2700A8B6AE /* FeedbackViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModelTests.swift; sourceTree = "<group>"; };
 		02B786732D3ADB2700A8B6AE /* MockFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeedbackView.swift; sourceTree = "<group>"; };
 		02B7CA6029259B1F0055B181 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -1017,6 +1027,8 @@
 		0205A49F2C53EF7600D5821D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				02B1912E2EA6BED200E7878D /* DeeplinkTests.swift */,
+				02B02BD72E8AC11A0088789D /* URLNavigatorTests.swift */,
 				0205A4A02C53EF7B00D5821D /* UI */,
 			);
 			path = Common;
@@ -1788,6 +1800,9 @@
 		02A824822881B1E8004351D0 /* CommonMocks */ = {
 			isa = PBXGroup;
 			children = (
+				02B191322EA6D82400E7878D /* MockDispatchQueue.swift */,
+				02B191342EA6D85500E7878D /* MockLoginCoordinator.swift */,
+				02B26C472E931365003EF74E /* MockAuthenticationService.swift */,
 				02A824832881B202004351D0 /* MockRestService.swift */,
 			);
 			path = CommonMocks;
@@ -3905,7 +3920,12 @@
 			files = (
 				B1B55C9D26CEFAE300FDE884 /* AccountViewModelTests.swift in Sources */,
 				02B786762D3ADB2700A8B6AE /* FeedbackViewModelTests.swift in Sources */,
+				02B26C482E931367003EF74E /* MockAuthenticationService.swift in Sources */,
+				02B191332EA6D82500E7878D /* MockDispatchQueue.swift in Sources */,
+				02B02BD82E8AC11A0088789D /* URLNavigatorTests.swift in Sources */,
+				02B191302EA6BED200E7878D /* DeeplinkTests.swift in Sources */,
 				02B786772D3ADB2700A8B6AE /* MockFeedbackView.swift in Sources */,
+				02B191352EA6D86000E7878D /* MockLoginCoordinator.swift in Sources */,
 				0205A49E2C53E5C600D5821D /* DropdownViewSnapshotTests.swift in Sources */,
 				02A824842881B202004351D0 /* MockRestService.swift in Sources */,
 				02FA5A4E2882293000E8AD5C /* MockAccountView.swift in Sources */,

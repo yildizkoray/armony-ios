@@ -8,11 +8,15 @@
 import UIKit
 import SwiftMessages
 
-final class LoginCoordinator: Coordinator {
+public class LoginCoordinator: Coordinator {
 
-    typealias Controller = LoginViewController
+    public typealias Controller = LoginViewController
 
-    weak var navigator: Navigator?
+    weak public var navigator: Navigator?
+
+    public init(navigator: Navigator? = nil) {
+        self.navigator = navigator
+    }
 
     private func start(navigator: UIViewController, loginCompletion: VoidCallback?, registrationCompletion: VoidCallback?) {
         let (loginNavigator, view) = createNavigatorWithRootViewController()

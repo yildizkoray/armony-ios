@@ -25,7 +25,7 @@ public protocol Coordinator {
     func popToRootViewController(animated: Bool)
 }
 
-extension Coordinator where Controller: UIViewController {
+public extension Coordinator where Controller: UIViewController {
 
     var navigator: Navigator? {
         return UIViewController.topMostNavigationController

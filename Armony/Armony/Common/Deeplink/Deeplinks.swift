@@ -12,6 +12,7 @@ public extension Deeplink {
     static let account: Deeplink = "/account"
     static let accountInformation: Deeplink = "/account-information"
     static let advert: Deeplink = "/advert"
+    static let adverts: Deeplink = "/adverts"
     static let advertListing: Deeplink = "/advert-listing"
     static let changePassword: Deeplink = "/change-password"
     static let chats: Deeplink = "/chats"

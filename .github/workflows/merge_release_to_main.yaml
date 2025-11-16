@@ -29,9 +29,9 @@ jobs:
       id: get_branch
       run: |
         if [ -n "${{ github.event.inputs.release_branch }}" ]; then
-          BRANCH_NAME="${{ github.event.inputs.release_branch }}"
+          BRANCH_NAME=$(echo "${{ github.event.inputs.release_branch }}" | xargs)
         else
-          BRANCH_NAME=$(git branch -r | grep 'origin/Releases/Release' | sort -V | tail -n 1 | sed 's/origin\///')
+          BRANCH_NAME=$(git branch -r | grep 'origin/Releases/Release' | sort -V | tail -n 1 | sed 's/origin\///' | xargs)
         fi
         
         if [ -z "$BRANCH_NAME" ]; then
@@ -39,6 +39,7 @@ jobs:
           exit 1
         fi
         
+        echo "Found branch: '$BRANCH_NAME'"
         echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
         
     - name: Merge release branch to main
